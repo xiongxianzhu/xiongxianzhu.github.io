@@ -6,7 +6,7 @@
   <link href="https://zhuxiongxian.cc/atom.xml" rel="self"/>
   
   <link href="https://zhuxiongxian.cc/"/>
-  <updated>2021-03-05T08:36:58.000Z</updated>
+  <updated>2021-03-02T02:41:33.000Z</updated>
   <id>https://zhuxiongxian.cc/</id>
   
   <author>
@@ -15,34 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>测试ssh方式连接github</title>
-    <link href="https://zhuxiongxian.cc/2021/03/05/git-ssh-github/"/>
-    <id>https://zhuxiongxian.cc/2021/03/05/git-ssh-github/</id>
-    <published>2021-03-05T08:36:58.000Z</published>
-    <updated>2021-03-05T08:36:58.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h4 id=&quot;1-问题描述&quot;&gt;&lt;a href=&quot;#1-问题描述&quot; class=&quot;headerlink&quot; title=&quot;1. 问题描述&quot;&gt;&lt;/a&gt;1. 问题描述&lt;/h4&gt;&lt;p&gt;ssh方式连接不上github&lt;/p&gt;
-&lt;pre class=&quot;line-numbers</summary>
-        
-      
-    
-    
-    
-    <category term="git" scheme="https://zhuxiongxian.cc/categories/git/"/>
-    
-    
-    <category term="git" scheme="https://zhuxiongxian.cc/tags/git/"/>
-    
-    <category term="ssh" scheme="https://zhuxiongxian.cc/tags/ssh/"/>
-    
-  </entry>
   
   <entry>
     <title>基于docker环境搭建ELK日志分析系统</title>
@@ -624,6 +596,33 @@
     <category term="robomongo" scheme="https://zhuxiongxian.cc/tags/robomongo/"/>
     
     <category term="图形管理工具" scheme="https://zhuxiongxian.cc/tags/%E5%9B%BE%E5%BD%A2%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>git常用命令</title>
+    <link href="https://zhuxiongxian.cc/2018/05/25/git-commands/"/>
+    <id>https://zhuxiongxian.cc/2018/05/25/git-commands/</id>
+    <published>2018-05-25T02:35:55.000Z</published>
+    <updated>2018-05-25T02:35:55.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;1-初始化git本地库&quot;&gt;&lt;a href=&quot;#1-初始化git本地库&quot; class=&quot;headerlink&quot; title=&quot;1. 初始化git本地库&quot;&gt;&lt;/a&gt;1. 初始化git本地库&lt;/h4&gt;&lt;pre class=&quot;line-numbers</summary>
+        
+      
+    
+    
+    
+    <category term="git" scheme="https://zhuxiongxian.cc/categories/git/"/>
+    
+    
+    <category term="git" scheme="https://zhuxiongxian.cc/tags/git/"/>
+    
+    <category term="ssh-keygen" scheme="https://zhuxiongxian.cc/tags/ssh-keygen/"/>
     
   </entry>
   

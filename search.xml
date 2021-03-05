@@ -4,33 +4,6 @@
   
     
     <entry>
-      <title>测试ssh方式连接github</title>
-      <link href="2021/03/05/git-ssh-github/"/>
-      <url>2021/03/05/git-ssh-github/</url>
-      
-        <content type="html"><![CDATA[<h4 id="1-问题描述"><a href="#1-问题描述" class="headerlink" title="1. 问题描述"></a>1. 问题描述</h4><p>ssh方式连接不上github</p><pre class="line-numbers language-none"><code class="language-none">ssh -T git@github.com<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h4 id="2-解决方法"><a href="#2-解决方法" class="headerlink" title="2. 解决方法"></a>2. 解决方法</h4><p>在<code>~/.ssh</code>目录下创建config文件：</p><pre class="line-numbers language-none"><code class="language-none">vim ~/.ssh/config<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p><code>~/.ssh/config</code>文件内容：</p><pre class="line-numbers language-none"><code class="language-none">Host github.comUser gitHostname ssh.github.comPreferredAuthentications publickeyIdentityFile ~/.ssh/id_rsaPort 443<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h4 id="3-检测ssh方式能否连接github"><a href="#3-检测ssh方式能否连接github" class="headerlink" title="3. 检测ssh方式能否连接github"></a>3. 检测ssh方式能否连接github</h4><pre class="line-numbers language-none"><code class="language-none">ssh -T git@github.comThe authenticity of host '[ssh.github.com]:443 ([18.140.96.234]:443)' can't be established.RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.Are you sure you want to continue connecting (yes/no/[fingerprint])? yesWarning: Permanently added '[ssh.github.com]:443,[18.140.96.234]:443' (RSA) to the list of known hosts.Hi xiongxianzhu! You've successfully authenticated, but GitHub does not provide shell access.<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
-      
-      
-      <categories>
-          
-          <category> git </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> git </tag>
-            
-            <tag> ssh </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>基于docker环境搭建ELK日志分析系统</title>
       <link href="2021/03/02/docker-elk/"/>
       <url>2021/03/02/docker-elk/</url>
