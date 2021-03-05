@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>xx&#39;s blog</title>
+  
+  <subtitle>zhuxiongxian的挨踢博客</subtitle>
+  <link href="https://zhuxiongxian.cc/atom.xml" rel="self"/>
+  
+  <link href="https://zhuxiongxian.cc/"/>
+  <updated>2021-03-05T08:36:58.000Z</updated>
+  <id>https://zhuxiongxian.cc/</id>
+  
+  <author>
+    <name>xx</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>测试ssh方式连接github</title>
+    <link href="https://zhuxiongxian.cc/2021/03/05/git-ssh-github/"/>
+    <id>https://zhuxiongxian.cc/2021/03/05/git-ssh-github/</id>
+    <published>2021-03-05T08:36:58.000Z</published>
+    <updated>2021-03-05T08:36:58.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;1-问题描述&quot;&gt;&lt;a href=&quot;#1-问题描述&quot; class=&quot;headerlink&quot; title=&quot;1. 问题描述&quot;&gt;&lt;/a&gt;1. 问题描述&lt;/h4&gt;&lt;p&gt;ssh方式连接不上github&lt;/p&gt;
+&lt;pre class=&quot;line-numbers</summary>
+        
+      
+    
+    
+    
+    <category term="git" scheme="https://zhuxiongxian.cc/categories/git/"/>
+    
+    
+    <category term="git" scheme="https://zhuxiongxian.cc/tags/git/"/>
+    
+    <category term="ssh" scheme="https://zhuxiongxian.cc/tags/ssh/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>基于docker环境搭建ELK日志分析系统</title>
+    <link href="https://zhuxiongxian.cc/2021/03/02/docker-elk/"/>
+    <id>https://zhuxiongxian.cc/2021/03/02/docker-elk/</id>
+    <published>2021-03-02T02:41:33.000Z</published>
+    <updated>2021-03-02T02:41:33.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;1-架构&quot;&gt;&lt;a href=&quot;#1-架构&quot; class=&quot;headerlink&quot; title=&quot;1. 架构&quot;&gt;&lt;/a&gt;1. 架构&lt;/h4&gt;&lt;p&gt;日志统计分析系统采用架构：&lt;/p&gt;
+&lt;pre class=&quot;line-numbers</summary>
+        
+      
+    
+    
+    
+    <category term="docker" scheme="https://zhuxiongxian.cc/categories/docker/"/>
+    
+    
+    <category term="docker" scheme="https://zhuxiongxian.cc/tags/docker/"/>
+    
+    <category term="elasticsearch" scheme="https://zhuxiongxian.cc/tags/elasticsearch/"/>
+    
+    <category term="ELK" scheme="https://zhuxiongxian.cc/tags/ELK/"/>
+    
+    <category term="kibana" scheme="https://zhuxiongxian.cc/tags/kibana/"/>
+    
+    <category term="logstash" scheme="https://zhuxiongxian.cc/tags/logstash/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>mysql5.7安装密码校验插件validate_password</title>
+    <link href="https://zhuxiongxian.cc/2021/02/28/mysql5-7-install-password-verification-plug-in-validate-password/"/>
+    <id>https://zhuxiongxian.cc/2021/02/28/mysql5-7-install-password-verification-plug-in-validate-password/</id>
+    <published>2021-02-28T08:16:35.000Z</published>
+    <updated>2021-02-28T08:16:35.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;1-查看密码校验插件validate-password是否启用&quot;&gt;&lt;a href=&quot;#1-查看密码校验插件validate-password是否启用&quot; class=&quot;headerlink&quot; title=&quot;1.</summary>
+        
+      
+    
+    
+    
+    <category term="mysql" scheme="https://zhuxiongxian.cc/categories/mysql/"/>
+    
+    
+    <category term="mysql" scheme="https://zhuxiongxian.cc/tags/mysql/"/>
+    
+    <category term="插件" scheme="https://zhuxiongxian.cc/tags/%E6%8F%92%E4%BB%B6/"/>
+    
+    <category term="validate_password" scheme="https://zhuxiongxian.cc/tags/validate-password/"/>
+    
+    <category term="密码" scheme="https://zhuxiongxian.cc/tags/%E5%AF%86%E7%A0%81/"/>
+    
+    <category term="复杂度" scheme="https://zhuxiongxian.cc/tags/%E5%A4%8D%E6%9D%82%E5%BA%A6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>docker命令</title>
+    <link href="https://zhuxiongxian.cc/2020/05/11/docker-commands/"/>
+    <id>https://zhuxiongxian.cc/2020/05/11/docker-commands/</id>
+    <published>2020-05-11T02:06:09.000Z</published>
+    <updated>2020-05-11T02:06:09.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;1-docker信息&quot;&gt;&lt;a href=&quot;#1-docker信息&quot; class=&quot;headerlink&quot; title=&quot;1. docker信息&quot;&gt;&lt;/a&gt;1. docker信息&lt;/h4&gt;&lt;pre class=&quot;line-numbers</summary>
+        
+      
+    
+    
+    
+    <category term="docker" scheme="https://zhuxiongxian.cc/categories/docker/"/>
+    
+    
+    <category term="docker" scheme="https://zhuxiongxian.cc/tags/docker/"/>
+    
+    <category term="命令" scheme="https://zhuxiongxian.cc/tags/%E5%91%BD%E4%BB%A4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>docker的安装</title>
+    <link href="https://zhuxiongxian.cc/2020/05/11/installation-of-docker/"/>
+    <id>https://zhuxiongxian.cc/2020/05/11/installation-of-docker/</id>
+    <published>2020-05-11T01:50:25.000Z</published>
+    <updated>2020-05-11T01:50:25.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;1-linux下安装docker&quot;&gt;&lt;a href=&quot;#1-linux下安装docker&quot; class=&quot;headerlink&quot; title=&quot;1. linux下安装docker&quot;&gt;&lt;/a&gt;1. linux下安装docker&lt;/h4&gt;&lt;h4</summary>
+        
+      
+    
+    
+    
+    <category term="docker" scheme="https://zhuxiongxian.cc/categories/docker/"/>
+    
+    
+    <category term="docker" scheme="https://zhuxiongxian.cc/tags/docker/"/>
+    
+    <category term="安装" scheme="https://zhuxiongxian.cc/tags/%E5%AE%89%E8%A3%85/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>解决macos下安装m2crypto报SWIG的错</title>
+    <link href="https://zhuxiongxian.cc/2020/03/06/install-m2crypto-on-macosx/"/>
+    <id>https://zhuxiongxian.cc/2020/03/06/install-m2crypto-on-macosx/</id>
+    <published>2020-03-06T06:25:39.000Z</published>
+    <updated>2020-03-06T06:25:39.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;1-使用pipenv或pip在虚拟环境安装m2crypto报错&quot;&gt;&lt;a href=&quot;#1-使用pipenv或pip在虚拟环境安装m2crypto报错&quot; class=&quot;headerlink&quot; title=&quot;1.</summary>
+        
+      
+    
+    
+    
+    <category term="python" scheme="https://zhuxiongxian.cc/categories/python/"/>
+    
+    
+    <category term="python" scheme="https://zhuxiongxian.cc/tags/python/"/>
+    
+    <category term="pip" scheme="https://zhuxiongxian.cc/tags/pip/"/>
+    
+    <category term="mac" scheme="https://zhuxiongxian.cc/tags/mac/"/>
+    
+    <category term="pipenv" scheme="https://zhuxiongxian.cc/tags/pipenv/"/>
+    
+    <category term="m2crypto" scheme="https://zhuxiongxian.cc/tags/m2crypto/"/>
+    
+    <category term="swig" scheme="https://zhuxiongxian.cc/tags/swig/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>mysql5.7.x编码设置为utf8mb4</title>
+    <link href="https://zhuxiongxian.cc/2020/02/12/mysql5-7-x-encoding-is-set-to-utf8mb4/"/>
+    <id>https://zhuxiongxian.cc/2020/02/12/mysql5-7-x-encoding-is-set-to-utf8mb4/</id>
+    <published>2020-02-12T11:33:54.000Z</published>
+    <updated>2020-02-12T11:33:54.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;1-临时设置编码-重新进入mysql-shell后失效&quot;&gt;&lt;a href=&quot;#1-临时设置编码-重新进入mysql-shell后失效&quot; class=&quot;headerlink&quot; title=&quot;1.  临时设置编码(重新进入mysql</summary>
+        
+      
+    
+    
+    
+    <category term="git" scheme="https://zhuxiongxian.cc/categories/git/"/>
+    
+    
+    <category term="mysql" scheme="https://zhuxiongxian.cc/tags/mysql/"/>
+    
+    <category term="编码" scheme="https://zhuxiongxian.cc/tags/%E7%BC%96%E7%A0%81/"/>
+    
+    <category term="utfmb4" scheme="https://zhuxiongxian.cc/tags/utfmb4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>mac os x从源码编译安装python3.8</title>
+    <link href="https://zhuxiongxian.cc/2019/10/15/install-python3-8-from-source-on-macosx/"/>
+    <id>https://zhuxiongxian.cc/2019/10/15/install-python3-8-from-source-on-macosx/</id>
+    <published>2019-10-15T03:25:57.000Z</published>
+    <updated>2019-10-15T03:25:57.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;1-下载并解压python3-8源码包&quot;&gt;&lt;a href=&quot;#1-下载并解压python3-8源码包&quot; class=&quot;headerlink&quot; title=&quot;1. 下载并解压python3.8源码包&quot;&gt;&lt;/a&gt;1.</summary>
+        
+      
+    
+    
+    
+    <category term="python" scheme="https://zhuxiongxian.cc/categories/python/"/>
+    
+    
+    <category term="python" scheme="https://zhuxiongxian.cc/tags/python/"/>
+    
+    <category term="mac" scheme="https://zhuxiongxian.cc/tags/mac/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>postgresql命令</title>
+    <link href="https://zhuxiongxian.cc/2019/08/26/postgresql-commands/"/>
+    <id>https://zhuxiongxian.cc/2019/08/26/postgresql-commands/</id>
+    <published>2019-08-26T02:43:21.000Z</published>
+    <updated>2019-08-26T02:43:21.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;1-postgresql常用命令&quot;&gt;&lt;a href=&quot;#1-postgresql常用命令&quot; class=&quot;headerlink&quot; title=&quot;1. postgresql常用命令&quot;&gt;&lt;/a&gt;1.</summary>
+        
+      
+    
+    
+    
+    <category term="postgresql" scheme="https://zhuxiongxian.cc/categories/postgresql/"/>
+    
+    
+    <category term="数据库" scheme="https://zhuxiongxian.cc/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    <category term="postgresql" scheme="https://zhuxiongxian.cc/tags/postgresql/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>mac os x sublime text 3安装ctags插件实现代码跳转</title>
+    <link href="https://zhuxiongxian.cc/2019/05/21/Mac-OS-X-sublime-text-3-installs-ctags-plug-in-to-achieve-code-jump/"/>
+    <id>https://zhuxiongxian.cc/2019/05/21/Mac-OS-X-sublime-text-3-installs-ctags-plug-in-to-achieve-code-jump/</id>
+    <published>2019-05-21T02:41:52.000Z</published>
+    <updated>2019-05-21T02:41:52.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;ctags是一款实现代码跳转的插件，可以提高查看代码的效率.&lt;/p&gt;
+&lt;h4 id=&quot;1-st3安装ctags插件&quot;&gt;&lt;a href=&quot;#1-st3安装ctags插件&quot; class=&quot;headerlink&quot; title=&quot;1. st3安装ctags插件&quot;&gt;&lt;/a&gt;1.</summary>
+        
+      
+    
+    
+    
+    <category term="sublimetext3" scheme="https://zhuxiongxian.cc/categories/sublimetext3/"/>
+    
+    
+    <category term="mac" scheme="https://zhuxiongxian.cc/tags/mac/"/>
+    
+    <category term="sublime text 3" scheme="https://zhuxiongxian.cc/tags/sublime-text-3/"/>
+    
+    <category term="ctags" scheme="https://zhuxiongxian.cc/tags/ctags/"/>
+    
+    <category term="代码跳转" scheme="https://zhuxiongxian.cc/tags/%E4%BB%A3%E7%A0%81%E8%B7%B3%E8%BD%AC/"/>
+    
+    <category term="插件" scheme="https://zhuxiongxian.cc/tags/%E6%8F%92%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>linux下安装postgresql</title>
+    <link href="https://zhuxiongxian.cc/2019/02/26/install-postgresql-on-linux/"/>
+    <id>https://zhuxiongxian.cc/2019/02/26/install-postgresql-on-linux/</id>
+    <published>2019-02-26T08:58:29.000Z</published>
+    <updated>2019-02-26T08:58:29.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;postgresql官方下载: &lt;a href=&quot;https://www.postgresql.org/download/&quot;&gt;https://www.postgresql.org/download/&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&quot;1-for-ubuntu&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="postgresql" scheme="https://zhuxiongxian.cc/categories/postgresql/"/>
+    
+    
+    <category term="linux" scheme="https://zhuxiongxian.cc/tags/linux/"/>
+    
+    <category term="数据库" scheme="https://zhuxiongxian.cc/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    <category term="postgresql" scheme="https://zhuxiongxian.cc/tags/postgresql/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>程序猿(媛)养成记</title>
+    <link href="https://zhuxiongxian.cc/2019/01/11/how-to-be-a-nb-coder/"/>
+    <id>https://zhuxiongxian.cc/2019/01/11/how-to-be-a-nb-coder/</id>
+    <published>2019-01-11T02:25:46.000Z</published>
+    <updated>2019-01-11T02:25:46.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;行为习惯Behavior&quot;&gt;&lt;a href=&quot;#行为习惯Behavior&quot; class=&quot;headerlink&quot; title=&quot;行为习惯Behavior&quot;&gt;&lt;/a&gt;行为习惯Behavior&lt;/h4&gt;&lt;h4</summary>
+        
+      
+    
+    
+    
+    <category term="杂谈" scheme="https://zhuxiongxian.cc/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    
+    <category term="程序员" scheme="https://zhuxiongxian.cc/tags/%E7%A8%8B%E5%BA%8F%E5%91%98/"/>
+    
+    <category term="码农" scheme="https://zhuxiongxian.cc/tags/%E7%A0%81%E5%86%9C/"/>
+    
+    <category term="养成记" scheme="https://zhuxiongxian.cc/tags/%E5%85%BB%E6%88%90%E8%AE%B0/"/>
+    
+    <category term="技术栈" scheme="https://zhuxiongxian.cc/tags/%E6%8A%80%E6%9C%AF%E6%A0%88/"/>
+    
+    <category term="学习" scheme="https://zhuxiongxian.cc/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>linux下安装elasticsearch</title>
+    <link href="https://zhuxiongxian.cc/2018/12/24/install-elasticsearch-on-linux/"/>
+    <id>https://zhuxiongxian.cc/2018/12/24/install-elasticsearch-on-linux/</id>
+    <published>2018-12-24T08:36:17.000Z</published>
+    <updated>2018-12-24T08:36:17.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;1-安装JDK&quot;&gt;&lt;a href=&quot;#1-安装JDK&quot; class=&quot;headerlink&quot; title=&quot;1. 安装JDK&quot;&gt;&lt;/a&gt;1. 安装JDK&lt;/h4&gt;&lt;p&gt;jdk8下载地址：&lt;/p&gt;
+&lt;p&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="linux" scheme="https://zhuxiongxian.cc/categories/linux/"/>
+    
+    
+    <category term="linux" scheme="https://zhuxiongxian.cc/tags/linux/"/>
+    
+    <category term="elasticsearch" scheme="https://zhuxiongxian.cc/tags/elasticsearch/"/>
+    
+    <category term="搜索" scheme="https://zhuxiongxian.cc/tags/%E6%90%9C%E7%B4%A2/"/>
+    
+    <category term="elk" scheme="https://zhuxiongxian.cc/tags/elk/"/>
+    
+    <category term="jdk" scheme="https://zhuxiongxian.cc/tags/jdk/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何在github提交PR(Pull Request)</title>
+    <link href="https://zhuxiongxian.cc/2018/12/13/how-to-submit-PR-in-github/"/>
+    <id>https://zhuxiongxian.cc/2018/12/13/how-to-submit-PR-in-github/</id>
+    <published>2018-12-13T01:56:54.000Z</published>
+    <updated>2018-12-13T01:56:54.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;拿本人在github上开源的&lt;a href=&quot;https://github.com/xiongxianzhu/cookiecutter-django&quot;&gt;cookiecutter-django&lt;/a&gt;为例。&lt;/p&gt;
+&lt;h4 id=&quot;1-fork-repository&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="git" scheme="https://zhuxiongxian.cc/categories/git/"/>
+    
+    
+    <category term="git" scheme="https://zhuxiongxian.cc/tags/git/"/>
+    
+    <category term="PR" scheme="https://zhuxiongxian.cc/tags/PR/"/>
+    
+    <category term="github" scheme="https://zhuxiongxian.cc/tags/github/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ubuntu16.04安装mysql5.7.24</title>
+    <link href="https://zhuxiongxian.cc/2018/12/11/install-mysql5-7-24-on-ubuntu16-04/"/>
+    <id>https://zhuxiongxian.cc/2018/12/11/install-mysql5-7-24-on-ubuntu16-04/</id>
+    <published>2018-12-11T02:43:25.000Z</published>
+    <updated>2018-12-11T02:43:25.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;参考本人CSDN博客上写的文章： &lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="ubuntu" scheme="https://zhuxiongxian.cc/categories/ubuntu/"/>
+    
+    
+    <category term="linux" scheme="https://zhuxiongxian.cc/tags/linux/"/>
+    
+    <category term="ubuntu" scheme="https://zhuxiongxian.cc/tags/ubuntu/"/>
+    
+    <category term="mysql" scheme="https://zhuxiongxian.cc/tags/mysql/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>linux安装nodejs,npm,cnpm,bower,hexo</title>
+    <link href="https://zhuxiongxian.cc/2018/12/05/install-nodejs-npm-cnpm-bower-hexo-on-linux/"/>
+    <id>https://zhuxiongxian.cc/2018/12/05/install-nodejs-npm-cnpm-bower-hexo-on-linux/</id>
+    <published>2018-12-05T07:35:56.000Z</published>
+    <updated>2018-12-05T07:35:56.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;nodejs长期LTS稳定版： &lt;a href=&quot;https://nodejs.org/en/download/&quot;&gt;https://nodejs.org/en/download/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;nodejs最新版： &lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="linux" scheme="https://zhuxiongxian.cc/categories/linux/"/>
+    
+    
+    <category term="nodejs" scheme="https://zhuxiongxian.cc/tags/nodejs/"/>
+    
+    <category term="npm" scheme="https://zhuxiongxian.cc/tags/npm/"/>
+    
+    <category term="bower" scheme="https://zhuxiongxian.cc/tags/bower/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>linux源码编译安装nginx1.15.7</title>
+    <link href="https://zhuxiongxian.cc/2018/12/05/install-nginx1-15-7-from-source-on-linux/"/>
+    <id>https://zhuxiongxian.cc/2018/12/05/install-nginx1-15-7-from-source-on-linux/</id>
+    <published>2018-12-05T05:41:23.000Z</published>
+    <updated>2018-12-05T05:41:23.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;1-源码包准备&quot;&gt;&lt;a href=&quot;#1-源码包准备&quot; class=&quot;headerlink&quot; title=&quot;1. 源码包准备&quot;&gt;&lt;/a&gt;1. 源码包准备&lt;/h4&gt;&lt;p&gt;安装nginx所需工具源码包下载地址：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;nginx&lt;/code&gt;:</summary>
+        
+      
+    
+    
+    
+    <category term="nginx" scheme="https://zhuxiongxian.cc/categories/nginx/"/>
+    
+    
+    <category term="linux" scheme="https://zhuxiongxian.cc/tags/linux/"/>
+    
+    <category term="运维" scheme="https://zhuxiongxian.cc/tags/%E8%BF%90%E7%BB%B4/"/>
+    
+    <category term="nginx" scheme="https://zhuxiongxian.cc/tags/nginx/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>linux源码安装python3.6.7</title>
+    <link href="https://zhuxiongxian.cc/2018/12/03/install-python3-6-7-from-source-on-linux/"/>
+    <id>https://zhuxiongxian.cc/2018/12/03/install-python3-6-7-from-source-on-linux/</id>
+    <published>2018-12-03T02:47:56.000Z</published>
+    <updated>2018-12-03T02:47:56.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;源码安装python3-6-7&quot;&gt;&lt;a href=&quot;#源码安装python3-6-7&quot; class=&quot;headerlink&quot; title=&quot;源码安装python3.6.7&quot;&gt;&lt;/a&gt;源码安装python3.6.7&lt;/h4&gt;&lt;p&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="python" scheme="https://zhuxiongxian.cc/categories/python/"/>
+    
+    
+    <category term="linux" scheme="https://zhuxiongxian.cc/tags/linux/"/>
+    
+    <category term="运维" scheme="https://zhuxiongxian.cc/tags/%E8%BF%90%E7%BB%B4/"/>
+    
+    <category term="python3" scheme="https://zhuxiongxian.cc/tags/python3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>linux下源码安装redis</title>
+    <link href="https://zhuxiongxian.cc/2018/06/22/install-redis-on-linux/"/>
+    <id>https://zhuxiongxian.cc/2018/06/22/install-redis-on-linux/</id>
+    <published>2018-06-22T03:25:26.000Z</published>
+    <updated>2018-06-22T03:25:26.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;redis官方下载网址： &lt;a href=&quot;https://redis.io/download&quot;&gt;https://redis.io/download&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;安装目录： &lt;code&gt;/usr/local/bin/&lt;/code&gt;&lt;br&gt;配置文件路径：</summary>
+        
+      
+    
+    
+    
+    <category term="缓存" scheme="https://zhuxiongxian.cc/categories/%E7%BC%93%E5%AD%98/"/>
+    
+    
+    <category term="linux" scheme="https://zhuxiongxian.cc/tags/linux/"/>
+    
+    <category term="centos" scheme="https://zhuxiongxian.cc/tags/centos/"/>
+    
+    <category term="redis" scheme="https://zhuxiongxian.cc/tags/redis/"/>
+    
+    <category term="缓存" scheme="https://zhuxiongxian.cc/tags/%E7%BC%93%E5%AD%98/"/>
+    
+    <category term="ubuntu" scheme="https://zhuxiongxian.cc/tags/ubuntu/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ubuntu16.04.4下安装mongodb的图形管理工具robomongo</title>
+    <link href="https://zhuxiongxian.cc/2018/05/30/install-robomongo-on-ubuntu16-04-4/"/>
+    <id>https://zhuxiongxian.cc/2018/05/30/install-robomongo-on-ubuntu16-04-4/</id>
+    <published>2018-05-30T03:37:50.000Z</published>
+    <updated>2018-05-30T03:37:50.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;1-官网下载&quot;&gt;&lt;a href=&quot;#1-官网下载&quot; class=&quot;headerlink&quot; title=&quot;1. 官网下载&quot;&gt;&lt;/a&gt;1. 官网下载&lt;/h4&gt;&lt;p&gt;从官网 &lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="mongodb" scheme="https://zhuxiongxian.cc/categories/mongodb/"/>
+    
+    
+    <category term="mongodb" scheme="https://zhuxiongxian.cc/tags/mongodb/"/>
+    
+    <category term="mongo" scheme="https://zhuxiongxian.cc/tags/mongo/"/>
+    
+    <category term="robomongo" scheme="https://zhuxiongxian.cc/tags/robomongo/"/>
+    
+    <category term="图形管理工具" scheme="https://zhuxiongxian.cc/tags/%E5%9B%BE%E5%BD%A2%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+</feed>
