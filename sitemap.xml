@@ -2,13 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://zhuxiongxian.cc/404</loc>
-    
-    <lastmod>2021-03-05</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://zhuxiongxian.cc/2021/03/05/git-ssh-github/</loc>
     
     <lastmod>2021-03-05</lastmod>
@@ -31,6 +24,13 @@
   
   <url>
     <loc>https://zhuxiongxian.cc/404/</loc>
+    
+    <lastmod>2021-02-19</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://zhuxiongxian.cc/404</loc>
     
     <lastmod>2021-02-19</lastmod>
     
