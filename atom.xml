@@ -6,7 +6,7 @@
   <link href="https://zhuxiongxian.cc/atom.xml" rel="self"/>
   
   <link href="https://zhuxiongxian.cc/"/>
-  <updated>2021-03-02T02:41:33.000Z</updated>
+  <updated>2021-03-10T06:40:15.000Z</updated>
   <id>https://zhuxiongxian.cc/</id>
   
   <author>
@@ -15,6 +15,60 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>docker国内源配置加速docker pull</title>
+    <link href="https://zhuxiongxian.cc/2021/03/10/docker-registry-mirrors-config/"/>
+    <id>https://zhuxiongxian.cc/2021/03/10/docker-registry-mirrors-config/</id>
+    <published>2021-03-10T06:40:15.000Z</published>
+    <updated>2021-03-10T06:40:15.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;1-docker国内源&quot;&gt;&lt;a href=&quot;#1-docker国内源&quot; class=&quot;headerlink&quot; title=&quot;1. docker国内源&quot;&gt;&lt;/a&gt;1. docker国内源&lt;/h4&gt;&lt;pre class=&quot;line-numbers</summary>
+        
+      
+    
+    
+    
+    <category term="docker" scheme="https://zhuxiongxian.cc/categories/docker/"/>
+    
+    
+    <category term="docker" scheme="https://zhuxiongxian.cc/tags/docker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用gitlab-ce搭建git服务</title>
+    <link href="https://zhuxiongxian.cc/2021/03/10/using-gitlab-ce-to-build-git-service/"/>
+    <id>https://zhuxiongxian.cc/2021/03/10/using-gitlab-ce-to-build-git-service/</id>
+    <published>2021-03-10T06:30:24.000Z</published>
+    <updated>2021-03-10T06:30:24.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;使用gitlab-ce搭建git服务&quot;&gt;&lt;a href=&quot;#使用gitlab-ce搭建git服务&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="git" scheme="https://zhuxiongxian.cc/categories/git/"/>
+    
+    
+    <category term="docker" scheme="https://zhuxiongxian.cc/tags/docker/"/>
+    
+    <category term="git" scheme="https://zhuxiongxian.cc/tags/git/"/>
+    
+    <category term="gitlab" scheme="https://zhuxiongxian.cc/tags/gitlab/"/>
+    
+  </entry>
   
   <entry>
     <title>基于docker环境搭建ELK日志分析系统</title>
@@ -122,7 +176,7 @@
       
         
         
-    <summary type="html">&lt;h4 id=&quot;1-linux下安装docker&quot;&gt;&lt;a href=&quot;#1-linux下安装docker&quot; class=&quot;headerlink&quot; title=&quot;1. linux下安装docker&quot;&gt;&lt;/a&gt;1. linux下安装docker&lt;/h4&gt;&lt;h4</summary>
+    <summary type="html">&lt;h4 id=&quot;1-linux下安装docker&quot;&gt;&lt;a href=&quot;#1-linux下安装docker&quot; class=&quot;headerlink&quot; title=&quot;1. linux下安装docker&quot;&gt;&lt;/a&gt;1. linux下安装docker&lt;/h4&gt;&lt;p&gt;&lt;code&gt;for</summary>
         
       
     
@@ -565,64 +619,6 @@
     <category term="缓存" scheme="https://zhuxiongxian.cc/tags/%E7%BC%93%E5%AD%98/"/>
     
     <category term="ubuntu" scheme="https://zhuxiongxian.cc/tags/ubuntu/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ubuntu16.04.4下安装mongodb的图形管理工具robomongo</title>
-    <link href="https://zhuxiongxian.cc/2018/05/30/install-robomongo-on-ubuntu16-04-4/"/>
-    <id>https://zhuxiongxian.cc/2018/05/30/install-robomongo-on-ubuntu16-04-4/</id>
-    <published>2018-05-30T03:37:50.000Z</published>
-    <updated>2018-05-30T03:37:50.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h4 id=&quot;1-官网下载&quot;&gt;&lt;a href=&quot;#1-官网下载&quot; class=&quot;headerlink&quot; title=&quot;1. 官网下载&quot;&gt;&lt;/a&gt;1. 官网下载&lt;/h4&gt;&lt;p&gt;从官网 &lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="mongodb" scheme="https://zhuxiongxian.cc/categories/mongodb/"/>
-    
-    
-    <category term="mongodb" scheme="https://zhuxiongxian.cc/tags/mongodb/"/>
-    
-    <category term="mongo" scheme="https://zhuxiongxian.cc/tags/mongo/"/>
-    
-    <category term="robomongo" scheme="https://zhuxiongxian.cc/tags/robomongo/"/>
-    
-    <category term="图形管理工具" scheme="https://zhuxiongxian.cc/tags/%E5%9B%BE%E5%BD%A2%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>git常用命令</title>
-    <link href="https://zhuxiongxian.cc/2018/05/25/git-commands/"/>
-    <id>https://zhuxiongxian.cc/2018/05/25/git-commands/</id>
-    <published>2018-05-25T02:35:55.000Z</published>
-    <updated>2018-05-25T02:35:55.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h4 id=&quot;1-初始化git本地库&quot;&gt;&lt;a href=&quot;#1-初始化git本地库&quot; class=&quot;headerlink&quot; title=&quot;1. 初始化git本地库&quot;&gt;&lt;/a&gt;1. 初始化git本地库&lt;/h4&gt;&lt;pre class=&quot;line-numbers</summary>
-        
-      
-    
-    
-    
-    <category term="git" scheme="https://zhuxiongxian.cc/categories/git/"/>
-    
-    
-    <category term="git" scheme="https://zhuxiongxian.cc/tags/git/"/>
-    
-    <category term="ssh-keygen" scheme="https://zhuxiongxian.cc/tags/ssh-keygen/"/>
     
   </entry>
   

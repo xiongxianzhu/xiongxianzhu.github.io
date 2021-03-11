@@ -1,3 +1,5 @@
+https://zhuxiongxian.cc/2021/03/10/docker-registry-mirrors-config/
+https://zhuxiongxian.cc/2021/03/10/using-gitlab-ce-to-build-git-service/
 https://zhuxiongxian.cc/2021/03/02/docker-elk/
 https://zhuxiongxian.cc/2021/02/28/mysql5-7-install-password-verification-plug-in-validate-password/
 https://zhuxiongxian.cc/2020/05/11/docker-commands/

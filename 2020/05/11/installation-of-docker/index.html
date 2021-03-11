@@ -412,7 +412,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    13
+                    140
                 </div>
                 
 
@@ -432,7 +432,36 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h4 id="1-linux下安装docker"><a href="#1-linux下安装docker" class="headerlink" title="1. linux下安装docker"></a>1. linux下安装docker</h4><h4 id="2-mac下安装docker"><a href="#2-mac下安装docker" class="headerlink" title="2. mac下安装docker"></a>2. mac下安装docker</h4><h4 id="3-windwos下安装docker"><a href="#3-windwos下安装docker" class="headerlink" title="3. windwos下安装docker"></a>3. windwos下安装docker</h4>
+                <h4 id="1-linux下安装docker"><a href="#1-linux下安装docker" class="headerlink" title="1. linux下安装docker"></a>1. linux下安装docker</h4><p><code>for centos</code>:</p>
+<p><a href="https://docs.docker.com/engine/install/centos/">https://docs.docker.com/engine/install/centos/</a></p>
+<p>卸载旧版本docker:</p>
+<pre class="line-numbers language-none"><code class="language-none">$ sudo yum remove docker \
+                  docker-client \
+                  docker-client-latest \
+                  docker-common \
+                  docker-latest \
+                  docker-latest-logrotate \
+                  docker-logrotate \
+                  docker-engine<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>使用docker仓库进行安装:</p>
+<pre class="line-numbers language-none"><code class="language-none">$ sudo yum install -y yum-utils<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>官方源：</p>
+<pre class="line-numbers language-none"><code class="language-none">$ sudo yum-config-manager \
+    --add-repo \
+    https://download.docker.com/linux/centos/docker-ce.repo<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>阿里云docker源：</p>
+<pre class="line-numbers language-none"><code class="language-none">$ sudo yum-config-manager \
+    --add-repo \
+    http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>安装<code>docker engine</code>:</p>
+<pre class="line-numbers language-none"><code class="language-none">$ sudo yum install docker-ce docker-ce-cli containerd.io<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>开启docker服务：</p>
+<pre class="line-numbers language-none"><code class="language-none">$ sudo systemctl start docker<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>卸载<code>docker engine</code>：</p>
+<pre class="line-numbers language-none"><code class="language-none">$ sudo yum remove docker-ce docker-ce-cli containerd.io<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+
+<h4 id="2-mac下安装docker"><a href="#2-mac下安装docker" class="headerlink" title="2. mac下安装docker"></a>2. mac下安装docker</h4><h4 id="3-windwos下安装docker"><a href="#3-windwos下安装docker" class="headerlink" title="3. windwos下安装docker"></a>3. windwos下安装docker</h4>
                 
             </div>
             <hr/>
@@ -888,7 +917,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">23.9k</span>&nbsp;字
+                class="white-color">24.6k</span>&nbsp;字
             
             
             
