@@ -17,7 +17,7 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>docker国内源配置加速docker pull</title>
+    <title>配置docker国内镜像源加速获取docker镜像</title>
     <link href="https://zhuxiongxian.cc/2021/03/10/docker-registry-mirrors-config/"/>
     <id>https://zhuxiongxian.cc/2021/03/10/docker-registry-mirrors-config/</id>
     <published>2021-03-10T06:40:15.000Z</published>
@@ -28,7 +28,7 @@
       
         
         
-    <summary type="html">&lt;h4 id=&quot;1-docker国内源&quot;&gt;&lt;a href=&quot;#1-docker国内源&quot; class=&quot;headerlink&quot; title=&quot;1. docker国内源&quot;&gt;&lt;/a&gt;1. docker国内源&lt;/h4&gt;&lt;pre class=&quot;line-numbers</summary>
+    <summary type="html">&lt;h4 id=&quot;1-docker国内镜像源&quot;&gt;&lt;a href=&quot;#1-docker国内镜像源&quot; class=&quot;headerlink&quot; title=&quot;1. docker国内镜像源&quot;&gt;&lt;/a&gt;1. docker国内镜像源&lt;/h4&gt;&lt;pre class=&quot;line-numbers</summary>
         
       
     
