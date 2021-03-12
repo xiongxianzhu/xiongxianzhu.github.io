@@ -408,7 +408,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    250
+                    262
                 </div>
                 
 
@@ -455,7 +455,7 @@ vim /etc/docker/daemon.json<span aria-hidden="true" class="line-numbers-rows"><s
 <pre class="line-numbers language-none"><code class="language-none">sudo mkdir -p /etc/docker
 sudo tee /etc/docker/daemon.json &lt;&lt;-'EOF'
 {
-  "registry-mirrors": ["https://3ynspdyp.mirror.aliyuncs.com"]
+  "registry-mirrors": ["https://&lt;阿里云给你分配的随机码&gt;.mirror.aliyuncs.com"]
 }
 EOF<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h4 id="3-重启docker服务生效"><a href="#3-重启docker服务生效" class="headerlink" title="3. 重启docker服务生效"></a>3. 重启docker服务生效</h4><p>重启docker服务使配置生效：</p>
