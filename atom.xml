@@ -6,7 +6,7 @@
   <link href="https://zhuxiongxian.cc/atom.xml" rel="self"/>
   
   <link href="https://zhuxiongxian.cc/"/>
-  <updated>2021-03-10T06:40:15.000Z</updated>
+  <updated>2021-03-18T03:15:11.000Z</updated>
   <id>https://zhuxiongxian.cc/</id>
   
   <author>
@@ -15,6 +15,62 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>mac下安装go开发环境</title>
+    <link href="https://zhuxiongxian.cc/2021/03/18/install-go-on-mac/"/>
+    <id>https://zhuxiongxian.cc/2021/03/18/install-go-on-mac/</id>
+    <published>2021-03-18T03:15:11.000Z</published>
+    <updated>2021-03-18T03:15:11.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;1-下载go安装包&quot;&gt;&lt;a href=&quot;#1-下载go安装包&quot; class=&quot;headerlink&quot; title=&quot;1. 下载go安装包&quot;&gt;&lt;/a&gt;1. 下载go安装包&lt;/h4&gt;&lt;p&gt;官网下载go安装包： &lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="go" scheme="https://zhuxiongxian.cc/categories/go/"/>
+    
+    
+    <category term="mac" scheme="https://zhuxiongxian.cc/tags/mac/"/>
+    
+    <category term="go" scheme="https://zhuxiongxian.cc/tags/go/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用vscode作为开发利器</title>
+    <link href="https://zhuxiongxian.cc/2021/03/17/using-vscode/"/>
+    <id>https://zhuxiongxian.cc/2021/03/17/using-vscode/</id>
+    <published>2021-03-17T05:00:18.000Z</published>
+    <updated>2021-03-17T05:00:18.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;1-下载并安装vscode&quot;&gt;&lt;a href=&quot;#1-下载并安装vscode&quot; class=&quot;headerlink&quot; title=&quot;1. 下载并安装vscode&quot;&gt;&lt;/a&gt;1. 下载并安装vscode&lt;/h4&gt;&lt;h4 id=&quot;2-配置主题&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="开发工具" scheme="https://zhuxiongxian.cc/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
+    
+    
+    <category term="mac" scheme="https://zhuxiongxian.cc/tags/mac/"/>
+    
+    <category term="vscode" scheme="https://zhuxiongxian.cc/tags/vscode/"/>
+    
+    <category term="开发工具" scheme="https://zhuxiongxian.cc/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
   
   <entry>
     <title>配置docker国内镜像源加速获取docker镜像</title>
@@ -557,69 +613,6 @@
     <category term="运维" scheme="https://zhuxiongxian.cc/tags/%E8%BF%90%E7%BB%B4/"/>
     
     <category term="nginx" scheme="https://zhuxiongxian.cc/tags/nginx/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>linux源码安装python3.6.7</title>
-    <link href="https://zhuxiongxian.cc/2018/12/03/install-python3-6-7-from-source-on-linux/"/>
-    <id>https://zhuxiongxian.cc/2018/12/03/install-python3-6-7-from-source-on-linux/</id>
-    <published>2018-12-03T02:47:56.000Z</published>
-    <updated>2018-12-03T02:47:56.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h4 id=&quot;源码安装python3-6-7&quot;&gt;&lt;a href=&quot;#源码安装python3-6-7&quot; class=&quot;headerlink&quot; title=&quot;源码安装python3.6.7&quot;&gt;&lt;/a&gt;源码安装python3.6.7&lt;/h4&gt;&lt;p&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="python" scheme="https://zhuxiongxian.cc/categories/python/"/>
-    
-    
-    <category term="linux" scheme="https://zhuxiongxian.cc/tags/linux/"/>
-    
-    <category term="运维" scheme="https://zhuxiongxian.cc/tags/%E8%BF%90%E7%BB%B4/"/>
-    
-    <category term="python3" scheme="https://zhuxiongxian.cc/tags/python3/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>linux下源码安装redis</title>
-    <link href="https://zhuxiongxian.cc/2018/06/22/install-redis-on-linux/"/>
-    <id>https://zhuxiongxian.cc/2018/06/22/install-redis-on-linux/</id>
-    <published>2018-06-22T03:25:26.000Z</published>
-    <updated>2018-06-22T03:25:26.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;redis官方下载网址： &lt;a href=&quot;https://redis.io/download&quot;&gt;https://redis.io/download&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;安装目录： &lt;code&gt;/usr/local/bin/&lt;/code&gt;&lt;br&gt;配置文件路径：</summary>
-        
-      
-    
-    
-    
-    <category term="缓存" scheme="https://zhuxiongxian.cc/categories/%E7%BC%93%E5%AD%98/"/>
-    
-    
-    <category term="linux" scheme="https://zhuxiongxian.cc/tags/linux/"/>
-    
-    <category term="centos" scheme="https://zhuxiongxian.cc/tags/centos/"/>
-    
-    <category term="redis" scheme="https://zhuxiongxian.cc/tags/redis/"/>
-    
-    <category term="缓存" scheme="https://zhuxiongxian.cc/tags/%E7%BC%93%E5%AD%98/"/>
-    
-    <category term="ubuntu" scheme="https://zhuxiongxian.cc/tags/ubuntu/"/>
     
   </entry>
   
