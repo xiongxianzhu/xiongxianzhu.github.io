@@ -4,6 +4,39 @@
   
     
     <entry>
+      <title>linux基本信息及监控指标获取</title>
+      <link href="2021/03/27/linux-info-stats/"/>
+      <url>2021/03/27/linux-info-stats/</url>
+      
+        <content type="html"><![CDATA[<h4 id="1-系统信息"><a href="#1-系统信息" class="headerlink" title="1. 系统信息"></a>1. 系统信息</h4><p>内核版本：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">cat</span> /proc/version<span class="token function">uname</span> -a<span class="token function">uname</span> -r<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>linux系统版本：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">uname</span> -a<span class="token function">cat</span> /etc/redhat-release<span class="token function">cat</span> /etc/issuelsb_release -a<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h4 id="2-cpu"><a href="#2-cpu" class="headerlink" title="2. cpu"></a>2. cpu</h4><p>cpu详细信息：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">cat</span> /proc/cpuinfo<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>cpu个数：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">cat</span> /proc/cpuinfo<span class="token operator">|</span> <span class="token function">grep</span> <span class="token string">"physical id"</span><span class="token operator">|</span> <span class="token function">sort</span><span class="token operator">|</span> <span class="token function">uniq</span><span class="token operator">|</span> <span class="token function">wc</span> -l<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>逻辑cpu<code>processor</code>个数：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">cat</span> /proc/cpuinfo <span class="token operator">|</span><span class="token function">grep</span> <span class="token string">"processor"</span><span class="token operator">|</span><span class="token function">wc</span> -l<span class="token function">cat</span> /proc/cpuinfo <span class="token operator">|</span><span class="token function">grep</span> <span class="token string">"processor"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><h4 id="3-内存"><a href="#3-内存" class="headerlink" title="3. 内存"></a>3. 内存</h4><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">cat</span> /proc/meminfo<span class="token function">top</span><span class="token function">free</span><span class="token function">free</span> -m<span class="token function">free</span> -g<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h4 id="4-磁盘"><a href="#4-磁盘" class="headerlink" title="4. 磁盘"></a>4. 磁盘</h4><p>磁盘使用情况统计：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">df</span> -lh<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>文件或目录的磁盘占用统计：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">du</span> -sh 文件/目录<span class="token function">du</span> -sh *<span class="token function">du</span> -sh <span class="token builtin class-name">.</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> linux </tag>
+            
+            <tag> cpu </tag>
+            
+            <tag> 内存 </tag>
+            
+            <tag> 系统版本 </tag>
+            
+            <tag> 磁盘 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>mac下安装go开发环境</title>
       <link href="2021/03/18/install-go-on-mac/"/>
       <url>2021/03/18/install-go-on-mac/</url>

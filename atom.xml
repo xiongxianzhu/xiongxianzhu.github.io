@@ -6,7 +6,7 @@
   <link href="https://zhuxiongxian.cc/atom.xml" rel="self"/>
   
   <link href="https://zhuxiongxian.cc/"/>
-  <updated>2021-03-18T03:15:11.000Z</updated>
+  <updated>2021-03-26T23:26:38.000Z</updated>
   <id>https://zhuxiongxian.cc/</id>
   
   <author>
@@ -15,6 +15,40 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>linux基本信息及监控指标获取</title>
+    <link href="https://zhuxiongxian.cc/2021/03/27/linux-info-stats/"/>
+    <id>https://zhuxiongxian.cc/2021/03/27/linux-info-stats/</id>
+    <published>2021-03-26T23:26:38.000Z</published>
+    <updated>2021-03-26T23:26:38.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;1-系统信息&quot;&gt;&lt;a href=&quot;#1-系统信息&quot; class=&quot;headerlink&quot; title=&quot;1. 系统信息&quot;&gt;&lt;/a&gt;1. 系统信息&lt;/h4&gt;&lt;p&gt;内核版本：&lt;/p&gt;
+&lt;pre class=&quot;line-numbers language-bash&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="linux" scheme="https://zhuxiongxian.cc/categories/linux/"/>
+    
+    
+    <category term="linux" scheme="https://zhuxiongxian.cc/tags/linux/"/>
+    
+    <category term="cpu" scheme="https://zhuxiongxian.cc/tags/cpu/"/>
+    
+    <category term="内存" scheme="https://zhuxiongxian.cc/tags/%E5%86%85%E5%AD%98/"/>
+    
+    <category term="系统版本" scheme="https://zhuxiongxian.cc/tags/%E7%B3%BB%E7%BB%9F%E7%89%88%E6%9C%AC/"/>
+    
+    <category term="磁盘" scheme="https://zhuxiongxian.cc/tags/%E7%A3%81%E7%9B%98/"/>
+    
+  </entry>
   
   <entry>
     <title>mac下安装go开发环境</title>
@@ -583,36 +617,6 @@
     <category term="npm" scheme="https://zhuxiongxian.cc/tags/npm/"/>
     
     <category term="bower" scheme="https://zhuxiongxian.cc/tags/bower/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>linux源码编译安装nginx1.15.7</title>
-    <link href="https://zhuxiongxian.cc/2018/12/05/install-nginx1-15-7-from-source-on-linux/"/>
-    <id>https://zhuxiongxian.cc/2018/12/05/install-nginx1-15-7-from-source-on-linux/</id>
-    <published>2018-12-05T05:41:23.000Z</published>
-    <updated>2018-12-05T05:41:23.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h4 id=&quot;1-源码包准备&quot;&gt;&lt;a href=&quot;#1-源码包准备&quot; class=&quot;headerlink&quot; title=&quot;1. 源码包准备&quot;&gt;&lt;/a&gt;1. 源码包准备&lt;/h4&gt;&lt;p&gt;安装nginx所需工具源码包下载地址：&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;nginx&lt;/code&gt;:</summary>
-        
-      
-    
-    
-    
-    <category term="nginx" scheme="https://zhuxiongxian.cc/categories/nginx/"/>
-    
-    
-    <category term="linux" scheme="https://zhuxiongxian.cc/tags/linux/"/>
-    
-    <category term="运维" scheme="https://zhuxiongxian.cc/tags/%E8%BF%90%E7%BB%B4/"/>
-    
-    <category term="nginx" scheme="https://zhuxiongxian.cc/tags/nginx/"/>
     
   </entry>
   
