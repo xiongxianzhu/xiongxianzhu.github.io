@@ -1,555 +1,640 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="zh-CN">
-
+    
 
 <head>
-    <meta charset="utf-8">
-    <meta name="keywords" content="分类: 缓存, xx, zhuxiongxian, blog, 博客, 挨踢， 官方, it">
-    <meta name="description" content="欢迎来到zhuxiongxian&#39;s blog, 我是zhuxiongxian, 这是我的挨踢博客!">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="keywords" content="xx, zhuxiongxian, blog, 博客, 挨踢， 官方, it">
+    <meta name="description" content="分类: 缓存 | xx&#39;s blog">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate.css/animate.min.css">
+    
+    <!-- 是否加载使用自带的 prismjs. -->
+    <link rel="stylesheet" href="/libs/prism/prism-tomorrow-night.css">
+    <link rel="stylesheet" type="text/css" href="/libs/prism/prism-line-numbers.css">
+    
+    
+    <!-- Material Icons -->
+    <link rel="stylesheet" type="text/css" href="/libs/materialicons/materialicons.css">
+    
+    <!-- Fontawesome Icons -->
+    <link rel="stylesheet" type="text/css" href="/libs/fontawesome/css/all.min.css">
+    <!-- aos -->
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <!-- The theme css -->
+    <link rel="stylesheet" type="text/css" href="/css/xxcoding.css">
 
+    
+    <!-- Your css -->
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    
+    <!-- 
+        
+            
+                <link rel="stylesheet" type="text/css" href="/libs/fontawesome/css/all.min.css">
+            
+        
+            
+                <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+            
+        
+            
+                <link rel="stylesheet" type="text/css" href="/libs/animate.css/animate.min.css">
+            
+        
+            
+        
+            
+                <link rel="stylesheet" type="text/css" href="/libs/prism/prism-tomorrow-night.css">
+            
+        
+            
+                <link rel="stylesheet" type="text/css" href="/libs/materialicons/materialicons.css">
+            
+        
+            
+                <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+            
+        
+            
+                <link rel="stylesheet" type="text/css" href="/libs/aplayer/APlayer.min.css">
+            
+        
+            
+                <link rel="stylesheet" type="text/css" href="/libs/tocbot/tocbot.css">
+            
+        
+            
+                <link rel="stylesheet" type="text/css" href="/libs/aplayer/Meting.min.js">
+            
+        
+            
+                <link rel="stylesheet" type="text/css" href="/css/xxcoding.css">
+            
+        
+            
+                <link rel="stylesheet" type="text/css" href="/css/my.css">
+            
+        
+     -->
+    <!-- 
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500">
+    
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Marck+Script">
+     -->
+    
+
+    <!-- Custom Head -->
+    
 
     <title>分类: 缓存 | xx&#39;s blog</title>
     <link rel="icon" type="image/png" href="/img/favicon.png">
-
-    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
-    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
-    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
-    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
-    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
-    <link rel="stylesheet" type="text/css" href="/css/matery.css">
-    <link rel="stylesheet" type="text/css" href="/css/my.css">
-
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Marck+Script' rel='stylesheet' type='text/css'>
-
     <script src="/libs/jquery/jquery.min.js"></script>
-
 <meta name="generator" content="Hexo 5.3.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
 <link rel="alternate" href="/atom.xml" title="xx's blog" type="application/atom+xml">
 </head>
 
-
-
-
 <body>
     <header class="navbar-fixed">
-    <nav id="headNav" class="bg-color nav-transparent">
-        <div id="navContainer" class="nav-wrapper container">
-            <div class="brand-logo">
-                <a href="/" class="waves-effect waves-light">
+    <!-- <nav class="nav-extended pushpin"> -->
+    <nav class="nav-color nav-transparent" id="nav-header" color-on-scroll="100">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a class="brand-logo waves-effect waves-light" href="/">
                     
-                    <img src="/img/logo.png" class="logo-img" alt="LOGO">
+                    <img src="/img/logo.png" class="circle logo-img lazyload" data-src="/img/logo.png" alt="logo">
                     
                     <span class="logo-span">xx&#39;s blog</span>
                 </a>
-            </div>
-            
-
-<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
-<ul class="right nav-menu">
-  
-  <li class="hide-on-med-and-down nav-item">
+                <a href="#" data-target="nav-mobile" class="sidenav-trigger">
+    <i class="material-icons">menu</i>
+</a>
+<ul class="right hide-on-med-and-down">
     
-    <a href="/" class="waves-effect waves-light">
-      
-      <i class="fas fa-home" style="zoom: 0.6;"></i>
-      
-      <span>首页</span>
-    </a>
+        
+            <li>
+                
+                
+                <a class="nav-item waves-effect waves-light" href="/" style="display: flex;">
+                    <i class="material-icons">home</i>
+                
+                    <span class="nav-menu">首页</span>
+                </a>
+                
+            </li>
+        
     
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
+        
+            <li>
+                
+                
+                <a class="nav-item waves-effect waves-light" href="/categories" style="display: flex;">
+                    <i class="material-icons">chrome_reader_mode</i>
+                
+                    <span class="nav-menu">分类</span>
+                </a>
+                
+            </li>
+        
     
-    <a href="/tags" class="waves-effect waves-light">
-      
-      <i class="fas fa-tags" style="zoom: 0.6;"></i>
-      
-      <span>标签</span>
-    </a>
+        
+            <li>
+                
+                
+                <a class="nav-item waves-effect waves-light" href="/archives" style="display: flex;">
+                    <i class="material-icons">inbox</i>
+                
+                    <span class="nav-menu">归档</span>
+                </a>
+                
+            </li>
+        
     
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
+        
+            <li>
+                
+                
+                <a class="nav-item waves-effect waves-light" href="/tags" style="display: flex;">
+                    <i class="material-icons">label</i>
+                
+                    <span class="nav-menu">标签</span>
+                </a>
+                
+            </li>
+        
     
-    <a href="/categories" class="waves-effect waves-light">
-      
-      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
-      
-      <span>分类</span>
-    </a>
+        
+            <li>
+                
+                
+                <a class="nav-item waves-effect waves-light" href="/about" style="display: flex;">
+                    <i class="material-icons">account_circle</i>
+                
+                    <span class="nav-menu">关于</span>
+                </a>
+                
+            </li>
+        
     
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
+        
+            <li>
+                
+                
+                <a class="nav-item dropdown-trigger waves-effect waves-light" href="#!" data-target="dropdown-lab" style="display: flex;">
+                    <i class="material-icons">apps</i>
+                
+                    <span class="nav-menu">实验室</span>
+                    <i class="material-icons right">arrow_drop_down</i>
+                </a>
+                <ul class="dropdown-content" id="dropdown-lab">
+                    
+                        
+                        <li>
+                            
+                            <a href="/comments" style="display: flex;">
+                                <i class="material-icons">comment</i>
+                            
+                                <span>留言板</span>
+                            </a>
+                        </li>
+                        
+                    
+                        
+                        <li>
+                            
+                            <a href="/friends" style="display: flex;">
+                                <i class="material-icons">link</i>
+                            
+                                <span>友情链接</span>
+                            </a>
+                        </li>
+                        
+                    
+                        
+                        <li>
+                            
+                            <a href="/resume" style="display: flex;">
+                                <i class="material-icons">work</i>
+                            
+                                <span>简历</span>
+                            </a>
+                        </li>
+                        
+                    
+                        
+                        <li>
+                            
+                            <a href="/timeline" style="display: flex;">
+                                <i class="material-icons">timeline</i>
+                            
+                                <span>时间线</span>
+                            </a>
+                        </li>
+                        
+                    
+                        
+                        <li>
+                            
+                            <a href="/vlog" style="display: flex;">
+                                <i class="material-icons">video_library</i>
+                            
+                                <span>Vlog</span>
+                            </a>
+                        </li>
+                        
+                    
+                        
+                        <li>
+                            
+                            <a href="/portfolio" style="display: flex;">
+                                <i class="material-icons">widgets</i>
+                            
+                                <span>作品集</span>
+                            </a>
+                        </li>
+                        
+                    
+                </ul>
+                
+            </li>
+        
     
-    <a href="/archives" class="waves-effect waves-light">
-      
-      <i class="fas fa-archive" style="zoom: 0.6;"></i>
-      
-      <span>归档</span>
-    </a>
+        
+            <li>
+                
+                
+                <a class="nav-item dropdown-trigger waves-effect waves-light" href="#!" data-target="dropdown-medias" style="display: flex;">
+                    <i class="material-icons">perm_media</i>
+                
+                    <span class="nav-menu">多媒体</span>
+                    <i class="material-icons right">arrow_drop_down</i>
+                </a>
+                <ul class="dropdown-content" id="dropdown-medias">
+                    
+                        
+                        <li>
+                            
+                            <a href="/galleries" style="display: flex;">
+                                <i class="material-icons">photo_library</i>
+                            
+                                <span>图库</span>
+                            </a>
+                        </li>
+                        
+                    
+                        
+                        <li>
+                            
+                            <a href="/musics" style="display: flex;">
+                                <i class="material-icons">library_music</i>
+                            
+                                <span>音乐</span>
+                            </a>
+                        </li>
+                        
+                    
+                        
+                        <li>
+                            
+                            <a href="/videos" style="display: flex;">
+                                <i class="material-icons">video_library</i>
+                            
+                                <span>视频</span>
+                            </a>
+                        </li>
+                        
+                    
+                        
+                        <li>
+                            
+                            <a href="/books" style="display: flex;">
+                                <i class="material-icons">library_books</i>
+                            
+                                <span>书籍</span>
+                            </a>
+                        </li>
+                        
+                    
+                </ul>
+                
+            </li>
+        
     
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/about" class="waves-effect waves-light">
-      
-      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
-      
-      <span>关于</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/contact" class="waves-effect waves-light">
-      
-      <i class="fas fa-comments" style="zoom: 0.6;"></i>
-      
-      <span>留言板</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/friends" class="waves-effect waves-light">
-      
-      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
-      
-      <span>友情链接</span>
-    </a>
-    
-  </li>
-  
-  <li>
-    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
-      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
-    </a>
-  </li>
+    <li>
+        <a class="nav-item modal-trigger waves-effect waves-light" href="#searchModal">
+            <i class="material-icons">search</i>
+            <!-- <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.6;"></i> -->
+        </a>
+    </li>
 </ul>
 
-
-<div id="mobile-nav" class="side-nav sidenav">
-
-    <div class="mobile-head bg-color">
-        
-        <img src="/img/logo.png" class="logo-img circle responsive-img">
-        
-        <div class="logo-name">xx&#39;s blog</div>
-        <div class="logo-desc">
-            
-            欢迎来到zhuxiongxian&#39;s blog, 我是zhuxiongxian, 这是我的挨踢博客!
-            
+            </div>
         </div>
+    </nav>
+</header>
+<div class="sidenav" id="nav-mobile">
+    <div class="user-view">
+        <div class="background overlay">
+            <img class="lazyload" src="/img/icon-seamless.png" data-src="/img/icon-seamless.png">
+        </div>
+        <img class="circle responsive-img lazyload" src="/img/logo.png" data-src="/img/logo.png">
+        <div class="name white-text">xx's blog</div>
+        <div class="description white-text">欢迎来到zhuxiongxian's blog, 我是zhuxiongxian, 这是我的挨踢博客!</div>
     </div>
-
-    
-
-    <ul class="menu-list mobile-menu-list">
+    <ul>
         
-        <li class="m-nav-item">
-	  
-		<a href="/" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-home"></i>
-			
-			首页
-		</a>
-          
-        </li>
+            
+                <li>
+                    
+                    
+                    <a class="waves-effect" href="/" style="display: flex;">
+                        <i class="material-icons">home</i>
+                    
+                        <span>首页</span>
+                    </a>
+                    
+                </li>
+            
         
-        <li class="m-nav-item">
-	  
-		<a href="/tags" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-tags"></i>
-			
-			标签
-		</a>
-          
-        </li>
+            
+                <li>
+                    
+                    
+                    <a class="waves-effect" href="/categories" style="display: flex;">
+                        <i class="material-icons">chrome_reader_mode</i>
+                    
+                        <span>分类</span>
+                    </a>
+                    
+                </li>
+            
         
-        <li class="m-nav-item">
-	  
-		<a href="/categories" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-bookmark"></i>
-			
-			分类
-		</a>
-          
-        </li>
+            
+                <li>
+                    
+                    
+                    <a class="waves-effect" href="/archives" style="display: flex;">
+                        <i class="material-icons">inbox</i>
+                    
+                        <span>归档</span>
+                    </a>
+                    
+                </li>
+            
         
-        <li class="m-nav-item">
-	  
-		<a href="/archives" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-archive"></i>
-			
-			归档
-		</a>
-          
-        </li>
+            
+                <li>
+                    
+                    
+                    <a class="waves-effect" href="/tags" style="display: flex;">
+                        <i class="material-icons">label</i>
+                    
+                        <span>标签</span>
+                    </a>
+                    
+                </li>
+            
         
-        <li class="m-nav-item">
-	  
-		<a href="/about" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-user-circle"></i>
-			
-			关于
-		</a>
-          
-        </li>
+            
+                <li>
+                    
+                    
+                    <a class="waves-effect" href="/about" style="display: flex;">
+                        <i class="material-icons">account_circle</i>
+                    
+                        <span>关于</span>
+                    </a>
+                    
+                </li>
+            
         
-        <li class="m-nav-item">
-	  
-		<a href="/contact" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-comments"></i>
-			
-			留言板
-		</a>
-          
-        </li>
+            
+                <li>
+                    
+                    <ul class="collapsible">
+                        <li>
+                            
+                            <div class="collapsible-header waves-effect">
+                                <i class="material-icons">apps</i>
+                            
+                                <span>实验室</span>
+                                <i class="material-icons right">arrow_drop_down</i>
+                            </div>
+                            <ul class="collapsible-body">
+                                
+                                    
+                                    <li>
+                                        
+                                        <a class="waves-effect" href="/comments" style="display: flex;">
+                                            <i class="material-icons">comment</i>
+                                        
+                                            <span>留言板</span>
+                                        </a>
+                                    </li>
+                                    
+                                
+                                    
+                                    <li>
+                                        
+                                        <a class="waves-effect" href="/friends" style="display: flex;">
+                                            <i class="material-icons">link</i>
+                                        
+                                            <span>友情链接</span>
+                                        </a>
+                                    </li>
+                                    
+                                
+                                    
+                                    <li>
+                                        
+                                        <a class="waves-effect" href="/resume" style="display: flex;">
+                                            <i class="material-icons">work</i>
+                                        
+                                            <span>简历</span>
+                                        </a>
+                                    </li>
+                                    
+                                
+                                    
+                                    <li>
+                                        
+                                        <a class="waves-effect" href="/timeline" style="display: flex;">
+                                            <i class="material-icons">timeline</i>
+                                        
+                                            <span>时间线</span>
+                                        </a>
+                                    </li>
+                                    
+                                
+                                    
+                                    <li>
+                                        
+                                        <a class="waves-effect" href="/vlog" style="display: flex;">
+                                            <i class="material-icons">video_library</i>
+                                        
+                                            <span>Vlog</span>
+                                        </a>
+                                    </li>
+                                    
+                                
+                                    
+                                    <li>
+                                        
+                                        <a class="waves-effect" href="/portfolio" style="display: flex;">
+                                            <i class="material-icons">widgets</i>
+                                        
+                                            <span>作品集</span>
+                                        </a>
+                                    </li>
+                                    
+                                
+                            </ul>
+                        </li>
+                    </ul>
+                    
+                </li>
+            
         
-        <li class="m-nav-item">
-	  
-		<a href="/friends" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-address-book"></i>
-			
-			友情链接
-		</a>
-          
-        </li>
-        
+            
+                <li>
+                    
+                    <ul class="collapsible">
+                        <li>
+                            
+                            <div class="collapsible-header waves-effect">
+                                <i class="material-icons">perm_media</i>
+                            
+                                <span>多媒体</span>
+                                <i class="material-icons right">arrow_drop_down</i>
+                            </div>
+                            <ul class="collapsible-body">
+                                
+                                    
+                                    <li>
+                                        
+                                        <a class="waves-effect" href="/galleries" style="display: flex;">
+                                            <i class="material-icons">photo_library</i>
+                                        
+                                            <span>图库</span>
+                                        </a>
+                                    </li>
+                                    
+                                
+                                    
+                                    <li>
+                                        
+                                        <a class="waves-effect" href="/musics" style="display: flex;">
+                                            <i class="material-icons">library_music</i>
+                                        
+                                            <span>音乐</span>
+                                        </a>
+                                    </li>
+                                    
+                                
+                                    
+                                    <li>
+                                        
+                                        <a class="waves-effect" href="/videos" style="display: flex;">
+                                            <i class="material-icons">video_library</i>
+                                        
+                                            <span>视频</span>
+                                        </a>
+                                    </li>
+                                    
+                                
+                                    
+                                    <li>
+                                        
+                                        <a class="waves-effect" href="/books" style="display: flex;">
+                                            <i class="material-icons">library_books</i>
+                                        
+                                            <span>书籍</span>
+                                        </a>
+                                    </li>
+                                    
+                                
+                            </ul>
+                        </li>
+                    </ul>
+                    
+                </li>
+            
         
     </ul>
 </div>
 
 
-        </div>
+    <main>
+    <div style="height: 400px; position: relative; top: -64px; left: 0;">
+        <div class="cover-background">
+    <div class="pattern lazyload" data-src="/img/icon-seamless.png"
+        style="background-image: url('/img/icon-seamless.png');">
 
-        
-    </nav>
-
-</header>
-
-    <div class="bg-cover pd-header about-cover">
-    <div class="container">
-    
-
-<div class="row">
-    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
-        <div class="brand">
-            <div class="title center-align">
-                
-                zhuxiongxian的挨踢博客
-                
-            </div>
-
-            <div class="description center-align">
-                
-                <span id="subtitle" style="font-family: 'Marck Script';"></span>
-                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-                <script>
-                    var typed = new Typed("#subtitle", {
-                        strings: [ 
-                            
-                                "Hi, I&#39;m zhuxiongxian.",
-                            
-                                "Welcome to my blog!!!",
-                            
-                        ],
-                        startDelay: 300,
-                        typeSpeed: 100,
-                        loop: true,
-                        backSpeed: 50,
-                        showCursor: true
-                    });
-                </script>
-                
-            </div>
-        </div>
     </div>
 </div>
+<div class="center" id="bg-center">
+    <h2 class="title white-text">xx&#39;s blog</h2>
+    
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Marck+Script">
 
-
+<div class="description white-text">
+    
+    <span id="subtitle" style="font-family: 'Marck Script';"></span>
+    
+</div>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 <script>
-    // $('.bg-cover').css('background-image', 'url(/medias/banner/6.jpg)');
-    $('.bg-cover').css('background-image', 'url(/medias/banner/6.jpg)');
+
+    var typed = new Typed("#subtitle", {
+        strings: [ 
+            
+                "Hi, I&#39;m zhuxiongxian.",
+            
+                "Welcome to my blog!!!",
+            
+        ],
+        startDelay: 300,
+        typeSpeed: 100,
+        loop: true,
+        backSpeed: 50,
+        showCursor: true
+    });
+
 </script>
 
-
-    </div>
 </div>
-
-<main class="content">
-
-    
-
-<div id="category-cloud" class="container chip-container">
-    <div class="card">
-        <div class="card-content">
-            <div class="tag-title center-align">
-                <i class="fas fa-bookmark"></i>&nbsp;&nbsp;文章分类
-            </div>
-            <div class="tag-chips">
-                
-                
-                
-                <a href="/categories/mongodb/" title="mongodb: 3">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #F9EBEA;">mongodb
-                        <span class="tag-length">3</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/docker/" title="docker: 4">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #F5EEF8;">docker
-                        <span class="tag-length">4</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/git/" title="git: 4">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #D5F5E3;">git
-                        <span class="tag-length">4</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/frontend/" title="frontend: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #E8F8F5;">frontend
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/python/" title="python: 9">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #FEF9E7;">python
-                        <span class="tag-length">9</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/linux/" title="linux: 5">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #F8F9F9;">linux
-                        <span class="tag-length">5</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/postgresql/" title="postgresql: 2">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #82E0AA;">postgresql
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/%E7%BC%93%E5%AD%98/" title="缓存: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-active "
-                            style="background-color: #D7BDE2;">缓存
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/Java/" title="Java: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #A3E4D7;">Java
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/nginx/" title="nginx: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #85C1E9;">nginx
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/sublimetext3/" title="sublimetext3: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #F8C471;">sublimetext3
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/ubuntu/" title="ubuntu: 5">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #F9E79F;">ubuntu
-                        <span class="tag-length">5</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" title="数据结构与算法: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #FFF;">数据结构与算法
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/%E6%9D%82%E8%B0%88/" title="杂谈: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #82E0AA;">杂谈
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/mysql/" title="mysql: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #F8C471;">mysql
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/go/" title="go: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #D5F5E3;">go
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/" title="开发工具: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #F9E79F;">开发工具
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-            </div>
-        </div>
     </div>
-</div>
-
-
-    
-
-    <article id="articles" class="container articles">
-        <div class="row tags-posts">
-            
-            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2018/06/22/install-redis-on-linux/">
-                        <div class="card-image tag-image">
-                            
-                            
-                            <img src="/img/random/material-6.jpg" class="responsive-img" alt="linux下源码安装redis">
-                            
-                            <span class="card-title">linux下源码安装redis</span>
-                        </div>
-                    </a>
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                redis官方下载网址： https://redis.io/download
-安装目录： /usr/local/bin/配置文件路径： /etc/redis/redis.conf配置端口： 6379服务端： /usr/local/bin/r
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2018-06-22
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E7%BC%93%E5%AD%98/" class="post-category">
-                                    缓存
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/linux/">
-                            <span class="chip bg-color">linux</span>
-                        </a>
-                        
-                        <a href="/tags/centos/">
-                            <span class="chip bg-color">centos</span>
-                        </a>
-                        
-                        <a href="/tags/redis/">
-                            <span class="chip bg-color">redis</span>
-                        </a>
-                        
-                        <a href="/tags/%E7%BC%93%E5%AD%98/">
-                            <span class="chip bg-color">缓存</span>
-                        </a>
-                        
-                        <a href="/tags/ubuntu/">
-                            <span class="chip bg-color">ubuntu</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-        </div>
-    </article>
 </main>
 
-
-
-
-    <footer class="page-footer bg-color">
+    <footer class="page-footer footer-color">
     
-        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
-<style>
+        
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+
+
+<style type="text/css">
+    .aplayer.aplayer-fixed {
+        z-index: 999;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+
     .aplayer .aplayer-lrc p {
         
         display: none;
@@ -564,336 +649,149 @@
         display: none;
         
         font-size: 15px;
-        color: #42b983;
+        color: #b7daff;
     }
-
-    
-    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
-        left: -66px !important;
-    }
-
-    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
-        left: 0px !important;
-    }
-
-    
 </style>
+
 <div class="">
-    
     <div class="row">
-        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
-                   server="netease"
-                   type="playlist"
-                   id="743950282"
-                   fixed='true'
-                   autoplay='false'
-                   theme='#42b983'
-                   loop='all'
-                   order='random'
-                   preload='auto'
-                   volume='0.7'
-                   list-folded='true'
-        >
+        <meting-js
+            class="col l8 offset-l2 m10 offset-m1 s12"
+            server="netease"
+            type="playlist"
+            id="743950282"
+            fixed='true'
+            autoplay='false'
+            theme='#b7daff'
+            loop='all'
+            order='random'
+            preload='auto'
+            volume='0.7'
+            list-folded='true'>
         </meting-js>
     </div>
 </div>
 
-<script src="/libs/aplayer/APlayer.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
+
 
     
-    <div class="container row center-align" style="margin-bottom: 15px !important;">
-        <div class="col s12 m8 l8 copy-right">
+    <div class="container">
+        <div class="row center">
+            <div class="col l12 m12 s12">
+                <div id="framework-info">
+                    Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+                    &nbsp;|&nbsp;&nbsp;Theme&nbsp;
+                    <a href="https://github.com/xiongxianzhu/hexo-theme-xxcoding" target="_blank">
+                        xxcoding
+                    </a>
+                </div>
+                <div id="siteinfo">
+                    <!-- <span>站点总字数：</span> -->
+                    
+                    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+                    <span id="busuanzi_container_page_pv">站点总阅读量：<span class="white-text" id="busuanzi_value_page_pv"></span>次</span>
+                    &nbsp;|&nbsp;&nbsp;<span id="busuanzi_container_site_uv">站点总访客数：<span class="white-text" id="busuanzi_value_site_uv"></span>人</span>
+                    &nbsp;|&nbsp;&nbsp;<span id="busuanzi_container_site_pv">站点总访问量：<span class="white-text" id="busuanzi_value_site_pv"></span>次</span>
+                    
+                </div>
+                
+                <div id="sitetime">载入运行时间...</div>
+                <script>
+                    function siteTime() {
+                        var seconds = 1000;
+                        var minutes = seconds * 60;
+                        var hours = minutes * 60;
+                        var days = hours * 24;
+                        var years = days * 365;
+                        var today = new Date();
+                        var startYear = "2017";
+                        var startMonth = "6";
+                        var startDate = "5";
+                        var startHour = "0";
+                        var startMinute = "0";
+                        var startSecond = "0";
+                        var todayYear = today.getFullYear();
+                        var todayMonth = today.getMonth() + 1;
+                        var todayDate = today.getDate();
+                        var todayHour = today.getHours();
+                        var todayMinute = today.getMinutes();
+                        var todaySecond = today.getSeconds();
+                        var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                        var diff = t2 - t1;
+                        var diffYears = Math.floor(diff / years);
+                        var diffDays = Math.floor((diff / days) - diffYears * 365);
+                        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                            minutes);
+                        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                            diffMinutes * minutes) / seconds);
+                        if (startYear == todayYear) {
+                            document.getElementById("year").innerHTML = todayYear;
+                            document.getElementById("sitetime").innerHTML = "本站已持续运行 " + "<span class='white-text'>" + diffDays + "</span>" + " 天 "
+                            + "<span class='white-text'>" + diffHours + "</span>" + " 小时 "
+                            + "<span class='white-text'>" + diffMinutes + "</span>" + " 分钟 "
+                            + "<span class='white-text'>" + diffSeconds + "</span>" + " 秒";
+                        } else {
+                            document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                            document.getElementById("sitetime").innerHTML = "本站已持续运行 " + "<span class='white-text'>" + diffYears + "</span>" + " 年 "
+                            + "<span class='white-text'>" + diffDays + "</span>" + " 天 "
+                            + "<span class='white-text'>" + diffHours + "</span>" + " 小时 "
+                            + "<span class='white-text'>" + diffMinutes + "</span>" + " 分钟 "
+                            + "<span class='white-text'>" + diffSeconds + "</span>" + " 秒";
+                        }
+                    }
+                    setInterval(siteTime, 1000);
+                </script>
+                
+                
+                <div id="icp">
+                    <img class="lazyload" src="/img/icp.png" data-src="/img/icp.png" style="vertical-align: text-bottom;" />
+                    <a href="https://beian.miit.gov.cn/" target="_blank">粤ICP备17065679号-1</a>
+                </div>
+                
+                
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container center">
             Copyright&nbsp;&copy;
             
-                <span id="year">2021</span>
+                <span id="year">2017 - 2021</span>
             
-            <span id="year">2021</span>
+            ,&nbsp;
+            made with <span style="color: red;">❤️</span>&nbsp;&nbsp;by
             <a href="/about" target="_blank">xx</a>
-            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
-            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
-            <br>
-            
-            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">25.6k</span>&nbsp;字
-            
-            
-            
-            
-            
-            
-            <span id="busuanzi_container_site_pv">
-                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
-                    class="white-color"></span>&nbsp;次
-            </span>
-            
-            
-            <span id="busuanzi_container_site_uv">
-                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
-                    class="white-color"></span>&nbsp;人
-            </span>
-            
-            <br>
-            
-            <span id="sitetime">载入运行时间...</span>
-            <script>
-                function siteTime() {
-                    var seconds = 1000;
-                    var minutes = seconds * 60;
-                    var hours = minutes * 60;
-                    var days = hours * 24;
-                    var years = days * 365;
-                    var today = new Date();
-                    var startYear = "2021";
-                    var startMonth = "2";
-                    var startDate = "19";
-                    var startHour = "0";
-                    var startMinute = "0";
-                    var startSecond = "0";
-                    var todayYear = today.getFullYear();
-                    var todayMonth = today.getMonth() + 1;
-                    var todayDate = today.getDate();
-                    var todayHour = today.getHours();
-                    var todayMinute = today.getMinutes();
-                    var todaySecond = today.getSeconds();
-                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
-                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
-                    var diff = t2 - t1;
-                    var diffYears = Math.floor(diff / years);
-                    var diffDays = Math.floor((diff / days) - diffYears * 365);
-                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
-                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
-                        minutes);
-                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
-                        diffMinutes * minutes) / seconds);
-                    if (startYear == todayYear) {
-                        document.getElementById("year").innerHTML = todayYear;
-                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
-                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
-                    } else {
-                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
-                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
-                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
-                    }
-                }
-                setInterval(siteTime, 1000);
-            </script>
-            
-            <br>
-            
-            <span id="icp"><img src="/medias/icp.png" style="vertical-align: text-bottom;" />
-                <a href="https://beian.miit.gov.cn/" target="_blank">粤ICP备17065679号-1</a>
-            </span>
-            
+            for a better web.
         </div>
-        <div class="col s12 m4 l4 social-link social-statis">
-    <a href="https://github.com/xiongxianzhu" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
-        <i class="fab fa-github"></i>
-    </a>
-
-
-
-    <a href="mailto:i@zhuxiongxian.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
-        <i class="fas fa-envelope-open"></i>
-    </a>
-
-
-
-    <a href="https://www.facebook.com/xiongxian.zhu" class="tooltipped" target="_blank" data-tooltip="关注我的Facebook: https://www.facebook.com/xiongxian.zhu" data-position="top" data-delay="50">
-        <i class="fab fa-facebook-f"></i>
-    </a>
-
-
-
-    <a href="https://twitter.com/xiongxianzhu" class="tooltipped" target="_blank" data-tooltip="关注我的Twitter: https://twitter.com/xiongxianzhu" data-position="top" data-delay="50">
-        <i class="fab fa-twitter"></i>
-    </a>
-
-
-
-    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=929679459" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 929679459" data-position="top" data-delay="50">
-        <i class="fab fa-qq"></i>
-    </a>
-
-
-
-    <a href="http://weibo.com/929679459" class="tooltipped" target="_blank" data-tooltip="关注我的微博: http://weibo.com/929679459" data-position="top" data-delay="50">
-        <i class="fab fa-weibo"></i>
-    </a>
-
-
-
-
-
-    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
-        <i class="fas fa-rss"></i>
-    </a>
-
-</div>
     </div>
 </footer>
 
-<div class="progress-bar"></div>
 
-
-    <!-- 搜索遮罩框 -->
-<div id="searchModal" class="modal">
-    <div class="modal-content">
-        <div class="search-header">
-            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
-            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
-                   class="search-input">
-        </div>
-        <div id="searchResult"></div>
-    </div>
-</div>
-
-<script type="text/javascript">
-$(function () {
-    var searchFunc = function (path, search_id, content_id) {
-        'use strict';
-        $.ajax({
-            url: path,
-            dataType: "xml",
-            success: function (xmlResponse) {
-                // get the contents from search data
-                var datas = $("entry", xmlResponse).map(function () {
-                    return {
-                        title: $("title", this).text(),
-                        content: $("content", this).text(),
-                        url: $("url", this).text()
-                    };
-                }).get();
-                var $input = document.getElementById(search_id);
-                var $resultContent = document.getElementById(content_id);
-                $input.addEventListener('input', function () {
-                    var str = '<ul class=\"search-result-list\">';
-                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
-                    $resultContent.innerHTML = "";
-                    if (this.value.trim().length <= 0) {
-                        return;
-                    }
-                    // perform local searching
-                    datas.forEach(function (data) {
-                        var isMatch = true;
-                        var data_title = data.title.trim().toLowerCase();
-                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
-                        var data_url = data.url;
-                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
-                        var index_title = -1;
-                        var index_content = -1;
-                        var first_occur = -1;
-                        // only match artiles with not empty titles and contents
-                        if (data_title !== '' && data_content !== '') {
-                            keywords.forEach(function (keyword, i) {
-                                index_title = data_title.indexOf(keyword);
-                                index_content = data_content.indexOf(keyword);
-                                if (index_title < 0 && index_content < 0) {
-                                    isMatch = false;
-                                } else {
-                                    if (index_content < 0) {
-                                        index_content = 0;
-                                    }
-                                    if (i === 0) {
-                                        first_occur = index_content;
-                                    }
-                                }
-                            });
-                        }
-                        // show search results
-                        if (isMatch) {
-                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
-                            var content = data.content.trim().replace(/<[^>]+>/g, "");
-                            if (first_occur >= 0) {
-                                // cut out 100 characters
-                                var start = first_occur - 20;
-                                var end = first_occur + 80;
-                                if (start < 0) {
-                                    start = 0;
-                                }
-                                if (start === 0) {
-                                    end = 100;
-                                }
-                                if (end > content.length) {
-                                    end = content.length;
-                                }
-                                var match_content = content.substr(start, end);
-                                // highlight all keywords
-                                keywords.forEach(function (keyword) {
-                                    var regS = new RegExp(keyword, "gi");
-                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
-                                });
-
-                                str += "<p class=\"search-result\">" + match_content + "...</p>"
-                            }
-                            str += "</li>";
-                        }
-                    });
-                    str += "</ul>";
-                    $resultContent.innerHTML = str;
-                });
-            }
-        });
-    };
-
-    searchFunc('/search.xml', 'searchInput', 'searchResult');
-});
-</script>
-
+    
     <!-- 回到顶部按钮 -->
-<div id="backTop" class="top-scroll">
+<div id="back-top" class="top-scroll">
     <a class="btn-floating btn-large waves-effect waves-light" href="#!">
         <i class="fas fa-arrow-up"></i>
     </a>
 </div>
 
+    
 
     <script src="/libs/materialize/materialize.min.js"></script>
-    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
-    <script src="/libs/aos/aos.js"></script>
-    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
-    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
-    <script src="/js/matery.js"></script>
+<script src="/libs/lazyload/lazyload.min.js"></script>
+<script src="/libs/aos/aos.js"></script>
+<script src="/js/xxcoding.js"></script>
 
-    <!-- Baidu Analytics -->
 
-    <!-- Baidu Push -->
+<script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
 
-<script>
-    (function () {
-        var bp = document.createElement('script');
-        var curProtocol = window.location.protocol.split(':')[0];
-        if (curProtocol === 'https') {
-            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-        } else {
-            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-        }
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(bp, s);
-    })();
-</script>
-
-    
-    
-    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
-    
-
-    
-
-    
-
-    <!--腾讯兔小巢-->
-    
-    
-
-    
-
-    
-
-    
-    <script src="/libs/instantpage/instantpage.js" type="module"></script>
-    
 
 </body>
-
 </html>
