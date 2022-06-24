@@ -185,13 +185,9 @@
     
     <category term="docker" scheme="https://zhuxiongxian.cc/tags/docker/"/>
     
-    <category term="elasticsearch" scheme="https://zhuxiongxian.cc/tags/elasticsearch/"/>
-    
     <category term="ELK" scheme="https://zhuxiongxian.cc/tags/ELK/"/>
     
     <category term="kibana" scheme="https://zhuxiongxian.cc/tags/kibana/"/>
-    
-    <category term="logstash" scheme="https://zhuxiongxian.cc/tags/logstash/"/>
     
   </entry>
   
@@ -216,13 +212,9 @@
     <category term="mysql" scheme="https://zhuxiongxian.cc/categories/mysql/"/>
     
     
-    <category term="插件" scheme="https://zhuxiongxian.cc/tags/%E6%8F%92%E4%BB%B6/"/>
-    
     <category term="mysql" scheme="https://zhuxiongxian.cc/tags/mysql/"/>
     
     <category term="validate_password" scheme="https://zhuxiongxian.cc/tags/validate-password/"/>
-    
-    <category term="密码" scheme="https://zhuxiongxian.cc/tags/%E5%AF%86%E7%A0%81/"/>
     
     <category term="复杂度" scheme="https://zhuxiongxian.cc/tags/%E5%A4%8D%E6%9D%82%E5%BA%A6/"/>
     
@@ -305,11 +297,7 @@
     
     <category term="python" scheme="https://zhuxiongxian.cc/tags/python/"/>
     
-    <category term="pip" scheme="https://zhuxiongxian.cc/tags/pip/"/>
-    
     <category term="mac" scheme="https://zhuxiongxian.cc/tags/mac/"/>
-    
-    <category term="pipenv" scheme="https://zhuxiongxian.cc/tags/pipenv/"/>
     
     <category term="m2crypto" scheme="https://zhuxiongxian.cc/tags/m2crypto/"/>
     
@@ -429,8 +417,6 @@
     <category term="ctags" scheme="https://zhuxiongxian.cc/tags/ctags/"/>
     
     <category term="代码跳转" scheme="https://zhuxiongxian.cc/tags/%E4%BB%A3%E7%A0%81%E8%B7%B3%E8%BD%AC/"/>
-    
-    <category term="插件" scheme="https://zhuxiongxian.cc/tags/%E6%8F%92%E4%BB%B6/"/>
     
   </entry>
   

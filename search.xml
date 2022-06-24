@@ -165,13 +165,9 @@
             
             <tag> docker </tag>
             
-            <tag> elasticsearch </tag>
-            
             <tag> ELK </tag>
             
             <tag> kibana </tag>
-            
-            <tag> logstash </tag>
             
         </tags>
       
@@ -196,13 +192,9 @@
       
         <tags>
             
-            <tag> 插件 </tag>
-            
             <tag> mysql </tag>
             
             <tag> validate_password </tag>
-            
-            <tag> 密码 </tag>
             
             <tag> 复杂度 </tag>
             
@@ -285,11 +277,7 @@
             
             <tag> python </tag>
             
-            <tag> pip </tag>
-            
             <tag> mac </tag>
-            
-            <tag> pipenv </tag>
             
             <tag> m2crypto </tag>
             
@@ -408,8 +396,6 @@
             <tag> ctags </tag>
             
             <tag> 代码跳转 </tag>
-            
-            <tag> 插件 </tag>
             
         </tags>
       
@@ -709,8 +695,6 @@
             
             <tag> mongodb </tag>
             
-            <tag> mongo </tag>
-            
             <tag> robomongo </tag>
             
             <tag> 图形管理工具 </tag>
@@ -949,8 +933,6 @@
             
             <tag> linux </tag>
             
-            <tag> 运维 </tag>
-            
             <tag> python </tag>
             
             <tag> fabric </tag>
@@ -1133,13 +1115,9 @@
             
             <tag> python </tag>
             
-            <tag> pip </tag>
-            
             <tag> virtualenv </tag>
             
             <tag> virtualenvwrapper </tag>
-            
-            <tag> 沙盒 </tag>
             
         </tags>
       
