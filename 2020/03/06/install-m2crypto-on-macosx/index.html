@@ -991,32 +991,33 @@ sudo ln -s /usr/local/opt/openssl@1.1/lib/libcrypto.dylib /usr/local/lib/libcryp
     }
 </style>
 
-<div class="">
-    <div class="row">
-        <meting-js
-            class="col l8 offset-l2 m10 offset-m1 s12"
-            server="netease"
-            type="playlist"
-            id="743950282"
-            fixed='true'
-            autoplay='false'
-            theme='#b7daff'
-            loop='all'
-            order='random'
-            preload='auto'
-            volume='0.7'
-            list-folded='true'>
-        </meting-js>
-    </div>
-</div>
-
 
 <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
 
 
-<script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
-
-
+<div id="aplayer"></div>
+<script>
+    const ap = new APlayer({
+        container: document.getElementById('aplayer'),
+        fixed: true,
+        autoplay: false,
+        theme: '#FADFA3',
+        loop: 'all',
+        order: 'random',
+        preload: 'auto',
+        volume: 0.7,
+        mutex: true,
+        listFolded: false,
+        listMaxHeight: 90,
+        lrcType: 3,
+        audio: [{
+            name: 'name',
+            artist: 'artist',
+            url: 'http://m10.music.126.net/20230310120841/0a113b78a5e3f422debfcb38ee23f62a/ymusic/5219/85e8/f9fd/2a797fa3e5a9e5e578847bd7628fd7ab.mp3',
+            cover: 'https://zhuxiongxian.cc/img/logo.png'
+        }]
+    });
+</script>
     
     <div class="container">
         <div class="row center">
