@@ -53,9 +53,9 @@
       
         <tags>
             
-            <tag> go </tag>
-            
             <tag> mac </tag>
+            
+            <tag> go </tag>
             
         </tags>
       
@@ -484,13 +484,13 @@
             
             <tag> linux </tag>
             
-            <tag> jdk </tag>
-            
             <tag> elasticsearch </tag>
             
             <tag> 搜索 </tag>
             
             <tag> elk </tag>
+            
+            <tag> jdk </tag>
             
         </tags>
       
@@ -900,13 +900,13 @@
             
             <tag> linux </tag>
             
+            <tag> jdk </tag>
+            
             <tag> centos </tag>
             
             <tag> ubuntu </tag>
             
             <tag> java </tag>
-            
-            <tag> jdk </tag>
             
         </tags>
       
@@ -1198,11 +1198,11 @@
       
         <tags>
             
+            <tag> jdk </tag>
+            
             <tag> ubuntu </tag>
             
             <tag> java </tag>
-            
-            <tag> jdk </tag>
             
         </tags>
       

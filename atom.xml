@@ -71,9 +71,9 @@
     <category term="go" scheme="https://zhuxiongxian.cc/categories/go/"/>
     
     
-    <category term="go" scheme="https://zhuxiongxian.cc/tags/go/"/>
-    
     <category term="mac" scheme="https://zhuxiongxian.cc/tags/mac/"/>
+    
+    <category term="go" scheme="https://zhuxiongxian.cc/tags/go/"/>
     
   </entry>
   
@@ -507,13 +507,13 @@
     
     <category term="linux" scheme="https://zhuxiongxian.cc/tags/linux/"/>
     
-    <category term="jdk" scheme="https://zhuxiongxian.cc/tags/jdk/"/>
-    
     <category term="elasticsearch" scheme="https://zhuxiongxian.cc/tags/elasticsearch/"/>
     
     <category term="搜索" scheme="https://zhuxiongxian.cc/tags/%E6%90%9C%E7%B4%A2/"/>
     
     <category term="elk" scheme="https://zhuxiongxian.cc/tags/elk/"/>
+    
+    <category term="jdk" scheme="https://zhuxiongxian.cc/tags/jdk/"/>
     
   </entry>
   
