@@ -739,10 +739,10 @@ Hello, World!<span aria-hidden="true" class="line-numbers-rows"><span></span><sp
 <h4 id="7-安装gin框架"><a href="#7-安装gin框架" class="headerlink" title="7. 安装gin框架"></a>7. 安装gin框架</h4><pre class="line-numbers language-none"><code class="language-none">go get -u github.com/gin-gonic/gin<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>在代码中导包：</p>
 <pre class="line-numbers language-none"><code class="language-none">import "github.com/gin-gonic/gin"<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h4 id="8-创建gin的demo项目"><a href="#8-创建gin的demo项目" class="headerlink" title="8. 创建gin的demo项目"></a>8. 创建gin的demo项目</h4><pre class="line-numbers language-none"><code class="language-none">cd $GOPATH/src
-mkdir gin-demo
-cd gin-demo
-vim example.go<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="8-创建gin的demo项目"><a href="#8-创建gin的demo项目" class="headerlink" title="8. 创建gin的demo项目"></a>8. 创建gin的demo项目</h4><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">cd</span> <span class="token variable">$GOPATH</span>/src
+<span class="token function">mkdir</span> gin-demo
+<span class="token builtin class-name">cd</span> gin-demo
+<span class="token function">vim</span> example.go<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <p>example.go文件内容：</p>
 <pre class="line-numbers language-none"><code class="language-none">package main
 
@@ -764,9 +764,21 @@ go run example.go
 或
 go run .<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>访问： <a href="http://0.0.0.0:10240/ping">http://0.0.0.0:10240/ping</a></p>
-<pre class="line-numbers language-none"><code class="language-none">{
-    "message": "pong"
-}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">{</span>
+    <span class="token string">"message"</span><span class="token builtin class-name">:</span> <span class="token string">"pong"</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h4 id="9-常用命令"><a href="#9-常用命令" class="headerlink" title="9. 常用命令"></a>9. 常用命令</h4><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">// 查看go当前版本
+go version
+// 查看当前go的环境变量
+go <span class="token function">env</span>
+// 列出当前全部安装的依赖库
+go list
+// 编辑并运行go程序
+go run
+// 自动更新依赖库
+go get -u
+// 增加缺少的module， 删除无用的module
+go mod tidy<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
         </div>
         <div class="post-comment">
             
@@ -1099,7 +1111,7 @@ go run .<span aria-hidden="true" class="line-numbers-rows"><span></span><span></
             name: 'name',
             artist: 'artist',
             url: 'http://m10.music.126.net/20230310120841/0a113b78a5e3f422debfcb38ee23f62a/ymusic/5219/85e8/f9fd/2a797fa3e5a9e5e578847bd7628fd7ab.mp3',
-            cover: 'https://zhuxiongxian.cc/img/logo.png'
+            cover: '/img/logo.png'
         }]
     });
 </script>
