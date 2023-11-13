@@ -98,9 +98,9 @@ git config --global user.email &#39;youremail">
     <title>git常用命令 | xx&#39;s blog</title>
     <link rel="icon" type="image/png" href="/img/favicon.png">
     <script src="/libs/jquery/jquery.min.js"></script>
-<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="xx's blog" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 5.3.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="xx's blog" type="application/atom+xml">
 </head>
 
 <body>
@@ -578,7 +578,8 @@ git config --global user.email &#39;youremail">
     .post-content pre.line-numbers {
         padding: 2.2rem 1.5rem 0.5rem 3.8rem !important;
         -webkit-box-shadow: 0 0 20px rgb(214 0 190 / 80%);
-        box-shadow: 0 0 20px rgb(214 0 190 / 80%);
+        /* box-shadow: 0 0 20px rgb(214 0 190 / 80%); */
+        box-shadow: 0 0 20px rgb(255 2 2);
     }
 
     /* 行号位置 */
@@ -834,9 +835,26 @@ vim config<span aria-hidden="true" class="line-numbers-rows"><span></span><span>
 <h4 id="30-撤销本地的修改"><a href="#30-撤销本地的修改" class="headerlink" title="30. 撤销本地的修改"></a>30. 撤销本地的修改</h4><pre class="line-numbers language-none"><code class="language-none">git restore 文件名
 git restore .<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <h4 id="31-fatal-拒绝合并无关的历史"><a href="#31-fatal-拒绝合并无关的历史" class="headerlink" title="31. fatal: 拒绝合并无关的历史"></a>31. fatal: 拒绝合并无关的历史</h4><p>使用参数<code>--allow-unrelated-histories</code>:</p>
-<pre class="line-numbers language-none"><code class="language-none">$ git merge main
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">git</span> merge main
 fatal: 拒绝合并无关的历史
-$ git merge main --allow-unrelated-histories<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+$ <span class="token function">git</span> merge main --allow-unrelated-histories<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h4 id="32-回滚代码"><a href="#32-回滚代码" class="headerlink" title="32. 回滚代码"></a>32. 回滚代码</h4><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> tag
+<span class="token function">git</span> show <span class="token number">1.0</span>.0          <span class="token comment"># 得到commit_id</span>
+
+<span class="token comment"># 得到commit_id后，则可以通过git reset回滚到commit_id</span>
+<span class="token function">git</span> reset --hard <span class="token operator">&lt;</span>commit_id<span class="token operator">&gt;</span>
+<span class="token function">git</span> reset --hard 357598e77fa2b6fa04c543e424c86230e30cf925
+
+<span class="token function">git</span> push origin <span class="token operator">&lt;</span>分支名<span class="token operator">&gt;</span> -f
+
+或
+
+<span class="token function">git</span> push -f<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>注意，若强推不上master，则可能master被设置为保护分支，需要到相应的git网站，到该仓库下的设置–保护分支，将master移除出保护分支或允许你的git账户角色有强推到master的权限，保存设置后，再重新强推即可。</p>
+<p>在生产环境的主机上，对源码回滚：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> checkout master
+<span class="token function">git</span> pull
+<span class="token function">git</span> reset --hard origin/master<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
         </div>
         <div class="post-comment">
             
