@@ -307,7 +307,7 @@ a .material-icons {
 }
 
 .post-item .post-category {
-    color: #01dfb8;
+    color: #cae9f7;
 }
 
 .post-item .post-title {
@@ -421,6 +421,10 @@ a .material-icons {
     transform: rotate(135deg);
 }
 
+article.post {
+    padding: 10px;
+}
+
 .post .card {
     -webkit-box-shadow: 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .07);
     box-shadow: 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .07);
@@ -475,13 +479,9 @@ a .material-icons {
 
 .post-item {
     background-color: #fff;
-    margin: 10px 0;
+    margin: 0 0 20px;
     border-radius: 0px;
     position: relative;
-}
-
-.post-item .post-body .col {
-    /* padding: 0px; */
 }
 
 .post-item .card .card-image {
@@ -515,6 +515,7 @@ a .material-icons {
     padding: 0px;
     word-break: break-all;
     color: #333;
+    margin-top: 25px;
 }
 
 .paginator {
