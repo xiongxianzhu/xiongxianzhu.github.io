@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="keywords" content="mac os x sublime text 3安装ctags插件实现代码跳转, mac, sublime text 3, ctags, 代码跳转, xx, zhuxiongxian, blog, 博客, 挨踢， 官方, it">
+    <meta name="description" content="ctags是一款实现代码跳转的插件，可以提高查看代码的效率.
+1. st3安装ctags插件快捷键commands + shift + p 打开 Package Control: Instance Package， 搜索 ctags进行安装">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate.css/animate.min.css">
+    
+    <!-- 是否加载使用自带的 prismjs. -->
+    <link rel="stylesheet" href="/libs/prism/prism-tomorrow-night.css">
+    <link rel="stylesheet" type="text/css" href="/libs/prism/prism-line-numbers.css">
+    
+    
+    <!-- Material Icons -->
+    <link rel="stylesheet" type="text/css" href="/libs/materialicons/materialicons.css">
+    
+    <!-- Fontawesome Icons -->
+    <link rel="stylesheet" type="text/css" href="/libs/fontawesome/css/all.min.css">
+    <!-- aos -->
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <!-- The theme css -->
+    <link rel="stylesheet" type="text/css" href="/css/xxcoding.css">
+
+    
+    <!-- Your css -->
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    
+    <!-- 
+        
+            
+                <link rel="stylesheet" type="text/css" href="/libs/fontawesome/css/all.min.css">
+            
+        
+            
+                <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+            
+        
+            
+                <link rel="stylesheet" type="text/css" href="/libs/animate.css/animate.min.css">
+            
+        
+            
+        
+            
+                <link rel="stylesheet" type="text/css" href="/libs/prism/prism-tomorrow-night.css">
+            
+        
+            
+                <link rel="stylesheet" type="text/css" href="/libs/materialicons/materialicons.css">
+            
+        
+            
+                <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+            
+        
+            
+                <link rel="stylesheet" type="text/css" href="/libs/aplayer/APlayer.min.css">
+            
+        
+            
+                <link rel="stylesheet" type="text/css" href="/libs/tocbot/tocbot.css">
+            
+        
+            
+                <link rel="stylesheet" type="text/css" href="/libs/aplayer/Meting.min.js">
+            
+        
+            
+                <link rel="stylesheet" type="text/css" href="/libs/fancybox/fancybox.css">
+            
+        
+            
+                <link rel="stylesheet" type="text/css" href="/css/xxcoding.css">
+            
+        
+            
+                <link rel="stylesheet" type="text/css" href="/css/my.css">
+            
+        
+     -->
+    <!-- 
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500">
+    
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Marck+Script">
+     -->
+    
+
+    <!-- Custom Head -->
+    
+
+    <title>mac os x sublime text 3安装ctags插件实现代码跳转 | xx&#39;s blog</title>
+    <link rel="icon" type="image/png" href="/img/favicon.png">
+    <script src="/libs/jquery/jquery.min.js"></script>
+<meta name="generator" content="Hexo 7.3.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="xx's blog" type="application/atom+xml">
+</head>
+
+<body>
+    <header class="navbar-fixed">
+    <!-- <nav class="nav-extended pushpin"> -->
+    <nav class="nav-color nav-transparent" id="nav-header" color-on-scroll="100">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a class="brand-logo waves-effect waves-light" href="/">
+                    
+                    <img src="/img/logo.png" class="circle logo-img lazyload" data-src="/img/logo.png" alt="logo">
+                    
+                    <span class="logo-span">xx&#39;s blog</span>
+                </a>
+                <a href="#" data-target="nav-mobile" class="sidenav-trigger">
+    <i class="material-icons">menu</i>
+</a>
+<ul class="right hide-on-med-and-down">
+    
+        
+            <li>
+                
+                
+                <a class="nav-item waves-effect waves-light" href="/" style="display: flex;">
+                    <i class="material-icons">home</i>
+                
+                    <span class="nav-menu">首页</span>
+                </a>
+                
+            </li>
+        
+    
+        
+            <li>
+                
+                
+                <a class="nav-item waves-effect waves-light" href="/categories" style="display: flex;">
+                    <i class="material-icons">chrome_reader_mode</i>
+                
+                    <span class="nav-menu">分类</span>
+                </a>
+                
+            </li>
+        
+    
+        
+            <li>
+                
+                
+                <a class="nav-item waves-effect waves-light" href="/archives" style="display: flex;">
+                    <i class="material-icons">inbox</i>
+                
+                    <span class="nav-menu">归档</span>
+                </a>
+                
+            </li>
+        
+    
+        
+            <li>
+                
+                
+                <a class="nav-item waves-effect waves-light" href="/tags" style="display: flex;">
+                    <i class="material-icons">label</i>
+                
+                    <span class="nav-menu">标签</span>
+                </a>
+                
+            </li>
+        
+    
+        
+            <li>
+                
+                
+                <a class="nav-item waves-effect waves-light" href="/about" style="display: flex;">
+                    <i class="material-icons">account_circle</i>
+                
+                    <span class="nav-menu">关于</span>
+                </a>
+                
+            </li>
+        
+    
+        
+            <li>
+                
+                
+                <a class="nav-item dropdown-trigger waves-effect waves-light" href="#!" data-target="dropdown-lab" style="display: flex;">
+                    <i class="material-icons">apps</i>
+                
+                    <span class="nav-menu">实验室</span>
+                    <i class="material-icons right">arrow_drop_down</i>
+                </a>
+                <ul class="dropdown-content" id="dropdown-lab">
+                    
+                        
+                        <li>
+                            
+                            <a href="/comments" style="display: flex;">
+                                <i class="material-icons">comment</i>
+                            
+                                <span>留言板</span>
+                            </a>
+                        </li>
+                        
+                    
+                        
+                        <li>
+                            
+                            <a href="/friends" style="display: flex;">
+                                <i class="material-icons">link</i>
+                            
+                                <span>友情链接</span>
+                            </a>
+                        </li>
+                        
+                    
+                        
+                        <li>
+                            
+                            <a href="/resume" style="display: flex;">
+                                <i class="material-icons">work</i>
+                            
+                                <span>简历</span>
+                            </a>
+                        </li>
+                        
+                    
+                        
+                        <li>
+                            
+                            <a href="/timeline" style="display: flex;">
+                                <i class="material-icons">timeline</i>
+                            
+                                <span>时间线</span>
+                            </a>
+                        </li>
+                        
+                    
+                        
+                        <li>
+                            
+                            <a href="/vlog" style="display: flex;">
+                                <i class="material-icons">video_library</i>
+                            
+                                <span>Vlog</span>
+                            </a>
+                        </li>
+                        
+                    
+                        
+                        <li>
+                            
+                            <a href="/portfolio" style="display: flex;">
+                                <i class="material-icons">widgets</i>
+                            
+                                <span>作品集</span>
+                            </a>
+                        </li>
+                        
+                    
+                </ul>
+                
+            </li>
+        
+    
+        
+            <li>
+                
+                
+                <a class="nav-item dropdown-trigger waves-effect waves-light" href="#!" data-target="dropdown-medias" style="display: flex;">
+                    <i class="material-icons">perm_media</i>
+                
+                    <span class="nav-menu">多媒体</span>
+                    <i class="material-icons right">arrow_drop_down</i>
+                </a>
+                <ul class="dropdown-content" id="dropdown-medias">
+                    
+                        
+                        <li>
+                            
+                            <a href="/galleries" style="display: flex;">
+                                <i class="material-icons">photo_library</i>
+                            
+                                <span>图库</span>
+                            </a>
+                        </li>
+                        
+                    
+                        
+                        <li>
+                            
+                            <a href="/musics" style="display: flex;">
+                                <i class="material-icons">library_music</i>
+                            
+                                <span>音乐</span>
+                            </a>
+                        </li>
+                        
+                    
+                        
+                        <li>
+                            
+                            <a href="/videos" style="display: flex;">
+                                <i class="material-icons">video_library</i>
+                            
+                                <span>视频</span>
+                            </a>
+                        </li>
+                        
+                    
+                        
+                        <li>
+                            
+                            <a href="/books" style="display: flex;">
+                                <i class="material-icons">library_books</i>
+                            
+                                <span>书籍</span>
+                            </a>
+                        </li>
+                        
+                    
+                </ul>
+                
+            </li>
+        
+    
+    <li>
+        <a class="nav-item modal-trigger waves-effect waves-light" href="#search-modal">
+            <i class="material-icons">search</i>
+        </a>
+        <div>
+    <!-- 模态框结构 -->
+    <div id="search-modal" class="modal">
+        <div class="modal-content">
+            <div id="search-title">
+                <i class="material-icons">search</i>
+                搜 索
+            </div>
+            <input type="text" id="search-input" placeholder="输入关键字进行搜索...">
+            <ul id="search-results"></ul>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            // 获取搜索输入框和结果列表元素
+            var searchInput = $('#search-input');
+            var searchResults = $('#search-results');
+
+            // 读取 search.json 文件
+            $.getJSON('/search.json', function(data) {
+                // 监听输入框的输入事件
+                searchInput.on('input', function() {
+                    var query = $(this).val().toLowerCase();
+
+                    if (query === '') {
+                        // 如果查询字符串为空，则清空结果列表
+                        searchResults.empty();
+                        return;
+                    }
+
+                    var results = data.filter(post => 
+                        post.title.toLowerCase().includes(query) || 
+                        post.content.toLowerCase().includes(query)
+                    );
+
+                    // 清空结果列表
+                    searchResults.empty();
+
+                    // 显示搜索结果
+                    results.forEach(function(result) {
+                        var li = $('<li>');
+                        var a = $('<a>').attr('href', result.url).text(result.title).addClass('title');
+                        li.append(a);
+                        searchResults.append(li);
+
+                        // 高亮显示关键词
+                        var content = result.content.trim().replace(/<[^>]+>/g, "");
+                        var regex = new RegExp('(' + query.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&') + ')', 'gi');
+                        var highlightedContent = content.replace(regex, '<span class="highlight">$&</span>');
+                        li.append($('<div>').html(highlightedContent));
+                    });
+                    
+                });
+            }).fail(function(err) {
+                console.error(err);
+            });
+        });
+
+        // 处理按钮点击事件
+        $('.modal-trigger').on('click', function(e) {
+            e.preventDefault(); // 阻止默认行为
+            var modalId = $(this).attr('href');
+            var modal = $(modalId);
+            M.Modal.init(modal[0]);
+            var instance = M.Modal.getInstance(modal[0]);
+            instance.open();
+        });
+    </script>
+</div>
+<style>
+    #search-modal .modal-content h4,
+    #search-modal .modal-content input,
+    #search-modal .modal-content ul,
+    #search-modal .modal-content li,
+    #search-modal .modal-content a {
+        color: #333; /* 设置字体颜色 */
+    }
+
+    #search-results li {
+        display: block; /* 将列表项显示为一行 */
+        margin: 10px 0; /* 每行间距 */
+        padding: 10px;
+        /* border-bottom: 1px solid #ddd; */
+        margin-bottom: 10px;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        border-radius: 3px;
+    }
+
+    #search-results a {
+        text-decoration: none; /* 去除链接的下划线 */
+    }
+
+    #search-input {
+        border-bottom: 1px solid #ddd;
+    }
+
+    .highlight {
+        margin: 0 2px;
+        padding: 1px 5px 1px 4px;
+        border-radius: 2px;
+        background-color: #f2f2f2;
+        color: #e96900;
+        font-style: normal;
+        white-space: pre-wrap;
+    }
+
+    #search-results a.title {
+        font-weight: bold;
+        font-size: 1.2em;
+        margin-bottom: 5px;
+    }
+
+    #search-title {
+        font-size: 2.16rem;
+        height: 64px;
+        line-height: 64px;
+        color: #333;
+    }
+
+    #search-title i {
+        display: inline-block;
+    }
+</style>
+    </li>
+</ul>
+
+            </div>
+        </div>
+    </nav>
+</header>
+<div class="sidenav" id="nav-mobile">
+    <div class="user-view">
+        <div class="background overlay">
+            <img class="lazyload" src="/img/icon-seamless.png" data-src="/img/icon-seamless.png">
+        </div>
+        <img class="circle responsive-img lazyload" src="/img/logo.png" data-src="/img/logo.png">
+        <div class="name white-text">xx's blog</div>
+        <div class="description white-text">欢迎来到zhuxiongxian's blog, 我是zhuxiongxian, 这是我的挨踢博客!</div>
+    </div>
+    <ul>
+        
+            
+                <li>
+                    
+                    
+                    <a class="waves-effect" href="/" style="display: flex;">
+                        <i class="material-icons">home</i>
+                    
+                        <span>首页</span>
+                    </a>
+                    
+                </li>
+            
+        
+            
+                <li>
+                    
+                    
+                    <a class="waves-effect" href="/categories" style="display: flex;">
+                        <i class="material-icons">chrome_reader_mode</i>
+                    
+                        <span>分类</span>
+                    </a>
+                    
+                </li>
+            
+        
+            
+                <li>
+                    
+                    
+                    <a class="waves-effect" href="/archives" style="display: flex;">
+                        <i class="material-icons">inbox</i>
+                    
+                        <span>归档</span>
+                    </a>
+                    
+                </li>
+            
+        
+            
+                <li>
+                    
+                    
+                    <a class="waves-effect" href="/tags" style="display: flex;">
+                        <i class="material-icons">label</i>
+                    
+                        <span>标签</span>
+                    </a>
+                    
+                </li>
+            
+        
+            
+                <li>
+                    
+                    
+                    <a class="waves-effect" href="/about" style="display: flex;">
+                        <i class="material-icons">account_circle</i>
+                    
+                        <span>关于</span>
+                    </a>
+                    
+                </li>
+            
+        
+            
+                <li>
+                    
+                    <ul class="collapsible">
+                        <li>
+                            
+                            <div class="collapsible-header waves-effect">
+                                <i class="material-icons">apps</i>
+                            
+                                <span>实验室</span>
+                                <i class="material-icons right">arrow_drop_down</i>
+                            </div>
+                            <ul class="collapsible-body">
+                                
+                                    
+                                    <li>
+                                        
+                                        <a class="waves-effect" href="/comments" style="display: flex;">
+                                            <i class="material-icons">comment</i>
+                                        
+                                            <span>留言板</span>
+                                        </a>
+                                    </li>
+                                    
+                                
+                                    
+                                    <li>
+                                        
+                                        <a class="waves-effect" href="/friends" style="display: flex;">
+                                            <i class="material-icons">link</i>
+                                        
+                                            <span>友情链接</span>
+                                        </a>
+                                    </li>
+                                    
+                                
+                                    
+                                    <li>
+                                        
+                                        <a class="waves-effect" href="/resume" style="display: flex;">
+                                            <i class="material-icons">work</i>
+                                        
+                                            <span>简历</span>
+                                        </a>
+                                    </li>
+                                    
+                                
+                                    
+                                    <li>
+                                        
+                                        <a class="waves-effect" href="/timeline" style="display: flex;">
+                                            <i class="material-icons">timeline</i>
+                                        
+                                            <span>时间线</span>
+                                        </a>
+                                    </li>
+                                    
+                                
+                                    
+                                    <li>
+                                        
+                                        <a class="waves-effect" href="/vlog" style="display: flex;">
+                                            <i class="material-icons">video_library</i>
+                                        
+                                            <span>Vlog</span>
+                                        </a>
+                                    </li>
+                                    
+                                
+                                    
+                                    <li>
+                                        
+                                        <a class="waves-effect" href="/portfolio" style="display: flex;">
+                                            <i class="material-icons">widgets</i>
+                                        
+                                            <span>作品集</span>
+                                        </a>
+                                    </li>
+                                    
+                                
+                            </ul>
+                        </li>
+                    </ul>
+                    
+                </li>
+            
+        
+            
+                <li>
+                    
+                    <ul class="collapsible">
+                        <li>
+                            
+                            <div class="collapsible-header waves-effect">
+                                <i class="material-icons">perm_media</i>
+                            
+                                <span>多媒体</span>
+                                <i class="material-icons right">arrow_drop_down</i>
+                            </div>
+                            <ul class="collapsible-body">
+                                
+                                    
+                                    <li>
+                                        
+                                        <a class="waves-effect" href="/galleries" style="display: flex;">
+                                            <i class="material-icons">photo_library</i>
+                                        
+                                            <span>图库</span>
+                                        </a>
+                                    </li>
+                                    
+                                
+                                    
+                                    <li>
+                                        
+                                        <a class="waves-effect" href="/musics" style="display: flex;">
+                                            <i class="material-icons">library_music</i>
+                                        
+                                            <span>音乐</span>
+                                        </a>
+                                    </li>
+                                    
+                                
+                                    
+                                    <li>
+                                        
+                                        <a class="waves-effect" href="/videos" style="display: flex;">
+                                            <i class="material-icons">video_library</i>
+                                        
+                                            <span>视频</span>
+                                        </a>
+                                    </li>
+                                    
+                                
+                                    
+                                    <li>
+                                        
+                                        <a class="waves-effect" href="/books" style="display: flex;">
+                                            <i class="material-icons">library_books</i>
+                                        
+                                            <span>书籍</span>
+                                        </a>
+                                    </li>
+                                    
+                                
+                            </ul>
+                        </li>
+                    </ul>
+                    
+                </li>
+            
+        
+    </ul>
+</div>
+
+
+    <style>
+    
+    .post-content pre.line-numbers {
+        padding: 2.2rem 1.5rem 0.5rem 3.8rem !important;
+        -webkit-box-shadow: 0 0 20px rgb(214 0 190 / 80%);
+        box-shadow: 0 0 20px rgb(214 0 190 / 80%);
+    }
+
+    /* 行号位置 */
+    .line-numbers .line-numbers-rows {
+        top: 2.5rem;        /* 2.2rem + 0.3rem */
+    }
+    
+    
+    /* mac主题效果 */
+    .post-content pre.line-numbers::after {
+        content: '';
+        position: absolute;
+        display: block;
+        border-radius: 50%;
+        background: #ff5f56!important;
+        width: 12px!important;
+        height: 12px!important;
+        top: 12px!important;
+        left: 12px!important;
+        -webkit-box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
+        box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
+    }
+    
+    
+    /* 代码块语言 */
+    .post-content pre.line-numbers::before {
+        color: #ccc;
+        font-size: .6rem;
+        font-weight: 600;
+        height: 25px;
+        line-height: 25px;
+        padding: 5px 10px 0;
+        position: absolute;
+        right: 0;
+        text-align: right;
+        top: 0;
+        content: attr(data-language);
+    }
+    
+</style>
+<main>
+    <!-- 文章封面 -->
+    <div class="post-cover">
+    <div class="cover-background">
+        
+        <div class="pattern repeat lazyload" data-src="/img/icon-seamless.png"
+            style="background-image: url('/img/icon-seamless.png');">
+            
+        </div>
+        
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="brand">
+                    <h4>mac os x sublime text 3安装ctags插件实现代码跳转</h4>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="container has-cover-container post-container">
+        <div class="row">
+            
+                <div class="col s12 m12 l9" id="post-body">
+                    <!-- 文章详情 -->
+                    <div id="post-detail">
+    <div class="card main main-raised">
+        <div class="post-content">
+            <p>ctags是一款实现代码跳转的插件，可以提高查看代码的效率.</p>
+<h4 id="1-st3安装ctags插件"><a href="#1-st3安装ctags插件" class="headerlink" title="1. st3安装ctags插件"></a>1. st3安装ctags插件</h4><p>快捷键<code>commands + shift + p</code> 打开 <code>Package Control: Instance Package</code>， 搜索 <code>ctags</code>进行安装<code>ctags</code>插件</p>
+<h4 id="2-安装ctags"><a href="#2-安装ctags" class="headerlink" title="2. 安装ctags"></a>2. 安装ctags</h4><p>打开ctags网址下载ctags源码包： <a href="http://ctags.sourceforge.net/">http://ctags.sourceforge.net/</a></p>
+<p>或<code>wget</code>命令下载：</p>
+<pre class="line-numbers language-none"><code class="language-none">wget -c https://jaist.dl.sourceforge.net/project/ctags/ctags/5.8/ctags-5.8.tar.gz<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>安装ctags：</p>
+<pre class="line-numbers language-none"><code class="language-none">tar -xzvf ctags-5.8.tar.gz
+cd ctags-5.8/
+./configure
+make &amp;&amp; sudo make install<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="3-在st3配置ctags插件"><a href="#3-在st3配置ctags插件" class="headerlink" title="3. 在st3配置ctags插件"></a>3. 在st3配置ctags插件</h4><p>依次打开<code>Sublime Text -- Preferences -- Package Settings -- CTags -- Settings User</code>, 拷贝以下内容保存.</p>
+<pre class="line-numbers language-none"><code class="language-none">{
+    "command": "/usr/local/bin/ctags",
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>依次打开<code>Sublime Text -- Preferences -- Package Settings -- CTags -- Mouse Bindings User</code>, 拷贝以下内容保存.</p>
+<p>默认：</p>
+<ul>
+<li>按快捷键<code>ctrl + shift + 鼠标左键</code> 代码跳转到函数定义 </li>
+<li>按快捷键<code>ctrl + shift + 鼠标右键</code> 代码跳转到函数引用</li>
+</ul>
+<p>改键后：</p>
+<ul>
+<li>按快捷键<code>ctrl + 鼠标左键</code> 代码跳转到函数定义 </li>
+<li>按快捷键<code>ctrl + 鼠标右键</code> 代码跳转到函数引用</li>
+</ul>
+<pre class="line-numbers language-none"><code class="language-none">[
+    {
+        "button": "button1",
+        "count": 1,
+        "press_command": "drag_select",
+        "modifiers": ["ctrl"],
+        "command": "navigate_to_definition"
+    },
+    {
+        "button": "button2",
+        "count": 1,
+        "modifiers": ["ctrl"],
+        "command": "jump_prev"
+    }
+]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="4-ctags自带其他快捷键"><a href="#4-ctags自带其他快捷键" class="headerlink" title="4. ctags自带其他快捷键"></a>4. ctags自带其他快捷键</h4><ul>
+<li><code>ctrl + k + u</code>或<code>ctrl+k, ctrl+u</code>将选择代码全部大写</li>
+<li><code>ctrl + k + l</code>或<code>ctrl+k, ctrl+l</code>将选择代码全部小写</li>
+</ul>
+
+        </div>
+        <div class="post-comment">
+            
+
+    <style>
+    .v[data-class=v] .vinput {
+        padding: unset;
+    }
+</style>
+<div id="vcomments"></div>
+
+<script src="/libs/valine/Valine.min.js"></script>
+
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'Mia2Oc0sFRP8CLKWIpkzlKH7-gzGzoHsz',
+        appKey: 'UzWr1AJYRlfkoKpaNY9l2dIW',
+        notify: 'false' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'monsterid',
+        pageSize: '10',
+        lang: '',
+        // lang: 'zh-cn',
+        placeholder: '发一条友善的评论',
+        emojiCDN: 'https://i0.hdslb.com/bfs/emote/',
+        emojiMaps: {
+            "doge": "3087d273a78ccaff4bb1e9972e2ba2a7583c9f11.png",
+            "微笑": "685612eadc33f6bc233776c6241813385844f182.png",
+            "OK": "4683fd9ffc925fa6423110979d7dcac5eda297f4.png",
+            "星星眼": "63c9d1a31c0da745b61cdb35e0ecb28635675db2.png",
+            "妙啊": "b4cb77159d58614a9b787b91b1cd22a81f383535.png",
+            "辣眼睛": "35d62c496d1e4ea9e091243fa812866f5fecc101.png",
+            "吃瓜": "4191ce3c44c2b3df8fd97c33f85d3ab15f4f3c84.png",
+            "滑稽": "d15121545a99ac46774f1f4465b895fe2d1411c3.png",
+            "呲牙": "b5a5898491944a4268360f2e7a84623149672eb6.png",
+            "打call": "431432c43da3ee5aab5b0e4f8931953e649e9975.png",
+            "歪嘴": "4384050fbab0586259acdd170b510fe262f08a17.png",
+            "调皮": "8290b7308325e3179d2154327c85640af1528617.png",
+            "嗑瓜子": "28a91da1685d90124cfeead74622e1ebb417c0eb.png",
+            "笑哭": "c3043ba94babf824dea03ce500d0e73763bf4f40.png",
+            "脱单doge": "bf7e00ecab02171f8461ee8cf439c73db9797748.png",
+            "给心心": "1597302b98827463f5b75c7cac1f29ea6ce572c4.png",
+            "嘟嘟": "abd7404537d8162720ccbba9e0a8cdf75547e07a.png",
+            "喜欢": "8a10a4d73a89f665feff3d46ca56e83dc68f9eb8.png",
+            "酸了": "92b1c8cbceea3ae0e8e32253ea414783e8ba7806.png",
+            "哦呼": "362bded07ea5434886271d23fa25f5d85d8af06c.png",
+            "嫌弃": "de4c0783aaa60ec03de0a2b90858927bfad7154b.png",
+            "大哭": "2caafee2e5db4db72104650d87810cc2c123fc86.png",
+            "害羞": "9d2ec4e1fbd6cb1b4d12d2bbbdd124ccb83ddfda.png",
+            "疑惑": "b7840db4b1f9f4726b7cb23c0972720c1698d661.png",
+            "喜极而泣": "485a7e0c01c2d70707daae53bee4a9e2e31ef1ed.png",
+            "奸笑": "bb84906573472f0a84cebad1e9000eb6164a6f5a.png",
+            "笑": "81edf17314cea3b48674312b4364df44d5c01f17.png",
+            "偷笑": "6c49d226e76c42cd8002abc47b3112bc5a92f66a.png",
+            "惊讶": "f8e9a59cad52ae1a19622805696a35f0a0d853f3.png",
+            "捂脸": "6921bb43f0c634870b92f4a8ad41dada94a5296d.png",
+            "阴险": "ba8d5f8e7d136d59aab52c40fd3b8a43419eb03c.png",
+            "囧": "12e41d357a9807cc80ef1e1ed258127fcc791424.png",
+            "呆": "33ad6000d9f9f168a0976bc60937786f239e5d8c.png",
+            "抠鼻": "cb89184c97e3f6d50acfd7961c313ce50360d70f.png",
+            "大笑": "ca94ad1c7e6dac895eb5b33b7836b634c614d1c0.png",
+            "惊喜": "0afecaf3a3499479af946f29749e1a6c285b6f65.png",
+            "无语": "44667b7d9349957e903b1b62cb91fb9b13720f04.png",
+            "点赞": "1a67265993913f4c35d15a6028a30724e83e7d35.png",
+            "鼓掌": "895d1fc616b4b6c830cf96012880818c0e1de00d.png",
+            "尴尬": "cb321684ed5ce6eacdc2699092ab8fe7679e4fda.png",
+            "灵魂出窍": "43d3db7d97343c01b47e22cfabeca84b4251f35a.png",
+            "委屈": "d2f26cbdd6c96960320af03f5514c5b524990840.png",
+            "傲娇": "010540d0f61220a0db4922e4a679a1d8eca94f4e.png",
+            "疼": "905fd9a99ec316e353b9bd4ecd49a5f0a301eabf.png",
+            "冷": "cb0ebbd0668640f07ebfc0e03f7a18a8cd00b4ed.png",
+            "生病": "0f25ce04ae1d7baf98650986454c634f6612cb76.png",
+            "吓": "9c10c5ebc7bef27ec641b8a1877674e0c65fea5d.png",
+            "吐": "06946bfe71ac48a6078a0b662181bb5cad09decc.png",
+            "捂眼": "c5c6d6982e1e53e478daae554b239f2b227b172b.png",
+            "嘘声": "e64af664d20716e090f10411496998095f62f844.png",
+            "思考": "cfa9b7e89e4bfe04bbcd34ccb1b0df37f4fa905c.png",
+            "再见": "fc510306bae26c9aec7e287cdf201ded27b065b9.png",
+            "翻白眼": "eba54707c7168925b18f6f8b1f48d532fe08c2b1.png",
+            "哈欠": "888d877729cbec444ddbd1cf4c9af155a7a06086.png",
+            "奋斗": "bb2060c15dba7d3fd731c35079d1617f1afe3376.png",
+            "墨镜": "3a03aebfc06339d86a68c2d893303b46f4b85771.png",
+            "难过": "a651db36701610aa70a781fa98c07c9789b11543.png",
+            "撇嘴": "531863568e5668c5ac181d395508a0eeb1f0cda4.png",
+            "抓狂": "4c87afff88c22439c45b79e9d2035d21d5622eba.png",
+            "生气": "3195714219c4b582a4fb02033dd1519913d0246d.png",
+            "口罩": "3ad2f66b151496d2a5fb0a8ea75f32265d778dd3.png",
+            "牛年": "9275275ff1f2659310648221107d20bc4970f106.png",
+            "福到了": "5de5373d354c373cf1617b6b836f3a8d53c5a655.png",
+            "鸡腿": "c7860392815d345fa69c4f00ef18d67dccfbd574.png",
+            "月饼": "89b19c5730e08d6f12fadf6996de5bc2e52f81fe.png",
+            "雪花": "a41813c4edf8782047e172c884ebd4507ce5e449.png",
+            "视频卫星": "dce6fc7d6dfeafff01241924db60f8251cca5307.png",
+            "干杯": "8da12d5f55a2c7e9778dcc05b40571979fe208e6.png",
+            "爱心": "ed04066ea7124106d17ffcaf75600700e5442f5c.png",
+            "锦鲤": "643d6c19c8164ffd89e3e9cdf093cf5d773d979c.png",
+            "胜利": "b49fa9f4b1e7c3477918153b82c60b114d87347c.png",
+            "加油": "c7aaeacb21e107292d3bb053e5abde4a4459ed30.png",
+            "抱拳": "89516218158dbea18ab78e8873060bf95d33bbbe.png",
+            "响指": "1b5c53cf14336903e1d2ae3527ca380a1256a077.png",
+            "保佑": "fafe8d3de0dc139ebe995491d2dac458a865fb30.png",
+            "支持": "3c210366a5585706c09d4c686a9d942b39feeb50.png",
+            "拥抱": "41780a4254750cdaaccb20735730a36044e98ef3.png",
+            "跪了": "f2b3aee7e521de7799d4e3aa379b01be032698ac.png",
+            "怪我咯": "07cc6077f7f7d75b8d2c722dd9d9828a9fb9e46d.png",
+            "黑洞": "e90ec4c799010f25391179118ccd9f66b3b279ba.png",
+            "老鼠": "8e6fb491eb1bb0d5862e7ec8ccf9a3da12b6c155.png",
+            "凛冬-生气": "d90bd2fbc13a3cb8d313f6d675f20caf109f60a7.png",
+            "W-哈哈": "83d527303c8f62f494e6971c48836487e7d87b1b.png",
+            "霜叶-疑问": "ada3aea8594e724511c1daad15fb3b23900d8e24.png",
+            "煌-震撼": "7bb39ac289bc97fe52af047020a9bf324ecdebe1.png",
+            "哭泣": "a61abafb8c39defc323b045f30072198007b1c89.png",
+            "狗子": "6a997106af5bf490f22c80a7acf3be813ee755fc.png",
+            "羞羞": "f4f9171e4d8c3f30827a8b96ea1ce1beb825ad50.png",
+            "亲亲": "2f72bae7b834d499f259c833f7011d5ed8748fd1.png",
+            "耍帅": "d7a38b08d1f1cc35b19c35041f29ffcc48808e87.png",
+            "气愤": "069b029d17a086ab475fd331697a649e234850bb.png",
+            "高兴": "416570a8aca7be12fb2c36e4b846906653f6d294.png",
+        }
+    })
+</script>
+
+
+
+        </div>
+
+    </div>
+</div>
+
+                </div>
+                <div class="col l3" id="toc-body">
+                    <!-- 文章目录 -->
+                    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget #toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #toc-content .toc-list {
+        padding-left: 10px;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ul li, #toc-content ol li {
+        padding-left: 10px;
+        line-height: 1.8rem;
+        font-size: 1rem;
+        color: #444;
+    }
+
+    #toc-content .is-active-link {
+        color: #E91E63;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: transparent;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+    }
+
+    .toc-widget {
+        box-shadow: 0 16px 24px 2px rgb(0 0 0 / 14%), 0 6px 30px 5px rgb(0 0 0 / 12%), 0 8px 10px -5px rgb(0 0 0 / 20%);
+    }
+
+</style>
+<div id="post-toc">
+    <div class="toc-widget card">
+        <div id="toc-title">
+            <i class="far fa-list-alt"></i>&nbsp;&nbsp;目录
+        </div>
+        <div id="toc-content"></div>
+    </div>
+</div>
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function() {
+        tocbot.init({
+            // Where to render the table of contents.
+            tocSelector: '#toc-content',
+            // Where to grab the headings to build the table of contents.
+            contentSelector: '.post-content',
+            // Which headings to grab inside of the contentSelector element.
+            headingSelector: 'h1, h2, h3, h4',
+            // For headings inside relative or absolute positioned containers within content.
+            hasInnerContainers: false,
+            // Smooth scrolling enabled.
+            scrollSmooth: true,
+            // Smooth scroll duration.
+            scrollSmoothDuration: 420,
+            headingsOffset: $('#nav-header').height() + 10,
+            scrollSmoothOffset: -($('#nav-header').height() + 10),
+            collapseDepth: 4,
+            // orderedList can be set to false to generate unordered lists (ul)
+            // instead of ordered lists (ol)
+            orderedList: false,
+        });
+
+        // 动态设置文章目录的宽度， 防止滚动和窗口变动时变形
+        // width()不包含padding, innerWidth()包含padding
+        $('.toc-widget').width($('#toc-body').width());
+
+        let tocHeight = parseInt($(window).height() * 0.5 - 64);
+        let $tocWidget = $('.toc-widget');
+        let $tocTitle = $('#toc-title');
+        let $tocContent = $('#toc-content');
+        if ($(window).scrollTop() > tocHeight) {
+            $tocWidget.addClass('toc-fixed');
+        } else {
+            $tocWidget.removeClass('toc-fixed');
+        }
+        $tocWidget.css('max-height', $(window).height() * 0.6);
+        if ($tocContent.height() > ($tocWidget.height() - $tocTitle.height())) {
+            $tocWidget.css('overflow-y', 'auto');
+        }
+        // if ($tocWidget.height() > $(window).height() * 0.6) {
+        //     $tocWidget.css('max-height', $(window).height() * 0.6);
+        // }
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+            if ($tocContent.height() > ($tocWidget.height() - $tocTitle.height())) {
+                $tocWidget.css('overflow-y', 'auto');
+            } else {
+                $tocWidget.css('overflow-y', 'unset');
+            }
+            $('.toc-widget').width($('#toc-body').width());
+        });
+        $(window).on('resize', function(){
+            $tocWidget.css('max-height', $(window).height() * 0.6);
+            if ($tocContent.height() > ($tocWidget.height() - $tocTitle.height())) {
+                $tocWidget.css('overflow-y', 'auto');
+            } else {
+                $tocWidget.css('overflow-y', 'unset');
+            }
+            $('.toc-widget').width($('#toc-body').width());
+        });
+    });
+</script>
+
+                </div>
+            
+        </div>
+    </div>
+</main>
+
+    <footer class="page-footer footer-color">
+    
+        
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+    
+    
+    <style type="text/css">
+        .aplayer.aplayer-fixed {
+            z-index: 999;
+        }
+    
+        
+        .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+            left: -66px !important;
+        }
+    
+        .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+            left: 0px !important;
+        }
+    
+        
+    
+        .aplayer .aplayer-lrc p {
+            
+            display: none;
+            
+            font-size: 12px;
+            font-weight: 700;
+            line-height: 16px !important;
+        }
+    
+        .aplayer .aplayer-lrc p.aplayer-lrc-current {
+            
+            display: none;
+            
+            font-size: 15px;
+            color: #b7daff;
+        }
+    </style>
+    
+    <div class="">
+        <div class="row">
+            <meting-js
+                class="col l8 offset-l2 m10 offset-m1 s12"
+                server="netease"
+                type="playlist"
+                id="743950282"
+                fixed='true'
+                autoplay='false'
+                theme='#b7daff'
+                loop='all'
+                order='random'
+                preload='auto'
+                volume='0.7'
+                list-folded='true'>
+            </meting-js>
+        </div>
+    </div>
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
+    
+    
+    
+    <div class="container">
+        <div class="row center">
+            <div class="col l12 m12 s12">
+                <div id="framework-info">
+                    Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+                    &nbsp;|&nbsp;&nbsp;Theme&nbsp;
+                    <a href="https://github.com/xiongxianzhu/hexo-theme-xxcoding" target="_blank">
+                        xxcoding
+                    </a>
+                </div>
+                <div id="siteinfo">
+                    <!-- <span>站点总字数：</span> -->
+                    
+                    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+                    <span id="busuanzi_container_page_pv">站点总阅读量：<span class="white-text" id="busuanzi_value_page_pv"></span>次</span>
+                    &nbsp;|&nbsp;&nbsp;<span id="busuanzi_container_site_uv">站点总访客数：<span class="white-text" id="busuanzi_value_site_uv"></span>人</span>
+                    &nbsp;|&nbsp;&nbsp;<span id="busuanzi_container_site_pv">站点总访问量：<span class="white-text" id="busuanzi_value_site_pv"></span>次</span>
+                    
+                </div>
+                
+                <div id="sitetime">载入运行时间...</div>
+                <script>
+                    function siteTime() {
+                        var seconds = 1000;
+                        var minutes = seconds * 60;
+                        var hours = minutes * 60;
+                        var days = hours * 24;
+                        var years = days * 365;
+                        var today = new Date();
+                        var startYear = "2017";
+                        var startMonth = "6";
+                        var startDate = "5";
+                        var startHour = "0";
+                        var startMinute = "0";
+                        var startSecond = "0";
+                        var todayYear = today.getFullYear();
+                        var todayMonth = today.getMonth() + 1;
+                        var todayDate = today.getDate();
+                        var todayHour = today.getHours();
+                        var todayMinute = today.getMinutes();
+                        var todaySecond = today.getSeconds();
+                        var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                        var diff = t2 - t1;
+                        var diffYears = Math.floor(diff / years);
+                        var diffDays = Math.floor((diff / days) - diffYears * 365);
+                        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                            minutes);
+                        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                            diffMinutes * minutes) / seconds);
+                        if (startYear == todayYear) {
+                            document.getElementById("year").innerHTML = todayYear;
+                            document.getElementById("sitetime").innerHTML = "本站已持续运行 " + "<span class='white-text'>" + diffDays + "</span>" + " 天 "
+                            + "<span class='white-text'>" + diffHours + "</span>" + " 小时 "
+                            + "<span class='white-text'>" + diffMinutes + "</span>" + " 分钟 "
+                            + "<span class='white-text'>" + diffSeconds + "</span>" + " 秒";
+                        } else {
+                            document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                            document.getElementById("sitetime").innerHTML = "本站已持续运行 " + "<span class='white-text'>" + diffYears + "</span>" + " 年 "
+                            + "<span class='white-text'>" + diffDays + "</span>" + " 天 "
+                            + "<span class='white-text'>" + diffHours + "</span>" + " 小时 "
+                            + "<span class='white-text'>" + diffMinutes + "</span>" + " 分钟 "
+                            + "<span class='white-text'>" + diffSeconds + "</span>" + " 秒";
+                        }
+                    }
+                    setInterval(siteTime, 1000);
+                </script>
+                
+                
+                <div id="icp">
+                    <img class="lazyload" src="/img/icp.png" data-src="/img/icp.png" style="vertical-align: text-bottom;" />
+                    <a href="https://beian.miit.gov.cn/" target="_blank">粤ICP备17065679号-1</a>
+                </div>
+                
+                
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container center">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2017 - 2024</span>
+            
+            ,&nbsp;
+            made with <span style="color: red;">❤️</span>&nbsp;&nbsp;by
+            <a href="/about" target="_blank">xx</a>
+            for a better web.
+        </div>
+    </div>
+</footer>
+
+
+    
+    <!-- 回到顶部按钮 -->
+<div id="back-top" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+    
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+<script src="/libs/lazyload/lazyload.min.js"></script>
+<script src="/libs/aos/aos.js"></script>
+<script src="/js/xxcoding.js"></script>
+
+
+<script src="https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
+
+
+</body>
+</html>

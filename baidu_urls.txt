@@ -1,0 +1,10 @@
+https://zhuxiongxian.cc/2024/07/21/win11-install-nodejs/
+https://zhuxiongxian.cc/2024/03/22/pyenv-usage/
+https://zhuxiongxian.cc/2023/05/09/how-to-learn-vue/
+https://zhuxiongxian.cc/2021/03/27/linux-info-stats/
+https://zhuxiongxian.cc/2021/03/18/install-go-on-mac/
+https://zhuxiongxian.cc/2021/03/17/using-vscode/
+https://zhuxiongxian.cc/2021/03/10/docker-registry-mirrors-config/
+https://zhuxiongxian.cc/2021/03/10/using-gitlab-ce-to-build-git-service/
+https://zhuxiongxian.cc/2021/03/02/docker-elk/
+https://zhuxiongxian.cc/2021/02/28/mysql5-7-install-password-verification-plug-in-validate-password/

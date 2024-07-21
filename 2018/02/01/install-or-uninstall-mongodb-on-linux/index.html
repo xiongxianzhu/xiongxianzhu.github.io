@@ -1,0 +1,1409 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="keywords" content="Linux安装与卸载MongoDB, linux, mongodb, nosql, 数据库, 运维, xx, zhuxiongxian, blog, 博客, 挨踢， 官方, it">
+    <meta name="description" content="官方安装MongoDB英文教程： https://docs.mongodb.com/getting-started/shell/installation/
+p.s. 本文针对64位的linux发行版本。
+1. Ubuntu下安装或卸载Mon">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate.css/animate.min.css">
+    
+    <!-- 是否加载使用自带的 prismjs. -->
+    <link rel="stylesheet" href="/libs/prism/prism-tomorrow-night.css">
+    <link rel="stylesheet" type="text/css" href="/libs/prism/prism-line-numbers.css">
+    
+    
+    <!-- Material Icons -->
+    <link rel="stylesheet" type="text/css" href="/libs/materialicons/materialicons.css">
+    
+    <!-- Fontawesome Icons -->
+    <link rel="stylesheet" type="text/css" href="/libs/fontawesome/css/all.min.css">
+    <!-- aos -->
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <!-- The theme css -->
+    <link rel="stylesheet" type="text/css" href="/css/xxcoding.css">
+
+    
+    <!-- Your css -->
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    
+    <!-- 
+        
+            
+                <link rel="stylesheet" type="text/css" href="/libs/fontawesome/css/all.min.css">
+            
+        
+            
+                <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+            
+        
+            
+                <link rel="stylesheet" type="text/css" href="/libs/animate.css/animate.min.css">
+            
+        
+            
+        
+            
+                <link rel="stylesheet" type="text/css" href="/libs/prism/prism-tomorrow-night.css">
+            
+        
+            
+                <link rel="stylesheet" type="text/css" href="/libs/materialicons/materialicons.css">
+            
+        
+            
+                <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+            
+        
+            
+                <link rel="stylesheet" type="text/css" href="/libs/aplayer/APlayer.min.css">
+            
+        
+            
+                <link rel="stylesheet" type="text/css" href="/libs/tocbot/tocbot.css">
+            
+        
+            
+                <link rel="stylesheet" type="text/css" href="/libs/aplayer/Meting.min.js">
+            
+        
+            
+                <link rel="stylesheet" type="text/css" href="/libs/fancybox/fancybox.css">
+            
+        
+            
+                <link rel="stylesheet" type="text/css" href="/css/xxcoding.css">
+            
+        
+            
+                <link rel="stylesheet" type="text/css" href="/css/my.css">
+            
+        
+     -->
+    <!-- 
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500">
+    
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Marck+Script">
+     -->
+    
+
+    <!-- Custom Head -->
+    
+
+    <title>Linux安装与卸载MongoDB | xx&#39;s blog</title>
+    <link rel="icon" type="image/png" href="/img/favicon.png">
+    <script src="/libs/jquery/jquery.min.js"></script>
+<meta name="generator" content="Hexo 7.3.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="xx's blog" type="application/atom+xml">
+</head>
+
+<body>
+    <header class="navbar-fixed">
+    <!-- <nav class="nav-extended pushpin"> -->
+    <nav class="nav-color nav-transparent" id="nav-header" color-on-scroll="100">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a class="brand-logo waves-effect waves-light" href="/">
+                    
+                    <img src="/img/logo.png" class="circle logo-img lazyload" data-src="/img/logo.png" alt="logo">
+                    
+                    <span class="logo-span">xx&#39;s blog</span>
+                </a>
+                <a href="#" data-target="nav-mobile" class="sidenav-trigger">
+    <i class="material-icons">menu</i>
+</a>
+<ul class="right hide-on-med-and-down">
+    
+        
+            <li>
+                
+                
+                <a class="nav-item waves-effect waves-light" href="/" style="display: flex;">
+                    <i class="material-icons">home</i>
+                
+                    <span class="nav-menu">首页</span>
+                </a>
+                
+            </li>
+        
+    
+        
+            <li>
+                
+                
+                <a class="nav-item waves-effect waves-light" href="/categories" style="display: flex;">
+                    <i class="material-icons">chrome_reader_mode</i>
+                
+                    <span class="nav-menu">分类</span>
+                </a>
+                
+            </li>
+        
+    
+        
+            <li>
+                
+                
+                <a class="nav-item waves-effect waves-light" href="/archives" style="display: flex;">
+                    <i class="material-icons">inbox</i>
+                
+                    <span class="nav-menu">归档</span>
+                </a>
+                
+            </li>
+        
+    
+        
+            <li>
+                
+                
+                <a class="nav-item waves-effect waves-light" href="/tags" style="display: flex;">
+                    <i class="material-icons">label</i>
+                
+                    <span class="nav-menu">标签</span>
+                </a>
+                
+            </li>
+        
+    
+        
+            <li>
+                
+                
+                <a class="nav-item waves-effect waves-light" href="/about" style="display: flex;">
+                    <i class="material-icons">account_circle</i>
+                
+                    <span class="nav-menu">关于</span>
+                </a>
+                
+            </li>
+        
+    
+        
+            <li>
+                
+                
+                <a class="nav-item dropdown-trigger waves-effect waves-light" href="#!" data-target="dropdown-lab" style="display: flex;">
+                    <i class="material-icons">apps</i>
+                
+                    <span class="nav-menu">实验室</span>
+                    <i class="material-icons right">arrow_drop_down</i>
+                </a>
+                <ul class="dropdown-content" id="dropdown-lab">
+                    
+                        
+                        <li>
+                            
+                            <a href="/comments" style="display: flex;">
+                                <i class="material-icons">comment</i>
+                            
+                                <span>留言板</span>
+                            </a>
+                        </li>
+                        
+                    
+                        
+                        <li>
+                            
+                            <a href="/friends" style="display: flex;">
+                                <i class="material-icons">link</i>
+                            
+                                <span>友情链接</span>
+                            </a>
+                        </li>
+                        
+                    
+                        
+                        <li>
+                            
+                            <a href="/resume" style="display: flex;">
+                                <i class="material-icons">work</i>
+                            
+                                <span>简历</span>
+                            </a>
+                        </li>
+                        
+                    
+                        
+                        <li>
+                            
+                            <a href="/timeline" style="display: flex;">
+                                <i class="material-icons">timeline</i>
+                            
+                                <span>时间线</span>
+                            </a>
+                        </li>
+                        
+                    
+                        
+                        <li>
+                            
+                            <a href="/vlog" style="display: flex;">
+                                <i class="material-icons">video_library</i>
+                            
+                                <span>Vlog</span>
+                            </a>
+                        </li>
+                        
+                    
+                        
+                        <li>
+                            
+                            <a href="/portfolio" style="display: flex;">
+                                <i class="material-icons">widgets</i>
+                            
+                                <span>作品集</span>
+                            </a>
+                        </li>
+                        
+                    
+                </ul>
+                
+            </li>
+        
+    
+        
+            <li>
+                
+                
+                <a class="nav-item dropdown-trigger waves-effect waves-light" href="#!" data-target="dropdown-medias" style="display: flex;">
+                    <i class="material-icons">perm_media</i>
+                
+                    <span class="nav-menu">多媒体</span>
+                    <i class="material-icons right">arrow_drop_down</i>
+                </a>
+                <ul class="dropdown-content" id="dropdown-medias">
+                    
+                        
+                        <li>
+                            
+                            <a href="/galleries" style="display: flex;">
+                                <i class="material-icons">photo_library</i>
+                            
+                                <span>图库</span>
+                            </a>
+                        </li>
+                        
+                    
+                        
+                        <li>
+                            
+                            <a href="/musics" style="display: flex;">
+                                <i class="material-icons">library_music</i>
+                            
+                                <span>音乐</span>
+                            </a>
+                        </li>
+                        
+                    
+                        
+                        <li>
+                            
+                            <a href="/videos" style="display: flex;">
+                                <i class="material-icons">video_library</i>
+                            
+                                <span>视频</span>
+                            </a>
+                        </li>
+                        
+                    
+                        
+                        <li>
+                            
+                            <a href="/books" style="display: flex;">
+                                <i class="material-icons">library_books</i>
+                            
+                                <span>书籍</span>
+                            </a>
+                        </li>
+                        
+                    
+                </ul>
+                
+            </li>
+        
+    
+    <li>
+        <a class="nav-item modal-trigger waves-effect waves-light" href="#search-modal">
+            <i class="material-icons">search</i>
+        </a>
+        <div>
+    <!-- 模态框结构 -->
+    <div id="search-modal" class="modal">
+        <div class="modal-content">
+            <div id="search-title">
+                <i class="material-icons">search</i>
+                搜 索
+            </div>
+            <input type="text" id="search-input" placeholder="输入关键字进行搜索...">
+            <ul id="search-results"></ul>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            // 获取搜索输入框和结果列表元素
+            var searchInput = $('#search-input');
+            var searchResults = $('#search-results');
+
+            // 读取 search.json 文件
+            $.getJSON('/search.json', function(data) {
+                // 监听输入框的输入事件
+                searchInput.on('input', function() {
+                    var query = $(this).val().toLowerCase();
+
+                    if (query === '') {
+                        // 如果查询字符串为空，则清空结果列表
+                        searchResults.empty();
+                        return;
+                    }
+
+                    var results = data.filter(post => 
+                        post.title.toLowerCase().includes(query) || 
+                        post.content.toLowerCase().includes(query)
+                    );
+
+                    // 清空结果列表
+                    searchResults.empty();
+
+                    // 显示搜索结果
+                    results.forEach(function(result) {
+                        var li = $('<li>');
+                        var a = $('<a>').attr('href', result.url).text(result.title).addClass('title');
+                        li.append(a);
+                        searchResults.append(li);
+
+                        // 高亮显示关键词
+                        var content = result.content.trim().replace(/<[^>]+>/g, "");
+                        var regex = new RegExp('(' + query.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&') + ')', 'gi');
+                        var highlightedContent = content.replace(regex, '<span class="highlight">$&</span>');
+                        li.append($('<div>').html(highlightedContent));
+                    });
+                    
+                });
+            }).fail(function(err) {
+                console.error(err);
+            });
+        });
+
+        // 处理按钮点击事件
+        $('.modal-trigger').on('click', function(e) {
+            e.preventDefault(); // 阻止默认行为
+            var modalId = $(this).attr('href');
+            var modal = $(modalId);
+            M.Modal.init(modal[0]);
+            var instance = M.Modal.getInstance(modal[0]);
+            instance.open();
+        });
+    </script>
+</div>
+<style>
+    #search-modal .modal-content h4,
+    #search-modal .modal-content input,
+    #search-modal .modal-content ul,
+    #search-modal .modal-content li,
+    #search-modal .modal-content a {
+        color: #333; /* 设置字体颜色 */
+    }
+
+    #search-results li {
+        display: block; /* 将列表项显示为一行 */
+        margin: 10px 0; /* 每行间距 */
+        padding: 10px;
+        /* border-bottom: 1px solid #ddd; */
+        margin-bottom: 10px;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        border-radius: 3px;
+    }
+
+    #search-results a {
+        text-decoration: none; /* 去除链接的下划线 */
+    }
+
+    #search-input {
+        border-bottom: 1px solid #ddd;
+    }
+
+    .highlight {
+        margin: 0 2px;
+        padding: 1px 5px 1px 4px;
+        border-radius: 2px;
+        background-color: #f2f2f2;
+        color: #e96900;
+        font-style: normal;
+        white-space: pre-wrap;
+    }
+
+    #search-results a.title {
+        font-weight: bold;
+        font-size: 1.2em;
+        margin-bottom: 5px;
+    }
+
+    #search-title {
+        font-size: 2.16rem;
+        height: 64px;
+        line-height: 64px;
+        color: #333;
+    }
+
+    #search-title i {
+        display: inline-block;
+    }
+</style>
+    </li>
+</ul>
+
+            </div>
+        </div>
+    </nav>
+</header>
+<div class="sidenav" id="nav-mobile">
+    <div class="user-view">
+        <div class="background overlay">
+            <img class="lazyload" src="/img/icon-seamless.png" data-src="/img/icon-seamless.png">
+        </div>
+        <img class="circle responsive-img lazyload" src="/img/logo.png" data-src="/img/logo.png">
+        <div class="name white-text">xx's blog</div>
+        <div class="description white-text">欢迎来到zhuxiongxian's blog, 我是zhuxiongxian, 这是我的挨踢博客!</div>
+    </div>
+    <ul>
+        
+            
+                <li>
+                    
+                    
+                    <a class="waves-effect" href="/" style="display: flex;">
+                        <i class="material-icons">home</i>
+                    
+                        <span>首页</span>
+                    </a>
+                    
+                </li>
+            
+        
+            
+                <li>
+                    
+                    
+                    <a class="waves-effect" href="/categories" style="display: flex;">
+                        <i class="material-icons">chrome_reader_mode</i>
+                    
+                        <span>分类</span>
+                    </a>
+                    
+                </li>
+            
+        
+            
+                <li>
+                    
+                    
+                    <a class="waves-effect" href="/archives" style="display: flex;">
+                        <i class="material-icons">inbox</i>
+                    
+                        <span>归档</span>
+                    </a>
+                    
+                </li>
+            
+        
+            
+                <li>
+                    
+                    
+                    <a class="waves-effect" href="/tags" style="display: flex;">
+                        <i class="material-icons">label</i>
+                    
+                        <span>标签</span>
+                    </a>
+                    
+                </li>
+            
+        
+            
+                <li>
+                    
+                    
+                    <a class="waves-effect" href="/about" style="display: flex;">
+                        <i class="material-icons">account_circle</i>
+                    
+                        <span>关于</span>
+                    </a>
+                    
+                </li>
+            
+        
+            
+                <li>
+                    
+                    <ul class="collapsible">
+                        <li>
+                            
+                            <div class="collapsible-header waves-effect">
+                                <i class="material-icons">apps</i>
+                            
+                                <span>实验室</span>
+                                <i class="material-icons right">arrow_drop_down</i>
+                            </div>
+                            <ul class="collapsible-body">
+                                
+                                    
+                                    <li>
+                                        
+                                        <a class="waves-effect" href="/comments" style="display: flex;">
+                                            <i class="material-icons">comment</i>
+                                        
+                                            <span>留言板</span>
+                                        </a>
+                                    </li>
+                                    
+                                
+                                    
+                                    <li>
+                                        
+                                        <a class="waves-effect" href="/friends" style="display: flex;">
+                                            <i class="material-icons">link</i>
+                                        
+                                            <span>友情链接</span>
+                                        </a>
+                                    </li>
+                                    
+                                
+                                    
+                                    <li>
+                                        
+                                        <a class="waves-effect" href="/resume" style="display: flex;">
+                                            <i class="material-icons">work</i>
+                                        
+                                            <span>简历</span>
+                                        </a>
+                                    </li>
+                                    
+                                
+                                    
+                                    <li>
+                                        
+                                        <a class="waves-effect" href="/timeline" style="display: flex;">
+                                            <i class="material-icons">timeline</i>
+                                        
+                                            <span>时间线</span>
+                                        </a>
+                                    </li>
+                                    
+                                
+                                    
+                                    <li>
+                                        
+                                        <a class="waves-effect" href="/vlog" style="display: flex;">
+                                            <i class="material-icons">video_library</i>
+                                        
+                                            <span>Vlog</span>
+                                        </a>
+                                    </li>
+                                    
+                                
+                                    
+                                    <li>
+                                        
+                                        <a class="waves-effect" href="/portfolio" style="display: flex;">
+                                            <i class="material-icons">widgets</i>
+                                        
+                                            <span>作品集</span>
+                                        </a>
+                                    </li>
+                                    
+                                
+                            </ul>
+                        </li>
+                    </ul>
+                    
+                </li>
+            
+        
+            
+                <li>
+                    
+                    <ul class="collapsible">
+                        <li>
+                            
+                            <div class="collapsible-header waves-effect">
+                                <i class="material-icons">perm_media</i>
+                            
+                                <span>多媒体</span>
+                                <i class="material-icons right">arrow_drop_down</i>
+                            </div>
+                            <ul class="collapsible-body">
+                                
+                                    
+                                    <li>
+                                        
+                                        <a class="waves-effect" href="/galleries" style="display: flex;">
+                                            <i class="material-icons">photo_library</i>
+                                        
+                                            <span>图库</span>
+                                        </a>
+                                    </li>
+                                    
+                                
+                                    
+                                    <li>
+                                        
+                                        <a class="waves-effect" href="/musics" style="display: flex;">
+                                            <i class="material-icons">library_music</i>
+                                        
+                                            <span>音乐</span>
+                                        </a>
+                                    </li>
+                                    
+                                
+                                    
+                                    <li>
+                                        
+                                        <a class="waves-effect" href="/videos" style="display: flex;">
+                                            <i class="material-icons">video_library</i>
+                                        
+                                            <span>视频</span>
+                                        </a>
+                                    </li>
+                                    
+                                
+                                    
+                                    <li>
+                                        
+                                        <a class="waves-effect" href="/books" style="display: flex;">
+                                            <i class="material-icons">library_books</i>
+                                        
+                                            <span>书籍</span>
+                                        </a>
+                                    </li>
+                                    
+                                
+                            </ul>
+                        </li>
+                    </ul>
+                    
+                </li>
+            
+        
+    </ul>
+</div>
+
+
+    <style>
+    
+    .post-content pre.line-numbers {
+        padding: 2.2rem 1.5rem 0.5rem 3.8rem !important;
+        -webkit-box-shadow: 0 0 20px rgb(214 0 190 / 80%);
+        box-shadow: 0 0 20px rgb(214 0 190 / 80%);
+    }
+
+    /* 行号位置 */
+    .line-numbers .line-numbers-rows {
+        top: 2.5rem;        /* 2.2rem + 0.3rem */
+    }
+    
+    
+    /* mac主题效果 */
+    .post-content pre.line-numbers::after {
+        content: '';
+        position: absolute;
+        display: block;
+        border-radius: 50%;
+        background: #ff5f56!important;
+        width: 12px!important;
+        height: 12px!important;
+        top: 12px!important;
+        left: 12px!important;
+        -webkit-box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
+        box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
+    }
+    
+    
+    /* 代码块语言 */
+    .post-content pre.line-numbers::before {
+        color: #ccc;
+        font-size: .6rem;
+        font-weight: 600;
+        height: 25px;
+        line-height: 25px;
+        padding: 5px 10px 0;
+        position: absolute;
+        right: 0;
+        text-align: right;
+        top: 0;
+        content: attr(data-language);
+    }
+    
+</style>
+<main>
+    <!-- 文章封面 -->
+    <div class="post-cover">
+    <div class="cover-background">
+        
+        <div class="pattern repeat lazyload" data-src="/img/icon-seamless.png"
+            style="background-image: url('/img/icon-seamless.png');">
+            
+        </div>
+        
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="brand">
+                    <h4>Linux安装与卸载MongoDB</h4>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="container has-cover-container post-container">
+        <div class="row">
+            
+                <div class="col s12 m12 l9" id="post-body">
+                    <!-- 文章详情 -->
+                    <div id="post-detail">
+    <div class="card main main-raised">
+        <div class="post-content">
+            <p>官方安装MongoDB英文教程： <a href="https://docs.mongodb.com/getting-started/shell/installation/">https://docs.mongodb.com/getting-started/shell/installation/</a></p>
+<p>p.s. 本文针对64位的linux发行版本。</p>
+<h4 id="1-Ubuntu下安装或卸载MongoDB"><a href="#1-Ubuntu下安装或卸载MongoDB" class="headerlink" title="1. Ubuntu下安装或卸载MongoDB"></a>1. Ubuntu下安装或卸载MongoDB</h4><h5 id="1-1-包管理系统APT添加MongoDB公钥key"><a href="#1-1-包管理系统APT添加MongoDB公钥key" class="headerlink" title="1.1. 包管理系统APT添加MongoDB公钥key"></a>1.1. 包管理系统APT添加MongoDB公钥key</h5><p>使用ubuntu的包管理系统(即dpkg和APT)导入公钥：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">sudo</span> apt-key adv <span class="token parameter variable">--keyserver</span> hkp://keyserver.ubuntu.com:80 <span class="token parameter variable">--recv</span> 2930ADAE8CAF5059EE73BB4B58712A2291FA4AD5<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>MongoDB的公钥Key会更新， 最新的公钥只能在官网Ubuntu系统下安装MongoDB的页面中查找：<br><a href="https://docs.mongodb.com/master/tutorial/install-mongodb-on-ubuntu/">https://docs.mongodb.com/master/tutorial/install-mongodb-on-ubuntu/</a></p>
+<p>任选以上其中一个公钥， 执行命令回车添加即可。</p>
+<h5 id="1-2-创建MongoDB软件源文件"><a href="#1-2-创建MongoDB软件源文件" class="headerlink" title="1.2. 创建MongoDB软件源文件"></a>1.2. 创建MongoDB软件源文件</h5><p>添加MongoDB软件源：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">vim</span> /etc/apt/sources.list.d/mongodb.list<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><code>mongodb.list</code>文件内容由ubuntu的版本决定。 ubuntu版本的命令规则是根据正式版发行的年月命名， ubuntu16.04也就意味着2016年04月发行。 除此之处， 每个版本的ubuntu还有一个用2个英文单词组成的开发代号， 都是动物名称组成。 安装软件源的版本则需要对应一下。</p>
+<p>p.s. ubuntu版本每半年(即6个月)发布一个版本， 每2年发布一个长期支持<code>LTS(Long Term Support)</code>版本。</p>
+<p>ubuntu12.04版本的代号是穿山甲 <code>Precise Pangolin</code>, 则输入内容是：</p>
+<pre class="line-numbers language-none"><code class="language-none">deb [ arch=amd64 ] https://repo.mongodb.org/apt/ubuntu precise/mongodb-org/3.6 multiverse<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>ubuntu14.04版本的代号是塔尔羊 <code>Trusty Tahr</code>, 则输入内容是：</p>
+<pre class="line-numbers language-none"><code class="language-none">deb [ arch=amd64 ] https://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.6 multiverse<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>ubuntu16.04版本的代号是地松鼠 <code>Xenial Xerus</code>, 则输入内容是：</p>
+<pre class="line-numbers language-none"><code class="language-none">deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.6 multiverse<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>p.s. 知道了配置软件源的原理之后， 这里提供了一种快速配置的方法， 不需要文本编辑器 <code>vim</code> 输入， <code>echo</code> 和 <code>tee</code> 命令可以把内容输入到文件中。 <code>lsb_release -sc</code> 则可以自动提取版本动物名， 所以以下命令可以替代上面的 <code>vim</code> 输入内容的方法。</p>
+<p>直接输入命令：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">echo</span> <span class="token string">"deb https://repo.mongodb.org/apt/ubuntu "</span><span class="token variable"><span class="token variable">$(</span>lsb_release <span class="token parameter variable">-sc</span><span class="token variable">)</span></span><span class="token string">"/mongodb-org/3.6 multiverse"</span> <span class="token operator">|</span> <span class="token function">sudo</span> <span class="token function">tee</span> /etc/apt/sources.list.d/mongodb.list<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>官方MongoDB的软件源仓库可以对大陆用户不太友好， 建议使用阿里云的MongoDB软件源仓库， 执行以下命令：</p>
+<pre class="line-numbers language-none"><code class="language-none">echo "deb http://mirrors.aliyun.com/mongodb/apt/ubuntu "$(lsb_release -sc)"/mongodb-org/3.6 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb.list<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>若想删除mongodb软件源， 则直接用<code>rm</code>命令从软件源目录下删除<code>mongodb.list</code>， 如下：</p>
+<pre class="line-numbers language-none"><code class="language-none">$ sudo rm -fr /etc/apt/sources.list.d/mongodb.list<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h5 id="1-3-更新软件源"><a href="#1-3-更新软件源" class="headerlink" title="1.3. 更新软件源"></a>1.3. 更新软件源</h5><p>ubuntu的软件源文件都存放在目录 <code>/etc/apt/sources.list.d/</code> 下， 执行以下命令扫描新增的mongodb软件源文件<code>mongodb.list</code>：</p>
+<pre class="line-numbers language-none"><code class="language-none">$ sudo apt-get update<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h5 id="1-4-安装MongoDB"><a href="#1-4-安装MongoDB" class="headerlink" title="1.4. 安装MongoDB"></a>1.4. 安装MongoDB</h5><pre class="line-numbers language-none"><code class="language-none">$ sudo apt-get install -y mongodb-org<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>参数<code>-y</code>表示yes, 意味着中途不用确认， 直接自动安装。</p>
+<h5 id="1-5-卸载MongoDB"><a href="#1-5-卸载MongoDB" class="headerlink" title="1.5. 卸载MongoDB"></a>1.5. 卸载MongoDB</h5><pre class="line-numbers language-none"><code class="language-none">$ sudo service mongod stop
+$ sudo apt-get purge mongodb-org*
+
+$ sudo apt-get autoremove
+$ sudo rm -r /var/log/mongodb (日志目录)
+$ sudo rm -r /var/lib/mongodb (数据目录)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h5 id="1-6-MongoDB相关说明"><a href="#1-6-MongoDB相关说明" class="headerlink" title="1.6. MongoDB相关说明"></a>1.6. MongoDB相关说明</h5><ul>
+<li>mongodb默认服务名为： <code>mongod</code></li>
+<li>mongodb默认的数据文件目录为： <code>/var/lib/mongodb</code></li>
+<li>mongodb默认的日志文件目录为： <code>/var/log/mongodb</code></li>
+<li>mongodb默认的配置文件为： <code>/etc/mongod.conf</code></li>
+<li>mongodb默认的端口为：<code>27017</code></li>
+<li>配置文件可指定日志(systemLog.path)和数据文件目录(storage.dbPath)， 以及端口等。</li>
+<li>mongodb默认的运行日志文件： <code>/var/log/mongodb/mongod.log</code></li>
+</ul>
+<h5 id="1-7-设置MongoDB服务开机启动"><a href="#1-7-设置MongoDB服务开机启动" class="headerlink" title="1.7. 设置MongoDB服务开机启动"></a>1.7. 设置MongoDB服务开机启动</h5><p>安装mongodb3.6版本默认会在目录<code>/lib/systemd/system/</code>下创建MongoDB的服务文件<code>mongod.service</code>， 如果没有则手动在<code>/lib/systemd/system/</code>下创建文件<code>mongod.service</code>， 如下：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># cd /lib/systemd/system/</span>
+<span class="token comment"># vim mongod.service</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p><code>mongod.service</code>文件内容如下：</p>
+<pre class="line-numbers language-none"><code class="language-none">[Unit]
+Description=High-performance, schema-free document-oriented database
+After=network.target
+Documentation=https://docs.mongodb.org/manual
+
+[Service]
+User=mongodb
+Group=mongodb
+ExecStart=/usr/bin/mongod --config /etc/mongod.conf
+PIDFile=/var/run/mongodb/mongod.pid
+# file size
+LimitFSIZE=infinity
+# cpu time
+LimitCPU=infinity
+# virtual memory size
+LimitAS=infinity
+# open files
+LimitNOFILE=64000
+# processes/threads
+LimitNPROC=64000
+# locked memory
+LimitMEMLOCK=infinity
+# total threads (user+kernel)
+TasksMax=infinity
+TasksAccounting=false
+
+# Recommended limits for for mongod as specified in
+# http://docs.mongodb.org/manual/reference/ulimit/#recommended-settings
+
+[Install]
+WantedBy=multi-user.target<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>或简化为：</p>
+<pre class="line-numbers language-none"><code class="language-none">[Unit]
+Description=High-performance, schema-free document-oriented database
+After=network.target
+Documentation=https://docs.mongodb.org/manual
+
+[Service]
+User=mongodb
+Group=mongodb
+ExecStart=/usr/bin/mongod --quiet --config /etc/mongod.conf
+
+[Install]
+WantedBy=multi-user.target<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><code>:wq</code>保存退出vim编辑文件<code>mongod.service</code>， 更新<code>systemctl</code>服务：</p>
+<pre class="line-numbers language-none"><code class="language-none"># systemctl daemon-reload<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>MongoDB的服务名为<code>mongod</code>, 执行以下命令实现开机启动：</p>
+<pre class="line-numbers language-none"><code class="language-none"># systemctl start mongod
+# systemctl enable mongod
+Created symlink from /etc/systemd/system/multi-user.target.wants/mongod.service to /lib/systemd/system/mongod.service.
+$ sudo update-rc.d -f mongod defaults<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>检测MongoDB服务<code>mongod</code>是否以端口<code>27017</code>启动：</p>
+<pre class="line-numbers language-none"><code class="language-none"># netstat -plntu
+或
+# ps aux|grep mongod
+或
+# lsof -i:27017
+或 
+# pgrep mongo -l # 注意：-l是英文字母l，不是阿拉伯数字1， 显示进程号和进程名
+1095 mongod<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>查看MongoDB版本：</p>
+<pre class="line-numbers language-none"><code class="language-none">$ mongod --version
+db version v3.6.2
+git version: 489d177dbd0f0420a8ca04d39fd78d0a2c539420
+OpenSSL version: OpenSSL 1.0.2g  1 Mar 2016
+allocator: tcmalloc
+modules: none
+build environment:
+    distmod: ubuntu1604
+    distarch: x86_64
+    target_arch: x86_64<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>删除mongod开机启动执行命令：</p>
+<pre class="line-numbers language-none"><code class="language-none">$ sudo update-rc.d -f mongod remove<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+
+<h4 id="2-Centos下安装或卸载MongoDB"><a href="#2-Centos下安装或卸载MongoDB" class="headerlink" title="2. Centos下安装或卸载MongoDB"></a>2. Centos下安装或卸载MongoDB</h4><p><a href="https://docs.mongodb.com/manual/tutorial/install-mongodb-on-red-hat/">install-mongodb-on-red-hat</a></p>
+<h5 id="2-1-安装MongoDB"><a href="#2-1-安装MongoDB" class="headerlink" title="2.1. 安装MongoDB"></a>2.1. 安装MongoDB</h5><p>当前最新稳定版本为<code>3.6.5</code>， 则选择安装最新稳定版的mongodb</p>
+<p>安装mongodb, 会安装软件包<code>mongodb-org</code>及其依赖包<code>mongodb-org-server</code>、<code>mongodb-org-mongos</code>、<code>mongodb-org-shell</code>、<code>mongodb-org-tools</code>。</p>
+<p>创建MongoDB软件源文件 <code>/etc/yum.repos.d/mongodb-org-3.6.repo</code>， 其内容为：</p>
+<pre class="line-numbers language-none"><code class="language-none">[mongodb-org-3.6]
+name=MongoDB Repository
+baseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/3.6/x86_64/
+gpgcheck=1
+enabled=1
+gpgkey=https://www.mongodb.org/static/pgp/server-3.6.asc<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>更新yum缓存， 并安装mongodb</p>
+<pre class="line-numbers language-none"><code class="language-none">$ sudo yum update
+$ sudo yum install -y mongodb-org
+$ mongo --version
+MongoDB shell version v3.6.5
+git version: a20ecd3e3a174162052ff99913bc2ca9a839d618
+OpenSSL version: OpenSSL 1.0.1e-fips 11 Feb 2013
+allocator: tcmalloc
+modules: none
+build environment:
+    distmod: rhel70
+    distarch: x86_64
+    target_arch: x86_64<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h5 id="2-2-卸载MongoDB"><a href="#2-2-卸载MongoDB" class="headerlink" title="2.2. 卸载MongoDB"></a>2.2. 卸载MongoDB</h5><pre class="line-numbers language-none"><code class="language-none">$ sudo systemctl stop mongod  // sudo service mongod stop
+$ sudo yum erase $(rpm -qa | grep mongodb-org)
+$ sudo rm -r /var/log/mongodb
+$ sudo rm -r /var/lib/mongo<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h5 id="2-3-设置MongoDB服务开机启动"><a href="#2-3-设置MongoDB服务开机启动" class="headerlink" title="2.3. 设置MongoDB服务开机启动"></a>2.3. 设置MongoDB服务开机启动</h5><pre class="line-numbers language-none"><code class="language-none">$ sudo chkconfig mongod on<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h5 id="2-4-mongodb服务管理"><a href="#2-4-mongodb服务管理" class="headerlink" title="2.4. mongodb服务管理"></a>2.4. mongodb服务管理</h5><pre class="line-numbers language-none"><code class="language-none">$ sudo systemctl start mongod   // 开启mongod服务
+$ sudo systemctl restart mongod // 重启mongod服务
+$ sudo systemctl stop mongod    // 停止mongod服务<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>相关阅读：</p>
+<ul>
+<li><a href="https://zhuxiongxian.cc/2017/06/23/mongodb-shell-common-commands/">mongodb shell常用命令</a></li>
+</ul>
+
+        </div>
+        <div class="post-comment">
+            
+
+    <style>
+    .v[data-class=v] .vinput {
+        padding: unset;
+    }
+</style>
+<div id="vcomments"></div>
+
+<script src="/libs/valine/Valine.min.js"></script>
+
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'Mia2Oc0sFRP8CLKWIpkzlKH7-gzGzoHsz',
+        appKey: 'UzWr1AJYRlfkoKpaNY9l2dIW',
+        notify: 'false' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'monsterid',
+        pageSize: '10',
+        lang: '',
+        // lang: 'zh-cn',
+        placeholder: '发一条友善的评论',
+        emojiCDN: 'https://i0.hdslb.com/bfs/emote/',
+        emojiMaps: {
+            "doge": "3087d273a78ccaff4bb1e9972e2ba2a7583c9f11.png",
+            "微笑": "685612eadc33f6bc233776c6241813385844f182.png",
+            "OK": "4683fd9ffc925fa6423110979d7dcac5eda297f4.png",
+            "星星眼": "63c9d1a31c0da745b61cdb35e0ecb28635675db2.png",
+            "妙啊": "b4cb77159d58614a9b787b91b1cd22a81f383535.png",
+            "辣眼睛": "35d62c496d1e4ea9e091243fa812866f5fecc101.png",
+            "吃瓜": "4191ce3c44c2b3df8fd97c33f85d3ab15f4f3c84.png",
+            "滑稽": "d15121545a99ac46774f1f4465b895fe2d1411c3.png",
+            "呲牙": "b5a5898491944a4268360f2e7a84623149672eb6.png",
+            "打call": "431432c43da3ee5aab5b0e4f8931953e649e9975.png",
+            "歪嘴": "4384050fbab0586259acdd170b510fe262f08a17.png",
+            "调皮": "8290b7308325e3179d2154327c85640af1528617.png",
+            "嗑瓜子": "28a91da1685d90124cfeead74622e1ebb417c0eb.png",
+            "笑哭": "c3043ba94babf824dea03ce500d0e73763bf4f40.png",
+            "脱单doge": "bf7e00ecab02171f8461ee8cf439c73db9797748.png",
+            "给心心": "1597302b98827463f5b75c7cac1f29ea6ce572c4.png",
+            "嘟嘟": "abd7404537d8162720ccbba9e0a8cdf75547e07a.png",
+            "喜欢": "8a10a4d73a89f665feff3d46ca56e83dc68f9eb8.png",
+            "酸了": "92b1c8cbceea3ae0e8e32253ea414783e8ba7806.png",
+            "哦呼": "362bded07ea5434886271d23fa25f5d85d8af06c.png",
+            "嫌弃": "de4c0783aaa60ec03de0a2b90858927bfad7154b.png",
+            "大哭": "2caafee2e5db4db72104650d87810cc2c123fc86.png",
+            "害羞": "9d2ec4e1fbd6cb1b4d12d2bbbdd124ccb83ddfda.png",
+            "疑惑": "b7840db4b1f9f4726b7cb23c0972720c1698d661.png",
+            "喜极而泣": "485a7e0c01c2d70707daae53bee4a9e2e31ef1ed.png",
+            "奸笑": "bb84906573472f0a84cebad1e9000eb6164a6f5a.png",
+            "笑": "81edf17314cea3b48674312b4364df44d5c01f17.png",
+            "偷笑": "6c49d226e76c42cd8002abc47b3112bc5a92f66a.png",
+            "惊讶": "f8e9a59cad52ae1a19622805696a35f0a0d853f3.png",
+            "捂脸": "6921bb43f0c634870b92f4a8ad41dada94a5296d.png",
+            "阴险": "ba8d5f8e7d136d59aab52c40fd3b8a43419eb03c.png",
+            "囧": "12e41d357a9807cc80ef1e1ed258127fcc791424.png",
+            "呆": "33ad6000d9f9f168a0976bc60937786f239e5d8c.png",
+            "抠鼻": "cb89184c97e3f6d50acfd7961c313ce50360d70f.png",
+            "大笑": "ca94ad1c7e6dac895eb5b33b7836b634c614d1c0.png",
+            "惊喜": "0afecaf3a3499479af946f29749e1a6c285b6f65.png",
+            "无语": "44667b7d9349957e903b1b62cb91fb9b13720f04.png",
+            "点赞": "1a67265993913f4c35d15a6028a30724e83e7d35.png",
+            "鼓掌": "895d1fc616b4b6c830cf96012880818c0e1de00d.png",
+            "尴尬": "cb321684ed5ce6eacdc2699092ab8fe7679e4fda.png",
+            "灵魂出窍": "43d3db7d97343c01b47e22cfabeca84b4251f35a.png",
+            "委屈": "d2f26cbdd6c96960320af03f5514c5b524990840.png",
+            "傲娇": "010540d0f61220a0db4922e4a679a1d8eca94f4e.png",
+            "疼": "905fd9a99ec316e353b9bd4ecd49a5f0a301eabf.png",
+            "冷": "cb0ebbd0668640f07ebfc0e03f7a18a8cd00b4ed.png",
+            "生病": "0f25ce04ae1d7baf98650986454c634f6612cb76.png",
+            "吓": "9c10c5ebc7bef27ec641b8a1877674e0c65fea5d.png",
+            "吐": "06946bfe71ac48a6078a0b662181bb5cad09decc.png",
+            "捂眼": "c5c6d6982e1e53e478daae554b239f2b227b172b.png",
+            "嘘声": "e64af664d20716e090f10411496998095f62f844.png",
+            "思考": "cfa9b7e89e4bfe04bbcd34ccb1b0df37f4fa905c.png",
+            "再见": "fc510306bae26c9aec7e287cdf201ded27b065b9.png",
+            "翻白眼": "eba54707c7168925b18f6f8b1f48d532fe08c2b1.png",
+            "哈欠": "888d877729cbec444ddbd1cf4c9af155a7a06086.png",
+            "奋斗": "bb2060c15dba7d3fd731c35079d1617f1afe3376.png",
+            "墨镜": "3a03aebfc06339d86a68c2d893303b46f4b85771.png",
+            "难过": "a651db36701610aa70a781fa98c07c9789b11543.png",
+            "撇嘴": "531863568e5668c5ac181d395508a0eeb1f0cda4.png",
+            "抓狂": "4c87afff88c22439c45b79e9d2035d21d5622eba.png",
+            "生气": "3195714219c4b582a4fb02033dd1519913d0246d.png",
+            "口罩": "3ad2f66b151496d2a5fb0a8ea75f32265d778dd3.png",
+            "牛年": "9275275ff1f2659310648221107d20bc4970f106.png",
+            "福到了": "5de5373d354c373cf1617b6b836f3a8d53c5a655.png",
+            "鸡腿": "c7860392815d345fa69c4f00ef18d67dccfbd574.png",
+            "月饼": "89b19c5730e08d6f12fadf6996de5bc2e52f81fe.png",
+            "雪花": "a41813c4edf8782047e172c884ebd4507ce5e449.png",
+            "视频卫星": "dce6fc7d6dfeafff01241924db60f8251cca5307.png",
+            "干杯": "8da12d5f55a2c7e9778dcc05b40571979fe208e6.png",
+            "爱心": "ed04066ea7124106d17ffcaf75600700e5442f5c.png",
+            "锦鲤": "643d6c19c8164ffd89e3e9cdf093cf5d773d979c.png",
+            "胜利": "b49fa9f4b1e7c3477918153b82c60b114d87347c.png",
+            "加油": "c7aaeacb21e107292d3bb053e5abde4a4459ed30.png",
+            "抱拳": "89516218158dbea18ab78e8873060bf95d33bbbe.png",
+            "响指": "1b5c53cf14336903e1d2ae3527ca380a1256a077.png",
+            "保佑": "fafe8d3de0dc139ebe995491d2dac458a865fb30.png",
+            "支持": "3c210366a5585706c09d4c686a9d942b39feeb50.png",
+            "拥抱": "41780a4254750cdaaccb20735730a36044e98ef3.png",
+            "跪了": "f2b3aee7e521de7799d4e3aa379b01be032698ac.png",
+            "怪我咯": "07cc6077f7f7d75b8d2c722dd9d9828a9fb9e46d.png",
+            "黑洞": "e90ec4c799010f25391179118ccd9f66b3b279ba.png",
+            "老鼠": "8e6fb491eb1bb0d5862e7ec8ccf9a3da12b6c155.png",
+            "凛冬-生气": "d90bd2fbc13a3cb8d313f6d675f20caf109f60a7.png",
+            "W-哈哈": "83d527303c8f62f494e6971c48836487e7d87b1b.png",
+            "霜叶-疑问": "ada3aea8594e724511c1daad15fb3b23900d8e24.png",
+            "煌-震撼": "7bb39ac289bc97fe52af047020a9bf324ecdebe1.png",
+            "哭泣": "a61abafb8c39defc323b045f30072198007b1c89.png",
+            "狗子": "6a997106af5bf490f22c80a7acf3be813ee755fc.png",
+            "羞羞": "f4f9171e4d8c3f30827a8b96ea1ce1beb825ad50.png",
+            "亲亲": "2f72bae7b834d499f259c833f7011d5ed8748fd1.png",
+            "耍帅": "d7a38b08d1f1cc35b19c35041f29ffcc48808e87.png",
+            "气愤": "069b029d17a086ab475fd331697a649e234850bb.png",
+            "高兴": "416570a8aca7be12fb2c36e4b846906653f6d294.png",
+        }
+    })
+</script>
+
+
+
+        </div>
+
+    </div>
+</div>
+
+                </div>
+                <div class="col l3" id="toc-body">
+                    <!-- 文章目录 -->
+                    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget #toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #toc-content .toc-list {
+        padding-left: 10px;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ul li, #toc-content ol li {
+        padding-left: 10px;
+        line-height: 1.8rem;
+        font-size: 1rem;
+        color: #444;
+    }
+
+    #toc-content .is-active-link {
+        color: #E91E63;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: transparent;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+    }
+
+    .toc-widget {
+        box-shadow: 0 16px 24px 2px rgb(0 0 0 / 14%), 0 6px 30px 5px rgb(0 0 0 / 12%), 0 8px 10px -5px rgb(0 0 0 / 20%);
+    }
+
+</style>
+<div id="post-toc">
+    <div class="toc-widget card">
+        <div id="toc-title">
+            <i class="far fa-list-alt"></i>&nbsp;&nbsp;目录
+        </div>
+        <div id="toc-content"></div>
+    </div>
+</div>
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function() {
+        tocbot.init({
+            // Where to render the table of contents.
+            tocSelector: '#toc-content',
+            // Where to grab the headings to build the table of contents.
+            contentSelector: '.post-content',
+            // Which headings to grab inside of the contentSelector element.
+            headingSelector: 'h1, h2, h3, h4',
+            // For headings inside relative or absolute positioned containers within content.
+            hasInnerContainers: false,
+            // Smooth scrolling enabled.
+            scrollSmooth: true,
+            // Smooth scroll duration.
+            scrollSmoothDuration: 420,
+            headingsOffset: $('#nav-header').height() + 10,
+            scrollSmoothOffset: -($('#nav-header').height() + 10),
+            collapseDepth: 4,
+            // orderedList can be set to false to generate unordered lists (ul)
+            // instead of ordered lists (ol)
+            orderedList: false,
+        });
+
+        // 动态设置文章目录的宽度， 防止滚动和窗口变动时变形
+        // width()不包含padding, innerWidth()包含padding
+        $('.toc-widget').width($('#toc-body').width());
+
+        let tocHeight = parseInt($(window).height() * 0.5 - 64);
+        let $tocWidget = $('.toc-widget');
+        let $tocTitle = $('#toc-title');
+        let $tocContent = $('#toc-content');
+        if ($(window).scrollTop() > tocHeight) {
+            $tocWidget.addClass('toc-fixed');
+        } else {
+            $tocWidget.removeClass('toc-fixed');
+        }
+        $tocWidget.css('max-height', $(window).height() * 0.6);
+        if ($tocContent.height() > ($tocWidget.height() - $tocTitle.height())) {
+            $tocWidget.css('overflow-y', 'auto');
+        }
+        // if ($tocWidget.height() > $(window).height() * 0.6) {
+        //     $tocWidget.css('max-height', $(window).height() * 0.6);
+        // }
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+            if ($tocContent.height() > ($tocWidget.height() - $tocTitle.height())) {
+                $tocWidget.css('overflow-y', 'auto');
+            } else {
+                $tocWidget.css('overflow-y', 'unset');
+            }
+            $('.toc-widget').width($('#toc-body').width());
+        });
+        $(window).on('resize', function(){
+            $tocWidget.css('max-height', $(window).height() * 0.6);
+            if ($tocContent.height() > ($tocWidget.height() - $tocTitle.height())) {
+                $tocWidget.css('overflow-y', 'auto');
+            } else {
+                $tocWidget.css('overflow-y', 'unset');
+            }
+            $('.toc-widget').width($('#toc-body').width());
+        });
+    });
+</script>
+
+                </div>
+            
+        </div>
+    </div>
+</main>
+
+    <footer class="page-footer footer-color">
+    
+        
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+    
+    
+    <style type="text/css">
+        .aplayer.aplayer-fixed {
+            z-index: 999;
+        }
+    
+        
+        .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+            left: -66px !important;
+        }
+    
+        .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+            left: 0px !important;
+        }
+    
+        
+    
+        .aplayer .aplayer-lrc p {
+            
+            display: none;
+            
+            font-size: 12px;
+            font-weight: 700;
+            line-height: 16px !important;
+        }
+    
+        .aplayer .aplayer-lrc p.aplayer-lrc-current {
+            
+            display: none;
+            
+            font-size: 15px;
+            color: #b7daff;
+        }
+    </style>
+    
+    <div class="">
+        <div class="row">
+            <meting-js
+                class="col l8 offset-l2 m10 offset-m1 s12"
+                server="netease"
+                type="playlist"
+                id="743950282"
+                fixed='true'
+                autoplay='false'
+                theme='#b7daff'
+                loop='all'
+                order='random'
+                preload='auto'
+                volume='0.7'
+                list-folded='true'>
+            </meting-js>
+        </div>
+    </div>
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
+    
+    
+    
+    <div class="container">
+        <div class="row center">
+            <div class="col l12 m12 s12">
+                <div id="framework-info">
+                    Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+                    &nbsp;|&nbsp;&nbsp;Theme&nbsp;
+                    <a href="https://github.com/xiongxianzhu/hexo-theme-xxcoding" target="_blank">
+                        xxcoding
+                    </a>
+                </div>
+                <div id="siteinfo">
+                    <!-- <span>站点总字数：</span> -->
+                    
+                    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+                    <span id="busuanzi_container_page_pv">站点总阅读量：<span class="white-text" id="busuanzi_value_page_pv"></span>次</span>
+                    &nbsp;|&nbsp;&nbsp;<span id="busuanzi_container_site_uv">站点总访客数：<span class="white-text" id="busuanzi_value_site_uv"></span>人</span>
+                    &nbsp;|&nbsp;&nbsp;<span id="busuanzi_container_site_pv">站点总访问量：<span class="white-text" id="busuanzi_value_site_pv"></span>次</span>
+                    
+                </div>
+                
+                <div id="sitetime">载入运行时间...</div>
+                <script>
+                    function siteTime() {
+                        var seconds = 1000;
+                        var minutes = seconds * 60;
+                        var hours = minutes * 60;
+                        var days = hours * 24;
+                        var years = days * 365;
+                        var today = new Date();
+                        var startYear = "2017";
+                        var startMonth = "6";
+                        var startDate = "5";
+                        var startHour = "0";
+                        var startMinute = "0";
+                        var startSecond = "0";
+                        var todayYear = today.getFullYear();
+                        var todayMonth = today.getMonth() + 1;
+                        var todayDate = today.getDate();
+                        var todayHour = today.getHours();
+                        var todayMinute = today.getMinutes();
+                        var todaySecond = today.getSeconds();
+                        var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                        var diff = t2 - t1;
+                        var diffYears = Math.floor(diff / years);
+                        var diffDays = Math.floor((diff / days) - diffYears * 365);
+                        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                            minutes);
+                        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                            diffMinutes * minutes) / seconds);
+                        if (startYear == todayYear) {
+                            document.getElementById("year").innerHTML = todayYear;
+                            document.getElementById("sitetime").innerHTML = "本站已持续运行 " + "<span class='white-text'>" + diffDays + "</span>" + " 天 "
+                            + "<span class='white-text'>" + diffHours + "</span>" + " 小时 "
+                            + "<span class='white-text'>" + diffMinutes + "</span>" + " 分钟 "
+                            + "<span class='white-text'>" + diffSeconds + "</span>" + " 秒";
+                        } else {
+                            document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                            document.getElementById("sitetime").innerHTML = "本站已持续运行 " + "<span class='white-text'>" + diffYears + "</span>" + " 年 "
+                            + "<span class='white-text'>" + diffDays + "</span>" + " 天 "
+                            + "<span class='white-text'>" + diffHours + "</span>" + " 小时 "
+                            + "<span class='white-text'>" + diffMinutes + "</span>" + " 分钟 "
+                            + "<span class='white-text'>" + diffSeconds + "</span>" + " 秒";
+                        }
+                    }
+                    setInterval(siteTime, 1000);
+                </script>
+                
+                
+                <div id="icp">
+                    <img class="lazyload" src="/img/icp.png" data-src="/img/icp.png" style="vertical-align: text-bottom;" />
+                    <a href="https://beian.miit.gov.cn/" target="_blank">粤ICP备17065679号-1</a>
+                </div>
+                
+                
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container center">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2017 - 2024</span>
+            
+            ,&nbsp;
+            made with <span style="color: red;">❤️</span>&nbsp;&nbsp;by
+            <a href="/about" target="_blank">xx</a>
+            for a better web.
+        </div>
+    </div>
+</footer>
+
+
+    
+    <!-- 回到顶部按钮 -->
+<div id="back-top" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+    
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+<script src="/libs/lazyload/lazyload.min.js"></script>
+<script src="/libs/aos/aos.js"></script>
+<script src="/js/xxcoding.js"></script>
+
+
+<script src="https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
+
+
+</body>
+</html>

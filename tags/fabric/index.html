@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="keywords" content="xx, zhuxiongxian, blog, 博客, 挨踢， 官方, it">
+    <meta name="description" content="标签: fabric | xx&#39;s blog">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate.css/animate.min.css">
+    
+    <!-- 是否加载使用自带的 prismjs. -->
+    <link rel="stylesheet" href="/libs/prism/prism-tomorrow-night.css">
+    <link rel="stylesheet" type="text/css" href="/libs/prism/prism-line-numbers.css">
+    
+    
+    <!-- Material Icons -->
+    <link rel="stylesheet" type="text/css" href="/libs/materialicons/materialicons.css">
+    
+    <!-- Fontawesome Icons -->
+    <link rel="stylesheet" type="text/css" href="/libs/fontawesome/css/all.min.css">
+    <!-- aos -->
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <!-- The theme css -->
+    <link rel="stylesheet" type="text/css" href="/css/xxcoding.css">
+
+    
+    <!-- Your css -->
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    
+    <!-- 
+        
+            
+                <link rel="stylesheet" type="text/css" href="/libs/fontawesome/css/all.min.css">
+            
+        
+            
+                <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+            
+        
+            
+                <link rel="stylesheet" type="text/css" href="/libs/animate.css/animate.min.css">
+            
+        
+            
+        
+            
+                <link rel="stylesheet" type="text/css" href="/libs/prism/prism-tomorrow-night.css">
+            
+        
+            
+                <link rel="stylesheet" type="text/css" href="/libs/materialicons/materialicons.css">
+            
+        
+            
+                <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+            
+        
+            
+                <link rel="stylesheet" type="text/css" href="/libs/aplayer/APlayer.min.css">
+            
+        
+            
+                <link rel="stylesheet" type="text/css" href="/libs/tocbot/tocbot.css">
+            
+        
+            
+                <link rel="stylesheet" type="text/css" href="/libs/aplayer/Meting.min.js">
+            
+        
+            
+                <link rel="stylesheet" type="text/css" href="/libs/fancybox/fancybox.css">
+            
+        
+            
+                <link rel="stylesheet" type="text/css" href="/css/xxcoding.css">
+            
+        
+            
+                <link rel="stylesheet" type="text/css" href="/css/my.css">
+            
+        
+     -->
+    <!-- 
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500">
+    
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Marck+Script">
+     -->
+    
+
+    <!-- Custom Head -->
+    
+
+    <title>标签: fabric | xx&#39;s blog</title>
+    <link rel="icon" type="image/png" href="/img/favicon.png">
+    <script src="/libs/jquery/jquery.min.js"></script>
+<meta name="generator" content="Hexo 7.3.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="xx's blog" type="application/atom+xml">
+</head>
+
+<body>
+    <header class="navbar-fixed">
+    <!-- <nav class="nav-extended pushpin"> -->
+    <nav class="nav-color nav-transparent" id="nav-header" color-on-scroll="100">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a class="brand-logo waves-effect waves-light" href="/">
+                    
+                    <img src="/img/logo.png" class="circle logo-img lazyload" data-src="/img/logo.png" alt="logo">
+                    
+                    <span class="logo-span">xx&#39;s blog</span>
+                </a>
+                <a href="#" data-target="nav-mobile" class="sidenav-trigger">
+    <i class="material-icons">menu</i>
+</a>
+<ul class="right hide-on-med-and-down">
+    
+        
+            <li>
+                
+                
+                <a class="nav-item waves-effect waves-light" href="/" style="display: flex;">
+                    <i class="material-icons">home</i>
+                
+                    <span class="nav-menu">首页</span>
+                </a>
+                
+            </li>
+        
+    
+        
+            <li>
+                
+                
+                <a class="nav-item waves-effect waves-light" href="/categories" style="display: flex;">
+                    <i class="material-icons">chrome_reader_mode</i>
+                
+                    <span class="nav-menu">分类</span>
+                </a>
+                
+            </li>
+        
+    
+        
+            <li>
+                
+                
+                <a class="nav-item waves-effect waves-light" href="/archives" style="display: flex;">
+                    <i class="material-icons">inbox</i>
+                
+                    <span class="nav-menu">归档</span>
+                </a>
+                
+            </li>
+        
+    
+        
+            <li>
+                
+                
+                <a class="nav-item waves-effect waves-light" href="/tags" style="display: flex;">
+                    <i class="material-icons">label</i>
+                
+                    <span class="nav-menu">标签</span>
+                </a>
+                
+            </li>
+        
+    
+        
+            <li>
+                
+                
+                <a class="nav-item waves-effect waves-light" href="/about" style="display: flex;">
+                    <i class="material-icons">account_circle</i>
+                
+                    <span class="nav-menu">关于</span>
+                </a>
+                
+            </li>
+        
+    
+        
+            <li>
+                
+                
+                <a class="nav-item dropdown-trigger waves-effect waves-light" href="#!" data-target="dropdown-lab" style="display: flex;">
+                    <i class="material-icons">apps</i>
+                
+                    <span class="nav-menu">实验室</span>
+                    <i class="material-icons right">arrow_drop_down</i>
+                </a>
+                <ul class="dropdown-content" id="dropdown-lab">
+                    
+                        
+                        <li>
+                            
+                            <a href="/comments" style="display: flex;">
+                                <i class="material-icons">comment</i>
+                            
+                                <span>留言板</span>
+                            </a>
+                        </li>
+                        
+                    
+                        
+                        <li>
+                            
+                            <a href="/friends" style="display: flex;">
+                                <i class="material-icons">link</i>
+                            
+                                <span>友情链接</span>
+                            </a>
+                        </li>
+                        
+                    
+                        
+                        <li>
+                            
+                            <a href="/resume" style="display: flex;">
+                                <i class="material-icons">work</i>
+                            
+                                <span>简历</span>
+                            </a>
+                        </li>
+                        
+                    
+                        
+                        <li>
+                            
+                            <a href="/timeline" style="display: flex;">
+                                <i class="material-icons">timeline</i>
+                            
+                                <span>时间线</span>
+                            </a>
+                        </li>
+                        
+                    
+                        
+                        <li>
+                            
+                            <a href="/vlog" style="display: flex;">
+                                <i class="material-icons">video_library</i>
+                            
+                                <span>Vlog</span>
+                            </a>
+                        </li>
+                        
+                    
+                        
+                        <li>
+                            
+                            <a href="/portfolio" style="display: flex;">
+                                <i class="material-icons">widgets</i>
+                            
+                                <span>作品集</span>
+                            </a>
+                        </li>
+                        
+                    
+                </ul>
+                
+            </li>
+        
+    
+        
+            <li>
+                
+                
+                <a class="nav-item dropdown-trigger waves-effect waves-light" href="#!" data-target="dropdown-medias" style="display: flex;">
+                    <i class="material-icons">perm_media</i>
+                
+                    <span class="nav-menu">多媒体</span>
+                    <i class="material-icons right">arrow_drop_down</i>
+                </a>
+                <ul class="dropdown-content" id="dropdown-medias">
+                    
+                        
+                        <li>
+                            
+                            <a href="/galleries" style="display: flex;">
+                                <i class="material-icons">photo_library</i>
+                            
+                                <span>图库</span>
+                            </a>
+                        </li>
+                        
+                    
+                        
+                        <li>
+                            
+                            <a href="/musics" style="display: flex;">
+                                <i class="material-icons">library_music</i>
+                            
+                                <span>音乐</span>
+                            </a>
+                        </li>
+                        
+                    
+                        
+                        <li>
+                            
+                            <a href="/videos" style="display: flex;">
+                                <i class="material-icons">video_library</i>
+                            
+                                <span>视频</span>
+                            </a>
+                        </li>
+                        
+                    
+                        
+                        <li>
+                            
+                            <a href="/books" style="display: flex;">
+                                <i class="material-icons">library_books</i>
+                            
+                                <span>书籍</span>
+                            </a>
+                        </li>
+                        
+                    
+                </ul>
+                
+            </li>
+        
+    
+    <li>
+        <a class="nav-item modal-trigger waves-effect waves-light" href="#search-modal">
+            <i class="material-icons">search</i>
+        </a>
+        <div>
+    <!-- 模态框结构 -->
+    <div id="search-modal" class="modal">
+        <div class="modal-content">
+            <div id="search-title">
+                <i class="material-icons">search</i>
+                搜 索
+            </div>
+            <input type="text" id="search-input" placeholder="输入关键字进行搜索...">
+            <ul id="search-results"></ul>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            // 获取搜索输入框和结果列表元素
+            var searchInput = $('#search-input');
+            var searchResults = $('#search-results');
+
+            // 读取 search.json 文件
+            $.getJSON('/search.json', function(data) {
+                // 监听输入框的输入事件
+                searchInput.on('input', function() {
+                    var query = $(this).val().toLowerCase();
+
+                    if (query === '') {
+                        // 如果查询字符串为空，则清空结果列表
+                        searchResults.empty();
+                        return;
+                    }
+
+                    var results = data.filter(post => 
+                        post.title.toLowerCase().includes(query) || 
+                        post.content.toLowerCase().includes(query)
+                    );
+
+                    // 清空结果列表
+                    searchResults.empty();
+
+                    // 显示搜索结果
+                    results.forEach(function(result) {
+                        var li = $('<li>');
+                        var a = $('<a>').attr('href', result.url).text(result.title).addClass('title');
+                        li.append(a);
+                        searchResults.append(li);
+
+                        // 高亮显示关键词
+                        var content = result.content.trim().replace(/<[^>]+>/g, "");
+                        var regex = new RegExp('(' + query.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&') + ')', 'gi');
+                        var highlightedContent = content.replace(regex, '<span class="highlight">$&</span>');
+                        li.append($('<div>').html(highlightedContent));
+                    });
+                    
+                });
+            }).fail(function(err) {
+                console.error(err);
+            });
+        });
+
+        // 处理按钮点击事件
+        $('.modal-trigger').on('click', function(e) {
+            e.preventDefault(); // 阻止默认行为
+            var modalId = $(this).attr('href');
+            var modal = $(modalId);
+            M.Modal.init(modal[0]);
+            var instance = M.Modal.getInstance(modal[0]);
+            instance.open();
+        });
+    </script>
+</div>
+<style>
+    #search-modal .modal-content h4,
+    #search-modal .modal-content input,
+    #search-modal .modal-content ul,
+    #search-modal .modal-content li,
+    #search-modal .modal-content a {
+        color: #333; /* 设置字体颜色 */
+    }
+
+    #search-results li {
+        display: block; /* 将列表项显示为一行 */
+        margin: 10px 0; /* 每行间距 */
+        padding: 10px;
+        /* border-bottom: 1px solid #ddd; */
+        margin-bottom: 10px;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        border-radius: 3px;
+    }
+
+    #search-results a {
+        text-decoration: none; /* 去除链接的下划线 */
+    }
+
+    #search-input {
+        border-bottom: 1px solid #ddd;
+    }
+
+    .highlight {
+        margin: 0 2px;
+        padding: 1px 5px 1px 4px;
+        border-radius: 2px;
+        background-color: #f2f2f2;
+        color: #e96900;
+        font-style: normal;
+        white-space: pre-wrap;
+    }
+
+    #search-results a.title {
+        font-weight: bold;
+        font-size: 1.2em;
+        margin-bottom: 5px;
+    }
+
+    #search-title {
+        font-size: 2.16rem;
+        height: 64px;
+        line-height: 64px;
+        color: #333;
+    }
+
+    #search-title i {
+        display: inline-block;
+    }
+</style>
+    </li>
+</ul>
+
+            </div>
+        </div>
+    </nav>
+</header>
+<div class="sidenav" id="nav-mobile">
+    <div class="user-view">
+        <div class="background overlay">
+            <img class="lazyload" src="/img/icon-seamless.png" data-src="/img/icon-seamless.png">
+        </div>
+        <img class="circle responsive-img lazyload" src="/img/logo.png" data-src="/img/logo.png">
+        <div class="name white-text">xx's blog</div>
+        <div class="description white-text">欢迎来到zhuxiongxian's blog, 我是zhuxiongxian, 这是我的挨踢博客!</div>
+    </div>
+    <ul>
+        
+            
+                <li>
+                    
+                    
+                    <a class="waves-effect" href="/" style="display: flex;">
+                        <i class="material-icons">home</i>
+                    
+                        <span>首页</span>
+                    </a>
+                    
+                </li>
+            
+        
+            
+                <li>
+                    
+                    
+                    <a class="waves-effect" href="/categories" style="display: flex;">
+                        <i class="material-icons">chrome_reader_mode</i>
+                    
+                        <span>分类</span>
+                    </a>
+                    
+                </li>
+            
+        
+            
+                <li>
+                    
+                    
+                    <a class="waves-effect" href="/archives" style="display: flex;">
+                        <i class="material-icons">inbox</i>
+                    
+                        <span>归档</span>
+                    </a>
+                    
+                </li>
+            
+        
+            
+                <li>
+                    
+                    
+                    <a class="waves-effect" href="/tags" style="display: flex;">
+                        <i class="material-icons">label</i>
+                    
+                        <span>标签</span>
+                    </a>
+                    
+                </li>
+            
+        
+            
+                <li>
+                    
+                    
+                    <a class="waves-effect" href="/about" style="display: flex;">
+                        <i class="material-icons">account_circle</i>
+                    
+                        <span>关于</span>
+                    </a>
+                    
+                </li>
+            
+        
+            
+                <li>
+                    
+                    <ul class="collapsible">
+                        <li>
+                            
+                            <div class="collapsible-header waves-effect">
+                                <i class="material-icons">apps</i>
+                            
+                                <span>实验室</span>
+                                <i class="material-icons right">arrow_drop_down</i>
+                            </div>
+                            <ul class="collapsible-body">
+                                
+                                    
+                                    <li>
+                                        
+                                        <a class="waves-effect" href="/comments" style="display: flex;">
+                                            <i class="material-icons">comment</i>
+                                        
+                                            <span>留言板</span>
+                                        </a>
+                                    </li>
+                                    
+                                
+                                    
+                                    <li>
+                                        
+                                        <a class="waves-effect" href="/friends" style="display: flex;">
+                                            <i class="material-icons">link</i>
+                                        
+                                            <span>友情链接</span>
+                                        </a>
+                                    </li>
+                                    
+                                
+                                    
+                                    <li>
+                                        
+                                        <a class="waves-effect" href="/resume" style="display: flex;">
+                                            <i class="material-icons">work</i>
+                                        
+                                            <span>简历</span>
+                                        </a>
+                                    </li>
+                                    
+                                
+                                    
+                                    <li>
+                                        
+                                        <a class="waves-effect" href="/timeline" style="display: flex;">
+                                            <i class="material-icons">timeline</i>
+                                        
+                                            <span>时间线</span>
+                                        </a>
+                                    </li>
+                                    
+                                
+                                    
+                                    <li>
+                                        
+                                        <a class="waves-effect" href="/vlog" style="display: flex;">
+                                            <i class="material-icons">video_library</i>
+                                        
+                                            <span>Vlog</span>
+                                        </a>
+                                    </li>
+                                    
+                                
+                                    
+                                    <li>
+                                        
+                                        <a class="waves-effect" href="/portfolio" style="display: flex;">
+                                            <i class="material-icons">widgets</i>
+                                        
+                                            <span>作品集</span>
+                                        </a>
+                                    </li>
+                                    
+                                
+                            </ul>
+                        </li>
+                    </ul>
+                    
+                </li>
+            
+        
+            
+                <li>
+                    
+                    <ul class="collapsible">
+                        <li>
+                            
+                            <div class="collapsible-header waves-effect">
+                                <i class="material-icons">perm_media</i>
+                            
+                                <span>多媒体</span>
+                                <i class="material-icons right">arrow_drop_down</i>
+                            </div>
+                            <ul class="collapsible-body">
+                                
+                                    
+                                    <li>
+                                        
+                                        <a class="waves-effect" href="/galleries" style="display: flex;">
+                                            <i class="material-icons">photo_library</i>
+                                        
+                                            <span>图库</span>
+                                        </a>
+                                    </li>
+                                    
+                                
+                                    
+                                    <li>
+                                        
+                                        <a class="waves-effect" href="/musics" style="display: flex;">
+                                            <i class="material-icons">library_music</i>
+                                        
+                                            <span>音乐</span>
+                                        </a>
+                                    </li>
+                                    
+                                
+                                    
+                                    <li>
+                                        
+                                        <a class="waves-effect" href="/videos" style="display: flex;">
+                                            <i class="material-icons">video_library</i>
+                                        
+                                            <span>视频</span>
+                                        </a>
+                                    </li>
+                                    
+                                
+                                    
+                                    <li>
+                                        
+                                        <a class="waves-effect" href="/books" style="display: flex;">
+                                            <i class="material-icons">library_books</i>
+                                        
+                                            <span>书籍</span>
+                                        </a>
+                                    </li>
+                                    
+                                
+                            </ul>
+                        </li>
+                    </ul>
+                    
+                </li>
+            
+        
+    </ul>
+</div>
+
+
+    
+
+<main>
+    <div style="height: 400px; position: relative; top: -64px; left: 0;">
+        <div class="cover-background">
+    <div class="pattern lazyload" data-src="/img/icon-seamless.png"
+        style="background-image: url('/img/icon-seamless.png');">
+
+    </div>
+</div>
+<div class="center" id="bg-center">
+    <h2 class="title white-text">xx&#39;s blog</h2>
+    
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Marck+Script">
+
+<div class="description white-text">
+    
+    <span id="subtitle" style="font-family: 'Marck Script';"></span>
+    
+</div>
+<script src="/libs/typedjs/typed.js"></script>
+<script>
+
+    var typed = new Typed("#subtitle", {
+        strings: [ 
+            
+                "Hi, I&#39;m zhuxiongxian.",
+            
+                "Welcome to my blog!!!",
+            
+        ],
+        startDelay: 300,
+        typeSpeed: 100,
+        loop: true,
+        backSpeed: 50,
+        showCursor: true
+    });
+
+</script>
+
+</div>
+    </div>
+    <div class="container has-cover-container">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="main main-raised tag-content">
+                    <header class="center">
+                        <h3 class="header-title">标签: fabric</h3>
+                        <p class="header-subtitle">共 1 篇文章</p>
+                    </header>
+                    <section class="center-align tag-body">
+                        
+                            
+                            
+                                
+                                
+                                    
+                                    <h4 class="year-month-title">2017年</h4>
+                                
+                                <div class="post-preview">
+                                    <h4 class="post-title">
+                                        <span class="post-date">11月09日</span>
+                                        <a href="/2017/11/09/python-fabric-automation-deployment/">python fabric自动化部署</a>
+                                    </h4>
+                                </div>
+                            
+                        
+                    </section>
+                    <!-- 分页器 -->
+                    <section class="paginator">
+    
+</section>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+    <footer class="page-footer footer-color">
+    
+        
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+    
+    
+    <style type="text/css">
+        .aplayer.aplayer-fixed {
+            z-index: 999;
+        }
+    
+        
+        .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+            left: -66px !important;
+        }
+    
+        .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+            left: 0px !important;
+        }
+    
+        
+    
+        .aplayer .aplayer-lrc p {
+            
+            display: none;
+            
+            font-size: 12px;
+            font-weight: 700;
+            line-height: 16px !important;
+        }
+    
+        .aplayer .aplayer-lrc p.aplayer-lrc-current {
+            
+            display: none;
+            
+            font-size: 15px;
+            color: #b7daff;
+        }
+    </style>
+    
+    <div class="">
+        <div class="row">
+            <meting-js
+                class="col l8 offset-l2 m10 offset-m1 s12"
+                server="netease"
+                type="playlist"
+                id="743950282"
+                fixed='true'
+                autoplay='false'
+                theme='#b7daff'
+                loop='all'
+                order='random'
+                preload='auto'
+                volume='0.7'
+                list-folded='true'>
+            </meting-js>
+        </div>
+    </div>
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
+    
+    
+    
+    <div class="container">
+        <div class="row center">
+            <div class="col l12 m12 s12">
+                <div id="framework-info">
+                    Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+                    &nbsp;|&nbsp;&nbsp;Theme&nbsp;
+                    <a href="https://github.com/xiongxianzhu/hexo-theme-xxcoding" target="_blank">
+                        xxcoding
+                    </a>
+                </div>
+                <div id="siteinfo">
+                    <!-- <span>站点总字数：</span> -->
+                    
+                    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+                    <span id="busuanzi_container_page_pv">站点总阅读量：<span class="white-text" id="busuanzi_value_page_pv"></span>次</span>
+                    &nbsp;|&nbsp;&nbsp;<span id="busuanzi_container_site_uv">站点总访客数：<span class="white-text" id="busuanzi_value_site_uv"></span>人</span>
+                    &nbsp;|&nbsp;&nbsp;<span id="busuanzi_container_site_pv">站点总访问量：<span class="white-text" id="busuanzi_value_site_pv"></span>次</span>
+                    
+                </div>
+                
+                <div id="sitetime">载入运行时间...</div>
+                <script>
+                    function siteTime() {
+                        var seconds = 1000;
+                        var minutes = seconds * 60;
+                        var hours = minutes * 60;
+                        var days = hours * 24;
+                        var years = days * 365;
+                        var today = new Date();
+                        var startYear = "2017";
+                        var startMonth = "6";
+                        var startDate = "5";
+                        var startHour = "0";
+                        var startMinute = "0";
+                        var startSecond = "0";
+                        var todayYear = today.getFullYear();
+                        var todayMonth = today.getMonth() + 1;
+                        var todayDate = today.getDate();
+                        var todayHour = today.getHours();
+                        var todayMinute = today.getMinutes();
+                        var todaySecond = today.getSeconds();
+                        var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                        var diff = t2 - t1;
+                        var diffYears = Math.floor(diff / years);
+                        var diffDays = Math.floor((diff / days) - diffYears * 365);
+                        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                            minutes);
+                        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                            diffMinutes * minutes) / seconds);
+                        if (startYear == todayYear) {
+                            document.getElementById("year").innerHTML = todayYear;
+                            document.getElementById("sitetime").innerHTML = "本站已持续运行 " + "<span class='white-text'>" + diffDays + "</span>" + " 天 "
+                            + "<span class='white-text'>" + diffHours + "</span>" + " 小时 "
+                            + "<span class='white-text'>" + diffMinutes + "</span>" + " 分钟 "
+                            + "<span class='white-text'>" + diffSeconds + "</span>" + " 秒";
+                        } else {
+                            document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                            document.getElementById("sitetime").innerHTML = "本站已持续运行 " + "<span class='white-text'>" + diffYears + "</span>" + " 年 "
+                            + "<span class='white-text'>" + diffDays + "</span>" + " 天 "
+                            + "<span class='white-text'>" + diffHours + "</span>" + " 小时 "
+                            + "<span class='white-text'>" + diffMinutes + "</span>" + " 分钟 "
+                            + "<span class='white-text'>" + diffSeconds + "</span>" + " 秒";
+                        }
+                    }
+                    setInterval(siteTime, 1000);
+                </script>
+                
+                
+                <div id="icp">
+                    <img class="lazyload" src="/img/icp.png" data-src="/img/icp.png" style="vertical-align: text-bottom;" />
+                    <a href="https://beian.miit.gov.cn/" target="_blank">粤ICP备17065679号-1</a>
+                </div>
+                
+                
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container center">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2017 - 2024</span>
+            
+            ,&nbsp;
+            made with <span style="color: red;">❤️</span>&nbsp;&nbsp;by
+            <a href="/about" target="_blank">xx</a>
+            for a better web.
+        </div>
+    </div>
+</footer>
+
+
+    
+    <!-- 回到顶部按钮 -->
+<div id="back-top" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+    
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+<script src="/libs/lazyload/lazyload.min.js"></script>
+<script src="/libs/aos/aos.js"></script>
+<script src="/js/xxcoding.js"></script>
+
+
+<script src="https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
+
+
+</body>
+</html>
