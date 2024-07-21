@@ -846,6 +846,10 @@ or
 docker container ls
 
 5. 列出所有容器及显示容器大小docker ps -as
+
+or
+
+docker con
                     
                 </div>
             </div>
@@ -911,7 +915,7 @@ $ sudo yum remove docker \
                   docker-client \
                   docker-client-latest \
                   docker-common \
-               
+                  docker-latest
                     
                 </div>
             </div>
@@ -973,7 +977,7 @@ $ sudo yum remove docker \
                         1. 使用pipenv或pip在虚拟环境安装m2crypto报错使用pipenv或pip在虚拟环境安装m2crypto报错， 报错内容如下：
 (env)$ pipenv install m2crypto       # 或： (env)$ pip install m2crypto
 Installing initially failed dependencies…
-[pipenv.exceptions.InstallError]:   File "/usr/local/lib/
+[pipenv.exceptions.InstallError]:   File "/usr/local/lib/python3.7/site-p
                     
                 </div>
             </div>
@@ -1043,7 +1047,7 @@ Installing initially failed dependencies…
                         1.  临时设置编码(重新进入mysql shell后失效)mysql&gt; show variables like '%char%';
 +--------------------------+-----------------------------------------------------------+
 | Variable_name | Value |
-+--------------------------+---------------------------
++--------------------------+-------------------------------------------
                     
                 </div>
             </div>
@@ -1110,7 +1114,9 @@ Installing initially failed dependencies…
 选择XZ compressed source tarball， 拷贝文件绝对路径链接， 用wget命令下载
 wget -c https://www.python.org/ftp/python/3.8.0/Python-3.8.0.tar.xz
 xz -d Python-3.8.0.tar.xz
-tar -xvf Python
+tar -xvf Python-3.8.0.tar
+
+2. 安
                     
                 </div>
             </div>
@@ -1184,7 +1190,7 @@ postgres=# exit
 postgres=# create user olddriver with password '123456';
 CREATE ROLE
 
-删除用户oldriver， 并创建用户ol
+删除用户oldriver， 并创建用户olddriver， 将数据库的拥有
                     
                 </div>
             </div>
@@ -1247,7 +1253,7 @@ CREATE ROLE
 1. st3安装ctags插件快捷键commands + shift + p 打开 Package Control: Instance Package， 搜索 ctags进行安装ctags插件
 2. 安装ctags打开ctags网址下载ctags源码包： http://ctags.sourceforge.net/
 或wget命令下载：
-wget -c https://jaist.dl.sourceforge.net
+wget -c https://jaist.dl.sourceforge.net/project/ctags/c
                     
                 </div>
             </div>
@@ -1318,7 +1324,9 @@ wget -c https://jaist.dl.sourceforge.net
 1. for ubuntuhttps://www.postgresql.org/download/linux/ubuntu/
 创建postgresql仓库文件/etc/apt/sources.list.d/pgdg.list, 以添加以下内容:
 for 18.04:
-deb http://apt.postgresql.org/pub/repos/apt/ bionic-p
+deb http://apt.postgresql.org/pub/repos/apt/ bionic-pgdg main
+
+for 16
                     
                 </div>
             </div>
@@ -1380,7 +1388,7 @@ deb http://apt.postgresql.org/pub/repos/apt/ bionic-p
                 </h4>
                 <div class="post-content">
                     
-                        行为习惯Behavior程序语言Programming Language开发工具dev tools技术栈Technology Stack架构Architecture编码规范code style运维部署DevOps安全Security密码学Cryptology统计学Statistics前端Frontend后端backend美工UI数据库database移动互联网Mobile Internet大数据与云BigData and Cloud开源opensource英文english打
+                        行为习惯Behavior程序语言Programming Language开发工具dev tools技术栈Technology Stack架构Architecture编码规范code style运维部署DevOps安全Security密码学Cryptology统计学Statistics前端Frontend后端backend美工UI数据库database移动互联网Mobile Internet大数据与云BigData and Cloud开源opensource英文english打杂other
                     
                 </div>
             </div>
@@ -1461,7 +1469,7 @@ for centos:
 sudo yum install vim wget lsof curl git
 
 wget命令下载：
-wget -c --
+wget -c --no-check-certifi
                     
                 </div>
             </div>

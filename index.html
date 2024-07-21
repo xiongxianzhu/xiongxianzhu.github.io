@@ -834,7 +834,7 @@
                     
                         1. 下载go安装包官网下载go安装包： https://golang.google.cn/dl/
 下载go二进制包go1.20.3.darwin-amd64.tar.gz或go1.20.3.darwin-arm64.tar.gz
-注意：选择amd64还是arm64取决于你电脑CPU的架构是x86_64还是arm架构，x86用amd64的包，arm则用arm64的包。mac的CPU目前主要有2种，分别Intel和M系列如m1, m2。CPU为Intel的则为x86_64架构，
+注意：选择amd64还是arm64取决于你电脑CPU的架构是x86_64还是arm架构，x86用amd64的包，arm则用arm64的包。mac的CPU目前主要有2种，分别Intel和M系列如m1, m2。CPU为Intel的则为x86_64架构，CPU为m1,m2,…则为arm
                     
                 </div>
             </div>
@@ -907,7 +907,7 @@ npm -v
 查看nodejs安装路径：
 fnm install 22
 # Installing Node v22.5.1 (x64)
-# warning: Version already
+# warning: Version already installed at "C
                     
                 </div>
             </div>
@@ -1042,7 +1042,7 @@ fnm install 22
 安装n模块，用n模块管理nodejs版本
 
 安装cnpm：
-sudo npm install -g cnpm --r
+sudo npm install -g cnpm --registry=https://
                     
                 </div>
             </div>
@@ -1131,7 +1131,8 @@ cat /proc/cpuinfo
 cpu个数：
 cat /proc/cpuinfo| grep "physical id"| sort| uniq| wc -l
 
-逻辑cpuproces
+逻辑cpuprocessor个数：
+cat /proc
                     
                 </div>
             </div>
@@ -1280,7 +1281,7 @@ https://&lt;阿里云给你分配的随机码&gt;.mirror.aliyuncs.com
 七牛云
 https://reg-mirror.qiniu.com
 
-2. 配置docker镜像源为阿里源配
+2. 配置docker镜像源为阿里源配置镜像源为国内源可以提升获取Do
                     
                 </div>
             </div>
@@ -1344,7 +1345,7 @@ Gitlab-ce与Gitlab-ee的区别在于：
 gitlab-ce: 社区版
 gitlab-ee: 企业收费版
 
-
+1. 下载gitlab-ce的d
                     
                 </div>
             </div>
@@ -1410,7 +1411,7 @@ gitlab-ee: 企业收费版
                         1. 架构日志统计分析系统采用架构：
 docker + kibana + logstash + elasticsearch + kafka + zookeeper + filebeat
 
-2. 下载docker镜像https://www.elastic.co/guide/index.htmlhttps://www.elastic.co/guide/en/kibana/current/docker.htmlhttps://www.elastic.co/guide/cn/kiba
+2. 下载docker镜像https://www.elastic.co/guide/index.htmlhttps://www.elastic.co/guide/en/kibana/current/docker.htmlhttps://www.elastic.co/guide/cn/kibana/current/docke
                     
                 </div>
             </div>
@@ -1485,7 +1486,7 @@ mysql命令连接mysql shell:
 mysql -uroot -p
 
 使用ssl连接示例：
-mysql -uroot -p --ssl-ca=/usr/local/mysql/data/ca-cert.pem --s
+mysql -uroot -p --ssl-ca=/usr/local/mysql/data/ca-cert.pem --ssl-cert=/usr/loc
                     
                 </div>
             </div>
