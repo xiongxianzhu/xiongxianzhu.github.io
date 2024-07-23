@@ -72,10 +72,6 @@
             
         
             
-                <link rel="stylesheet" type="text/css" href="/libs/aplayer/Meting.min.js">
-            
-        
-            
                 <link rel="stylesheet" type="text/css" href="/libs/fancybox/fancybox.css">
             
         
@@ -350,6 +346,52 @@
     </div>
 
     <script>
+        // $(document).ready(function() {
+        //     // 获取搜索输入框和结果列表元素
+        //     var searchInput = $('#search-input');
+        //     var searchResults = $('#search-results');
+
+        //     // 读取 search.json 文件
+        //     $.getJSON('/search.json', function(data) {
+        //         // 监听输入框的输入事件
+        //         searchInput.on('input', function() {
+        //             var query = $(this).val().toLowerCase();
+
+        //             if (query === '') {
+        //                 // 如果查询字符串为空，则清空结果列表
+        //                 searchResults.empty();
+        //                 return;
+        //             }
+
+        //             var results = data.filter(post => 
+        //                 post.title.toLowerCase().includes(query) || 
+        //                 post.content.toLowerCase().includes(query)
+        //             );
+
+        //             // 清空结果列表
+        //             searchResults.empty();
+
+        //             // 显示搜索结果
+        //             results.forEach(function(result) {
+        //                 var li = $('<li>');
+        //                 var a = $('<a>').attr('href', result.url).text(result.title).addClass('title');
+        //                 li.append(a);
+        //                 searchResults.append(li);
+
+        //                 // 高亮显示关键词
+        //                 var content = result.content.trim().replace(/<[^>]+>/g, "");
+        //                 var regex = new RegExp('(' + query.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&') + ')', 'gi');
+        //                 var highlightedContent = content.replace(regex, '<span class="highlight">$&</span>');
+        //                 li.append($('<div>').html(highlightedContent).addClass('content'));
+
+        //             });
+                    
+        //         });
+        //     }).fail(function(err) {
+        //         console.error(err);
+        //     });
+        // });
+
         $(document).ready(function() {
             // 获取搜索输入框和结果列表元素
             var searchInput = $('#search-input');
@@ -359,17 +401,23 @@
             $.getJSON('/search.json', function(data) {
                 // 监听输入框的输入事件
                 searchInput.on('input', function() {
-                    var query = $(this).val().toLowerCase();
+                    var query = $(this).val().toLowerCase().trim();
 
                     if (query === '') {
                         // 如果查询字符串为空，则清空结果列表
                         searchResults.empty();
                         return;
                     }
+                    
+                    // 将查询字符串拆分成多个关键词，并过滤掉空字符串
+                    var keywords = query.split(/\s+/).filter(keyword => keyword.trim() !== '');
+                    console.log(keywords);
 
                     var results = data.filter(post => 
-                        post.title.toLowerCase().includes(query) || 
-                        post.content.toLowerCase().includes(query)
+                        keywords.some(keyword => 
+                            post.title.toLowerCase().includes(keyword) || 
+                            post.content.toLowerCase().includes(keyword)
+                        )
                     );
 
                     // 清空结果列表
@@ -382,10 +430,10 @@
                         li.append(a);
                         searchResults.append(li);
 
-                        // 高亮显示关键词
+                        // 高亮显示关键词及其前后 20 个字符
                         var content = result.content.trim().replace(/<[^>]+>/g, "");
-                        var regex = new RegExp('(' + query.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&') + ')', 'gi');
-                        var highlightedContent = content.replace(regex, '<span class="highlight">$&</span>');
+
+                        var highlightedContent = highlightMatches(content, keywords);
                         li.append($('<div>').html(highlightedContent).addClass('content'));
 
                     });
@@ -395,6 +443,27 @@
                 console.error(err);
             });
         });
+
+        function highlightMatches(text, keywords) {
+            // 提取关键词及其前后 20 个字符的内容
+            const snippets = [];
+            keywords.forEach(keyword => {
+                if (keyword.trim() === '') {
+                    return;
+                }
+                const re = new RegExp(`(.{0,20})(${keyword.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&')})(.{0,20})`, 'gi');
+                let match;
+                while ((match = re.exec(text)) !== null) {
+                    snippets.push(`${match[1]}<span class="highlight">${match[2]}</span>${match[3]}`);
+                }
+            });
+
+            // 去重
+            const uniqueSnippets = [...new Set(snippets)];
+            return uniqueSnippets.map(snippet => `${snippet}`).join('');
+        }
+
+
 
         // 处理按钮点击事件
         $('.modal-trigger').on('click', function(e) {
@@ -469,6 +538,8 @@
         </div>
     </nav>
 </header>
+<!-- 滚动进度条容器 -->
+<div class="scroll-progress-bar"></div>
 <div class="sidenav" id="nav-mobile">
     <div class="user-view">
         <div class="background overlay">
@@ -1088,7 +1159,9 @@ Type "help", "copyright", "credits" or "license" for more information.
     <footer class="page-footer footer-color">
     
         
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+    
+<link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+
     
     
     <style type="text/css">
@@ -1145,12 +1218,12 @@ Type "help", "copyright", "credits" or "license" for more information.
     </div>
     
     
-    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    <script src="/libs/aplayer/APlayer.min.js"></script>
     
     
-    <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
+    <script src="/libs/meting/Meting.min.js"></script>
     
-    
+
     
     <div class="container">
         <div class="row center">
@@ -1259,6 +1332,7 @@ Type "help", "copyright", "credits" or "license" for more information.
     <script src="/libs/materialize/materialize.min.js"></script>
 <script src="/libs/lazyload/lazyload.min.js"></script>
 <script src="/libs/aos/aos.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/scrollprogress/3.0.2/scrollProgress.min.js"></script>
 <script src="/js/xxcoding.js"></script>
 
 
