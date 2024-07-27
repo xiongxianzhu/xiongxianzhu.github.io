@@ -96,9 +96,9 @@
     <title>时间线 | xx&#39;s blog</title>
     <link rel="icon" type="image/png" href="/img/favicon.png">
     <script src="/libs/jquery/jquery.min.js"></script>
-<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="xx's blog" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 7.3.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="xx's blog" type="application/atom+xml">
 </head>
 
 <body>
@@ -815,112 +815,115 @@
         display: table;
         clear: both;
     }
-    #md-timeline {
+    #timeline {
         position: relative;
         padding: 2em 0;
         margin-top: 2em;
         margin-bottom: 2em;
     }
     @media screen and (max-device-width:480px){
-        #md-timeline {
+        #timeline {
             margin-top: 6em;
         }
     }
-    #md-timeline::before {
+    #timeline::before {
         content: '';
         position: absolute;
         top: 0;
         left: 18px;
         height: 100%;
-        width: 2px;
+        width: 6px;
         background: #d7e4ed;
     }
-    .md-timeline-title {
+    .timeline-title {
         font-size: 20px;
         line-height: 24px;
         color: #333;
     }
-    .md-timeline-content a {
+    .timeline-content a {
         text-decoration: none;
         color: #007bff;
     }
-    .md-timeline-info {
+    .timeline-info {
         height: 20px;
         width: 100%;
         margin: 10px 0px;
     }
-    .md-timeline-info-span {
+    .timeline-info-span {
         float: right;
         margin-right: 10px;
         text-align: right;
     }
-    .md-timeline-excerpt {
+    .timeline-excerpt {
         clear: right;
     }
     @media only screen and (min-width: 1170px) {
-        #md-timeline {
+        #timeline {
             margin-top: 3em;
             margin-bottom: 3em;
         }
-        #md-timeline::before {
+        #timeline::before {
             left: 50%;
-            margin-left: -2px;
+            transform: translate(-50%);
         }
     }
-    .md-timeline-block {
+    .timeline-item {
         position: relative;
         margin: 2em 0;
     }
-    .md-timeline-block:after {
+    .timeline-item:after {
         content: "";
         display: table;
         clear: both;
     }
-    .md-timeline-block:first-child {
+    .timeline-item:first-child {
         margin-top: 0;
     }
-    .md-timeline-block:last-child {
+    .timeline-item:last-child {
         margin-bottom: 0;
     }
     @media only screen and (min-width: 1170px) {
-        .md-timeline-block {
+        .timeline-item {
             margin: 4em 0;
         }
-        .md-timeline-block:first-child {
+        .timeline-item:first-child {
             margin-top: 0;
         }
-        .md-timeline-block:last-child {
+        .timeline-item:last-child {
             margin-bottom: 0;
         }
     }
-    .md-timeline-date {
+    .timeline-date {
         position: absolute;
         top: 0;
         left: 0;
         width: 120px;
         height: 60px;
-        background: #007bff;
-        color: white;
+        /* background: #007bff; */
+        /* background: #FF9F55; */
+        background-color: white;
+        border: 4px solid #FF9F55;
+        /* color: white; */
+        color: #FF9F55;
         text-align: center;
         line-height: 60px;
         font-size: 16px;
         font-weight: bold;
-        box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.75);
+        /* box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.75); */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     }
     @media only screen and (min-width: 1170px) {
-        .md-timeline-date {
+        .timeline-date {
             width: 120px;
             height: 60px;
             left: 50%;
-            margin-left: -60px;
-            /* Force Hardware Acceleration in WebKit */
-            -webkit-transform: translateZ(0);
-            -webkit-backface-visibility: hidden;
+            transform: translate(-50%);
+            -webkit-transform: translate(-50%);
         }
-        .cssanimations .md-timeline-date.is-hidden {
+        .cssanimations .timeline-date.is-hidden {
             visibility: hidden;
         }
-        .cssanimations .md-timeline-date.bounce-in {
+        .cssanimations .timeline-date.bounce-in {
             visibility: visible;
             -webkit-animation: md-bounce-1 0.6s;
             -moz-animation: md-bounce-1 0.6s;
@@ -978,33 +981,33 @@
             transform: scale(1);
         }
     }
-    .md-timeline-content {
+    .timeline-content {
         position: relative;
-        margin-left: 60px;
         background: white;
         padding: 1em;
-        box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.75);
+        /* box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.75); */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     }
-    .md-timeline-content:after {
+    .timeline-content:after {
         content: "";
         display: table;
         clear: both;
     }
-    .md-timeline-content h2 {
+    .timeline-content h2 {
         color: #303e49;
     }
-    .md-timeline-content p, .md-timeline-content .md-read-more, .md-timeline-content .md-date {
+    .timeline-content p, .timeline-content .md-read-more, .timeline-content .md-date {
         font-size: 13px;
         font-size: 0.8125rem;
     }
-    .md-timeline-content .md-read-more, .md-timeline-content .md-date {
+    .timeline-content .md-read-more, .timeline-content .md-date {
         display: inline-block;
     }
-    .md-timeline-content p {
+    .timeline-content p {
         margin: 1em 0;
         line-height: 1.6;
     }
-    .md-timeline-content .md-read-more {
+    .timeline-content .md-read-more {
         float: right;
         padding: .8em 1em;
         background: #acb7c0;
@@ -1012,15 +1015,14 @@
         /* border-radius: 0.25em; */
     }
     .md-date {
-        color: white;
+        color: #FF9F55;
         text-align: center;
         white-space: nowrap;
-        padding: 10px;
     }
-    .no-touch .md-timeline-content .md-read-more:hover {
+    .no-touch .timeline-content .md-read-more:hover {
         background-color: #bac4cb;
     }
-    .md-timeline-content::before {
+    .timeline-content::before {
         content: '';
         position: absolute;
         top: 24px;
@@ -1031,15 +1033,15 @@
         border-right: 7px solid white;
     }
     @media only screen and (min-width: 768px) {
-        .md-timeline-content h2 {
+        .timeline-content h2 {
             font-size: 20px;
             font-size: 1.25rem;
         }
-        .md-timeline-content p {
+        .timeline-content p {
             font-size: 16px;
             font-size: 1rem;
         }
-        .md-timeline-content .md-read-more {
+        .timeline-content .md-read-more {
             font-size: 14px;
             font-size: 0.875rem;
         }
@@ -1047,40 +1049,44 @@
     @media only screen and (min-width: 1170px) {
         .md-date {
             text-align: center;
-            margin-top: 10px;
-            line-height: 20px;
+            line-height: 52px;
         }
-        .md-timeline-content {
-            margin-left: -40px;
+        .timeline-content {
             padding: 1.6em;
             width: 45%;
         }
-        .md-timeline-content::before {
+        .timeline-content::before {
             top: 24px;
             left: 100%;
             border-color: transparent;
             border-left: 7px solid white;
         }
-        .md-timeline-content .md-read-more {
+        .timeline-content .md-read-more {
             float: left;
         }
-        .md-timeline-block:nth-child(even) .md-timeline-content {
-            float: right;
+        .timeline-item:nth-child(odd) .timeline-content {
+            transform: translate(-40px);
+            /* margin-left: -40px; */
         }
-        .md-timeline-block:nth-child(even) .md-timeline-content::before {
+        .timeline-item:nth-child(even) .timeline-content {
+            float: right;
+            transform: translate(40px);
+            /* margin-right: -40px; */
+        }
+        .timeline-item:nth-child(even) .timeline-content::before {
             top: 24px;
             left: auto;
             right: 100%;
             border-color: transparent;
             border-right: 7px solid white;
         }
-        .md-timeline-block:nth-child(even) .md-timeline-content .md-read-more {
+        .timeline-item:nth-child(even) .timeline-content .md-read-more {
             float: right;
         }
-        .cssanimations .md-timeline-content.is-hidden {
+        .cssanimations .timeline-content.is-hidden {
             visibility: hidden;
         }
-        .cssanimations .md-timeline-content.bounce-in {
+        .cssanimations .timeline-content.bounce-in {
             visibility: visible;
             -webkit-animation: md-bounce-2 0.6s;
             -moz-animation: md-bounce-2 0.6s;
@@ -1089,7 +1095,7 @@
     }
     @media only screen and (min-width: 1170px) {
         /* inverse bounce effect on even content blocks */
-        .cssanimations .md-timeline-block:nth-child(even) .md-timeline-content.bounce-in {
+        .cssanimations .timeline-item:nth-child(even) .timeline-content.bounce-in {
             -webkit-animation: md-bounce-2-inverse 0.6s;
             -moz-animation: md-bounce-2-inverse 0.6s;
             animation: md-bounce-2-inverse 0.6s;
@@ -1238,1200 +1244,1158 @@
 
 </div>
     </div>
-    <section id="md-timeline" class="md-container">
+    <section id="timeline" class="md-container">
                     
-             <div class="md-timeline-block">
-                         <div class="md-timeline-date blue">
-                                <div class="md-date">2024-07-21 </div>
-                         </div>
- 
-                         <div class="md-timeline-content">
-                                 <div class="md-timeline-title"><a href="/2024/07/21/win11-install-nodejs/">win11安装nodejs</a></div>
-                     <div class="md-timeline-info">
-                         <span class="md-timeline-info-span">Categories:
-                             <a class="category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
-                         </span>
-                         <span class="md-timeline-info-span">Tags:
-                             <a class="tag-none-link" href="/tags/nodejs/" rel="tag">nodejs</a>, <a class="tag-none-link" href="/tags/npm/" rel="tag">npm</a>
-                         </span>
-                         
-                     </div>
-                     <p class="md-timeline-excerpt">
-                         
-                             win + x + a打开PowerShell，输入以下命令安装nodej：
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    <div class="md-date">2024-07-21 </div>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-title"><a href="/2024/07/21/win11-install-nodejs/">win11安装nodejs</a></div>
+                <div class="timeline-info">
+                    <span class="timeline-info-span">Categories:
+                        <a class="category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
+                    </span>
+                    <span class="timeline-info-span">Tags:
+                        <a class="tag-none-link" href="/tags/nodejs/" rel="tag">nodejs</a>, <a class="tag-none-link" href="/tags/npm/" rel="tag">npm</a>
+                    </span>
+                    
+                </div>
+                <p class="timeline-excerpt">
+                    
+                        win + x + a打开PowerShell，输入以下命令安装nodej：
 
-                         ...
-                     </p>
-                             </div>
-             </div>	
-            
-             <div class="md-timeline-block">
-                         <div class="md-timeline-date blue">
-                                <div class="md-date">2024-03-22 </div>
-                         </div>
- 
-                         <div class="md-timeline-content">
-                                 <div class="md-timeline-title"><a href="/2024/03/22/pyenv-usage/">pyenv的用法</a></div>
-                     <div class="md-timeline-info">
-                         <span class="md-timeline-info-span">Categories:
-                             <a class="category-link" href="/categories/python/">python</a>
-                         </span>
-                         <span class="md-timeline-info-span">Tags:
-                             <a class="tag-none-link" href="/tags/pyenv/" rel="tag">pyenv</a>, <a class="tag-none-link" href="/tags/python/" rel="tag">python</a>
-                         </span>
-                         
-                     </div>
-                     <p class="md-timeline-excerpt">
-                         
-                             
-                         ...
-                     </p>
-                             </div>
-             </div>	
-            
-             <div class="md-timeline-block">
-                         <div class="md-timeline-date blue">
-                                <div class="md-date">2023-05-09 </div>
-                         </div>
- 
-                         <div class="md-timeline-content">
-                                 <div class="md-timeline-title"><a href="/2023/05/09/how-to-learn-vue/">快速上手vue</a></div>
-                     <div class="md-timeline-info">
-                         <span class="md-timeline-info-span">Categories:
-                             <a class="category-link" href="/categories/vue/">vue</a>
-                         </span>
-                         <span class="md-timeline-info-span">Tags:
-                             <a class="tag-none-link" href="/tags/nodejs/" rel="tag">nodejs</a>, <a class="tag-none-link" href="/tags/npm/" rel="tag">npm</a>, <a class="tag-none-link" href="/tags/vue/" rel="tag">vue</a>, <a class="tag-none-link" href="/tags/yarn/" rel="tag">yarn</a>
-                         </span>
-                         
-                     </div>
-                     <p class="md-timeline-excerpt">
-                         
-                             1. 官网vue官网：
-                         ...
-                     </p>
-                             </div>
-             </div>	
-            
-             <div class="md-timeline-block">
-                         <div class="md-timeline-date blue">
-                                <div class="md-date">2021-03-27 </div>
-                         </div>
- 
-                         <div class="md-timeline-content">
-                                 <div class="md-timeline-title"><a href="/2021/03/27/linux-info-stats/">linux基本信息及监控指标获取</a></div>
-                     <div class="md-timeline-info">
-                         <span class="md-timeline-info-span">Categories:
-                             <a class="category-link" href="/categories/linux/">linux</a>
-                         </span>
-                         <span class="md-timeline-info-span">Tags:
-                             <a class="tag-none-link" href="/tags/cpu/" rel="tag">cpu</a>, <a class="tag-none-link" href="/tags/linux/" rel="tag">linux</a>, <a class="tag-none-link" href="/tags/%E5%86%85%E5%AD%98/" rel="tag">内存</a>, <a class="tag-none-link" href="/tags/%E7%A3%81%E7%9B%98/" rel="tag">磁盘</a>, <a class="tag-none-link" href="/tags/%E7%B3%BB%E7%BB%9F%E7%89%88%E6%9C%AC/" rel="tag">系统版本</a>
-                         </span>
-                         
-                     </div>
-                     <p class="md-timeline-excerpt">
-                         
-                             1. 系统信息内核版本：...
-                         ...
-                     </p>
-                             </div>
-             </div>	
-            
-             <div class="md-timeline-block">
-                         <div class="md-timeline-date blue">
-                                <div class="md-date">2021-03-18 </div>
-                         </div>
- 
-                         <div class="md-timeline-content">
-                                 <div class="md-timeline-title"><a href="/2021/03/18/install-go-on-mac/">mac下安装go开发环境</a></div>
-                     <div class="md-timeline-info">
-                         <span class="md-timeline-info-span">Categories:
-                             <a class="category-link" href="/categories/go/">go</a>
-                         </span>
-                         <span class="md-timeline-info-span">Tags:
-                             <a class="tag-none-link" href="/tags/go/" rel="tag">go</a>, <a class="tag-none-link" href="/tags/mac/" rel="tag">mac</a>
-                         </span>
-                         
-                     </div>
-                     <p class="md-timeline-excerpt">
-                         
-                             1. 下载go安装包...
-                         ...
-                     </p>
-                             </div>
-             </div>	
-            
-             <div class="md-timeline-block">
-                         <div class="md-timeline-date blue">
-                                <div class="md-date">2021-03-17 </div>
-                         </div>
- 
-                         <div class="md-timeline-content">
-                                 <div class="md-timeline-title"><a href="/2021/03/17/using-vscode/">使用vscode作为开发利器</a></div>
-                     <div class="md-timeline-info">
-                         <span class="md-timeline-info-span">Categories:
-                             <a class="category-link" href="/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/">开发工具</a>
-                         </span>
-                         <span class="md-timeline-info-span">Tags:
-                             <a class="tag-none-link" href="/tags/mac/" rel="tag">mac</a>, <a class="tag-none-link" href="/tags/vscode/" rel="tag">vscode</a>, <a class="tag-none-link" href="/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/" rel="tag">开发工具</a>
-                         </span>
-                         
-                     </div>
-                     <p class="md-timeline-excerpt">
-                         
-                             1. ...
-                         ...
-                     </p>
-                             </div>
-             </div>	
-            
-             <div class="md-timeline-block">
-                         <div class="md-timeline-date blue">
-                                <div class="md-date">2021-03-10 </div>
-                         </div>
- 
-                         <div class="md-timeline-content">
-                                 <div class="md-timeline-title"><a href="/2021/03/10/docker-registry-mirrors-config/">配置docker国内镜像源加速获取docker镜像</a></div>
-                     <div class="md-timeline-info">
-                         <span class="md-timeline-info-span">Categories:
-                             <a class="category-link" href="/categories/docker/">docker</a>
-                         </span>
-                         <span class="md-timeline-info-span">Tags:
-                             <a class="tag-none-link" href="/tags/docker/" rel="tag">docker</a>
-                         </span>
-                         
-                     </div>
-                     <p class="md-timeline-excerpt">
-                         
-                             1. ...
-                         ...
-                     </p>
-                             </div>
-             </div>	
-            
-             <div class="md-timeline-block">
-                         <div class="md-timeline-date blue">
-                                <div class="md-date">2021-03-10 </div>
-                         </div>
- 
-                         <div class="md-timeline-content">
-                                 <div class="md-timeline-title"><a href="/2021/03/10/using-gitlab-ce-to-build-git-service/">使用gitlab-ce搭建git服务</a></div>
-                     <div class="md-timeline-info">
-                         <span class="md-timeline-info-span">Categories:
-                             <a class="category-link" href="/categories/git/">git</a>
-                         </span>
-                         <span class="md-timeline-info-span">Tags:
-                             <a class="tag-none-link" href="/tags/docker/" rel="tag">docker</a>, <a class="tag-none-link" href="/tags/git/" rel="tag">git</a>, <a class="tag-none-link" href="/tags/gitlab/" rel="tag">gitlab</a>
-                         </span>
-                         
-                     </div>
-                     <p class="md-timeline-excerpt">
-                         
-                             使用docker安装gitlab
+                    ...
+                </p>
+                </div>
+            </div>	
+    
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    <div class="md-date">2024-03-22 </div>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-title"><a href="/2024/03/22/pyenv-usage/">pyenv的用法</a></div>
+                <div class="timeline-info">
+                    <span class="timeline-info-span">Categories:
+                        <a class="category-link" href="/categories/python/">python</a>
+                    </span>
+                    <span class="timeline-info-span">Tags:
+                        <a class="tag-none-link" href="/tags/pyenv/" rel="tag">pyenv</a>, <a class="tag-none-link" href="/tags/python/" rel="tag">python</a>
+                    </span>
+                    
+                </div>
+                <p class="timeline-excerpt">
+                    
+                        
+                    ...
+                </p>
+                </div>
+            </div>	
+    
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    <div class="md-date">2023-05-09 </div>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-title"><a href="/2023/05/09/how-to-learn-vue/">快速上手vue</a></div>
+                <div class="timeline-info">
+                    <span class="timeline-info-span">Categories:
+                        <a class="category-link" href="/categories/vue/">vue</a>
+                    </span>
+                    <span class="timeline-info-span">Tags:
+                        <a class="tag-none-link" href="/tags/nodejs/" rel="tag">nodejs</a>, <a class="tag-none-link" href="/tags/npm/" rel="tag">npm</a>, <a class="tag-none-link" href="/tags/vue/" rel="tag">vue</a>, <a class="tag-none-link" href="/tags/yarn/" rel="tag">yarn</a>
+                    </span>
+                    
+                </div>
+                <p class="timeline-excerpt">
+                    
+                        1. 官网vue官网：
+                    ...
+                </p>
+                </div>
+            </div>	
+    
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    <div class="md-date">2021-03-27 </div>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-title"><a href="/2021/03/27/linux-info-stats/">linux基本信息及监控指标获取</a></div>
+                <div class="timeline-info">
+                    <span class="timeline-info-span">Categories:
+                        <a class="category-link" href="/categories/linux/">linux</a>
+                    </span>
+                    <span class="timeline-info-span">Tags:
+                        <a class="tag-none-link" href="/tags/cpu/" rel="tag">cpu</a>, <a class="tag-none-link" href="/tags/linux/" rel="tag">linux</a>, <a class="tag-none-link" href="/tags/%E5%86%85%E5%AD%98/" rel="tag">内存</a>, <a class="tag-none-link" href="/tags/%E7%A3%81%E7%9B%98/" rel="tag">磁盘</a>, <a class="tag-none-link" href="/tags/%E7%B3%BB%E7%BB%9F%E7%89%88%E6%9C%AC/" rel="tag">系统版本</a>
+                    </span>
+                    
+                </div>
+                <p class="timeline-excerpt">
+                    
+                        1. 系统信息内核版本：...
+                    ...
+                </p>
+                </div>
+            </div>	
+    
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    <div class="md-date">2021-03-18 </div>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-title"><a href="/2021/03/18/install-go-on-mac/">mac下安装go开发环境</a></div>
+                <div class="timeline-info">
+                    <span class="timeline-info-span">Categories:
+                        <a class="category-link" href="/categories/go/">go</a>
+                    </span>
+                    <span class="timeline-info-span">Tags:
+                        <a class="tag-none-link" href="/tags/go/" rel="tag">go</a>, <a class="tag-none-link" href="/tags/mac/" rel="tag">mac</a>
+                    </span>
+                    
+                </div>
+                <p class="timeline-excerpt">
+                    
+                        1. 下载go安装包...
+                    ...
+                </p>
+                </div>
+            </div>	
+    
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    <div class="md-date">2021-03-17 </div>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-title"><a href="/2021/03/17/using-vscode/">使用vscode作为开发利器</a></div>
+                <div class="timeline-info">
+                    <span class="timeline-info-span">Categories:
+                        <a class="category-link" href="/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/">开发工具</a>
+                    </span>
+                    <span class="timeline-info-span">Tags:
+                        <a class="tag-none-link" href="/tags/mac/" rel="tag">mac</a>, <a class="tag-none-link" href="/tags/vscode/" rel="tag">vscode</a>, <a class="tag-none-link" href="/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/" rel="tag">开发工具</a>
+                    </span>
+                    
+                </div>
+                <p class="timeline-excerpt">
+                    
+                        1. ...
+                    ...
+                </p>
+                </div>
+            </div>	
+    
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    <div class="md-date">2021-03-10 </div>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-title"><a href="/2021/03/10/docker-registry-mirrors-config/">配置docker国内镜像源加速获取docker镜像</a></div>
+                <div class="timeline-info">
+                    <span class="timeline-info-span">Categories:
+                        <a class="category-link" href="/categories/docker/">docker</a>
+                    </span>
+                    <span class="timeline-info-span">Tags:
+                        <a class="tag-none-link" href="/tags/docker/" rel="tag">docker</a>
+                    </span>
+                    
+                </div>
+                <p class="timeline-excerpt">
+                    
+                        1. ...
+                    ...
+                </p>
+                </div>
+            </div>	
+    
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    <div class="md-date">2021-03-10 </div>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-title"><a href="/2021/03/10/using-gitlab-ce-to-build-git-service/">使用gitlab-ce搭建git服务</a></div>
+                <div class="timeline-info">
+                    <span class="timeline-info-span">Categories:
+                        <a class="category-link" href="/categories/git/">git</a>
+                    </span>
+                    <span class="timeline-info-span">Tags:
+                        <a class="tag-none-link" href="/tags/docker/" rel="tag">docker</a>, <a class="tag-none-link" href="/tags/git/" rel="tag">git</a>, <a class="tag-none-link" href="/tags/gitlab/" rel="tag">gitlab</a>
+                    </span>
+                    
+                </div>
+                <p class="timeline-excerpt">
+                    
+                        使用docker安装gitlab
 https://docs.gitlab....
-                         ...
-                     </p>
-                             </div>
-             </div>	
-            
-             <div class="md-timeline-block">
-                         <div class="md-timeline-date blue">
-                                <div class="md-date">2021-03-02 </div>
-                         </div>
- 
-                         <div class="md-timeline-content">
-                                 <div class="md-timeline-title"><a href="/2021/03/02/docker-elk/">基于docker环境搭建ELK日志分析系统</a></div>
-                     <div class="md-timeline-info">
-                         <span class="md-timeline-info-span">Categories:
-                             <a class="category-link" href="/categories/docker/">docker</a>
-                         </span>
-                         <span class="md-timeline-info-span">Tags:
-                             <a class="tag-none-link" href="/tags/ELK/" rel="tag">ELK</a>, <a class="tag-none-link" href="/tags/docker/" rel="tag">docker</a>, <a class="tag-none-link" href="/tags/kibana/" rel="tag">kibana</a>
-                         </span>
-                         
-                     </div>
-                     <p class="md-timeline-excerpt">
-                         
-                             1. 架构日志统计分析系统采用架构：...
-                         ...
-                     </p>
-                             </div>
-             </div>	
-            
-             <div class="md-timeline-block">
-                         <div class="md-timeline-date blue">
-                                <div class="md-date">2021-02-28 </div>
-                         </div>
- 
-                         <div class="md-timeline-content">
-                                 <div class="md-timeline-title"><a href="/2021/02/28/mysql5-7-install-password-verification-plug-in-validate-password/">mysql5.7安装密码校验插件validate_password</a></div>
-                     <div class="md-timeline-info">
-                         <span class="md-timeline-info-span">Categories:
-                             <a class="category-link" href="/categories/mysql/">mysql</a>
-                         </span>
-                         <span class="md-timeline-info-span">Tags:
-                             <a class="tag-none-link" href="/tags/mysql/" rel="tag">mysql</a>, <a class="tag-none-link" href="/tags/validate-password/" rel="tag">validate_password</a>, <a class="tag-none-link" href="/tags/%E5%A4%8D%E6%9D%82%E5%BA%A6/" rel="tag">复杂度</a>
-                         </span>
-                         
-                     </div>
-                     <p class="md-timeline-excerpt">
-                         
-                             
-                         ...
-                     </p>
-                             </div>
-             </div>	
-            
-             <div class="md-timeline-block">
-                         <div class="md-timeline-date blue">
-                                <div class="md-date">2020-05-11 </div>
-                         </div>
- 
-                         <div class="md-timeline-content">
-                                 <div class="md-timeline-title"><a href="/2020/05/11/docker-commands/">docker命令</a></div>
-                     <div class="md-timeline-info">
-                         <span class="md-timeline-info-span">Categories:
-                             <a class="category-link" href="/categories/docker/">docker</a>
-                         </span>
-                         <span class="md-timeline-info-span">Tags:
-                             <a class="tag-none-link" href="/tags/docker/" rel="tag">docker</a>, <a class="tag-none-link" href="/tags/%E5%91%BD%E4%BB%A4/" rel="tag">命令</a>
-                         </span>
-                         
-                     </div>
-                     <p class="md-timeline-excerpt">
-                         
-                             1. docker信息
-                         ...
-                     </p>
-                             </div>
-             </div>	
-            
-             <div class="md-timeline-block">
-                         <div class="md-timeline-date blue">
-                                <div class="md-date">2020-05-11 </div>
-                         </div>
- 
-                         <div class="md-timeline-content">
-                                 <div class="md-timeline-title"><a href="/2020/05/11/installation-of-docker/">docker的安装</a></div>
-                     <div class="md-timeline-info">
-                         <span class="md-timeline-info-span">Categories:
-                             <a class="category-link" href="/categories/docker/">docker</a>
-                         </span>
-                         <span class="md-timeline-info-span">Tags:
-                             <a class="tag-none-link" href="/tags/docker/" rel="tag">docker</a>, <a class="tag-none-link" href="/tags/%E5%AE%89%E8%A3%85/" rel="tag">安装</a>
-                         </span>
-                         
-                     </div>
-                     <p class="md-timeline-excerpt">
-                         
-                             
-                         ...
-                     </p>
-                             </div>
-             </div>	
-            
-             <div class="md-timeline-block">
-                         <div class="md-timeline-date blue">
-                                <div class="md-date">2020-03-06 </div>
-                         </div>
- 
-                         <div class="md-timeline-content">
-                                 <div class="md-timeline-title"><a href="/2020/03/06/install-m2crypto-on-macosx/">解决macos下安装m2crypto报SWIG的错</a></div>
-                     <div class="md-timeline-info">
-                         <span class="md-timeline-info-span">Categories:
-                             <a class="category-link" href="/categories/python/">python</a>
-                         </span>
-                         <span class="md-timeline-info-span">Tags:
-                             <a class="tag-none-link" href="/tags/m2crypto/" rel="tag">m2crypto</a>, <a class="tag-none-link" href="/tags/mac/" rel="tag">mac</a>, <a class="tag-none-link" href="/tags/python/" rel="tag">python</a>, <a class="tag-none-link" href="/tags/swig/" rel="tag">swig</a>
-                         </span>
-                         
-                     </div>
-                     <p class="md-timeline-excerpt">
-                         
-                             
-                         ...
-                     </p>
-                             </div>
-             </div>	
-            
-             <div class="md-timeline-block">
-                         <div class="md-timeline-date blue">
-                                <div class="md-date">2020-02-12 </div>
-                         </div>
- 
-                         <div class="md-timeline-content">
-                                 <div class="md-timeline-title"><a href="/2020/02/12/mysql5-7-x-encoding-is-set-to-utf8mb4/">mysql5.7.x编码设置为utf8mb4</a></div>
-                     <div class="md-timeline-info">
-                         <span class="md-timeline-info-span">Categories:
-                             <a class="category-link" href="/categories/git/">git</a>
-                         </span>
-                         <span class="md-timeline-info-span">Tags:
-                             <a class="tag-none-link" href="/tags/mysql/" rel="tag">mysql</a>, <a class="tag-none-link" href="/tags/utfmb4/" rel="tag">utfmb4</a>, <a class="tag-none-link" href="/tags/%E7%BC%96%E7%A0%81/" rel="tag">编码</a>
-                         </span>
-                         
-                     </div>
-                     <p class="md-timeline-excerpt">
-                         
-                             
-                         ...
-                     </p>
-                             </div>
-             </div>	
-            
-             <div class="md-timeline-block">
-                         <div class="md-timeline-date blue">
-                                <div class="md-date">2019-10-15 </div>
-                         </div>
- 
-                         <div class="md-timeline-content">
-                                 <div class="md-timeline-title"><a href="/2019/10/15/install-python3-8-from-source-on-macosx/">mac os x从源码编译安装python3.8</a></div>
-                     <div class="md-timeline-info">
-                         <span class="md-timeline-info-span">Categories:
-                             <a class="category-link" href="/categories/python/">python</a>
-                         </span>
-                         <span class="md-timeline-info-span">Tags:
-                             <a class="tag-none-link" href="/tags/mac/" rel="tag">mac</a>, <a class="tag-none-link" href="/tags/python/" rel="tag">python</a>
-                         </span>
-                         
-                     </div>
-                     <p class="md-timeline-excerpt">
-                         
-                             
-                         ...
-                     </p>
-                             </div>
-             </div>	
-            
-             <div class="md-timeline-block">
-                         <div class="md-timeline-date blue">
-                                <div class="md-date">2019-08-26 </div>
-                         </div>
- 
-                         <div class="md-timeline-content">
-                                 <div class="md-timeline-title"><a href="/2019/08/26/postgresql-commands/">postgresql命令</a></div>
-                     <div class="md-timeline-info">
-                         <span class="md-timeline-info-span">Categories:
-                             <a class="category-link" href="/categories/postgresql/">postgresql</a>
-                         </span>
-                         <span class="md-timeline-info-span">Tags:
-                             <a class="tag-none-link" href="/tags/postgresql/" rel="tag">postgresql</a>, <a class="tag-none-link" href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" rel="tag">数据库</a>
-                         </span>
-                         
-                     </div>
-                     <p class="md-timeline-excerpt">
-                         
-                             
-                         ...
-                     </p>
-                             </div>
-             </div>	
-            
-             <div class="md-timeline-block">
-                         <div class="md-timeline-date blue">
-                                <div class="md-date">2019-05-21 </div>
-                         </div>
- 
-                         <div class="md-timeline-content">
-                                 <div class="md-timeline-title"><a href="/2019/05/21/Mac-OS-X-sublime-text-3-installs-ctags-plug-in-to-achieve-code-jump/">mac os x sublime text 3安装ctags插件实现代码跳转</a></div>
-                     <div class="md-timeline-info">
-                         <span class="md-timeline-info-span">Categories:
-                             <a class="category-link" href="/categories/sublimetext3/">sublimetext3</a>
-                         </span>
-                         <span class="md-timeline-info-span">Tags:
-                             <a class="tag-none-link" href="/tags/ctags/" rel="tag">ctags</a>, <a class="tag-none-link" href="/tags/mac/" rel="tag">mac</a>, <a class="tag-none-link" href="/tags/sublime-text-3/" rel="tag">sublime text 3</a>, <a class="tag-none-link" href="/tags/%E4%BB%A3%E7%A0%81%E8%B7%B3%E8%BD%AC/" rel="tag">代码跳转</a>
-                         </span>
-                         
-                     </div>
-                     <p class="md-timeline-excerpt">
-                         
-                             ctags是一款实现代码跳转的插件，可以提高查看代码的效率.
+                    ...
+                </p>
+                </div>
+            </div>	
+    
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    <div class="md-date">2021-03-02 </div>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-title"><a href="/2021/03/02/docker-elk/">基于docker环境搭建ELK日志分析系统</a></div>
+                <div class="timeline-info">
+                    <span class="timeline-info-span">Categories:
+                        <a class="category-link" href="/categories/docker/">docker</a>
+                    </span>
+                    <span class="timeline-info-span">Tags:
+                        <a class="tag-none-link" href="/tags/ELK/" rel="tag">ELK</a>, <a class="tag-none-link" href="/tags/docker/" rel="tag">docker</a>, <a class="tag-none-link" href="/tags/kibana/" rel="tag">kibana</a>
+                    </span>
+                    
+                </div>
+                <p class="timeline-excerpt">
+                    
+                        1. 架构日志统计分析系统采用架构：...
+                    ...
+                </p>
+                </div>
+            </div>	
+    
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    <div class="md-date">2021-02-28 </div>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-title"><a href="/2021/02/28/mysql5-7-install-password-verification-plug-in-validate-password/">mysql5.7安装密码校验插件validate_password</a></div>
+                <div class="timeline-info">
+                    <span class="timeline-info-span">Categories:
+                        <a class="category-link" href="/categories/mysql/">mysql</a>
+                    </span>
+                    <span class="timeline-info-span">Tags:
+                        <a class="tag-none-link" href="/tags/mysql/" rel="tag">mysql</a>, <a class="tag-none-link" href="/tags/validate-password/" rel="tag">validate_password</a>, <a class="tag-none-link" href="/tags/%E5%A4%8D%E6%9D%82%E5%BA%A6/" rel="tag">复杂度</a>
+                    </span>
+                    
+                </div>
+                <p class="timeline-excerpt">
+                    
+                        
+                    ...
+                </p>
+                </div>
+            </div>	
+    
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    <div class="md-date">2020-05-11 </div>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-title"><a href="/2020/05/11/docker-commands/">docker命令</a></div>
+                <div class="timeline-info">
+                    <span class="timeline-info-span">Categories:
+                        <a class="category-link" href="/categories/docker/">docker</a>
+                    </span>
+                    <span class="timeline-info-span">Tags:
+                        <a class="tag-none-link" href="/tags/docker/" rel="tag">docker</a>, <a class="tag-none-link" href="/tags/%E5%91%BD%E4%BB%A4/" rel="tag">命令</a>
+                    </span>
+                    
+                </div>
+                <p class="timeline-excerpt">
+                    
+                        1. docker信息
+                    ...
+                </p>
+                </div>
+            </div>	
+    
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    <div class="md-date">2020-05-11 </div>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-title"><a href="/2020/05/11/installation-of-docker/">docker的安装</a></div>
+                <div class="timeline-info">
+                    <span class="timeline-info-span">Categories:
+                        <a class="category-link" href="/categories/docker/">docker</a>
+                    </span>
+                    <span class="timeline-info-span">Tags:
+                        <a class="tag-none-link" href="/tags/docker/" rel="tag">docker</a>, <a class="tag-none-link" href="/tags/%E5%AE%89%E8%A3%85/" rel="tag">安装</a>
+                    </span>
+                    
+                </div>
+                <p class="timeline-excerpt">
+                    
+                        
+                    ...
+                </p>
+                </div>
+            </div>	
+    
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    <div class="md-date">2020-03-06 </div>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-title"><a href="/2020/03/06/install-m2crypto-on-macosx/">解决macos下安装m2crypto报SWIG的错</a></div>
+                <div class="timeline-info">
+                    <span class="timeline-info-span">Categories:
+                        <a class="category-link" href="/categories/python/">python</a>
+                    </span>
+                    <span class="timeline-info-span">Tags:
+                        <a class="tag-none-link" href="/tags/m2crypto/" rel="tag">m2crypto</a>, <a class="tag-none-link" href="/tags/mac/" rel="tag">mac</a>, <a class="tag-none-link" href="/tags/python/" rel="tag">python</a>, <a class="tag-none-link" href="/tags/swig/" rel="tag">swig</a>
+                    </span>
+                    
+                </div>
+                <p class="timeline-excerpt">
+                    
+                        
+                    ...
+                </p>
+                </div>
+            </div>	
+    
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    <div class="md-date">2020-02-12 </div>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-title"><a href="/2020/02/12/mysql5-7-x-encoding-is-set-to-utf8mb4/">mysql5.7.x编码设置为utf8mb4</a></div>
+                <div class="timeline-info">
+                    <span class="timeline-info-span">Categories:
+                        <a class="category-link" href="/categories/git/">git</a>
+                    </span>
+                    <span class="timeline-info-span">Tags:
+                        <a class="tag-none-link" href="/tags/mysql/" rel="tag">mysql</a>, <a class="tag-none-link" href="/tags/utfmb4/" rel="tag">utfmb4</a>, <a class="tag-none-link" href="/tags/%E7%BC%96%E7%A0%81/" rel="tag">编码</a>
+                    </span>
+                    
+                </div>
+                <p class="timeline-excerpt">
+                    
+                        
+                    ...
+                </p>
+                </div>
+            </div>	
+    
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    <div class="md-date">2019-10-15 </div>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-title"><a href="/2019/10/15/install-python3-8-from-source-on-macosx/">mac os x从源码编译安装python3.8</a></div>
+                <div class="timeline-info">
+                    <span class="timeline-info-span">Categories:
+                        <a class="category-link" href="/categories/python/">python</a>
+                    </span>
+                    <span class="timeline-info-span">Tags:
+                        <a class="tag-none-link" href="/tags/mac/" rel="tag">mac</a>, <a class="tag-none-link" href="/tags/python/" rel="tag">python</a>
+                    </span>
+                    
+                </div>
+                <p class="timeline-excerpt">
+                    
+                        
+                    ...
+                </p>
+                </div>
+            </div>	
+    
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    <div class="md-date">2019-08-26 </div>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-title"><a href="/2019/08/26/postgresql-commands/">postgresql命令</a></div>
+                <div class="timeline-info">
+                    <span class="timeline-info-span">Categories:
+                        <a class="category-link" href="/categories/postgresql/">postgresql</a>
+                    </span>
+                    <span class="timeline-info-span">Tags:
+                        <a class="tag-none-link" href="/tags/postgresql/" rel="tag">postgresql</a>, <a class="tag-none-link" href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" rel="tag">数据库</a>
+                    </span>
+                    
+                </div>
+                <p class="timeline-excerpt">
+                    
+                        
+                    ...
+                </p>
+                </div>
+            </div>	
+    
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    <div class="md-date">2019-05-21 </div>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-title"><a href="/2019/05/21/Mac-OS-X-sublime-text-3-installs-ctags-plug-in-to-achieve-code-jump/">mac os x sublime text 3安装ctags插件实现代码跳转</a></div>
+                <div class="timeline-info">
+                    <span class="timeline-info-span">Categories:
+                        <a class="category-link" href="/categories/sublimetext3/">sublimetext3</a>
+                    </span>
+                    <span class="timeline-info-span">Tags:
+                        <a class="tag-none-link" href="/tags/ctags/" rel="tag">ctags</a>, <a class="tag-none-link" href="/tags/mac/" rel="tag">mac</a>, <a class="tag-none-link" href="/tags/sublime-text-3/" rel="tag">sublime text 3</a>, <a class="tag-none-link" href="/tags/%E4%BB%A3%E7%A0%81%E8%B7%B3%E8%BD%AC/" rel="tag">代码跳转</a>
+                    </span>
+                    
+                </div>
+                <p class="timeline-excerpt">
+                    
+                        ctags是一款实现代码跳转的插件，可以提高查看代码的效率.
 
-                         ...
-                     </p>
-                             </div>
-             </div>	
-            
-             <div class="md-timeline-block">
-                         <div class="md-timeline-date blue">
-                                <div class="md-date">2019-02-26 </div>
-                         </div>
- 
-                         <div class="md-timeline-content">
-                                 <div class="md-timeline-title"><a href="/2019/02/26/install-postgresql-on-linux/">linux下安装postgresql</a></div>
-                     <div class="md-timeline-info">
-                         <span class="md-timeline-info-span">Categories:
-                             <a class="category-link" href="/categories/postgresql/">postgresql</a>
-                         </span>
-                         <span class="md-timeline-info-span">Tags:
-                             <a class="tag-none-link" href="/tags/linux/" rel="tag">linux</a>, <a class="tag-none-link" href="/tags/postgresql/" rel="tag">postgresql</a>, <a class="tag-none-link" href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" rel="tag">数据库</a>
-                         </span>
-                         
-                     </div>
-                     <p class="md-timeline-excerpt">
-                         
-                             postgresql官方下载: https://www.postgresql.org/down...
-                         ...
-                     </p>
-                             </div>
-             </div>	
-            
-             <div class="md-timeline-block">
-                         <div class="md-timeline-date blue">
-                                <div class="md-date">2019-01-11 </div>
-                         </div>
- 
-                         <div class="md-timeline-content">
-                                 <div class="md-timeline-title"><a href="/2019/01/11/how-to-be-a-nb-coder/">程序猿(媛)养成记</a></div>
-                     <div class="md-timeline-info">
-                         <span class="md-timeline-info-span">Categories:
-                             <a class="category-link" href="/categories/%E6%9D%82%E8%B0%88/">杂谈</a>
-                         </span>
-                         <span class="md-timeline-info-span">Tags:
-                             <a class="tag-none-link" href="/tags/%E5%85%BB%E6%88%90%E8%AE%B0/" rel="tag">养成记</a>, <a class="tag-none-link" href="/tags/%E5%AD%A6%E4%B9%A0/" rel="tag">学习</a>, <a class="tag-none-link" href="/tags/%E6%8A%80%E6%9C%AF%E6%A0%88/" rel="tag">技术栈</a>, <a class="tag-none-link" href="/tags/%E7%A0%81%E5%86%9C/" rel="tag">码农</a>, <a class="tag-none-link" href="/tags/%E7%A8%8B%E5%BA%8F%E5%91%98/" rel="tag">程序员</a>
-                         </span>
-                         
-                     </div>
-                     <p class="md-timeline-excerpt">
-                         
-                             行为习惯Beh...
-                         ...
-                     </p>
-                             </div>
-             </div>	
-            
-             <div class="md-timeline-block">
-                         <div class="md-timeline-date blue">
-                                <div class="md-date">2018-12-24 </div>
-                         </div>
- 
-                         <div class="md-timeline-content">
-                                 <div class="md-timeline-title"><a href="/2018/12/24/install-elasticsearch-on-linux/">linux下安装elasticsearch</a></div>
-                     <div class="md-timeline-info">
-                         <span class="md-timeline-info-span">Categories:
-                             <a class="category-link" href="/categories/linux/">linux</a>
-                         </span>
-                         <span class="md-timeline-info-span">Tags:
-                             <a class="tag-none-link" href="/tags/elasticsearch/" rel="tag">elasticsearch</a>, <a class="tag-none-link" href="/tags/elk/" rel="tag">elk</a>, <a class="tag-none-link" href="/tags/jdk/" rel="tag">jdk</a>, <a class="tag-none-link" href="/tags/linux/" rel="tag">linux</a>, <a class="tag-none-link" href="/tags/%E6%90%9C%E7%B4%A2/" rel="tag">搜索</a>
-                         </span>
-                         
-                     </div>
-                     <p class="md-timeline-excerpt">
-                         
-                             1. 安装JDKjdk8下...
-                         ...
-                     </p>
-                             </div>
-             </div>	
-            
-             <div class="md-timeline-block">
-                         <div class="md-timeline-date blue">
-                                <div class="md-date">2018-12-13 </div>
-                         </div>
- 
-                         <div class="md-timeline-content">
-                                 <div class="md-timeline-title"><a href="/2018/12/13/how-to-submit-PR-in-github/">如何在github提交PR(Pull Request)</a></div>
-                     <div class="md-timeline-info">
-                         <span class="md-timeline-info-span">Categories:
-                             <a class="category-link" href="/categories/git/">git</a>
-                         </span>
-                         <span class="md-timeline-info-span">Tags:
-                             <a class="tag-none-link" href="/tags/PR/" rel="tag">PR</a>, <a class="tag-none-link" href="/tags/git/" rel="tag">git</a>, <a class="tag-none-link" href="/tags/github/" rel="tag">github</a>
-                         </span>
-                         
-                     </div>
-                     <p class="md-timeline-excerpt">
-                         
-                             拿本人在github上开源的cookiecutter-djang...
-                         ...
-                     </p>
-                             </div>
-             </div>	
-            
-             <div class="md-timeline-block">
-                         <div class="md-timeline-date blue">
-                                <div class="md-date">2018-12-11 </div>
-                         </div>
- 
-                         <div class="md-timeline-content">
-                                 <div class="md-timeline-title"><a href="/2018/12/11/install-mysql5-7-24-on-ubuntu16-04/">ubuntu16.04安装mysql5.7.24</a></div>
-                     <div class="md-timeline-info">
-                         <span class="md-timeline-info-span">Categories:
-                             <a class="category-link" href="/categories/ubuntu/">ubuntu</a>
-                         </span>
-                         <span class="md-timeline-info-span">Tags:
-                             <a class="tag-none-link" href="/tags/linux/" rel="tag">linux</a>, <a class="tag-none-link" href="/tags/mysql/" rel="tag">mysql</a>, <a class="tag-none-link" href="/tags/ubuntu/" rel="tag">ubuntu</a>
-                         </span>
-                         
-                     </div>
-                     <p class="md-timeline-excerpt">
-                         
-                             参考本人CSDN博客上写的文章： 64位centos6...
-                         ...
-                     </p>
-                             </div>
-             </div>	
-            
-             <div class="md-timeline-block">
-                         <div class="md-timeline-date blue">
-                                <div class="md-date">2018-12-05 </div>
-                         </div>
- 
-                         <div class="md-timeline-content">
-                                 <div class="md-timeline-title"><a href="/2018/12/05/install-nodejs-npm-cnpm-bower-hexo-on-linux/">linux安装nodejs,npm,cnpm,bower,hexo</a></div>
-                     <div class="md-timeline-info">
-                         <span class="md-timeline-info-span">Categories:
-                             <a class="category-link" href="/categories/linux/">linux</a>
-                         </span>
-                         <span class="md-timeline-info-span">Tags:
-                             <a class="tag-none-link" href="/tags/bower/" rel="tag">bower</a>, <a class="tag-none-link" href="/tags/nodejs/" rel="tag">nodejs</a>, <a class="tag-none-link" href="/tags/npm/" rel="tag">npm</a>
-                         </span>
-                         
-                     </div>
-                     <p class="md-timeline-excerpt">
-                         
-                             nodejs长期LTS稳定版： https://nodejs.org/en/download/
-                         ...
-                     </p>
-                             </div>
-             </div>	
-            
-             <div class="md-timeline-block">
-                         <div class="md-timeline-date blue">
-                                <div class="md-date">2018-12-05 </div>
-                         </div>
- 
-                         <div class="md-timeline-content">
-                                 <div class="md-timeline-title"><a href="/2018/12/05/install-nginx1-15-7-from-source-on-linux/">linux源码编译安装nginx1.15.7</a></div>
-                     <div class="md-timeline-info">
-                         <span class="md-timeline-info-span">Categories:
-                             <a class="category-link" href="/categories/nginx/">nginx</a>
-                         </span>
-                         <span class="md-timeline-info-span">Tags:
-                             <a class="tag-none-link" href="/tags/linux/" rel="tag">linux</a>, <a class="tag-none-link" href="/tags/nginx/" rel="tag">nginx</a>, <a class="tag-none-link" href="/tags/%E8%BF%90%E7%BB%B4/" rel="tag">运维</a>
-                         </span>
-                         
-                     </div>
-                     <p class="md-timeline-excerpt">
-                         
-                             1. 源码包准备安装ngi...
-                         ...
-                     </p>
-                             </div>
-             </div>	
-            
-             <div class="md-timeline-block">
-                         <div class="md-timeline-date blue">
-                                <div class="md-date">2018-12-03 </div>
-                         </div>
- 
-                         <div class="md-timeline-content">
-                                 <div class="md-timeline-title"><a href="/2018/12/03/install-python3-6-7-from-source-on-linux/">linux源码安装python3.6.7</a></div>
-                     <div class="md-timeline-info">
-                         <span class="md-timeline-info-span">Categories:
-                             <a class="category-link" href="/categories/python/">python</a>
-                         </span>
-                         <span class="md-timeline-info-span">Tags:
-                             <a class="tag-none-link" href="/tags/linux/" rel="tag">linux</a>, <a class="tag-none-link" href="/tags/python3/" rel="tag">python3</a>, <a class="tag-none-link" href="/tags/%E8%BF%90%E7%BB%B4/" rel="tag">运维</a>
-                         </span>
-                         
-                     </div>
-                     <p class="md-timeline-excerpt">
-                         
-                             
-                         ...
-                     </p>
-                             </div>
-             </div>	
-            
-             <div class="md-timeline-block">
-                         <div class="md-timeline-date blue">
-                                <div class="md-date">2018-06-22 </div>
-                         </div>
- 
-                         <div class="md-timeline-content">
-                                 <div class="md-timeline-title"><a href="/2018/06/22/install-redis-on-linux/">linux下源码安装redis</a></div>
-                     <div class="md-timeline-info">
-                         <span class="md-timeline-info-span">Categories:
-                             <a class="category-link" href="/categories/%E7%BC%93%E5%AD%98/">缓存</a>
-                         </span>
-                         <span class="md-timeline-info-span">Tags:
-                             <a class="tag-none-link" href="/tags/centos/" rel="tag">centos</a>, <a class="tag-none-link" href="/tags/linux/" rel="tag">linux</a>, <a class="tag-none-link" href="/tags/redis/" rel="tag">redis</a>, <a class="tag-none-link" href="/tags/ubuntu/" rel="tag">ubuntu</a>, <a class="tag-none-link" href="/tags/%E7%BC%93%E5%AD%98/" rel="tag">缓存</a>
-                         </span>
-                         
-                     </div>
-                     <p class="md-timeline-excerpt">
-                         
-                             redis官方下载网址： https://redis.io/download
+                    ...
+                </p>
+                </div>
+            </div>	
+    
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    <div class="md-date">2019-02-26 </div>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-title"><a href="/2019/02/26/install-postgresql-on-linux/">linux下安装postgresql</a></div>
+                <div class="timeline-info">
+                    <span class="timeline-info-span">Categories:
+                        <a class="category-link" href="/categories/postgresql/">postgresql</a>
+                    </span>
+                    <span class="timeline-info-span">Tags:
+                        <a class="tag-none-link" href="/tags/linux/" rel="tag">linux</a>, <a class="tag-none-link" href="/tags/postgresql/" rel="tag">postgresql</a>, <a class="tag-none-link" href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" rel="tag">数据库</a>
+                    </span>
+                    
+                </div>
+                <p class="timeline-excerpt">
+                    
+                        postgresql官方下载: https://www.postgresql.org/down...
+                    ...
+                </p>
+                </div>
+            </div>	
+    
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    <div class="md-date">2019-01-11 </div>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-title"><a href="/2019/01/11/how-to-be-a-nb-coder/">程序猿(媛)养成记</a></div>
+                <div class="timeline-info">
+                    <span class="timeline-info-span">Categories:
+                        <a class="category-link" href="/categories/%E6%9D%82%E8%B0%88/">杂谈</a>
+                    </span>
+                    <span class="timeline-info-span">Tags:
+                        <a class="tag-none-link" href="/tags/%E5%85%BB%E6%88%90%E8%AE%B0/" rel="tag">养成记</a>, <a class="tag-none-link" href="/tags/%E5%AD%A6%E4%B9%A0/" rel="tag">学习</a>, <a class="tag-none-link" href="/tags/%E6%8A%80%E6%9C%AF%E6%A0%88/" rel="tag">技术栈</a>, <a class="tag-none-link" href="/tags/%E7%A0%81%E5%86%9C/" rel="tag">码农</a>, <a class="tag-none-link" href="/tags/%E7%A8%8B%E5%BA%8F%E5%91%98/" rel="tag">程序员</a>
+                    </span>
+                    
+                </div>
+                <p class="timeline-excerpt">
+                    
+                        行为习惯Beh...
+                    ...
+                </p>
+                </div>
+            </div>	
+    
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    <div class="md-date">2018-12-24 </div>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-title"><a href="/2018/12/24/install-elasticsearch-on-linux/">linux下安装elasticsearch</a></div>
+                <div class="timeline-info">
+                    <span class="timeline-info-span">Categories:
+                        <a class="category-link" href="/categories/linux/">linux</a>
+                    </span>
+                    <span class="timeline-info-span">Tags:
+                        <a class="tag-none-link" href="/tags/elasticsearch/" rel="tag">elasticsearch</a>, <a class="tag-none-link" href="/tags/elk/" rel="tag">elk</a>, <a class="tag-none-link" href="/tags/jdk/" rel="tag">jdk</a>, <a class="tag-none-link" href="/tags/linux/" rel="tag">linux</a>, <a class="tag-none-link" href="/tags/%E6%90%9C%E7%B4%A2/" rel="tag">搜索</a>
+                    </span>
+                    
+                </div>
+                <p class="timeline-excerpt">
+                    
+                        1. 安装JDKjdk8下...
+                    ...
+                </p>
+                </div>
+            </div>	
+    
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    <div class="md-date">2018-12-13 </div>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-title"><a href="/2018/12/13/how-to-submit-PR-in-github/">如何在github提交PR(Pull Request)</a></div>
+                <div class="timeline-info">
+                    <span class="timeline-info-span">Categories:
+                        <a class="category-link" href="/categories/git/">git</a>
+                    </span>
+                    <span class="timeline-info-span">Tags:
+                        <a class="tag-none-link" href="/tags/PR/" rel="tag">PR</a>, <a class="tag-none-link" href="/tags/git/" rel="tag">git</a>, <a class="tag-none-link" href="/tags/github/" rel="tag">github</a>
+                    </span>
+                    
+                </div>
+                <p class="timeline-excerpt">
+                    
+                        拿本人在github上开源的cookiecutter-djang...
+                    ...
+                </p>
+                </div>
+            </div>	
+    
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    <div class="md-date">2018-12-11 </div>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-title"><a href="/2018/12/11/install-mysql5-7-24-on-ubuntu16-04/">ubuntu16.04安装mysql5.7.24</a></div>
+                <div class="timeline-info">
+                    <span class="timeline-info-span">Categories:
+                        <a class="category-link" href="/categories/ubuntu/">ubuntu</a>
+                    </span>
+                    <span class="timeline-info-span">Tags:
+                        <a class="tag-none-link" href="/tags/linux/" rel="tag">linux</a>, <a class="tag-none-link" href="/tags/mysql/" rel="tag">mysql</a>, <a class="tag-none-link" href="/tags/ubuntu/" rel="tag">ubuntu</a>
+                    </span>
+                    
+                </div>
+                <p class="timeline-excerpt">
+                    
+                        参考本人CSDN博客上写的文章： 64位centos6...
+                    ...
+                </p>
+                </div>
+            </div>	
+    
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    <div class="md-date">2018-12-05 </div>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-title"><a href="/2018/12/05/install-nodejs-npm-cnpm-bower-hexo-on-linux/">linux安装nodejs,npm,cnpm,bower,hexo</a></div>
+                <div class="timeline-info">
+                    <span class="timeline-info-span">Categories:
+                        <a class="category-link" href="/categories/linux/">linux</a>
+                    </span>
+                    <span class="timeline-info-span">Tags:
+                        <a class="tag-none-link" href="/tags/bower/" rel="tag">bower</a>, <a class="tag-none-link" href="/tags/nodejs/" rel="tag">nodejs</a>, <a class="tag-none-link" href="/tags/npm/" rel="tag">npm</a>
+                    </span>
+                    
+                </div>
+                <p class="timeline-excerpt">
+                    
+                        nodejs长期LTS稳定版： https://nodejs.org/en/download/
+                    ...
+                </p>
+                </div>
+            </div>	
+    
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    <div class="md-date">2018-12-05 </div>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-title"><a href="/2018/12/05/install-nginx1-15-7-from-source-on-linux/">linux源码编译安装nginx1.15.7</a></div>
+                <div class="timeline-info">
+                    <span class="timeline-info-span">Categories:
+                        <a class="category-link" href="/categories/nginx/">nginx</a>
+                    </span>
+                    <span class="timeline-info-span">Tags:
+                        <a class="tag-none-link" href="/tags/linux/" rel="tag">linux</a>, <a class="tag-none-link" href="/tags/nginx/" rel="tag">nginx</a>, <a class="tag-none-link" href="/tags/%E8%BF%90%E7%BB%B4/" rel="tag">运维</a>
+                    </span>
+                    
+                </div>
+                <p class="timeline-excerpt">
+                    
+                        1. 源码包准备安装ngi...
+                    ...
+                </p>
+                </div>
+            </div>	
+    
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    <div class="md-date">2018-12-03 </div>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-title"><a href="/2018/12/03/install-python3-6-7-from-source-on-linux/">linux源码安装python3.6.7</a></div>
+                <div class="timeline-info">
+                    <span class="timeline-info-span">Categories:
+                        <a class="category-link" href="/categories/python/">python</a>
+                    </span>
+                    <span class="timeline-info-span">Tags:
+                        <a class="tag-none-link" href="/tags/linux/" rel="tag">linux</a>, <a class="tag-none-link" href="/tags/python3/" rel="tag">python3</a>, <a class="tag-none-link" href="/tags/%E8%BF%90%E7%BB%B4/" rel="tag">运维</a>
+                    </span>
+                    
+                </div>
+                <p class="timeline-excerpt">
+                    
+                        
+                    ...
+                </p>
+                </div>
+            </div>	
+    
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    <div class="md-date">2018-06-22 </div>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-title"><a href="/2018/06/22/install-redis-on-linux/">linux下源码安装redis</a></div>
+                <div class="timeline-info">
+                    <span class="timeline-info-span">Categories:
+                        <a class="category-link" href="/categories/%E7%BC%93%E5%AD%98/">缓存</a>
+                    </span>
+                    <span class="timeline-info-span">Tags:
+                        <a class="tag-none-link" href="/tags/centos/" rel="tag">centos</a>, <a class="tag-none-link" href="/tags/linux/" rel="tag">linux</a>, <a class="tag-none-link" href="/tags/redis/" rel="tag">redis</a>, <a class="tag-none-link" href="/tags/ubuntu/" rel="tag">ubuntu</a>, <a class="tag-none-link" href="/tags/%E7%BC%93%E5%AD%98/" rel="tag">缓存</a>
+                    </span>
+                    
+                </div>
+                <p class="timeline-excerpt">
+                    
+                        redis官方下载网址： https://redis.io/download
 安装目录： 
-                         ...
-                     </p>
-                             </div>
-             </div>	
-            
-             <div class="md-timeline-block">
-                         <div class="md-timeline-date blue">
-                                <div class="md-date">2018-05-30 </div>
-                         </div>
- 
-                         <div class="md-timeline-content">
-                                 <div class="md-timeline-title"><a href="/2018/05/30/install-robomongo-on-ubuntu16-04-4/">ubuntu16.04.4下安装mongodb的图形管理工具robomongo</a></div>
-                     <div class="md-timeline-info">
-                         <span class="md-timeline-info-span">Categories:
-                             <a class="category-link" href="/categories/mongodb/">mongodb</a>
-                         </span>
-                         <span class="md-timeline-info-span">Tags:
-                             <a class="tag-none-link" href="/tags/mongodb/" rel="tag">mongodb</a>, <a class="tag-none-link" href="/tags/robomongo/" rel="tag">robomongo</a>, <a class="tag-none-link" href="/tags/%E5%9B%BE%E5%BD%A2%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/" rel="tag">图形管理工具</a>
-                         </span>
-                         
-                     </div>
-                     <p class="md-timeline-excerpt">
-                         
-                             1. 官网下载从官网 
-                         ...
-                     </p>
-                             </div>
-             </div>	
-            
-             <div class="md-timeline-block">
-                         <div class="md-timeline-date blue">
-                                <div class="md-date">2018-05-25 </div>
-                         </div>
- 
-                         <div class="md-timeline-content">
-                                 <div class="md-timeline-title"><a href="/2018/05/25/git-commands/">git常用命令</a></div>
-                     <div class="md-timeline-info">
-                         <span class="md-timeline-info-span">Categories:
-                             <a class="category-link" href="/categories/git/">git</a>
-                         </span>
-                         <span class="md-timeline-info-span">Tags:
-                             <a class="tag-none-link" href="/tags/git/" rel="tag">git</a>, <a class="tag-none-link" href="/tags/ssh-keygen/" rel="tag">ssh-keygen</a>
-                         </span>
-                         
-                     </div>
-                     <p class="md-timeline-excerpt">
-                         
-                             1. 初始化git...
-                         ...
-                     </p>
-                             </div>
-             </div>	
-            
-             <div class="md-timeline-block">
-                         <div class="md-timeline-date blue">
-                                <div class="md-date">2018-02-01 </div>
-                         </div>
- 
-                         <div class="md-timeline-content">
-                                 <div class="md-timeline-title"><a href="/2018/02/01/install-or-uninstall-mongodb-on-linux/">Linux安装与卸载MongoDB</a></div>
-                     <div class="md-timeline-info">
-                         <span class="md-timeline-info-span">Categories:
-                             <a class="category-link" href="/categories/mongodb/">mongodb</a>
-                         </span>
-                         <span class="md-timeline-info-span">Tags:
-                             <a class="tag-none-link" href="/tags/linux/" rel="tag">linux</a>, <a class="tag-none-link" href="/tags/mongodb/" rel="tag">mongodb</a>, <a class="tag-none-link" href="/tags/nosql/" rel="tag">nosql</a>, <a class="tag-none-link" href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" rel="tag">数据库</a>, <a class="tag-none-link" href="/tags/%E8%BF%90%E7%BB%B4/" rel="tag">运维</a>
-                         </span>
-                         
-                     </div>
-                     <p class="md-timeline-excerpt">
-                         
-                             官方安装MongoDB英文教程： https:...
-                         ...
-                     </p>
-                             </div>
-             </div>	
-            
-             <div class="md-timeline-block">
-                         <div class="md-timeline-date blue">
-                                <div class="md-date">2018-01-26 </div>
-                         </div>
- 
-                         <div class="md-timeline-content">
-                                 <div class="md-timeline-title"><a href="/2018/01/26/hexo-command/">hexo常用命令</a></div>
-                     <div class="md-timeline-info">
-                         <span class="md-timeline-info-span">Categories:
-                             <a class="category-link" href="/categories/frontend/">frontend</a>
-                         </span>
-                         <span class="md-timeline-info-span">Tags:
-                             <a class="tag-none-link" href="/tags/hexo/" rel="tag">hexo</a>, <a class="tag-none-link" href="/tags/%E5%91%BD%E4%BB%A4/" rel="tag">命令</a>
-                         </span>
-                         
-                     </div>
-                     <p class="md-timeline-excerpt">
-                         
-                             hexo中文官网： https://hexo.io/zh-cn/hexo中文官方文档： 
-                         ...
-                     </p>
-                             </div>
-             </div>	
-            
-             <div class="md-timeline-block">
-                         <div class="md-timeline-date blue">
-                                <div class="md-date">2018-01-22 </div>
-                         </div>
- 
-                         <div class="md-timeline-content">
-                                 <div class="md-timeline-title"><a href="/2018/01/22/python-simple-socket/">python实现简单的socket通讯</a></div>
-                     <div class="md-timeline-info">
-                         <span class="md-timeline-info-span">Categories:
-                             
-                         </span>
-                         <span class="md-timeline-info-span">Tags:
-                             <a class="tag-none-link" href="/tags/TCP/" rel="tag">TCP</a>, <a class="tag-none-link" href="/tags/python/" rel="tag">python</a>, <a class="tag-none-link" href="/tags/socket/" rel="tag">socket</a>, <a class="tag-none-link" href="/tags/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/" rel="tag">网络编程</a>, <a class="tag-none-link" href="/tags/%E9%80%9A%E8%AE%AF/" rel="tag">通讯</a>
-                         </span>
-                         
-                     </div>
-                     <p class="md-timeline-excerpt">
-                         
-                             Talk is cheap, show me the code!!!
+                    ...
+                </p>
+                </div>
+            </div>	
+    
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    <div class="md-date">2018-05-30 </div>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-title"><a href="/2018/05/30/install-robomongo-on-ubuntu16-04-4/">ubuntu16.04.4下安装mongodb的图形管理工具robomongo</a></div>
+                <div class="timeline-info">
+                    <span class="timeline-info-span">Categories:
+                        <a class="category-link" href="/categories/mongodb/">mongodb</a>
+                    </span>
+                    <span class="timeline-info-span">Tags:
+                        <a class="tag-none-link" href="/tags/mongodb/" rel="tag">mongodb</a>, <a class="tag-none-link" href="/tags/robomongo/" rel="tag">robomongo</a>, <a class="tag-none-link" href="/tags/%E5%9B%BE%E5%BD%A2%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/" rel="tag">图形管理工具</a>
+                    </span>
+                    
+                </div>
+                <p class="timeline-excerpt">
+                    
+                        1. 官网下载从官网 
+                    ...
+                </p>
+                </div>
+            </div>	
+    
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    <div class="md-date">2018-05-25 </div>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-title"><a href="/2018/05/25/git-commands/">git常用命令</a></div>
+                <div class="timeline-info">
+                    <span class="timeline-info-span">Categories:
+                        <a class="category-link" href="/categories/git/">git</a>
+                    </span>
+                    <span class="timeline-info-span">Tags:
+                        <a class="tag-none-link" href="/tags/git/" rel="tag">git</a>, <a class="tag-none-link" href="/tags/ssh-keygen/" rel="tag">ssh-keygen</a>
+                    </span>
+                    
+                </div>
+                <p class="timeline-excerpt">
+                    
+                        1. 初始化git...
+                    ...
+                </p>
+                </div>
+            </div>	
+    
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    <div class="md-date">2018-02-01 </div>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-title"><a href="/2018/02/01/install-or-uninstall-mongodb-on-linux/">Linux安装与卸载MongoDB</a></div>
+                <div class="timeline-info">
+                    <span class="timeline-info-span">Categories:
+                        <a class="category-link" href="/categories/mongodb/">mongodb</a>
+                    </span>
+                    <span class="timeline-info-span">Tags:
+                        <a class="tag-none-link" href="/tags/linux/" rel="tag">linux</a>, <a class="tag-none-link" href="/tags/mongodb/" rel="tag">mongodb</a>, <a class="tag-none-link" href="/tags/nosql/" rel="tag">nosql</a>, <a class="tag-none-link" href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" rel="tag">数据库</a>, <a class="tag-none-link" href="/tags/%E8%BF%90%E7%BB%B4/" rel="tag">运维</a>
+                    </span>
+                    
+                </div>
+                <p class="timeline-excerpt">
+                    
+                        官方安装MongoDB英文教程： https:...
+                    ...
+                </p>
+                </div>
+            </div>	
+    
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    <div class="md-date">2018-01-26 </div>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-title"><a href="/2018/01/26/hexo-command/">hexo常用命令</a></div>
+                <div class="timeline-info">
+                    <span class="timeline-info-span">Categories:
+                        <a class="category-link" href="/categories/frontend/">frontend</a>
+                    </span>
+                    <span class="timeline-info-span">Tags:
+                        <a class="tag-none-link" href="/tags/hexo/" rel="tag">hexo</a>, <a class="tag-none-link" href="/tags/%E5%91%BD%E4%BB%A4/" rel="tag">命令</a>
+                    </span>
+                    
+                </div>
+                <p class="timeline-excerpt">
+                    
+                        hexo中文官网： https://hexo.io/zh-cn/hexo中文官方文档： 
+                    ...
+                </p>
+                </div>
+            </div>	
+    
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    <div class="md-date">2018-01-22 </div>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-title"><a href="/2018/01/22/python-simple-socket/">python实现简单的socket通讯</a></div>
+                <div class="timeline-info">
+                    <span class="timeline-info-span">Categories:
+                        
+                    </span>
+                    <span class="timeline-info-span">Tags:
+                        <a class="tag-none-link" href="/tags/TCP/" rel="tag">TCP</a>, <a class="tag-none-link" href="/tags/python/" rel="tag">python</a>, <a class="tag-none-link" href="/tags/socket/" rel="tag">socket</a>, <a class="tag-none-link" href="/tags/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/" rel="tag">网络编程</a>, <a class="tag-none-link" href="/tags/%E9%80%9A%E8%AE%AF/" rel="tag">通讯</a>
+                    </span>
+                    
+                </div>
+                <p class="timeline-excerpt">
+                    
+                        Talk is cheap, show me the code!!!
 服务端socket_server_demo01.py代码如下：
 
-                         ...
-                     </p>
-                             </div>
-             </div>	
-            
-             <div class="md-timeline-block">
-                         <div class="md-timeline-date blue">
-                                <div class="md-date">2018-01-18 </div>
-                         </div>
- 
-                         <div class="md-timeline-content">
-                                 <div class="md-timeline-title"><a href="/2018/01/18/python-permutation-combination-demo01/">python排列组合算法应用01</a></div>
-                     <div class="md-timeline-info">
-                         <span class="md-timeline-info-span">Categories:
-                             <a class="category-link" href="/categories/python/">python</a>
-                         </span>
-                         <span class="md-timeline-info-span">Tags:
-                             <a class="tag-none-link" href="/tags/python/" rel="tag">python</a>, <a class="tag-none-link" href="/tags/%E6%8E%92%E5%88%97/" rel="tag">排列</a>, <a class="tag-none-link" href="/tags/%E7%BB%84%E5%90%88/" rel="tag">组合</a>
-                         </span>
-                         
-                     </div>
-                     <p class="md-timeline-excerpt">
-                         
-                             1. 题目描述每天早上打开电脑，...
-                         ...
-                     </p>
-                             </div>
-             </div>	
-            
-             <div class="md-timeline-block">
-                         <div class="md-timeline-date blue">
-                                <div class="md-date">2018-01-08 </div>
-                         </div>
- 
-                         <div class="md-timeline-content">
-                                 <div class="md-timeline-title"><a href="/2018/01/08/binary-tree-traversal/">二叉树前中后序遍历快速入门</a></div>
-                     <div class="md-timeline-info">
-                         <span class="md-timeline-info-span">Categories:
-                             <a class="category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">数据结构与算法</a>
-                         </span>
-                         <span class="md-timeline-info-span">Tags:
-                             <a class="tag-none-link" href="/tags/%E4%B8%AD%E5%BA%8F/" rel="tag">中序</a>, <a class="tag-none-link" href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/" rel="tag">二叉树</a>, <a class="tag-none-link" href="/tags/%E5%89%8D%E5%BA%8F/" rel="tag">前序</a>, <a class="tag-none-link" href="/tags/%E5%90%8E%E5%BA%8F/" rel="tag">后序</a>, <a class="tag-none-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag">数据结构</a>
-                         </span>
-                         
-                     </div>
-                     <p class="md-timeline-excerpt">
-                         
-                             1. 遍历顺序遍历是对树的一种最...
-                         ...
-                     </p>
-                             </div>
-             </div>	
-            
-             <div class="md-timeline-block">
-                         <div class="md-timeline-date blue">
-                                <div class="md-date">2017-12-13 </div>
-                         </div>
- 
-                         <div class="md-timeline-content">
-                                 <div class="md-timeline-title"><a href="/2017/12/13/linux-jdk8/">linux安装jdk8</a></div>
-                     <div class="md-timeline-info">
-                         <span class="md-timeline-info-span">Categories:
-                             <a class="category-link" href="/categories/Java/">Java</a>
-                         </span>
-                         <span class="md-timeline-info-span">Tags:
-                             <a class="tag-none-link" href="/tags/centos/" rel="tag">centos</a>, <a class="tag-none-link" href="/tags/java/" rel="tag">java</a>, <a class="tag-none-link" href="/tags/jdk/" rel="tag">jdk</a>, <a class="tag-none-link" href="/tags/linux/" rel="tag">linux</a>, <a class="tag-none-link" href="/tags/ubuntu/" rel="tag">ubuntu</a>
-                         </span>
-                         
-                     </div>
-                     <p class="md-timeline-excerpt">
-                         
-                             本文安装jdk1.8适用于linux的主流发行版本如ubuntu, centos等。
+                    ...
+                </p>
+                </div>
+            </div>	
+    
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    <div class="md-date">2018-01-18 </div>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-title"><a href="/2018/01/18/python-permutation-combination-demo01/">python排列组合算法应用01</a></div>
+                <div class="timeline-info">
+                    <span class="timeline-info-span">Categories:
+                        <a class="category-link" href="/categories/python/">python</a>
+                    </span>
+                    <span class="timeline-info-span">Tags:
+                        <a class="tag-none-link" href="/tags/python/" rel="tag">python</a>, <a class="tag-none-link" href="/tags/%E6%8E%92%E5%88%97/" rel="tag">排列</a>, <a class="tag-none-link" href="/tags/%E7%BB%84%E5%90%88/" rel="tag">组合</a>
+                    </span>
+                    
+                </div>
+                <p class="timeline-excerpt">
+                    
+                        1. 题目描述每天早上打开电脑，...
+                    ...
+                </p>
+                </div>
+            </div>	
+    
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    <div class="md-date">2018-01-08 </div>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-title"><a href="/2018/01/08/binary-tree-traversal/">二叉树前中后序遍历快速入门</a></div>
+                <div class="timeline-info">
+                    <span class="timeline-info-span">Categories:
+                        <a class="category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">数据结构与算法</a>
+                    </span>
+                    <span class="timeline-info-span">Tags:
+                        <a class="tag-none-link" href="/tags/%E4%B8%AD%E5%BA%8F/" rel="tag">中序</a>, <a class="tag-none-link" href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/" rel="tag">二叉树</a>, <a class="tag-none-link" href="/tags/%E5%89%8D%E5%BA%8F/" rel="tag">前序</a>, <a class="tag-none-link" href="/tags/%E5%90%8E%E5%BA%8F/" rel="tag">后序</a>, <a class="tag-none-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag">数据结构</a>
+                    </span>
+                    
+                </div>
+                <p class="timeline-excerpt">
+                    
+                        1. 遍历顺序遍历是对树的一种最...
+                    ...
+                </p>
+                </div>
+            </div>	
+    
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    <div class="md-date">2017-12-13 </div>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-title"><a href="/2017/12/13/linux-jdk8/">linux安装jdk8</a></div>
+                <div class="timeline-info">
+                    <span class="timeline-info-span">Categories:
+                        <a class="category-link" href="/categories/Java/">Java</a>
+                    </span>
+                    <span class="timeline-info-span">Tags:
+                        <a class="tag-none-link" href="/tags/centos/" rel="tag">centos</a>, <a class="tag-none-link" href="/tags/java/" rel="tag">java</a>, <a class="tag-none-link" href="/tags/jdk/" rel="tag">jdk</a>, <a class="tag-none-link" href="/tags/linux/" rel="tag">linux</a>, <a class="tag-none-link" href="/tags/ubuntu/" rel="tag">ubuntu</a>
+                    </span>
+                    
+                </div>
+                <p class="timeline-excerpt">
+                    
+                        本文安装jdk1.8适用于linux的主流发行版本如ubuntu, centos等。
 
-                         ...
-                     </p>
-                             </div>
-             </div>	
-            
-             <div class="md-timeline-block">
-                         <div class="md-timeline-date blue">
-                                <div class="md-date">2017-11-09 </div>
-                         </div>
- 
-                         <div class="md-timeline-content">
-                                 <div class="md-timeline-title"><a href="/2017/11/09/python-fabric-automation-deployment/">python fabric自动化部署</a></div>
-                     <div class="md-timeline-info">
-                         <span class="md-timeline-info-span">Categories:
-                             <a class="category-link" href="/categories/python/">python</a>
-                         </span>
-                         <span class="md-timeline-info-span">Tags:
-                             <a class="tag-none-link" href="/tags/fabric/" rel="tag">fabric</a>, <a class="tag-none-link" href="/tags/linux/" rel="tag">linux</a>, <a class="tag-none-link" href="/tags/python/" rel="tag">python</a>, <a class="tag-none-link" href="/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2/" rel="tag">自动化部署</a>
-                         </span>
-                         
-                     </div>
-                     <p class="md-timeline-excerpt">
-                         
-                             Fabric是一个Python（2.5-2.7）库和命令行工具，可以通过SSH在多个host上批量执行任务, 用于简化应用程序部署或系统管理任务的SSH使用。
+                    ...
+                </p>
+                </div>
+            </div>	
+    
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    <div class="md-date">2017-11-09 </div>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-title"><a href="/2017/11/09/python-fabric-automation-deployment/">python fabric自动化部署</a></div>
+                <div class="timeline-info">
+                    <span class="timeline-info-span">Categories:
+                        <a class="category-link" href="/categories/python/">python</a>
+                    </span>
+                    <span class="timeline-info-span">Tags:
+                        <a class="tag-none-link" href="/tags/fabric/" rel="tag">fabric</a>, <a class="tag-none-link" href="/tags/linux/" rel="tag">linux</a>, <a class="tag-none-link" href="/tags/python/" rel="tag">python</a>, <a class="tag-none-link" href="/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2/" rel="tag">自动化部署</a>
+                    </span>
+                    
+                </div>
+                <p class="timeline-excerpt">
+                    
+                        Fabric是一个Python（2.5-2.7）库和命令行工具，可以通过SSH在多个host上批量执行任务, 用于简化应用程序部署或系统管理任务的SSH使用。
 fabric官...
-                         ...
-                     </p>
-                             </div>
-             </div>	
-            
-             <div class="md-timeline-block">
-                         <div class="md-timeline-date blue">
-                                <div class="md-date">2017-11-09 </div>
-                         </div>
- 
-                         <div class="md-timeline-content">
-                                 <div class="md-timeline-title"><a href="/2017/11/09/linux-pip/">linux下pip的安装及常用命令</a></div>
-                     <div class="md-timeline-info">
-                         <span class="md-timeline-info-span">Categories:
-                             <a class="category-link" href="/categories/python/">python</a>
-                         </span>
-                         <span class="md-timeline-info-span">Tags:
-                             <a class="tag-none-link" href="/tags/linux/" rel="tag">linux</a>, <a class="tag-none-link" href="/tags/pip/" rel="tag">pip</a>, <a class="tag-none-link" href="/tags/python/" rel="tag">python</a>
-                         </span>
-                         
-                     </div>
-                     <p class="md-timeline-excerpt">
-                         
-                             pip是一个用来安装和管理Python包的工具， 它是easy_install的替代品， 也是目前社区的主流工具。
+                    ...
+                </p>
+                </div>
+            </div>	
+    
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    <div class="md-date">2017-11-09 </div>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-title"><a href="/2017/11/09/linux-pip/">linux下pip的安装及常用命令</a></div>
+                <div class="timeline-info">
+                    <span class="timeline-info-span">Categories:
+                        <a class="category-link" href="/categories/python/">python</a>
+                    </span>
+                    <span class="timeline-info-span">Tags:
+                        <a class="tag-none-link" href="/tags/linux/" rel="tag">linux</a>, <a class="tag-none-link" href="/tags/pip/" rel="tag">pip</a>, <a class="tag-none-link" href="/tags/python/" rel="tag">python</a>
+                    </span>
+                    
+                </div>
+                <p class="timeline-excerpt">
+                    
+                        pip是一个用来安装和管理Python包的工具， 它是easy_install的替代品， 也是目前社区的主流工具。
 第三方包主要分布在The Pyt...
-                         ...
-                     </p>
-                             </div>
-             </div>	
-            
-             <div class="md-timeline-block">
-                         <div class="md-timeline-date blue">
-                                <div class="md-date">2017-11-09 </div>
-                         </div>
- 
-                         <div class="md-timeline-content">
-                                 <div class="md-timeline-title"><a href="/2017/11/09/linux-upgrade-python-version/">linux升级python2.6.x到python2.7.x</a></div>
-                     <div class="md-timeline-info">
-                         <span class="md-timeline-info-span">Categories:
-                             <a class="category-link" href="/categories/python/">python</a>
-                         </span>
-                         <span class="md-timeline-info-span">Tags:
-                             <a class="tag-none-link" href="/tags/linux/" rel="tag">linux</a>, <a class="tag-none-link" href="/tags/python/" rel="tag">python</a>
-                         </span>
-                         
-                     </div>
-                     <p class="md-timeline-excerpt">
-                         
-                             低版本的centos6.x系统自带的python版本为2.6.x, 而平时的开发中都需要python2.7.x版本， 故本文记录下python2.6.x升级到python2.7.x的操作步...
-                         ...
-                     </p>
-                             </div>
-             </div>	
-            
-             <div class="md-timeline-block">
-                         <div class="md-timeline-date blue">
-                                <div class="md-date">2017-11-08 </div>
-                         </div>
- 
-                         <div class="md-timeline-content">
-                                 <div class="md-timeline-title"><a href="/2017/11/08/linux-timing-task-crontab/">linux定时任务crontab</a></div>
-                     <div class="md-timeline-info">
-                         <span class="md-timeline-info-span">Categories:
-                             <a class="category-link" href="/categories/linux/">linux</a>
-                         </span>
-                         <span class="md-timeline-info-span">Tags:
-                             <a class="tag-none-link" href="/tags/cron/" rel="tag">cron</a>, <a class="tag-none-link" href="/tags/crontab/" rel="tag">crontab</a>, <a class="tag-none-link" href="/tags/linux/" rel="tag">linux</a>, <a class="tag-none-link" href="/tags/%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/" rel="tag">定时任务</a>, <a class="tag-none-link" href="/tags/%E8%B0%83%E5%BA%A6/" rel="tag">调度</a>
-                         </span>
-                         
-                     </div>
-                     <p class="md-timeline-excerpt">
-                         
-                             cron是一个在类Unix操作系统上的任务计划程序。它可以让用户在指定时间段周期性地运行命令或者shell脚本，通常被用在系统的自动化维护或者管理。cron的配置文件称为“crontab”...
-                         ...
-                     </p>
-                             </div>
-             </div>	
-            
-             <div class="md-timeline-block">
-                         <div class="md-timeline-date blue">
-                                <div class="md-date">2017-10-31 </div>
-                         </div>
- 
-                         <div class="md-timeline-content">
-                                 <div class="md-timeline-title"><a href="/2017/10/31/ubuntu-theme-beautify/">ubuntu主题美化</a></div>
-                     <div class="md-timeline-info">
-                         <span class="md-timeline-info-span">Categories:
-                             <a class="category-link" href="/categories/ubuntu/">ubuntu</a>
-                         </span>
-                         <span class="md-timeline-info-span">Tags:
-                             <a class="tag-none-link" href="/tags/linux/" rel="tag">linux</a>, <a class="tag-none-link" href="/tags/ubuntu/" rel="tag">ubuntu</a>, <a class="tag-none-link" href="/tags/%E5%B7%A5%E5%85%B7/" rel="tag">工具</a>, <a class="tag-none-link" href="/tags/%E7%BE%8E%E5%8C%96/" rel="tag">美化</a>
-                         </span>
-                         
-                     </div>
-                     <p class="md-timeline-excerpt">
-                         
-                             1. 添加资源添加U...
-                         ...
-                     </p>
-                             </div>
-             </div>	
-            
-             <div class="md-timeline-block">
-                         <div class="md-timeline-date blue">
-                                <div class="md-date">2017-09-28 </div>
-                         </div>
- 
-                         <div class="md-timeline-content">
-                                 <div class="md-timeline-title"><a href="/2017/09/28/use-oh-my-zsh-instead-of-bash-shell/">使用oh-my-zsh代替bash shell</a></div>
-                     <div class="md-timeline-info">
-                         <span class="md-timeline-info-span">Categories:
-                             <a class="category-link" href="/categories/linux/">linux</a>
-                         </span>
-                         <span class="md-timeline-info-span">Tags:
-                             <a class="tag-none-link" href="/tags/linux/" rel="tag">linux</a>, <a class="tag-none-link" href="/tags/ubuntu/" rel="tag">ubuntu</a>, <a class="tag-none-link" href="/tags/%E5%B7%A5%E5%85%B7/" rel="tag">工具</a>, <a class="tag-none-link" href="/tags/%E7%BE%8E%E5%8C%96/" rel="tag">美化</a>
-                         </span>
-                         
-                     </div>
-                     <p class="md-timeline-excerpt">
-                         
-                             
-                         ...
-                     </p>
-                             </div>
-             </div>	
-            
-             <div class="md-timeline-block">
-                         <div class="md-timeline-date blue">
-                                <div class="md-date">2017-09-28 </div>
-                         </div>
- 
-                         <div class="md-timeline-content">
-                                 <div class="md-timeline-title"><a href="/2017/09/28/python-install-virtualenv-and-virtualenvwrapper/">python安装virtualenv和virtualenvwrapper</a></div>
-                     <div class="md-timeline-info">
-                         <span class="md-timeline-info-span">Categories:
-                             <a class="category-link" href="/categories/python/">python</a>
-                         </span>
-                         <span class="md-timeline-info-span">Tags:
-                             <a class="tag-none-link" href="/tags/python/" rel="tag">python</a>, <a class="tag-none-link" href="/tags/virtualenv/" rel="tag">virtualenv</a>, <a class="tag-none-link" href="/tags/virtualenvwrapper/" rel="tag">virtualenvwrapper</a>
-                         </span>
-                         
-                     </div>
-                     <p class="md-timeline-excerpt">
-                         
-                             1. pip常用命令...
-                         ...
-                     </p>
-                             </div>
-             </div>	
-            
-             <div class="md-timeline-block">
-                         <div class="md-timeline-date blue">
-                                <div class="md-date">2017-06-30 </div>
-                         </div>
- 
-                         <div class="md-timeline-content">
-                                 <div class="md-timeline-title"><a href="/2017/06/30/using-pypi-domestic-sources-to-speed-up-the-installation-of-pypi-packages/">使用国内Pypi源加速Pypi包的安装</a></div>
-                     <div class="md-timeline-info">
-                         <span class="md-timeline-info-span">Categories:
-                             <a class="category-link" href="/categories/python/">python</a>
-                         </span>
-                         <span class="md-timeline-info-span">Tags:
-                             <a class="tag-none-link" href="/tags/pip/" rel="tag">pip</a>, <a class="tag-none-link" href="/tags/python/" rel="tag">python</a>
-                         </span>
-                         
-                     </div>
-                     <p class="md-timeline-excerpt">
-                         
-                             1. 国内常用的p...
-                         ...
-                     </p>
-                             </div>
-             </div>	
-            
-             <div class="md-timeline-block">
-                         <div class="md-timeline-date blue">
-                                <div class="md-date">2017-06-23 </div>
-                         </div>
- 
-                         <div class="md-timeline-content">
-                                 <div class="md-timeline-title"><a href="/2017/06/23/mongodb-shell-common-commands/">mongodb shell常用命令</a></div>
-                     <div class="md-timeline-info">
-                         <span class="md-timeline-info-span">Categories:
-                             <a class="category-link" href="/categories/mongodb/">mongodb</a>
-                         </span>
-                         <span class="md-timeline-info-span">Tags:
-                             <a class="tag-none-link" href="/tags/mongodb/" rel="tag">mongodb</a>, <a class="tag-none-link" href="/tags/%E5%91%BD%E4%BB%A4/" rel="tag">命令</a>, <a class="tag-none-link" href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" rel="tag">数据库</a>
-                         </span>
-                         
-                     </div>
-                     <p class="md-timeline-excerpt">
-                         
-                             
-                         ...
-                     </p>
-                             </div>
-             </div>	
-            
-             <div class="md-timeline-block">
-                         <div class="md-timeline-date blue">
-                                <div class="md-date">2017-06-17 </div>
-                         </div>
- 
-                         <div class="md-timeline-content">
-                                 <div class="md-timeline-title"><a href="/2017/06/17/Ubuntu1604-install-jdk8/">ubuntu16.04安装jdk8</a></div>
-                     <div class="md-timeline-info">
-                         <span class="md-timeline-info-span">Categories:
-                             <a class="category-link" href="/categories/ubuntu/">ubuntu</a>
-                         </span>
-                         <span class="md-timeline-info-span">Tags:
-                             <a class="tag-none-link" href="/tags/java/" rel="tag">java</a>, <a class="tag-none-link" href="/tags/jdk/" rel="tag">jdk</a>, <a class="tag-none-link" href="/tags/ubuntu/" rel="tag">ubuntu</a>
-                         </span>
-                         
-                     </div>
-                     <p class="md-timeline-excerpt">
-                         
-                             1. jdk8下载j...
-                         ...
-                     </p>
-                             </div>
-             </div>	
-            
-             <div class="md-timeline-block">
-                         <div class="md-timeline-date blue">
-                                <div class="md-date">2017-06-08 </div>
-                         </div>
- 
-                         <div class="md-timeline-content">
-                                 <div class="md-timeline-title"><a href="/2017/06/08/Ubuntu1604-install-adobe-flashplugin-for-google-chrome/">ubuntu16.04为google chrome安装adobe-flashplugin</a></div>
-                     <div class="md-timeline-info">
-                         <span class="md-timeline-info-span">Categories:
-                             <a class="category-link" href="/categories/ubuntu/">ubuntu</a>
-                         </span>
-                         <span class="md-timeline-info-span">Tags:
-                             <a class="tag-none-link" href="/tags/flashpluin/" rel="tag">flashpluin</a>, <a class="tag-none-link" href="/tags/google-chrome/" rel="tag">google chrome</a>, <a class="tag-none-link" href="/tags/ubuntu/" rel="tag">ubuntu</a>
-                         </span>
-                         
-                     </div>
-                     <p class="md-timeline-excerpt">
-                         
-                             
-                         ...
-                     </p>
-                             </div>
-             </div>	
-            
-             <div class="md-timeline-block">
-                         <div class="md-timeline-date blue">
-                                <div class="md-date">2017-06-05 </div>
-                         </div>
- 
-                         <div class="md-timeline-content">
-                                 <div class="md-timeline-title"><a href="/2017/06/05/Ubuntu1604-install-sublimetext3/">ubuntu16.04安装sublime text 3</a></div>
-                     <div class="md-timeline-info">
-                         <span class="md-timeline-info-span">Categories:
-                             <a class="category-link" href="/categories/ubuntu/">ubuntu</a>
-                         </span>
-                         <span class="md-timeline-info-span">Tags:
-                             <a class="tag-none-link" href="/tags/sublime-text/" rel="tag">sublime text</a>, <a class="tag-none-link" href="/tags/ubuntu/" rel="tag">ubuntu</a>
-                         </span>
-                         
-                     </div>
-                     <p class="md-timeline-excerpt">
-                         
-                             
-                         ...
-                     </p>
-                             </div>
-             </div>	
-            	   	  		
-            </section>
+                    ...
+                </p>
+                </div>
+            </div>	
+    
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    <div class="md-date">2017-11-09 </div>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-title"><a href="/2017/11/09/linux-upgrade-python-version/">linux升级python2.6.x到python2.7.x</a></div>
+                <div class="timeline-info">
+                    <span class="timeline-info-span">Categories:
+                        <a class="category-link" href="/categories/python/">python</a>
+                    </span>
+                    <span class="timeline-info-span">Tags:
+                        <a class="tag-none-link" href="/tags/linux/" rel="tag">linux</a>, <a class="tag-none-link" href="/tags/python/" rel="tag">python</a>
+                    </span>
+                    
+                </div>
+                <p class="timeline-excerpt">
+                    
+                        低版本的centos6.x系统自带的python版本为2.6.x, 而平时的开发中都需要python2.7.x版本， 故本文记录下python2.6.x升级到python2.7.x的操作步...
+                    ...
+                </p>
+                </div>
+            </div>	
+    
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    <div class="md-date">2017-11-08 </div>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-title"><a href="/2017/11/08/linux-timing-task-crontab/">linux定时任务crontab</a></div>
+                <div class="timeline-info">
+                    <span class="timeline-info-span">Categories:
+                        <a class="category-link" href="/categories/linux/">linux</a>
+                    </span>
+                    <span class="timeline-info-span">Tags:
+                        <a class="tag-none-link" href="/tags/cron/" rel="tag">cron</a>, <a class="tag-none-link" href="/tags/crontab/" rel="tag">crontab</a>, <a class="tag-none-link" href="/tags/linux/" rel="tag">linux</a>, <a class="tag-none-link" href="/tags/%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/" rel="tag">定时任务</a>, <a class="tag-none-link" href="/tags/%E8%B0%83%E5%BA%A6/" rel="tag">调度</a>
+                    </span>
+                    
+                </div>
+                <p class="timeline-excerpt">
+                    
+                        cron是一个在类Unix操作系统上的任务计划程序。它可以让用户在指定时间段周期性地运行命令或者shell脚本，通常被用在系统的自动化维护或者管理。cron的配置文件称为“crontab”...
+                    ...
+                </p>
+                </div>
+            </div>	
+    
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    <div class="md-date">2017-10-31 </div>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-title"><a href="/2017/10/31/ubuntu-theme-beautify/">ubuntu主题美化</a></div>
+                <div class="timeline-info">
+                    <span class="timeline-info-span">Categories:
+                        <a class="category-link" href="/categories/ubuntu/">ubuntu</a>
+                    </span>
+                    <span class="timeline-info-span">Tags:
+                        <a class="tag-none-link" href="/tags/linux/" rel="tag">linux</a>, <a class="tag-none-link" href="/tags/ubuntu/" rel="tag">ubuntu</a>, <a class="tag-none-link" href="/tags/%E5%B7%A5%E5%85%B7/" rel="tag">工具</a>, <a class="tag-none-link" href="/tags/%E7%BE%8E%E5%8C%96/" rel="tag">美化</a>
+                    </span>
+                    
+                </div>
+                <p class="timeline-excerpt">
+                    
+                        1. 添加资源添加U...
+                    ...
+                </p>
+                </div>
+            </div>	
+    
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    <div class="md-date">2017-09-28 </div>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-title"><a href="/2017/09/28/use-oh-my-zsh-instead-of-bash-shell/">使用oh-my-zsh代替bash shell</a></div>
+                <div class="timeline-info">
+                    <span class="timeline-info-span">Categories:
+                        <a class="category-link" href="/categories/linux/">linux</a>
+                    </span>
+                    <span class="timeline-info-span">Tags:
+                        <a class="tag-none-link" href="/tags/linux/" rel="tag">linux</a>, <a class="tag-none-link" href="/tags/ubuntu/" rel="tag">ubuntu</a>, <a class="tag-none-link" href="/tags/%E5%B7%A5%E5%85%B7/" rel="tag">工具</a>, <a class="tag-none-link" href="/tags/%E7%BE%8E%E5%8C%96/" rel="tag">美化</a>
+                    </span>
+                    
+                </div>
+                <p class="timeline-excerpt">
+                    
+                        
+                    ...
+                </p>
+                </div>
+            </div>	
+    
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    <div class="md-date">2017-09-28 </div>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-title"><a href="/2017/09/28/python-install-virtualenv-and-virtualenvwrapper/">python安装virtualenv和virtualenvwrapper</a></div>
+                <div class="timeline-info">
+                    <span class="timeline-info-span">Categories:
+                        <a class="category-link" href="/categories/python/">python</a>
+                    </span>
+                    <span class="timeline-info-span">Tags:
+                        <a class="tag-none-link" href="/tags/python/" rel="tag">python</a>, <a class="tag-none-link" href="/tags/virtualenv/" rel="tag">virtualenv</a>, <a class="tag-none-link" href="/tags/virtualenvwrapper/" rel="tag">virtualenvwrapper</a>
+                    </span>
+                    
+                </div>
+                <p class="timeline-excerpt">
+                    
+                        1. pip常用命令...
+                    ...
+                </p>
+                </div>
+            </div>	
+    
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    <div class="md-date">2017-06-30 </div>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-title"><a href="/2017/06/30/using-pypi-domestic-sources-to-speed-up-the-installation-of-pypi-packages/">使用国内Pypi源加速Pypi包的安装</a></div>
+                <div class="timeline-info">
+                    <span class="timeline-info-span">Categories:
+                        <a class="category-link" href="/categories/python/">python</a>
+                    </span>
+                    <span class="timeline-info-span">Tags:
+                        <a class="tag-none-link" href="/tags/pip/" rel="tag">pip</a>, <a class="tag-none-link" href="/tags/python/" rel="tag">python</a>
+                    </span>
+                    
+                </div>
+                <p class="timeline-excerpt">
+                    
+                        1. 国内常用的p...
+                    ...
+                </p>
+                </div>
+            </div>	
+    
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    <div class="md-date">2017-06-23 </div>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-title"><a href="/2017/06/23/mongodb-shell-common-commands/">mongodb shell常用命令</a></div>
+                <div class="timeline-info">
+                    <span class="timeline-info-span">Categories:
+                        <a class="category-link" href="/categories/mongodb/">mongodb</a>
+                    </span>
+                    <span class="timeline-info-span">Tags:
+                        <a class="tag-none-link" href="/tags/mongodb/" rel="tag">mongodb</a>, <a class="tag-none-link" href="/tags/%E5%91%BD%E4%BB%A4/" rel="tag">命令</a>, <a class="tag-none-link" href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" rel="tag">数据库</a>
+                    </span>
+                    
+                </div>
+                <p class="timeline-excerpt">
+                    
+                        
+                    ...
+                </p>
+                </div>
+            </div>	
+    
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    <div class="md-date">2017-06-17 </div>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-title"><a href="/2017/06/17/Ubuntu1604-install-jdk8/">ubuntu16.04安装jdk8</a></div>
+                <div class="timeline-info">
+                    <span class="timeline-info-span">Categories:
+                        <a class="category-link" href="/categories/ubuntu/">ubuntu</a>
+                    </span>
+                    <span class="timeline-info-span">Tags:
+                        <a class="tag-none-link" href="/tags/java/" rel="tag">java</a>, <a class="tag-none-link" href="/tags/jdk/" rel="tag">jdk</a>, <a class="tag-none-link" href="/tags/ubuntu/" rel="tag">ubuntu</a>
+                    </span>
+                    
+                </div>
+                <p class="timeline-excerpt">
+                    
+                        1. jdk8下载j...
+                    ...
+                </p>
+                </div>
+            </div>	
+    
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    <div class="md-date">2017-06-08 </div>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-title"><a href="/2017/06/08/Ubuntu1604-install-adobe-flashplugin-for-google-chrome/">ubuntu16.04为google chrome安装adobe-flashplugin</a></div>
+                <div class="timeline-info">
+                    <span class="timeline-info-span">Categories:
+                        <a class="category-link" href="/categories/ubuntu/">ubuntu</a>
+                    </span>
+                    <span class="timeline-info-span">Tags:
+                        <a class="tag-none-link" href="/tags/flashpluin/" rel="tag">flashpluin</a>, <a class="tag-none-link" href="/tags/google-chrome/" rel="tag">google chrome</a>, <a class="tag-none-link" href="/tags/ubuntu/" rel="tag">ubuntu</a>
+                    </span>
+                    
+                </div>
+                <p class="timeline-excerpt">
+                    
+                        
+                    ...
+                </p>
+                </div>
+            </div>	
+    
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    <div class="md-date">2017-06-05 </div>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-title"><a href="/2017/06/05/Ubuntu1604-install-sublimetext3/">ubuntu16.04安装sublime text 3</a></div>
+                <div class="timeline-info">
+                    <span class="timeline-info-span">Categories:
+                        <a class="category-link" href="/categories/ubuntu/">ubuntu</a>
+                    </span>
+                    <span class="timeline-info-span">Tags:
+                        <a class="tag-none-link" href="/tags/sublime-text/" rel="tag">sublime text</a>, <a class="tag-none-link" href="/tags/ubuntu/" rel="tag">ubuntu</a>
+                    </span>
+                    
+                </div>
+                <p class="timeline-excerpt">
+                    
+                        
+                    ...
+                </p>
+                </div>
+            </div>	
+    	   	  		
+    </section>
 </main>
-<script>
+<!-- <script>
     $(function() {
         if( ($('#bottom').offset().top + $('#bottom').outerHeight() ) < $(window).height() ) {
             var footerBottom = $(window).height() - $('#bottom').outerHeight() - $('#bottom').offset().top;
             $('#bottom').css('bottom', '-' + footerBottom + 'px');
         }
     });
-</script>
+</script> -->
 
     <footer class="page-footer footer-color">
     
         
-    
+
 <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
 
+
     
+<style type="text/css">
+    .aplayer.aplayer-fixed {
+        z-index: 999;
+    }
+
     
-    <style type="text/css">
-        .aplayer.aplayer-fixed {
-            z-index: 999;
-        }
-    
-        
-        .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
-            left: -66px !important;
-        }
-    
-        .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
-            left: 0px !important;
-        }
-    
-        
-    
-        .aplayer .aplayer-lrc p {
-            
-            display: none;
-            
-            font-size: 12px;
-            font-weight: 700;
-            line-height: 16px !important;
-        }
-    
-        .aplayer .aplayer-lrc p.aplayer-lrc-current {
-            
-            display: none;
-            
-            font-size: 15px;
-            color: #b7daff;
-        }
-    </style>
-    
-    <div class="">
-        <div class="row">
-            <meting-js
-                class="col l8 offset-l2 m10 offset-m1 s12"
-                server="netease"
-                type="playlist"
-                id="743950282"
-                fixed='true'
-                autoplay='false'
-                theme='#b7daff'
-                loop='all'
-                order='random'
-                preload='auto'
-                volume='0.7'
-                list-folded='true'>
-            </meting-js>
-        </div>
-    </div>
-    
-    
-    <script src="/libs/aplayer/APlayer.min.js"></script>
-    
-    
-    <script src="/libs/meting/Meting.min.js"></script>
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
     
 
+    .aplayer .aplayer-lrc {
+        height: 66px;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        font-size: 24px;
+        color: #BCDDEC;
+        line-height: 24px !important;
+        font-weight: bold;
+    }
+
+    .aplayer.aplayer-fixed .aplayer-lrc {
+        text-shadow: none;
+    }
+</style>
+
+<div class="">
+    <div class="row">
+        <meting-js
+            class="col l8 offset-l2 m10 offset-m1 s12"
+            server="netease"
+            type="playlist"
+            id="743950282"
+            fixed='true'
+            autoplay='false'
+            theme='#BCDDEC'
+            loop='all'
+            order='random'
+            preload='auto'
+            volume='0.7'
+            list-folded='true'>
+        </meting-js>
+    </div>
+</div>
+
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+
+
+<script src="/libs/meting/Meting.min.js"></script>
+
+<script>
+    
+        $(document).ready(function() {
+            $('.aplayer .aplayer-lrc').addClass('aplayer-lrc-hide');
+        });
+    
+</script>
     
     <div class="container">
         <div class="row center">
