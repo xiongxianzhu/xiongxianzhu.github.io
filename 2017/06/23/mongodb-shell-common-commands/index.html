@@ -10,7 +10,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="format-detection" content="telephone=no">
-    <meta name="keywords" content="mongodb shell常用命令, 命令, mongodb, 数据库, xx, zhuxiongxian, blog, 博客, 挨踢， 官方, it">
+    <meta name="keywords" content="mongodb shell常用命令, mongodb, 数据库, 命令, xx, zhuxiongxian, blog, 博客, 挨踢， 官方, it">
     <meta name="description" content="1. 进入mongodb shell$ mongo
 MongoDB shell version v3.4.4
 connecting to: mongodb://127.0.0.1:27017
@@ -1181,9 +1181,9 @@ WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })<span aria-hidd
         color: #999;
     }
 
-    .code-container.copied .copy-button::before {
-        content: '\e86c  '; /* Unicode for check icon */
-    }
+    /* .code-container.copied .copy-button::before {
+        content: '\e86c  ';
+    } */
 
     .language-label {
         font-size: 1rem;
@@ -1230,8 +1230,10 @@ WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })<span aria-hidd
 
         navigator.clipboard.writeText(code).then(function() {
             $container.addClass('copied');
+            $container.find('i.copy-button').text('done_all');
             setTimeout(function() {
                 $container.removeClass('copied');
+                $container.find('i.copy-button').text('content_copy');
             }, 2000);
         }).catch(function(err) {
             console.error('无法复制文本: ', err);

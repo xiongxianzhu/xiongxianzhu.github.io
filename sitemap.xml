@@ -497,6 +497,15 @@
   </url>
   
   <url>
+    <loc>https://zhuxiongxian.cc/resume/</loc>
+    
+    <lastmod>2017-06-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://zhuxiongxian.cc/tags/</loc>
     
     <lastmod>2017-05-22</lastmod>
@@ -531,20 +540,6 @@
     <priority>1.0</priority>
   </url>
 
-  
-  <url>
-    <loc>https://zhuxiongxian.cc/tags/docker/</loc>
-    <lastmod>2024-08-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://zhuxiongxian.cc/tags/%E5%91%BD%E4%BB%A4/</loc>
-    <lastmod>2024-08-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
   
   <url>
     <loc>https://zhuxiongxian.cc/tags/linux/</loc>
@@ -582,6 +577,20 @@
   </url>
   
   <url>
+    <loc>https://zhuxiongxian.cc/tags/docker/</loc>
+    <lastmod>2024-08-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhuxiongxian.cc/tags/%E5%91%BD%E4%BB%A4/</loc>
+    <lastmod>2024-08-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://zhuxiongxian.cc/tags/%E5%AE%89%E8%A3%85/</loc>
     <lastmod>2024-08-03</lastmod>
     <changefreq>weekly</changefreq>
@@ -610,7 +619,14 @@
   </url>
   
   <url>
-    <loc>https://zhuxiongxian.cc/tags/postgresql/</loc>
+    <loc>https://zhuxiongxian.cc/tags/python/</loc>
+    <lastmod>2024-08-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhuxiongxian.cc/tags/pip/</loc>
     <lastmod>2024-08-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -645,14 +661,7 @@
   </url>
   
   <url>
-    <loc>https://zhuxiongxian.cc/tags/python/</loc>
-    <lastmod>2024-08-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://zhuxiongxian.cc/tags/pip/</loc>
+    <loc>https://zhuxiongxian.cc/tags/postgresql/</loc>
     <lastmod>2024-08-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -771,6 +780,13 @@
   </url>
   
   <url>
+    <loc>https://zhuxiongxian.cc/tags/nginx/</loc>
+    <lastmod>2024-08-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://zhuxiongxian.cc/tags/python3/</loc>
     <lastmod>2024-08-03</lastmod>
     <changefreq>weekly</changefreq>
@@ -806,13 +822,6 @@
   </url>
   
   <url>
-    <loc>https://zhuxiongxian.cc/tags/nginx/</loc>
-    <lastmod>2024-08-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://zhuxiongxian.cc/tags/go/</loc>
     <lastmod>2024-08-03</lastmod>
     <changefreq>weekly</changefreq>
@@ -827,20 +836,6 @@
   </url>
   
   <url>
-    <loc>https://zhuxiongxian.cc/tags/validate-password/</loc>
-    <lastmod>2024-08-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://zhuxiongxian.cc/tags/%E5%A4%8D%E6%9D%82%E5%BA%A6/</loc>
-    <lastmod>2024-08-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://zhuxiongxian.cc/tags/%E7%BC%96%E7%A0%81/</loc>
     <lastmod>2024-08-03</lastmod>
     <changefreq>weekly</changefreq>
@@ -849,6 +844,20 @@
   
   <url>
     <loc>https://zhuxiongxian.cc/tags/utfmb4/</loc>
+    <lastmod>2024-08-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhuxiongxian.cc/tags/validate-password/</loc>
+    <lastmod>2024-08-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhuxiongxian.cc/tags/%E5%A4%8D%E6%9D%82%E5%BA%A6/</loc>
     <lastmod>2024-08-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -884,20 +893,6 @@
   
   <url>
     <loc>https://zhuxiongxian.cc/tags/virtualenvwrapper/</loc>
-    <lastmod>2024-08-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://zhuxiongxian.cc/tags/robomongo/</loc>
-    <lastmod>2024-08-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://zhuxiongxian.cc/tags/%E5%9B%BE%E5%BD%A2%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/</loc>
     <lastmod>2024-08-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -960,6 +955,13 @@
   </url>
   
   <url>
+    <loc>https://zhuxiongxian.cc/tags/sublime-text/</loc>
+    <lastmod>2024-08-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://zhuxiongxian.cc/tags/%E7%BE%8E%E5%8C%96/</loc>
     <lastmod>2024-08-03</lastmod>
     <changefreq>weekly</changefreq>
@@ -974,14 +976,14 @@
   </url>
   
   <url>
-    <loc>https://zhuxiongxian.cc/tags/sublime-text/</loc>
+    <loc>https://zhuxiongxian.cc/tags/robomongo/</loc>
     <lastmod>2024-08-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://zhuxiongxian.cc/tags/gitlab/</loc>
+    <loc>https://zhuxiongxian.cc/tags/%E5%9B%BE%E5%BD%A2%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/</loc>
     <lastmod>2024-08-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1023,6 +1025,13 @@
   </url>
   
   <url>
+    <loc>https://zhuxiongxian.cc/tags/gitlab/</loc>
+    <lastmod>2024-08-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://zhuxiongxian.cc/tags/vscode/</loc>
     <lastmod>2024-08-03</lastmod>
     <changefreq>weekly</changefreq>
@@ -1037,14 +1046,14 @@
   </url>
   
   <url>
-    <loc>https://zhuxiongxian.cc/tags/ELK/</loc>
+    <loc>https://zhuxiongxian.cc/tags/PR/</loc>
     <lastmod>2024-08-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://zhuxiongxian.cc/tags/kibana/</loc>
+    <loc>https://zhuxiongxian.cc/tags/github/</loc>
     <lastmod>2024-08-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1059,20 +1068,6 @@
   
   <url>
     <loc>https://zhuxiongxian.cc/tags/yarn/</loc>
-    <lastmod>2024-08-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://zhuxiongxian.cc/tags/PR/</loc>
-    <lastmod>2024-08-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://zhuxiongxian.cc/tags/github/</loc>
     <lastmod>2024-08-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1114,6 +1109,20 @@
   </url>
   
   <url>
+    <loc>https://zhuxiongxian.cc/tags/ELK/</loc>
+    <lastmod>2024-08-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhuxiongxian.cc/tags/kibana/</loc>
+    <lastmod>2024-08-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://zhuxiongxian.cc/tags/m2crypto/</loc>
     <lastmod>2024-08-03</lastmod>
     <changefreq>weekly</changefreq>
@@ -1130,14 +1139,14 @@
 
   
   <url>
-    <loc>https://zhuxiongxian.cc/categories/docker/</loc>
+    <loc>https://zhuxiongxian.cc/categories/mongodb/</loc>
     <lastmod>2024-08-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://zhuxiongxian.cc/categories/mongodb/</loc>
+    <loc>https://zhuxiongxian.cc/categories/docker/</loc>
     <lastmod>2024-08-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1158,7 +1167,7 @@
   </url>
   
   <url>
-    <loc>https://zhuxiongxian.cc/categories/postgresql/</loc>
+    <loc>https://zhuxiongxian.cc/categories/python/</loc>
     <lastmod>2024-08-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1172,7 +1181,7 @@
   </url>
   
   <url>
-    <loc>https://zhuxiongxian.cc/categories/python/</loc>
+    <loc>https://zhuxiongxian.cc/categories/postgresql/</loc>
     <lastmod>2024-08-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1193,14 +1202,14 @@
   </url>
   
   <url>
-    <loc>https://zhuxiongxian.cc/categories/sublimetext3/</loc>
+    <loc>https://zhuxiongxian.cc/categories/nginx/</loc>
     <lastmod>2024-08-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://zhuxiongxian.cc/categories/nginx/</loc>
+    <loc>https://zhuxiongxian.cc/categories/sublimetext3/</loc>
     <lastmod>2024-08-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

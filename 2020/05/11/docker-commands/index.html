@@ -1138,9 +1138,9 @@ docker stop 7b32b8c559618c677f50ab793d70e4d08dda3499c3b13d82cb118aa1e6e91e1a<spa
         color: #999;
     }
 
-    .code-container.copied .copy-button::before {
-        content: '\e86c  '; /* Unicode for check icon */
-    }
+    /* .code-container.copied .copy-button::before {
+        content: '\e86c  ';
+    } */
 
     .language-label {
         font-size: 1rem;
@@ -1187,8 +1187,10 @@ docker stop 7b32b8c559618c677f50ab793d70e4d08dda3499c3b13d82cb118aa1e6e91e1a<spa
 
         navigator.clipboard.writeText(code).then(function() {
             $container.addClass('copied');
+            $container.find('i.copy-button').text('done_all');
             setTimeout(function() {
                 $container.removeClass('copied');
+                $container.find('i.copy-button').text('content_copy');
             }, 2000);
         }).catch(function(err) {
             console.error('无法复制文本: ', err);

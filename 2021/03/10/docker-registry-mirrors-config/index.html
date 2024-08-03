@@ -1097,9 +1097,9 @@ systemctl restart docker<span aria-hidden="true" class="line-numbers-rows"><span
         color: #999;
     }
 
-    .code-container.copied .copy-button::before {
-        content: '\e86c  '; /* Unicode for check icon */
-    }
+    /* .code-container.copied .copy-button::before {
+        content: '\e86c  ';
+    } */
 
     .language-label {
         font-size: 1rem;
@@ -1146,8 +1146,10 @@ systemctl restart docker<span aria-hidden="true" class="line-numbers-rows"><span
 
         navigator.clipboard.writeText(code).then(function() {
             $container.addClass('copied');
+            $container.find('i.copy-button').text('done_all');
             setTimeout(function() {
                 $container.removeClass('copied');
+                $container.find('i.copy-button').text('content_copy');
             }, 2000);
         }).catch(function(err) {
             console.error('无法复制文本: ', err);
