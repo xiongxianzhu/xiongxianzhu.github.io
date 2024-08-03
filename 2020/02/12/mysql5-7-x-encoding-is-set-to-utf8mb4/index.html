@@ -1179,6 +1179,12 @@ mysql&gt; ALTER TABLE table_name CHANGE column_name column_name VARCHAR(191) CHA
         var code = $container.find('pre').text();
 
         navigator.clipboard.writeText(code).then(function() {
+            M.toast({
+                html: '已拷贝',
+                displayLength: 1200,
+                inDuration: 300,
+                outDuration: 300
+            });
             $container.addClass('copied');
             $container.find('i.copy-button').text('done_all');
             setTimeout(function() {

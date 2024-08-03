@@ -1271,6 +1271,12 @@ $ sudo systemctl stop mongod    // 停止mongod服务<span aria-hidden="true" cl
         var code = $container.find('pre').text();
 
         navigator.clipboard.writeText(code).then(function() {
+            M.toast({
+                html: '已拷贝',
+                displayLength: 1200,
+                inDuration: 300,
+                outDuration: 300
+            });
             $container.addClass('copied');
             $container.find('i.copy-button').text('done_all');
             setTimeout(function() {

@@ -1186,6 +1186,12 @@ docker stop 7b32b8c559618c677f50ab793d70e4d08dda3499c3b13d82cb118aa1e6e91e1a<spa
         var code = $container.find('pre').text();
 
         navigator.clipboard.writeText(code).then(function() {
+            M.toast({
+                html: '已拷贝',
+                displayLength: 1200,
+                inDuration: 300,
+                outDuration: 300
+            });
             $container.addClass('copied');
             $container.find('i.copy-button').text('done_all');
             setTimeout(function() {

@@ -1262,6 +1262,12 @@ go mod tidy<span aria-hidden="true" class="line-numbers-rows"><span></span><span
         var code = $container.find('pre').text();
 
         navigator.clipboard.writeText(code).then(function() {
+            M.toast({
+                html: '已拷贝',
+                displayLength: 1200,
+                inDuration: 300,
+                outDuration: 300
+            });
             $container.addClass('copied');
             $container.find('i.copy-button').text('done_all');
             setTimeout(function() {
