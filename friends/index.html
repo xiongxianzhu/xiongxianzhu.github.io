@@ -804,7 +804,9 @@
 </div>
 
 
-    <main>
+    
+
+<main>
     <div style="height: 400px; position: relative; top: -64px; left: 0;">
         <div class="cover-background">
     <div class="pattern lazyload" data-src="/img/icon-seamless.png"
@@ -813,38 +815,90 @@
     </div>
 </div>
 <div class="center" id="bg-center">
-    <h2 class="title white-text">xx&#39;s blog</h2>
-    
-<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Marck+Script">
-
-<div class="description white-text">
-    
-    <span id="subtitle" style="font-family: 'Marck Script';"></span>
-    
+    <h2 class="title white-text">友情链接</h2>
 </div>
-<script src="/libs/typedjs/typed.js"></script>
-<script>
+<style>
+    #bg-center {
+        top: 52%;
+    }
+</style>
 
-    var typed = new Typed("#subtitle", {
-        strings: [ 
+    </div>
+    <div class="container">
+        <div class="friend-list row">
             
-                "Hi, I&#39;m zhuxiongxian.",
+                <div class="col s12 m6 l3">
+                    <div class="friend-item">
+                        <div class="friend-avatar-container">
+                            <a class="frient-avatar" href="https://xxcoding.blog.csdn.net/" target="_blank" rel="noopener noreferrer">
+                                <img src="/img/logo.png" alt="zhuxiongxian的CSDN博客">
+                            </a>
+                        </div>
+                        <div>
+                            <a class="friend-name" href="https://xxcoding.blog.csdn.net/" target="_blank" rel="noopener noreferrer">
+                                zhuxiongxian的CSDN博客
+                            </a>
+                        </div>
+                        <p class="friend-description">Life is short, show me the code.</p>
+                    </div>
+                </div>
             
-                "Welcome to my blog!!!",
-            
-        ],
-        startDelay: 300,
-        typeSpeed: 100,
-        loop: true,
-        backSpeed: 50,
-        showCursor: true
-    });
-
-</script>
-
-</div>
+        </div>
     </div>
 </main>
+<style>
+    .friend-list {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .friend-list .friend-item {
+        margin: .5rem 0 1rem 0;
+        background-color: #f5f5f5;
+        border-radius: 3px;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .friend-item .friend-avatar-container {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .friend-item .frient-avatar {
+        display: block;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    .friend-item img {
+        width: 100px;
+        height: auto;
+        border-radius: 50%;
+        transition: all 0.5s ease-in-out;
+    }
+    
+    .friend-item img:hover {
+        transform: scale3d(1.2, 1.2, 1);
+    }
+
+    .friend-item .friend-name {
+        color: #1c385f;
+        font-weight: 700;
+    }
+
+    .friend-item .friend-name:hover {
+        color: #1c385f;
+        font-weight: 700;
+    }
+
+    .friend-item .friend-description {
+        color: #1c385feb;
+    }
+
+</style>
 
     <footer class="page-footer footer-color">
     
