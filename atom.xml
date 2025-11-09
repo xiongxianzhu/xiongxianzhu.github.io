@@ -6,7 +6,7 @@
   <link href="https://zhuxiongxian.cc/atom.xml" rel="self"/>
   
   <link href="https://zhuxiongxian.cc/"/>
-  <updated>2024-07-20T16:31:55.000Z</updated>
+  <updated>2025-11-09T16:17:02.000Z</updated>
   <id>https://zhuxiongxian.cc/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>如何使用claude code</title>
+    <link href="https://zhuxiongxian.cc/2025/11/10/how-to-use-claude-code/"/>
+    <id>https://zhuxiongxian.cc/2025/11/10/how-to-use-claude-code/</id>
+    <published>2025-11-09T16:17:02.000Z</published>
+    <updated>2025-11-09T16:17:02.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Claude Code是Anthropic推出的AI编程助手，它可以直接在终端中工作，帮助开发者编写、审查和修改代码。本文将详细介绍如何搭建Claude Code环境以及基本使用方法。&lt;/p&gt;
+&lt;h2 id=&quot;1-环境搭建&quot;&gt;&lt;a href=&quot;#1-环境搭建&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="ai" scheme="https://zhuxiongxian.cc/categories/ai/"/>
+    
+    
+    <category term="ai" scheme="https://zhuxiongxian.cc/tags/ai/"/>
+    
+    <category term="claude code" scheme="https://zhuxiongxian.cc/tags/claude-code/"/>
+    
+  </entry>
   
   <entry>
     <title>win11安装nodejs</title>
@@ -568,40 +596,6 @@
     <category term="技术栈" scheme="https://zhuxiongxian.cc/tags/%E6%8A%80%E6%9C%AF%E6%A0%88/"/>
     
     <category term="学习" scheme="https://zhuxiongxian.cc/tags/%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>linux下安装elasticsearch</title>
-    <link href="https://zhuxiongxian.cc/2018/12/24/install-elasticsearch-on-linux/"/>
-    <id>https://zhuxiongxian.cc/2018/12/24/install-elasticsearch-on-linux/</id>
-    <published>2018-12-24T08:36:17.000Z</published>
-    <updated>2018-12-24T08:36:17.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h4 id=&quot;1-安装JDK&quot;&gt;&lt;a href=&quot;#1-安装JDK&quot; class=&quot;headerlink&quot; title=&quot;1. 安装JDK&quot;&gt;&lt;/a&gt;1. 安装JDK&lt;/h4&gt;&lt;p&gt;jdk8下载地址：&lt;/p&gt;
-&lt;p&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="linux" scheme="https://zhuxiongxian.cc/categories/linux/"/>
-    
-    
-    <category term="linux" scheme="https://zhuxiongxian.cc/tags/linux/"/>
-    
-    <category term="elasticsearch" scheme="https://zhuxiongxian.cc/tags/elasticsearch/"/>
-    
-    <category term="搜索" scheme="https://zhuxiongxian.cc/tags/%E6%90%9C%E7%B4%A2/"/>
-    
-    <category term="elk" scheme="https://zhuxiongxian.cc/tags/elk/"/>
-    
-    <category term="jdk" scheme="https://zhuxiongxian.cc/tags/jdk/"/>
     
   </entry>
   

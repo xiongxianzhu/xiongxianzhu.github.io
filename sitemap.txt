@@ -1,3 +1,4 @@
+https://zhuxiongxian.cc/2025/11/10/how-to-use-claude-code/
 https://zhuxiongxian.cc/search/
 https://zhuxiongxian.cc/2024/07/21/win11-install-nodejs/
 https://zhuxiongxian.cc/baidu_verify_code-ivcglTF6nL
@@ -143,6 +144,8 @@ https://zhuxiongxian.cc/tags/%E6%8A%80%E6%9C%AF%E6%A0%88/
 https://zhuxiongxian.cc/tags/%E5%AD%A6%E4%B9%A0/
 https://zhuxiongxian.cc/tags/m2crypto/
 https://zhuxiongxian.cc/tags/swig/
+https://zhuxiongxian.cc/tags/ai/
+https://zhuxiongxian.cc/tags/claude-code/
 https://zhuxiongxian.cc/categories/docker/
 https://zhuxiongxian.cc/categories/mongodb/
 https://zhuxiongxian.cc/categories/python/
@@ -162,3 +165,4 @@ https://zhuxiongxian.cc/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E
 https://zhuxiongxian.cc/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/
 https://zhuxiongxian.cc/categories/vue/
 https://zhuxiongxian.cc/categories/%E6%9D%82%E8%B0%88/
+https://zhuxiongxian.cc/categories/ai/
