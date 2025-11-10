@@ -98,9 +98,9 @@ Node.js 18+">
     <title>如何使用claude code | xx&#39;s blog</title>
     <link rel="icon" type="image/png" href="/img/favicon.png">
     <script src="/libs/jquery/jquery.min.js"></script>
-<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="xx's blog" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 7.3.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="xx's blog" type="application/atom+xml">
 </head>
 
 <body>
@@ -1029,76 +1029,68 @@ EOF</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span>
 <span class="token list punctuation">-</span> 状态码：200表示成功，400表示客户端错误，500表示服务器错误
 <span class="token list punctuation">-</span> 消息体：包含必要的信息，如错误消息、数据等，响应结构示例：
 
-<span class="token code keyword">    ```json
-    {
+<span class="token code keyword">    {
         "code": 0,
         "message": "success",
         "data": {}
-    }</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+    }</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<pre class="line-numbers language-none"><code class="language-none">
-### 3.2 提示技巧
+<h3 id="3-2-提示技巧"><a href="#3-2-提示技巧" class="headerlink" title="3.2 提示技巧"></a>3.2 提示技巧</h3><ol>
+<li><strong>明确具体</strong>：提供清晰、具体的指令</li>
+<li><strong>提供上下文</strong>：包含足够的背景信息</li>
+<li><strong>分步请求</strong>：将复杂任务分解为多个步骤</li>
+<li><strong>迭代改进</strong>：根据结果逐步完善请求</li>
+</ol>
+<h3 id="3-3-成本优化"><a href="#3-3-成本优化" class="headerlink" title="3.3 成本优化"></a>3.3 成本优化</h3><ol>
+<li><strong>使用提示模板</strong>：为常见任务创建提示模板</li>
+<li><strong>保持CLAUDE.md简洁</strong>：专注于最重要的规则</li>
+<li><strong>配置适当超时</strong>：为您的工作流设置合理的超时时间</li>
+</ol>
+<h2 id="4-故障排除"><a href="#4-故障排除" class="headerlink" title="4. 故障排除"></a>4. 故障排除</h2><h3 id="4-1-常见问题"><a href="#4-1-常见问题" class="headerlink" title="4.1 常见问题"></a>4.1 常见问题</h3><h4 id="安装问题"><a href="#安装问题" class="headerlink" title="安装问题"></a>安装问题</h4><p>如果在Linux上遇到权限问题，请查阅<a href="https://code.claude.com/docs/zh-CN/troubleshooting#linux-permission-issues">故障排除指南</a>。</p>
+<h4 id="认证问题"><a href="#认证问题" class="headerlink" title="认证问题"></a>认证问题</h4><p>如果遇到认证问题，请确保：</p>
+<ul>
+<li>API密钥有效且未过期</li>
+<li>网络连接正常</li>
+<li>防火墙未阻止Claude Code的连接</li>
+</ul>
+<h4 id="自定义API端点问题"><a href="#自定义API端点问题" class="headerlink" title="自定义API端点问题"></a>自定义API端点问题</h4><p>当使用ANTHROPIC_BASE_URL和ANTHROPIC_AUTH_TOKEN时，可能遇到以下问题：</p>
+<ol>
+<li><p><strong>连接超时</strong>：</p>
+<ul>
+<li>检查ANTHROPIC_BASE_URL是否正确且可访问</li>
+<li>验证网络连接是否稳定</li>
+<li>确认端点是否需要特定的TLS/SSL配置</li>
+</ul>
+</li>
+<li><p><strong>认证失败</strong>：</p>
+<ul>
+<li>验证ANTHROPIC_AUTH_TOKEN是否有效</li>
+<li>检查令牌格式是否正确（是否包含必要的前缀）</li>
+<li>确认令牌是否有足够的权限访问请求的资源</li>
+</ul>
+</li>
+<li><p><strong>配置冲突</strong>：</p>
+<ul>
+<li>检查是否存在多个配置源冲突</li>
+<li>验证环境变量优先级是否按预期工作</li>
+<li>确认配置文件格式是否正确</li>
+</ul>
+</li>
+<li><p><strong>调试技巧</strong>：</p>
+</li>
+</ol>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 使用详细模式查看请求详情</span>
+claude <span class="token parameter variable">-v</span> <span class="token parameter variable">-p</span> <span class="token string">"测试请求"</span>
 
-1. **明确具体**：提供清晰、具体的指令
-2. **提供上下文**：包含足够的背景信息
-3. **分步请求**：将复杂任务分解为多个步骤
-4. **迭代改进**：根据结果逐步完善请求
-
-### 3.3 成本优化
-
-1. **使用提示模板**：为常见任务创建提示模板
-2. **保持CLAUDE.md简洁**：专注于最重要的规则
-3. **配置适当超时**：为您的工作流设置合理的超时时间
-
-## 4. 故障排除
-
-### 4.1 常见问题
-
-#### 安装问题
-
-如果在Linux上遇到权限问题，请查阅[故障排除指南](https://code.claude.com/docs/zh-CN/troubleshooting#linux-permission-issues)。
-
-#### 认证问题
-
-如果遇到认证问题，请确保：
-
-- API密钥有效且未过期
-- 网络连接正常
-- 防火墙未阻止Claude Code的连接
-
-#### 自定义API端点问题
-
-当使用ANTHROPIC_BASE_URL和ANTHROPIC_AUTH_TOKEN时，可能遇到以下问题：
-
-1. **连接超时**：
-   - 检查ANTHROPIC_BASE_URL是否正确且可访问
-   - 验证网络连接是否稳定
-   - 确认端点是否需要特定的TLS/SSL配置
-
-2. **认证失败**：
-   - 验证ANTHROPIC_AUTH_TOKEN是否有效
-   - 检查令牌格式是否正确（是否包含必要的前缀）
-   - 确认令牌是否有足够的权限访问请求的资源
-
-3. **配置冲突**：
-   - 检查是否存在多个配置源冲突
-   - 验证环境变量优先级是否按预期工作
-   - 确认配置文件格式是否正确
-
-4. **调试技巧**：
-
-```bash
-# 使用详细模式查看请求详情
-claude -v -p "测试请求"
-
-# 检查当前配置
+<span class="token comment"># 检查当前配置</span>
 claude config show
 
-# 测试API连接
-curl -H "Authorization: Bearer $ANTHROPIC_AUTH_TOKEN" \
-     -H "Content-Type: application/json" \
-     -d '{"model": "claude-3-sonnet-20240229", "max_tokens": 10, "messages": [{"role": "user", "content": "Hi"}]}' \
-     "$ANTHROPIC_BASE_URL/messages"<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token comment"># 测试API连接</span>
+<span class="token function">curl</span> <span class="token parameter variable">-H</span> <span class="token string">"Authorization: Bearer <span class="token variable">$ANTHROPIC_AUTH_TOKEN</span>"</span> <span class="token punctuation">\</span>
+     <span class="token parameter variable">-H</span> <span class="token string">"Content-Type: application/json"</span> <span class="token punctuation">\</span>
+     <span class="token parameter variable">-d</span> <span class="token string">'{"model": "claude-3-sonnet-20240229", "max_tokens": 10, "messages": [{"role": "user", "content": "Hi"}]}'</span> <span class="token punctuation">\</span>
+     <span class="token string">"<span class="token variable">$ANTHROPIC_BASE_URL</span>/messages"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="4-2-获取帮助"><a href="#4-2-获取帮助" class="headerlink" title="4.2 获取帮助"></a>4.2 获取帮助</h3><p>如果遇到问题，可以通过以下方式获取帮助：</p>
 <ul>
