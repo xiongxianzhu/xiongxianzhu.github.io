@@ -10,14 +10,10 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="format-detection" content="telephone=no">
-    <meta name="keywords" content="win11安装nodejs, nodejs, npm, xx, zhuxiongxian, blog, 博客, 挨踢， 官方, it">
-    <meta name="description" content="win + x + a打开PowerShell，输入以下命令安装nodej：
-winget install Schniz.fnm
-
-# 重启powershell后fnm生效
-fnm install 22
-
-fnm use --install">
+    <meta name="keywords" content="win11安装nodejs, nodejs, npm, chocolatey, windows, node, fnm, xx, zhuxiongxian, blog, 博客, 挨踢， 官方, it">
+    <meta name="description" content="nodejs官网下载地址：https://nodejs.org/zh-cn/download
+Chocolatey安装nodejswin11用户推荐用Chocolatey安装nodejs。
+Chocolatey 是 Windows 上一个非">
     <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
     <link rel="stylesheet" type="text/css" href="/libs/animate.css/animate.min.css">
     
@@ -896,12 +892,50 @@ fnm use --install">
                 
                 <a href="/tags/npm/" class="post-tag">npm</a>
                 
+                <a href="/tags/chocolatey/" class="post-tag">chocolatey</a>
+                
+                <a href="/tags/windows/" class="post-tag">windows</a>
+                
+                <a href="/tags/node/" class="post-tag">node</a>
+                
+                <a href="/tags/fnm/" class="post-tag">fnm</a>
+                
             </div>
             
         </div>
         
         <div class="post-content">
-            <p><code>win + x + a</code>打开PowerShell，输入以下命令安装nodej：</p>
+            <p>nodejs官网下载地址：<a href="https://nodejs.org/zh-cn/download">https://nodejs.org/zh-cn/download</a></p>
+<h2 id="Chocolatey安装nodejs"><a href="#Chocolatey安装nodejs" class="headerlink" title="Chocolatey安装nodejs"></a>Chocolatey安装nodejs</h2><p>win11用户推荐用Chocolatey安装nodejs。</p>
+<p>Chocolatey 是 Windows 上一个非常流行的软件包管理器，类似于 Linux 上的 apt-get 或 yum。它可以让你通过命令行快速、批量地安装、更新、卸载应用程序，极大地简化了软件维护工作，特别适合开发者和系统管理员。</p>
+<p><code>win + x + a</code> 以管理员身份打开PowerShell，输入以下命令安装Chocolatey：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 下载并安装 Chocolatey：</span>
+powershell <span class="token parameter variable">-c</span> <span class="token string">"irm https://community.chocolatey.org/install.ps1|iex"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>安装完后重启PowerShell，输入以下命令检查Chocolatey是否安装成功：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">choco
+
+Chocolatey v2.5.1
+Please run <span class="token string">'choco --help'</span> or <span class="token string">'choco &lt;command&gt; --help'</span> <span class="token keyword">for</span> <span class="token builtin class-name">help</span> menu.
+
+choco <span class="token parameter variable">--version</span>
+
+<span class="token number">2.5</span>.1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>安装Node.js：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 下载并安装 Node.js：</span>
+choco <span class="token function">install</span> nodejs <span class="token parameter variable">--version</span><span class="token operator">=</span><span class="token string">"25.2.0"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>安装完Node.js后，重启PowerShell，输入以下命令检查Node.js是否安装成功：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 验证 Node.js 版本：</span>
+<span class="token function">node</span> <span class="token parameter variable">-v</span> <span class="token comment"># Should print "v25.2.0".</span>
+
+<span class="token comment"># 验证 npm 版本：</span>
+<span class="token function">npm</span> <span class="token parameter variable">-v</span> <span class="token comment"># Should print "11.6.2".</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="fnm安装"><a href="#fnm安装" class="headerlink" title="fnm安装"></a>fnm安装</h2><p>fnm是nodejs的版本管理工具，它可以在同一台机器上安装和切换多个nodejs版本。</p>
+<p>fnm官网：<a href="https://github.com/Schniz/fnm">https://github.com/Schniz/fnm</a></p>
+<p><code>win + x + a</code>打开PowerShell，输入以下命令安装nodej：</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">winget <span class="token function">install</span> Schniz.fnm
 
 <span class="token comment"># 重启powershell后fnm生效</span>
@@ -918,7 +952,11 @@ fnm use --install-if-missing <span class="token number">22</span>
 <span class="token comment"># Installing Node v22.5.1 (x64)</span>
 <span class="token comment"># warning: Version already installed at "C:\\Users\\xx\\AppData\\Roaming\\fnm\\node-versions\\v22.5.1"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
-<p>nodejs安装目录<code>C:\Users\xx\AppData\Roaming\fnm\node-versions\v22.5.1\installation</code>添加到环境变量中，即可全局使用nodejs。</p>
+<p>nodejs安装目录<code>C:\Users\&lt;用户名&gt;\AppData\Roaming\fnm\node-versions\v22.5.1\installation</code>添加到环境变量中，即可全局使用nodejs。</p>
+<p>若要卸载fnm，执行以下命令：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">winget uninstall Schniz.fnm<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>在主目录找到<code>C:\Users\&lt;用户名&gt;\AppData\Roaming\fnm</code>，删除该目录即可卸载fnm。</p>
 
         </div>
         <div class="post-comment">

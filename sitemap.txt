@@ -1,3 +1,4 @@
+https://zhuxiongxian.cc/2025/11/15/win11-install-chocolatey/
 https://zhuxiongxian.cc/2025/11/10/how-to-use-claude-code/
 https://zhuxiongxian.cc/search/
 https://zhuxiongxian.cc/2024/07/21/win11-install-nodejs/
@@ -146,6 +147,11 @@ https://zhuxiongxian.cc/tags/m2crypto/
 https://zhuxiongxian.cc/tags/swig/
 https://zhuxiongxian.cc/tags/ai/
 https://zhuxiongxian.cc/tags/claude-code/
+https://zhuxiongxian.cc/tags/chocolatey/
+https://zhuxiongxian.cc/tags/windows/
+https://zhuxiongxian.cc/tags/%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8/
+https://zhuxiongxian.cc/tags/node/
+https://zhuxiongxian.cc/tags/fnm/
 https://zhuxiongxian.cc/categories/docker/
 https://zhuxiongxian.cc/categories/mongodb/
 https://zhuxiongxian.cc/categories/python/
@@ -166,3 +172,4 @@ https://zhuxiongxian.cc/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/
 https://zhuxiongxian.cc/categories/vue/
 https://zhuxiongxian.cc/categories/%E6%9D%82%E8%B0%88/
 https://zhuxiongxian.cc/categories/ai/
+https://zhuxiongxian.cc/categories/windows/

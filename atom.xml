@@ -6,7 +6,7 @@
   <link href="https://zhuxiongxian.cc/atom.xml" rel="self"/>
   
   <link href="https://zhuxiongxian.cc/"/>
-  <updated>2025-11-09T16:17:02.000Z</updated>
+  <updated>2025-11-15T11:44:57.000Z</updated>
   <id>https://zhuxiongxian.cc/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>win11安装chocolatey</title>
+    <link href="https://zhuxiongxian.cc/2025/11/15/win11-install-chocolatey/"/>
+    <id>https://zhuxiongxian.cc/2025/11/15/win11-install-chocolatey/</id>
+    <published>2025-11-15T11:44:57.000Z</published>
+    <updated>2025-11-15T11:44:57.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;安装Chocolatey&quot;&gt;&lt;a href=&quot;#安装Chocolatey&quot; class=&quot;headerlink&quot; title=&quot;安装Chocolatey&quot;&gt;&lt;/a&gt;安装Chocolatey&lt;/h2&gt;&lt;p&gt;Chocolatey 是 Windows</summary>
+        
+      
+    
+    
+    
+    <category term="windows" scheme="https://zhuxiongxian.cc/categories/windows/"/>
+    
+    
+    <category term="chocolatey" scheme="https://zhuxiongxian.cc/tags/chocolatey/"/>
+    
+    <category term="windows" scheme="https://zhuxiongxian.cc/tags/windows/"/>
+    
+    <category term="包管理器" scheme="https://zhuxiongxian.cc/tags/%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8/"/>
+    
+  </entry>
   
   <entry>
     <title>如何使用claude code</title>
@@ -56,8 +85,8 @@
       
         
         
-    <summary type="html">&lt;p&gt;&lt;code&gt;win + x + a&lt;/code&gt;打开PowerShell，输入以下命令安装nodej：&lt;/p&gt;
-&lt;pre class=&quot;line-numbers language-bash&quot; data-language=&quot;bash&quot;&gt;&lt;code</summary>
+    <summary type="html">&lt;p&gt;nodejs官网下载地址：&lt;a href=&quot;https://nodejs.org/zh-cn/download&quot;&gt;https://nodejs.org/zh-cn/download&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Chocolatey安装nodejs&quot;&gt;&lt;a</summary>
         
       
     
@@ -69,6 +98,14 @@
     <category term="nodejs" scheme="https://zhuxiongxian.cc/tags/nodejs/"/>
     
     <category term="npm" scheme="https://zhuxiongxian.cc/tags/npm/"/>
+    
+    <category term="chocolatey" scheme="https://zhuxiongxian.cc/tags/chocolatey/"/>
+    
+    <category term="windows" scheme="https://zhuxiongxian.cc/tags/windows/"/>
+    
+    <category term="node" scheme="https://zhuxiongxian.cc/tags/node/"/>
+    
+    <category term="fnm" scheme="https://zhuxiongxian.cc/tags/fnm/"/>
     
   </entry>
   
@@ -563,39 +600,6 @@
     <category term="数据库" scheme="https://zhuxiongxian.cc/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     
     <category term="postgresql" scheme="https://zhuxiongxian.cc/tags/postgresql/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>程序猿(媛)养成记</title>
-    <link href="https://zhuxiongxian.cc/2019/01/11/how-to-be-a-nb-coder/"/>
-    <id>https://zhuxiongxian.cc/2019/01/11/how-to-be-a-nb-coder/</id>
-    <published>2019-01-11T02:25:46.000Z</published>
-    <updated>2019-01-11T02:25:46.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h4 id=&quot;行为习惯Behavior&quot;&gt;&lt;a href=&quot;#行为习惯Behavior&quot; class=&quot;headerlink&quot; title=&quot;行为习惯Behavior&quot;&gt;&lt;/a&gt;行为习惯Behavior&lt;/h4&gt;&lt;h4</summary>
-        
-      
-    
-    
-    
-    <category term="杂谈" scheme="https://zhuxiongxian.cc/categories/%E6%9D%82%E8%B0%88/"/>
-    
-    
-    <category term="程序员" scheme="https://zhuxiongxian.cc/tags/%E7%A8%8B%E5%BA%8F%E5%91%98/"/>
-    
-    <category term="码农" scheme="https://zhuxiongxian.cc/tags/%E7%A0%81%E5%86%9C/"/>
-    
-    <category term="养成记" scheme="https://zhuxiongxian.cc/tags/%E5%85%BB%E6%88%90%E8%AE%B0/"/>
-    
-    <category term="技术栈" scheme="https://zhuxiongxian.cc/tags/%E6%8A%80%E6%9C%AF%E6%A0%88/"/>
-    
-    <category term="学习" scheme="https://zhuxiongxian.cc/tags/%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
