@@ -560,20 +560,6 @@
 
   
   <url>
-    <loc>https://zhuxiongxian.cc/tags/docker/</loc>
-    <lastmod>2025-11-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://zhuxiongxian.cc/tags/%E5%AE%89%E8%A3%85/</loc>
-    <lastmod>2025-11-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://zhuxiongxian.cc/tags/linux/</loc>
     <lastmod>2025-11-15</lastmod>
     <changefreq>weekly</changefreq>
@@ -609,14 +595,49 @@
   </url>
   
   <url>
-    <loc>https://zhuxiongxian.cc/tags/python/</loc>
+    <loc>https://zhuxiongxian.cc/tags/mcp/</loc>
     <lastmod>2025-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://zhuxiongxian.cc/tags/pip/</loc>
+    <loc>https://zhuxiongxian.cc/tags/ai/</loc>
+    <lastmod>2025-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhuxiongxian.cc/tags/%E5%B7%A5%E5%85%B7/</loc>
+    <lastmod>2025-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhuxiongxian.cc/tags/docker/</loc>
+    <lastmod>2025-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhuxiongxian.cc/tags/%E5%AE%89%E8%A3%85/</loc>
+    <lastmod>2025-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhuxiongxian.cc/tags/git/</loc>
+    <lastmod>2025-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhuxiongxian.cc/tags/ssh-keygen/</loc>
     <lastmod>2025-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -637,14 +658,14 @@
   </url>
   
   <url>
-    <loc>https://zhuxiongxian.cc/tags/git/</loc>
+    <loc>https://zhuxiongxian.cc/tags/python/</loc>
     <lastmod>2025-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://zhuxiongxian.cc/tags/ssh-keygen/</loc>
+    <loc>https://zhuxiongxian.cc/tags/pip/</loc>
     <lastmod>2025-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -679,6 +700,13 @@
   </url>
   
   <url>
+    <loc>https://zhuxiongxian.cc/tags/postgresql/</loc>
+    <lastmod>2025-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://zhuxiongxian.cc/tags/centos/</loc>
     <lastmod>2025-11-15</lastmod>
     <changefreq>weekly</changefreq>
@@ -707,21 +735,7 @@
   </url>
   
   <url>
-    <loc>https://zhuxiongxian.cc/tags/postgresql/</loc>
-    <lastmod>2025-11-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://zhuxiongxian.cc/tags/java/</loc>
-    <lastmod>2025-11-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://zhuxiongxian.cc/tags/python3/</loc>
     <lastmod>2025-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -749,28 +763,35 @@
   </url>
   
   <url>
-    <loc>https://zhuxiongxian.cc/tags/cpu/</loc>
+    <loc>https://zhuxiongxian.cc/tags/%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/</loc>
     <lastmod>2025-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://zhuxiongxian.cc/tags/%E5%86%85%E5%AD%98/</loc>
+    <loc>https://zhuxiongxian.cc/tags/%E8%B0%83%E5%BA%A6/</loc>
     <lastmod>2025-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://zhuxiongxian.cc/tags/%E7%B3%BB%E7%BB%9F%E7%89%88%E6%9C%AC/</loc>
+    <loc>https://zhuxiongxian.cc/tags/cron/</loc>
     <lastmod>2025-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://zhuxiongxian.cc/tags/%E7%A3%81%E7%9B%98/</loc>
+    <loc>https://zhuxiongxian.cc/tags/crontab/</loc>
+    <lastmod>2025-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhuxiongxian.cc/tags/python3/</loc>
     <lastmod>2025-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -812,34 +833,6 @@
   </url>
   
   <url>
-    <loc>https://zhuxiongxian.cc/tags/%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/</loc>
-    <lastmod>2025-11-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://zhuxiongxian.cc/tags/%E8%B0%83%E5%BA%A6/</loc>
-    <lastmod>2025-11-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://zhuxiongxian.cc/tags/cron/</loc>
-    <lastmod>2025-11-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://zhuxiongxian.cc/tags/crontab/</loc>
-    <lastmod>2025-11-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://zhuxiongxian.cc/tags/go/</loc>
     <lastmod>2025-11-15</lastmod>
     <changefreq>weekly</changefreq>
@@ -862,6 +855,20 @@
   
   <url>
     <loc>https://zhuxiongxian.cc/tags/utfmb4/</loc>
+    <lastmod>2025-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhuxiongxian.cc/tags/validate-password/</loc>
+    <lastmod>2025-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhuxiongxian.cc/tags/%E5%A4%8D%E6%9D%82%E5%BA%A6/</loc>
     <lastmod>2025-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -931,34 +938,6 @@
   </url>
   
   <url>
-    <loc>https://zhuxiongxian.cc/tags/validate-password/</loc>
-    <lastmod>2025-11-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://zhuxiongxian.cc/tags/%E5%A4%8D%E6%9D%82%E5%BA%A6/</loc>
-    <lastmod>2025-11-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://zhuxiongxian.cc/tags/%E6%8E%92%E5%88%97/</loc>
-    <lastmod>2025-11-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://zhuxiongxian.cc/tags/%E7%BB%84%E5%90%88/</loc>
-    <lastmod>2025-11-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://zhuxiongxian.cc/tags/robomongo/</loc>
     <lastmod>2025-11-15</lastmod>
     <changefreq>weekly</changefreq>
@@ -987,14 +966,28 @@
   </url>
   
   <url>
-    <loc>https://zhuxiongxian.cc/tags/%E7%BE%8E%E5%8C%96/</loc>
+    <loc>https://zhuxiongxian.cc/tags/cpu/</loc>
     <lastmod>2025-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://zhuxiongxian.cc/tags/%E5%B7%A5%E5%85%B7/</loc>
+    <loc>https://zhuxiongxian.cc/tags/%E5%86%85%E5%AD%98/</loc>
+    <lastmod>2025-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhuxiongxian.cc/tags/%E7%B3%BB%E7%BB%9F%E7%89%88%E6%9C%AC/</loc>
+    <lastmod>2025-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhuxiongxian.cc/tags/%E7%A3%81%E7%9B%98/</loc>
     <lastmod>2025-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1008,126 +1001,7 @@
   </url>
   
   <url>
-    <loc>https://zhuxiongxian.cc/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
-    <lastmod>2025-11-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://zhuxiongxian.cc/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/</loc>
-    <lastmod>2025-11-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://zhuxiongxian.cc/tags/%E5%89%8D%E5%BA%8F/</loc>
-    <lastmod>2025-11-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://zhuxiongxian.cc/tags/%E4%B8%AD%E5%BA%8F/</loc>
-    <lastmod>2025-11-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://zhuxiongxian.cc/tags/%E5%90%8E%E5%BA%8F/</loc>
-    <lastmod>2025-11-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://zhuxiongxian.cc/tags/gitlab/</loc>
-    <lastmod>2025-11-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://zhuxiongxian.cc/tags/vscode/</loc>
-    <lastmod>2025-11-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://zhuxiongxian.cc/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/</loc>
-    <lastmod>2025-11-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://zhuxiongxian.cc/tags/PR/</loc>
-    <lastmod>2025-11-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://zhuxiongxian.cc/tags/github/</loc>
-    <lastmod>2025-11-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://zhuxiongxian.cc/tags/vue/</loc>
-    <lastmod>2025-11-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://zhuxiongxian.cc/tags/yarn/</loc>
-    <lastmod>2025-11-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://zhuxiongxian.cc/tags/ELK/</loc>
-    <lastmod>2025-11-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://zhuxiongxian.cc/tags/kibana/</loc>
-    <lastmod>2025-11-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://zhuxiongxian.cc/tags/m2crypto/</loc>
-    <lastmod>2025-11-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://zhuxiongxian.cc/tags/swig/</loc>
-    <lastmod>2025-11-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://zhuxiongxian.cc/tags/ai/</loc>
-    <lastmod>2025-11-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://zhuxiongxian.cc/tags/claude-code/</loc>
+    <loc>https://zhuxiongxian.cc/tags/%E7%BE%8E%E5%8C%96/</loc>
     <lastmod>2025-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1169,20 +1043,139 @@
   </url>
   
   <url>
-    <loc>https://zhuxiongxian.cc/tags/mcp/</loc>
+    <loc>https://zhuxiongxian.cc/tags/%E6%8E%92%E5%88%97/</loc>
+    <lastmod>2025-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhuxiongxian.cc/tags/%E7%BB%84%E5%90%88/</loc>
+    <lastmod>2025-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhuxiongxian.cc/tags/gitlab/</loc>
+    <lastmod>2025-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhuxiongxian.cc/tags/vscode/</loc>
+    <lastmod>2025-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhuxiongxian.cc/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/</loc>
+    <lastmod>2025-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhuxiongxian.cc/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
+    <lastmod>2025-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhuxiongxian.cc/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/</loc>
+    <lastmod>2025-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhuxiongxian.cc/tags/%E5%89%8D%E5%BA%8F/</loc>
+    <lastmod>2025-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhuxiongxian.cc/tags/%E4%B8%AD%E5%BA%8F/</loc>
+    <lastmod>2025-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhuxiongxian.cc/tags/%E5%90%8E%E5%BA%8F/</loc>
+    <lastmod>2025-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhuxiongxian.cc/tags/PR/</loc>
+    <lastmod>2025-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhuxiongxian.cc/tags/github/</loc>
+    <lastmod>2025-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhuxiongxian.cc/tags/ELK/</loc>
+    <lastmod>2025-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhuxiongxian.cc/tags/kibana/</loc>
+    <lastmod>2025-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhuxiongxian.cc/tags/vue/</loc>
+    <lastmod>2025-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhuxiongxian.cc/tags/yarn/</loc>
+    <lastmod>2025-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhuxiongxian.cc/tags/claude-code/</loc>
+    <lastmod>2025-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhuxiongxian.cc/tags/m2crypto/</loc>
+    <lastmod>2025-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhuxiongxian.cc/tags/swig/</loc>
     <lastmod>2025-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
 
-  
-  <url>
-    <loc>https://zhuxiongxian.cc/categories/docker/</loc>
-    <lastmod>2025-11-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
   
   <url>
     <loc>https://zhuxiongxian.cc/categories/mongodb/</loc>
@@ -1192,14 +1185,14 @@
   </url>
   
   <url>
-    <loc>https://zhuxiongxian.cc/categories/python/</loc>
+    <loc>https://zhuxiongxian.cc/categories/ai/</loc>
     <lastmod>2025-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://zhuxiongxian.cc/categories/frontend/</loc>
+    <loc>https://zhuxiongxian.cc/categories/docker/</loc>
     <lastmod>2025-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1213,6 +1206,20 @@
   </url>
   
   <url>
+    <loc>https://zhuxiongxian.cc/categories/frontend/</loc>
+    <lastmod>2025-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhuxiongxian.cc/categories/python/</loc>
+    <lastmod>2025-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://zhuxiongxian.cc/categories/linux/</loc>
     <lastmod>2025-11-15</lastmod>
     <changefreq>weekly</changefreq>
@@ -1220,14 +1227,14 @@
   </url>
   
   <url>
-    <loc>https://zhuxiongxian.cc/categories/%E7%BC%93%E5%AD%98/</loc>
+    <loc>https://zhuxiongxian.cc/categories/postgresql/</loc>
     <lastmod>2025-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://zhuxiongxian.cc/categories/postgresql/</loc>
+    <loc>https://zhuxiongxian.cc/categories/%E7%BC%93%E5%AD%98/</loc>
     <lastmod>2025-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1276,14 +1283,14 @@
   </url>
   
   <url>
-    <loc>https://zhuxiongxian.cc/categories/%E5%89%8D%E7%AB%AF/</loc>
+    <loc>https://zhuxiongxian.cc/categories/windows/</loc>
     <lastmod>2025-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://zhuxiongxian.cc/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/</loc>
+    <loc>https://zhuxiongxian.cc/categories/%E5%89%8D%E7%AB%AF/</loc>
     <lastmod>2025-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1297,21 +1304,14 @@
   </url>
   
   <url>
+    <loc>https://zhuxiongxian.cc/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/</loc>
+    <lastmod>2025-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://zhuxiongxian.cc/categories/vue/</loc>
-    <lastmod>2025-11-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://zhuxiongxian.cc/categories/ai/</loc>
-    <lastmod>2025-11-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://zhuxiongxian.cc/categories/windows/</loc>
     <lastmod>2025-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
