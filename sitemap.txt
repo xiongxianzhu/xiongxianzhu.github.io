@@ -1,3 +1,4 @@
+https://zhuxiongxian.cc/2025/11/16/delete-all-github-fork-repos/
 https://zhuxiongxian.cc/2025/11/15/mcp-toolbox-essential-extensions/
 https://zhuxiongxian.cc/2025/11/15/win11-install-chocolatey/
 https://zhuxiongxian.cc/2025/11/10/how-to-use-claude-code/
@@ -148,6 +149,9 @@ https://zhuxiongxian.cc/tags/PR/
 https://zhuxiongxian.cc/tags/github/
 https://zhuxiongxian.cc/tags/m2crypto/
 https://zhuxiongxian.cc/tags/swig/
+https://zhuxiongxian.cc/tags/fork/
+https://zhuxiongxian.cc/tags/%E5%88%A0%E9%99%A4/
+https://zhuxiongxian.cc/tags/%E6%89%B9%E9%87%8F/
 https://zhuxiongxian.cc/categories/mongodb/
 https://zhuxiongxian.cc/categories/ai/
 https://zhuxiongxian.cc/categories/docker/

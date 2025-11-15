@@ -6,7 +6,7 @@
   <link href="https://zhuxiongxian.cc/atom.xml" rel="self"/>
   
   <link href="https://zhuxiongxian.cc/"/>
-  <updated>2025-11-15T12:10:32.000Z</updated>
+  <updated>2025-11-15T22:24:10.000Z</updated>
   <id>https://zhuxiongxian.cc/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>批量删除github fork仓库</title>
+    <link href="https://zhuxiongxian.cc/2025/11/16/delete-all-github-fork-repos/"/>
+    <id>https://zhuxiongxian.cc/2025/11/16/delete-all-github-fork-repos/</id>
+    <published>2025-11-15T22:24:10.000Z</published>
+    <updated>2025-11-15T22:24:10.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;1-安装-GitHub-CLI&quot;&gt;&lt;a href=&quot;#1-安装-GitHub-CLI&quot; class=&quot;headerlink&quot; title=&quot;1. 安装 GitHub CLI&quot;&gt;&lt;/a&gt;1. 安装 GitHub CLI&lt;/h2&gt;&lt;pre</summary>
+        
+      
+    
+    
+    
+    <category term="git" scheme="https://zhuxiongxian.cc/categories/git/"/>
+    
+    
+    <category term="github" scheme="https://zhuxiongxian.cc/tags/github/"/>
+    
+    <category term="fork" scheme="https://zhuxiongxian.cc/tags/fork/"/>
+    
+    <category term="删除" scheme="https://zhuxiongxian.cc/tags/%E5%88%A0%E9%99%A4/"/>
+    
+    <category term="批量" scheme="https://zhuxiongxian.cc/tags/%E6%89%B9%E9%87%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>MCP工具箱：必备扩展提升AI智能体能力</title>
@@ -567,38 +598,6 @@
     <category term="数据库" scheme="https://zhuxiongxian.cc/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     
     <category term="postgresql" scheme="https://zhuxiongxian.cc/tags/postgresql/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>mac os x sublime text 3安装ctags插件实现代码跳转</title>
-    <link href="https://zhuxiongxian.cc/2019/05/21/Mac-OS-X-sublime-text-3-installs-ctags-plug-in-to-achieve-code-jump/"/>
-    <id>https://zhuxiongxian.cc/2019/05/21/Mac-OS-X-sublime-text-3-installs-ctags-plug-in-to-achieve-code-jump/</id>
-    <published>2019-05-21T02:41:52.000Z</published>
-    <updated>2019-05-21T02:41:52.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;ctags是一款实现代码跳转的插件，可以提高查看代码的效率.&lt;/p&gt;
-&lt;h4 id=&quot;1-st3安装ctags插件&quot;&gt;&lt;a href=&quot;#1-st3安装ctags插件&quot; class=&quot;headerlink&quot; title=&quot;1. st3安装ctags插件&quot;&gt;&lt;/a&gt;1.</summary>
-        
-      
-    
-    
-    
-    <category term="sublimetext3" scheme="https://zhuxiongxian.cc/categories/sublimetext3/"/>
-    
-    
-    <category term="mac" scheme="https://zhuxiongxian.cc/tags/mac/"/>
-    
-    <category term="sublime text 3" scheme="https://zhuxiongxian.cc/tags/sublime-text-3/"/>
-    
-    <category term="ctags" scheme="https://zhuxiongxian.cc/tags/ctags/"/>
-    
-    <category term="代码跳转" scheme="https://zhuxiongxian.cc/tags/%E4%BB%A3%E7%A0%81%E8%B7%B3%E8%BD%AC/"/>
     
   </entry>
   

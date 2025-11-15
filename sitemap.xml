@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://zhuxiongxian.cc/2025/11/16/delete-all-github-fork-repos/</loc>
+    
+    <lastmod>2025-11-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://zhuxiongxian.cc/2025/11/15/mcp-toolbox-essential-extensions/</loc>
     
     <lastmod>2025-11-15</lastmod>
@@ -1170,6 +1179,27 @@
   
   <url>
     <loc>https://zhuxiongxian.cc/tags/swig/</loc>
+    <lastmod>2025-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhuxiongxian.cc/tags/fork/</loc>
+    <lastmod>2025-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhuxiongxian.cc/tags/%E5%88%A0%E9%99%A4/</loc>
+    <lastmod>2025-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhuxiongxian.cc/tags/%E6%89%B9%E9%87%8F/</loc>
     <lastmod>2025-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
