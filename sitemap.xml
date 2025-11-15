@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://zhuxiongxian.cc/2025/11/15/common-mcp/</loc>
+    
+    <lastmod>2025-11-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://zhuxiongxian.cc/2025/11/15/win11-install-chocolatey/</loc>
     
     <lastmod>2025-11-15</lastmod>
@@ -1198,6 +1207,13 @@
   
   <url>
     <loc>https://zhuxiongxian.cc/tags/fnm/</loc>
+    <lastmod>2025-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhuxiongxian.cc/tags/mcp/</loc>
     <lastmod>2025-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

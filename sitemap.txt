@@ -1,3 +1,4 @@
+https://zhuxiongxian.cc/2025/11/15/common-mcp/
 https://zhuxiongxian.cc/2025/11/15/win11-install-chocolatey/
 https://zhuxiongxian.cc/2025/11/10/how-to-use-claude-code/
 https://zhuxiongxian.cc/search/
@@ -152,6 +153,7 @@ https://zhuxiongxian.cc/tags/windows/
 https://zhuxiongxian.cc/tags/%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8/
 https://zhuxiongxian.cc/tags/node/
 https://zhuxiongxian.cc/tags/fnm/
+https://zhuxiongxian.cc/tags/mcp/
 https://zhuxiongxian.cc/categories/docker/
 https://zhuxiongxian.cc/categories/mongodb/
 https://zhuxiongxian.cc/categories/python/

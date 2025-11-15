@@ -1,3 +1,4 @@
+https://zhuxiongxian.cc/2025/11/15/common-mcp/
 https://zhuxiongxian.cc/2025/11/15/win11-install-chocolatey/
 https://zhuxiongxian.cc/2025/11/10/how-to-use-claude-code/
 https://zhuxiongxian.cc/2024/07/21/win11-install-nodejs/
@@ -7,4 +8,3 @@ https://zhuxiongxian.cc/2021/03/27/linux-info-stats/
 https://zhuxiongxian.cc/2021/03/18/install-go-on-mac/
 https://zhuxiongxian.cc/2021/03/17/using-vscode/
 https://zhuxiongxian.cc/2021/03/10/docker-registry-mirrors-config/
-https://zhuxiongxian.cc/2021/03/10/using-gitlab-ce-to-build-git-service/
