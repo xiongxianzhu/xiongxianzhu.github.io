@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://zhuxiongxian.cc/2025/11/15/common-mcp/</loc>
+    <loc>https://zhuxiongxian.cc/2025/11/15/mcp-toolbox-essential-extensions/</loc>
     
     <lastmod>2025-11-15</lastmod>
     
@@ -248,15 +248,6 @@
     <loc>https://zhuxiongxian.cc/2019/02/26/install-postgresql-on-linux/</loc>
     
     <lastmod>2019-02-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://zhuxiongxian.cc/2019/01/11/how-to-be-a-nb-coder/</loc>
-    
-    <lastmod>2019-01-11</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1115,41 +1106,6 @@
   </url>
   
   <url>
-    <loc>https://zhuxiongxian.cc/tags/%E7%A8%8B%E5%BA%8F%E5%91%98/</loc>
-    <lastmod>2025-11-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://zhuxiongxian.cc/tags/%E7%A0%81%E5%86%9C/</loc>
-    <lastmod>2025-11-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://zhuxiongxian.cc/tags/%E5%85%BB%E6%88%90%E8%AE%B0/</loc>
-    <lastmod>2025-11-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://zhuxiongxian.cc/tags/%E6%8A%80%E6%9C%AF%E6%A0%88/</loc>
-    <lastmod>2025-11-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://zhuxiongxian.cc/tags/%E5%AD%A6%E4%B9%A0/</loc>
-    <lastmod>2025-11-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://zhuxiongxian.cc/tags/m2crypto/</loc>
     <lastmod>2025-11-15</lastmod>
     <changefreq>weekly</changefreq>
@@ -1342,13 +1298,6 @@
   
   <url>
     <loc>https://zhuxiongxian.cc/categories/vue/</loc>
-    <lastmod>2025-11-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://zhuxiongxian.cc/categories/%E6%9D%82%E8%B0%88/</loc>
     <lastmod>2025-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

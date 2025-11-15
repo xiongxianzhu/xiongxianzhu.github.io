@@ -1,4 +1,4 @@
-https://zhuxiongxian.cc/2025/11/15/common-mcp/
+https://zhuxiongxian.cc/2025/11/15/mcp-toolbox-essential-extensions/
 https://zhuxiongxian.cc/2025/11/15/win11-install-chocolatey/
 https://zhuxiongxian.cc/2025/11/10/how-to-use-claude-code/
 https://zhuxiongxian.cc/search/
@@ -26,7 +26,6 @@ https://zhuxiongxian.cc/2019/10/15/install-python3-8-from-source-on-macosx/
 https://zhuxiongxian.cc/2019/08/26/postgresql-commands/
 https://zhuxiongxian.cc/2019/05/21/Mac-OS-X-sublime-text-3-installs-ctags-plug-in-to-achieve-code-jump/
 https://zhuxiongxian.cc/2019/02/26/install-postgresql-on-linux/
-https://zhuxiongxian.cc/2019/01/11/how-to-be-a-nb-coder/
 https://zhuxiongxian.cc/2018/12/24/install-elasticsearch-on-linux/
 https://zhuxiongxian.cc/2018/12/13/how-to-submit-PR-in-github/
 https://zhuxiongxian.cc/2018/12/11/install-mysql5-7-24-on-ubuntu16-04/
@@ -139,11 +138,6 @@ https://zhuxiongxian.cc/tags/vue/
 https://zhuxiongxian.cc/tags/yarn/
 https://zhuxiongxian.cc/tags/ELK/
 https://zhuxiongxian.cc/tags/kibana/
-https://zhuxiongxian.cc/tags/%E7%A8%8B%E5%BA%8F%E5%91%98/
-https://zhuxiongxian.cc/tags/%E7%A0%81%E5%86%9C/
-https://zhuxiongxian.cc/tags/%E5%85%BB%E6%88%90%E8%AE%B0/
-https://zhuxiongxian.cc/tags/%E6%8A%80%E6%9C%AF%E6%A0%88/
-https://zhuxiongxian.cc/tags/%E5%AD%A6%E4%B9%A0/
 https://zhuxiongxian.cc/tags/m2crypto/
 https://zhuxiongxian.cc/tags/swig/
 https://zhuxiongxian.cc/tags/ai/
@@ -172,6 +166,5 @@ https://zhuxiongxian.cc/categories/%E5%89%8D%E7%AB%AF/
 https://zhuxiongxian.cc/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/
 https://zhuxiongxian.cc/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/
 https://zhuxiongxian.cc/categories/vue/
-https://zhuxiongxian.cc/categories/%E6%9D%82%E8%B0%88/
 https://zhuxiongxian.cc/categories/ai/
 https://zhuxiongxian.cc/categories/windows/
