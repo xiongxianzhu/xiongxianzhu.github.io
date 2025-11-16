@@ -10,10 +10,11 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="format-detection" content="telephone=no">
-    <meta name="keywords" content="linux安装nodejs,npm,cnpm,bower,hexo, nodejs, npm, bower, xx, zhuxiongxian, blog, 博客, 官方, it">
-    <meta name="description" content="nodejs长期LTS稳定版： https://nodejs.org/en/download/
-nodejs最新版： https://nodejs.org/en/download/current/
-linux选择： Linux Binari">
+    <meta name="keywords" content="Vue主流技术栈与最佳实践, vue, 前端, 技术栈, xx, zhuxiongxian, blog, 博客, 官方, it">
+    <meta name="description" content="概述Vue.js 作为当前最流行的前端框架之一，拥有完整的生态系统和丰富的技术栈。本文总结了 Vue 开发中的主流技术栈和最佳实践。
+核心技术栈1. Vue 3 + Composition API为什么选择 Vue 3？
+
+更好的性能（重写">
     <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
     <link rel="stylesheet" type="text/css" href="/libs/animate.css/animate.min.css">
     
@@ -95,7 +96,7 @@ linux选择： Linux Binari">
     <!-- Custom Head -->
     
 
-    <title>linux安装nodejs,npm,cnpm,bower,hexo | xx&#39;s blog</title>
+    <title>Vue主流技术栈与最佳实践 | xx&#39;s blog</title>
     <link rel="icon" type="image/png" href="/img/favicon.png">
     <script src="/libs/jquery/jquery.min.js"></script>
 <meta name="generator" content="Hexo 7.3.0">
@@ -821,7 +822,7 @@ linux选择： Linux Binari">
         <div class="row">
             <div class="col-md-8">
                 <div class="brand">
-                    <!-- <h4>linux安装nodejs,npm,cnpm,bower,hexo</h4> -->
+                    <!-- <h4>Vue主流技术栈与最佳实践</h4> -->
                     
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Marck+Script">
 
@@ -864,7 +865,7 @@ linux选择： Linux Binari">
                     <!-- 文章详情 -->
                     <div id="post-detail">
     <div class="card main main-raised">
-        <h1 class="post-title">linux安装nodejs,npm,cnpm,bower,hexo</h1>
+        <h1 class="post-title">Vue主流技术栈与最佳实践</h1>
         
         <div class="post-meta">
             <div class="post-meta-top">
@@ -872,14 +873,16 @@ linux选择： Linux Binari">
                     作者： xx
                 </span>
                 <span class="post-date">
-                    发布于： 2018-12-05 15:35:56
+                    发布于： 2025-11-16 19:50:52
                 </span>
                 
                 
                 <span class="post-categories">
                     <i class="fas fa-bookmark fa-fw icon-category"></i>
                     
-                    <a href="/categories/linux/" class="post-category">linux</a>
+                    <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">前端</a>
+                    
+                    <a href="/categories/%E5%89%8D%E7%AB%AF/vue/" class="post-category">vue</a>
                     
                 </span>
                 
@@ -888,40 +891,387 @@ linux选择： Linux Binari">
             
             <div class="post-meta-bottom">
                 
-                <a href="/tags/nodejs/" class="post-tag">nodejs</a>
+                <a href="/tags/vue/" class="post-tag">vue</a>
                 
-                <a href="/tags/npm/" class="post-tag">npm</a>
+                <a href="/tags/%E5%89%8D%E7%AB%AF/" class="post-tag">前端</a>
                 
-                <a href="/tags/bower/" class="post-tag">bower</a>
+                <a href="/tags/%E6%8A%80%E6%9C%AF%E6%A0%88/" class="post-tag">技术栈</a>
                 
             </div>
             
         </div>
         
         <div class="post-content">
-            <p>nodejs长期LTS稳定版： <a href="https://nodejs.org/en/download/">https://nodejs.org/en/download/</a></p>
-<p>nodejs最新版： <a href="https://nodejs.org/en/download/current/">https://nodejs.org/en/download/current/</a></p>
-<p>linux选择： <code>Linux Binaries (x64)</code></p>
-<pre class="line-numbers language-none"><code class="language-none">$ wget -c https://nodejs.org/dist/v10.14.1/node-v10.14.1-linux-x64.tar.xz
-$ xz -d node-v10.14.1-linux-x64.tar.xz
-$ tar -xvf node-v10.14.1-linux-x64.tar
-$ sudo mv node-v10.14.1-linux-x64 /usr/local/node
-$ sudo ln -s /usr/local/node/bin/npm /usr/bin/npm
-$ sudo ln -s /usr/local/node/bin/node /usr/bin/node
-$ npm -v
-6.4.1
-$ node -v
-v10.14.1
-$ npm install -g cnpm --registry=https://registry.npm.taobao.org
-$ sudo ln -s /usr/local/node/bin/cnpm /usr/bin/cnpm
-$ cnpm -v
-$ cnpm install -g bower
-$ sudo ln -s /usr/local/node/bin/bower /usr/bin/bower
-$ bower -v
-1.8.4
-$ cnpm i hexo -g
-$ sudo ln -s /usr/local/node/bin/hexo /usr/bin/hexo
-$ hexo -v<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+            <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>Vue.js 作为当前最流行的前端框架之一，拥有完整的生态系统和丰富的技术栈。本文总结了 Vue 开发中的主流技术栈和最佳实践。</p>
+<h2 id="核心技术栈"><a href="#核心技术栈" class="headerlink" title="核心技术栈"></a>核心技术栈</h2><h3 id="1-Vue-3-Composition-API"><a href="#1-Vue-3-Composition-API" class="headerlink" title="1. Vue 3 + Composition API"></a>1. Vue 3 + Composition API</h3><p><strong>为什么选择 Vue 3？</strong></p>
+<ul>
+<li>更好的性能（重写了虚拟 DOM）</li>
+<li>更好的 TypeScript 支持</li>
+<li>Composition API 提供更灵活的代码组织方式</li>
+<li>Tree-shaking 友好，打包体积更小</li>
+</ul>
+<p><strong>最佳实践：</strong></p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// 推荐使用 &lt;script setup&gt; 语法糖</span>
+<span class="token operator">&lt;</span>script setup<span class="token operator">&gt;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> ref<span class="token punctuation">,</span> computed<span class="token punctuation">,</span> onMounted <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue'</span>
+
+<span class="token keyword">const</span> count <span class="token operator">=</span> <span class="token function">ref</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> doubled <span class="token operator">=</span> <span class="token function">computed</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> count<span class="token punctuation">.</span>value <span class="token operator">*</span> <span class="token number">2</span><span class="token punctuation">)</span>
+
+<span class="token function">onMounted</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'组件已挂载'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="2-构建工具"><a href="#2-构建工具" class="headerlink" title="2. 构建工具"></a>2. 构建工具</h3><h4 id="Vite（推荐）"><a href="#Vite（推荐）" class="headerlink" title="Vite（推荐）"></a>Vite（推荐）</h4><ul>
+<li><strong>极快的冷启动速度</strong></li>
+<li><strong>即时的模块热更新（HMR）</strong></li>
+<li><strong>开箱即用的 TypeScript 支持</strong></li>
+<li><strong>优化的生产构建</strong></li>
+</ul>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 创建 Vite 项目</span>
+<span class="token function">npm</span> create vite@latest my-vue-app -- <span class="token parameter variable">--template</span> vue
+<span class="token builtin class-name">cd</span> my-vue-app
+<span class="token function">npm</span> <span class="token function">install</span>
+<span class="token function">npm</span> run dev<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="Webpack（传统方案）"><a href="#Webpack（传统方案）" class="headerlink" title="Webpack（传统方案）"></a>Webpack（传统方案）</h4><ul>
+<li>Vue CLI 基于 Webpack</li>
+<li>适合需要复杂配置的大型项目</li>
+</ul>
+<h3 id="3-状态管理"><a href="#3-状态管理" class="headerlink" title="3. 状态管理"></a>3. 状态管理</h3><h4 id="Pinia（官方推荐）"><a href="#Pinia（官方推荐）" class="headerlink" title="Pinia（官方推荐）"></a>Pinia（官方推荐）</h4><ul>
+<li>Vue 3 官方推荐的状态管理库</li>
+<li>更轻量，更简洁的 API</li>
+<li>完整的 TypeScript 支持</li>
+<li>支持开发工具调试</li>
+</ul>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// stores/counter.js</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> defineStore <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'pinia'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">const</span> useCounterStore <span class="token operator">=</span> <span class="token function">defineStore</span><span class="token punctuation">(</span><span class="token string">'counter'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  <span class="token function-variable function">state</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token literal-property property">count</span><span class="token operator">:</span> <span class="token number">0</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">getters</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">doubleCount</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">state</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> state<span class="token punctuation">.</span>count <span class="token operator">*</span> <span class="token number">2</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">actions</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token function">increment</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>count<span class="token operator">++</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 组件中使用</span>
+<span class="token operator">&lt;</span>script setup<span class="token operator">&gt;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> useCounterStore <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@/stores/counter'</span>
+<span class="token keyword">const</span> counter <span class="token operator">=</span> <span class="token function">useCounterStore</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="Vuex（经典方案）"><a href="#Vuex（经典方案）" class="headerlink" title="Vuex（经典方案）"></a>Vuex（经典方案）</h4><ul>
+<li>适合已有项目的维护</li>
+<li>Vue 2 的标准状态管理方案</li>
+</ul>
+<h3 id="4-路由管理"><a href="#4-路由管理" class="headerlink" title="4. 路由管理"></a>4. 路由管理</h3><h4 id="Vue-Router-4"><a href="#Vue-Router-4" class="headerlink" title="Vue Router 4"></a>Vue Router 4</h4><ul>
+<li>Vue 3 官方路由解决方案</li>
+<li>支持嵌套路由、动态路由、路由守卫</li>
+</ul>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// router/index.js</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> createRouter<span class="token punctuation">,</span> createWebHistory <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue-router'</span>
+
+<span class="token keyword">const</span> routes <span class="token operator">=</span> <span class="token punctuation">[</span>
+  <span class="token punctuation">{</span>
+    <span class="token literal-property property">path</span><span class="token operator">:</span> <span class="token string">'/'</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'Home'</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">component</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">'@/views/Home.vue'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    <span class="token literal-property property">path</span><span class="token operator">:</span> <span class="token string">'/about'</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'About'</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">component</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">'@/views/About.vue'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">]</span>
+
+<span class="token keyword">const</span> router <span class="token operator">=</span> <span class="token function">createRouter</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token literal-property property">history</span><span class="token operator">:</span> <span class="token function">createWebHistory</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  routes
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> router<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>最佳实践：</strong></p>
+<ul>
+<li>使用路由懒加载优化首屏加载速度</li>
+<li>合理使用路由守卫进行权限控制</li>
+<li>使用命名路由提高可维护性</li>
+</ul>
+<h3 id="5-UI-组件库"><a href="#5-UI-组件库" class="headerlink" title="5. UI 组件库"></a>5. UI 组件库</h3><h4 id="Element-Plus"><a href="#Element-Plus" class="headerlink" title="Element Plus"></a>Element Plus</h4><ul>
+<li>Element UI 的 Vue 3 版本</li>
+<li>组件丰富，适合后台管理系统</li>
+</ul>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> element-plus<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h4 id="Ant-Design-Vue"><a href="#Ant-Design-Vue" class="headerlink" title="Ant Design Vue"></a>Ant Design Vue</h4><ul>
+<li>Ant Design 的 Vue 实现</li>
+<li>企业级 UI 设计语言</li>
+</ul>
+<h4 id="Naive-UI"><a href="#Naive-UI" class="headerlink" title="Naive UI"></a>Naive UI</h4><ul>
+<li>完整的 TypeScript 支持</li>
+<li>轻量、主题可定制</li>
+</ul>
+<h4 id="Vuetify"><a href="#Vuetify" class="headerlink" title="Vuetify"></a>Vuetify</h4><ul>
+<li>Material Design 风格</li>
+<li>组件丰富</li>
+</ul>
+<p><strong>选择建议：</strong></p>
+<ul>
+<li>后台管理系统：Element Plus / Ant Design Vue</li>
+<li>移动端项目：Vant</li>
+<li>追求轻量和定制：Naive UI</li>
+</ul>
+<h3 id="6-CSS-解决方案"><a href="#6-CSS-解决方案" class="headerlink" title="6. CSS 解决方案"></a>6. CSS 解决方案</h3><h4 id="Tailwind-CSS（推荐）"><a href="#Tailwind-CSS（推荐）" class="headerlink" title="Tailwind CSS（推荐）"></a>Tailwind CSS（推荐）</h4><ul>
+<li>原子化 CSS 框架</li>
+<li>高度可定制</li>
+<li>与 Vue 3 配合完美</li>
+</ul>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> <span class="token parameter variable">-D</span> tailwindcss postcss autoprefixer
+npx tailwindcss init <span class="token parameter variable">-p</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h4 id="SCSS-SASS"><a href="#SCSS-SASS" class="headerlink" title="SCSS/SASS"></a>SCSS/SASS</h4><ul>
+<li>传统 CSS 预处理器</li>
+<li>支持变量、嵌套、混入</li>
+</ul>
+<pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">&lt;style lang="scss" scoped&gt;
+$primary-color: #42b983;
+
+.container {
+  color: $primary-color;
+  
+  .item {
+    padding: 10px;
+  }
+}
+&lt;/style&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="CSS-Modules"><a href="#CSS-Modules" class="headerlink" title="CSS Modules"></a>CSS Modules</h4><ul>
+<li>避免样式冲突</li>
+<li>局部作用域</li>
+</ul>
+<h3 id="7-TypeScript"><a href="#7-TypeScript" class="headerlink" title="7. TypeScript"></a>7. TypeScript</h3><p><strong>强烈推荐在 Vue 3 项目中使用 TypeScript</strong></p>
+<pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">&lt;script setup lang="ts"&gt;
+import { ref, computed } from 'vue'
+
+interface User {
+  id: number
+  name: string
+}
+
+const user = ref&lt;User&gt;({
+  id: 1,
+  name: 'John'
+})
+
+const greeting = computed&lt;string&gt;(() =&gt; `Hello, ${user.value.name}`)
+&lt;/script&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="8-HTTP-请求"><a href="#8-HTTP-请求" class="headerlink" title="8. HTTP 请求"></a>8. HTTP 请求</h3><h4 id="Axios"><a href="#Axios" class="headerlink" title="Axios"></a>Axios</h4><ul>
+<li>最流行的 HTTP 客户端</li>
+<li>支持拦截器、请求/响应转换</li>
+</ul>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// utils/request.js</span>
+<span class="token keyword">import</span> axios <span class="token keyword">from</span> <span class="token string">'axios'</span>
+
+<span class="token keyword">const</span> request <span class="token operator">=</span> axios<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token literal-property property">baseURL</span><span class="token operator">:</span> <span class="token keyword">import</span><span class="token punctuation">.</span>meta<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">VITE_API_BASE_URL</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">timeout</span><span class="token operator">:</span> <span class="token number">5000</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 请求拦截器</span>
+request<span class="token punctuation">.</span>interceptors<span class="token punctuation">.</span>request<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>
+  <span class="token parameter">config</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> token <span class="token operator">=</span> localStorage<span class="token punctuation">.</span><span class="token function">getItem</span><span class="token punctuation">(</span><span class="token string">'token'</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>token<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      config<span class="token punctuation">.</span>headers<span class="token punctuation">.</span>Authorization <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Bearer </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>token<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> config
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token parameter">error</span> <span class="token operator">=&gt;</span> Promise<span class="token punctuation">.</span><span class="token function">reject</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span>
+<span class="token punctuation">)</span>
+
+<span class="token comment">// 响应拦截器</span>
+request<span class="token punctuation">.</span>interceptors<span class="token punctuation">.</span>response<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>
+  <span class="token parameter">response</span> <span class="token operator">=&gt;</span> response<span class="token punctuation">.</span>data<span class="token punctuation">,</span>
+  <span class="token parameter">error</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">'请求失败:'</span><span class="token punctuation">,</span> error<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> Promise<span class="token punctuation">.</span><span class="token function">reject</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">)</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> request<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="VueUse（工具库）"><a href="#VueUse（工具库）" class="headerlink" title="VueUse（工具库）"></a>VueUse（工具库）</h4><ul>
+<li>提供大量组合式 API 工具函数</li>
+<li>包括 <code>useFetch</code>、<code>useLocalStorage</code> 等</li>
+</ul>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">import</span> <span class="token punctuation">{</span> useFetch <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@vueuse/core'</span>
+
+<span class="token keyword">const</span> <span class="token punctuation">{</span> data<span class="token punctuation">,</span> error<span class="token punctuation">,</span> isFetching <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">useFetch</span><span class="token punctuation">(</span><span class="token string">'/api/users'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="9-代码规范工具"><a href="#9-代码规范工具" class="headerlink" title="9. 代码规范工具"></a>9. 代码规范工具</h3><h4 id="ESLint-Prettier"><a href="#ESLint-Prettier" class="headerlink" title="ESLint + Prettier"></a>ESLint + Prettier</h4><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> <span class="token parameter variable">-D</span> eslint prettier eslint-config-prettier eslint-plugin-vue<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><strong>.eslintrc.js</strong></p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token keyword">extends</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token string">'plugin:vue/vue3-recommended'</span><span class="token punctuation">,</span>
+    <span class="token string">'prettier'</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">rules</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string-property property">'vue/multi-word-component-names'</span><span class="token operator">:</span> <span class="token string">'off'</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="Husky-lint-staged"><a href="#Husky-lint-staged" class="headerlink" title="Husky + lint-staged"></a>Husky + lint-staged</h4><ul>
+<li>Git 提交前自动检查代码</li>
+</ul>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> <span class="token parameter variable">-D</span> husky lint-staged
+npx husky <span class="token function">install</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h3 id="10-测试工具"><a href="#10-测试工具" class="headerlink" title="10. 测试工具"></a>10. 测试工具</h3><h4 id="Vitest（推荐）"><a href="#Vitest（推荐）" class="headerlink" title="Vitest（推荐）"></a>Vitest（推荐）</h4><ul>
+<li>Vite 原生支持</li>
+<li>与 Jest API 兼容</li>
+<li>速度极快</li>
+</ul>
+<h4 id="Vue-Test-Utils"><a href="#Vue-Test-Utils" class="headerlink" title="Vue Test Utils"></a>Vue Test Utils</h4><ul>
+<li>Vue 官方测试工具库</li>
+</ul>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">import</span> <span class="token punctuation">{</span> mount <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@vue/test-utils'</span>
+<span class="token keyword">import</span> HelloWorld <span class="token keyword">from</span> <span class="token string">'./HelloWorld.vue'</span>
+
+<span class="token function">test</span><span class="token punctuation">(</span><span class="token string">'displays message'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> wrapper <span class="token operator">=</span> <span class="token function">mount</span><span class="token punctuation">(</span>HelloWorld<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">props</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token literal-property property">msg</span><span class="token operator">:</span> <span class="token string">'Hello Vitest'</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token function">expect</span><span class="token punctuation">(</span>wrapper<span class="token punctuation">.</span><span class="token function">text</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toContain</span><span class="token punctuation">(</span><span class="token string">'Hello Vitest'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="完整技术栈推荐"><a href="#完整技术栈推荐" class="headerlink" title="完整技术栈推荐"></a>完整技术栈推荐</h2><h3 id="方案一：现代化技术栈（推荐）"><a href="#方案一：现代化技术栈（推荐）" class="headerlink" title="方案一：现代化技术栈（推荐）"></a>方案一：现代化技术栈（推荐）</h3><pre class="line-numbers language-text" data-language="text"><code class="language-text">Vue 3 + TypeScript + Vite + Pinia + Vue Router 4 + 
+Element Plus + Tailwind CSS + Axios + VueUse + 
+ESLint + Prettier + Vitest<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="方案二：企业级技术栈"><a href="#方案二：企业级技术栈" class="headerlink" title="方案二：企业级技术栈"></a>方案二：企业级技术栈</h3><pre class="line-numbers language-text" data-language="text"><code class="language-text">Vue 3 + TypeScript + Vite + Pinia + Vue Router 4 + 
+Ant Design Vue + SCSS + Axios + 
+ESLint + Prettier + Husky + Jest<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="方案三：轻量级技术栈"><a href="#方案三：轻量级技术栈" class="headerlink" title="方案三：轻量级技术栈"></a>方案三：轻量级技术栈</h3><pre class="line-numbers language-text" data-language="text"><code class="language-text">Vue 3 + Vite + Pinia + Vue Router 4 + 
+Naive UI + Tailwind CSS + Axios + VueUse<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h2 id="项目结构最佳实践"><a href="#项目结构最佳实践" class="headerlink" title="项目结构最佳实践"></a>项目结构最佳实践</h2><pre class="line-numbers language-text" data-language="text"><code class="language-text">src/
+├── assets/          # 静态资源
+│   ├── images/
+│   └── styles/
+├── components/      # 通用组件
+│   ├── common/      # 基础组件
+│   └── business/    # 业务组件
+├── views/           # 页面组件
+├── router/          # 路由配置
+├── stores/          # 状态管理
+├── api/             # API 接口
+├── utils/           # 工具函数
+├── composables/     # 组合式函数
+├── directives/      # 自定义指令
+├── plugins/         # 插件
+├── types/           # TypeScript 类型定义
+├── App.vue
+└── main.ts<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="开发最佳实践"><a href="#开发最佳实践" class="headerlink" title="开发最佳实践"></a>开发最佳实践</h2><h3 id="1-组件设计原则"><a href="#1-组件设计原则" class="headerlink" title="1. 组件设计原则"></a>1. 组件设计原则</h3><ul>
+<li><strong>单一职责</strong>：每个组件只做一件事</li>
+<li><strong>Props Down, Events Up</strong>：父组件通过 props 传递数据，子组件通过事件通知父组件</li>
+<li><strong>合理拆分组件</strong>：避免单个组件过大</li>
+<li><strong>使用组合式函数</strong>：复用逻辑</li>
+</ul>
+<h3 id="2-性能优化"><a href="#2-性能优化" class="headerlink" title="2. 性能优化"></a>2. 性能优化</h3><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// 1. 使用 v-memo 缓存渲染结果（Vue 3.2+）</span>
+<span class="token operator">&lt;</span>div v<span class="token operator">-</span>memo<span class="token operator">=</span><span class="token string">"[value1, value2]"</span><span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 只有 value1 或 value2 变化时才重新渲染 <span class="token operator">--</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+
+<span class="token comment">// 2. 使用 defineAsyncComponent 异步组件</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> defineAsyncComponent <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue'</span>
+
+<span class="token keyword">const</span> AsyncComp <span class="token operator">=</span> <span class="token function">defineAsyncComponent</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span>
+  <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">'./components/AsyncComponent.vue'</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span>
+
+<span class="token comment">// 3. 使用 KeepAlive 缓存组件</span>
+<span class="token operator">&lt;</span>KeepAlive<span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span>component <span class="token operator">:</span>is<span class="token operator">=</span><span class="token string">"currentComponent"</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>KeepAlive<span class="token operator">&gt;</span>
+
+<span class="token comment">// 4. 使用 shallowRef 和 shallowReactive 减少响应式开销</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> shallowRef <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue'</span>
+<span class="token keyword">const</span> state <span class="token operator">=</span> <span class="token function">shallowRef</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token literal-property property">count</span><span class="token operator">:</span> <span class="token number">0</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="3-代码组织"><a href="#3-代码组织" class="headerlink" title="3. 代码组织"></a>3. 代码组织</h3><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// 使用组合式函数封装逻辑</span>
+<span class="token comment">// composables/useCounter.js</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> ref<span class="token punctuation">,</span> computed <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">useCounter</span><span class="token punctuation">(</span><span class="token parameter">initialValue <span class="token operator">=</span> <span class="token number">0</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> count <span class="token operator">=</span> <span class="token function">ref</span><span class="token punctuation">(</span>initialValue<span class="token punctuation">)</span>
+  <span class="token keyword">const</span> doubled <span class="token operator">=</span> <span class="token function">computed</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> count<span class="token punctuation">.</span>value <span class="token operator">*</span> <span class="token number">2</span><span class="token punctuation">)</span>
+  
+  <span class="token keyword">const</span> <span class="token function-variable function">increment</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> count<span class="token punctuation">.</span>value<span class="token operator">++</span>
+  <span class="token keyword">const</span> <span class="token function-variable function">decrement</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> count<span class="token punctuation">.</span>value<span class="token operator">--</span>
+  
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    count<span class="token punctuation">,</span>
+    doubled<span class="token punctuation">,</span>
+    increment<span class="token punctuation">,</span>
+    decrement
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 组件中使用</span>
+<span class="token operator">&lt;</span>script setup<span class="token operator">&gt;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> useCounter <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@/composables/useCounter'</span>
+<span class="token keyword">const</span> <span class="token punctuation">{</span> count<span class="token punctuation">,</span> doubled<span class="token punctuation">,</span> increment<span class="token punctuation">,</span> decrement <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">useCounter</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="4-环境变量管理"><a href="#4-环境变量管理" class="headerlink" title="4. 环境变量管理"></a>4. 环境变量管理</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># .env.development</span>
+<span class="token assign-left variable">VITE_API_BASE_URL</span><span class="token operator">=</span>http://localhost:3000
+<span class="token assign-left variable">VITE_APP_TITLE</span><span class="token operator">=</span>开发环境
+
+<span class="token comment"># .env.production</span>
+<span class="token assign-left variable">VITE_API_BASE_URL</span><span class="token operator">=</span>https://api.example.com
+<span class="token assign-left variable">VITE_APP_TITLE</span><span class="token operator">=</span>生产环境<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// 使用环境变量</span>
+<span class="token keyword">const</span> apiUrl <span class="token operator">=</span> <span class="token keyword">import</span><span class="token punctuation">.</span>meta<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">VITE_API_BASE_URL</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h3 id="5-错误处理"><a href="#5-错误处理" class="headerlink" title="5. 错误处理"></a>5. 错误处理</h3><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// main.ts</span>
+app<span class="token punctuation">.</span>config<span class="token punctuation">.</span><span class="token function-variable function">errorHandler</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">err<span class="token punctuation">,</span> instance<span class="token punctuation">,</span> info</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">'全局错误:'</span><span class="token punctuation">,</span> err<span class="token punctuation">)</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'错误组件:'</span><span class="token punctuation">,</span> instance<span class="token punctuation">)</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'错误信息:'</span><span class="token punctuation">,</span> info<span class="token punctuation">)</span>
+  <span class="token comment">// 可以上报到错误监控平台</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="学习资源"><a href="#学习资源" class="headerlink" title="学习资源"></a>学习资源</h2><ul>
+<li><a href="https://cn.vuejs.org/">Vue 3 官方文档</a></li>
+<li><a href="https://cn.vitejs.dev/">Vite 官方文档</a></li>
+<li><a href="https://pinia.vuejs.org/zh/">Pinia 官方文档</a></li>
+<li><a href="https://router.vuejs.org/zh/">Vue Router 官方文档</a></li>
+<li><a href="https://vueuse.org/">VueUse 文档</a></li>
+</ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>选择技术栈时需要考虑：</p>
+<ol>
+<li><strong>项目规模</strong>：小型项目选择轻量方案，大型项目选择完整方案</li>
+<li><strong>团队熟悉度</strong>：优先选择团队熟悉的技术</li>
+<li><strong>长期维护性</strong>：选择社区活跃、文档完善的技术</li>
+<li><strong>性能要求</strong>：根据性能需求选择合适的工具</li>
+</ol>
+<p>最重要的是<strong>保持技术栈的一致性和简洁性</strong>，避免过度工程化。</p>
 
         </div>
         <div class="post-comment">

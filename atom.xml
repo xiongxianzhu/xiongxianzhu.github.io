@@ -6,7 +6,7 @@
   <link href="https://zhuxiongxian.cc/atom.xml" rel="self"/>
   
   <link href="https://zhuxiongxian.cc/"/>
-  <updated>2025-11-15T22:24:10.000Z</updated>
+  <updated>2025-11-16T11:50:52.000Z</updated>
   <id>https://zhuxiongxian.cc/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Vue主流技术栈与最佳实践</title>
+    <link href="https://zhuxiongxian.cc/2025/11/16/undefined/"/>
+    <id>https://zhuxiongxian.cc/2025/11/16/undefined/</id>
+    <published>2025-11-16T11:50:52.000Z</published>
+    <updated>2025-11-16T11:50:52.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;Vue.js 作为当前最流行的前端框架之一，拥有完整的生态系统和丰富的技术栈。本文总结了 Vue</summary>
+        
+      
+    
+    
+    
+    <category term="前端" scheme="https://zhuxiongxian.cc/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    <category term="vue" scheme="https://zhuxiongxian.cc/categories/%E5%89%8D%E7%AB%AF/vue/"/>
+    
+    
+    <category term="vue" scheme="https://zhuxiongxian.cc/tags/vue/"/>
+    
+    <category term="前端" scheme="https://zhuxiongxian.cc/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+    <category term="技术栈" scheme="https://zhuxiongxian.cc/tags/%E6%8A%80%E6%9C%AF%E6%A0%88/"/>
+    
+  </entry>
   
   <entry>
     <title>批量删除github fork仓库</title>
@@ -571,33 +602,6 @@
     <category term="python" scheme="https://zhuxiongxian.cc/tags/python/"/>
     
     <category term="mac" scheme="https://zhuxiongxian.cc/tags/mac/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>postgresql命令</title>
-    <link href="https://zhuxiongxian.cc/2019/08/26/postgresql-commands/"/>
-    <id>https://zhuxiongxian.cc/2019/08/26/postgresql-commands/</id>
-    <published>2019-08-26T02:43:21.000Z</published>
-    <updated>2019-08-26T02:43:21.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h4 id=&quot;1-postgresql常用命令&quot;&gt;&lt;a href=&quot;#1-postgresql常用命令&quot; class=&quot;headerlink&quot; title=&quot;1. postgresql常用命令&quot;&gt;&lt;/a&gt;1.</summary>
-        
-      
-    
-    
-    
-    <category term="postgresql" scheme="https://zhuxiongxian.cc/categories/postgresql/"/>
-    
-    
-    <category term="数据库" scheme="https://zhuxiongxian.cc/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-    <category term="postgresql" scheme="https://zhuxiongxian.cc/tags/postgresql/"/>
     
   </entry>
   
