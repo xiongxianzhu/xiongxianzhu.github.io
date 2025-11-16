@@ -1252,13 +1252,6 @@
   </url>
   
   <url>
-    <loc>https://zhuxiongxian.cc/categories/frontend/</loc>
-    <lastmod>2025-11-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://zhuxiongxian.cc/categories/python/</loc>
     <lastmod>2025-11-16</lastmod>
     <changefreq>weekly</changefreq>
@@ -1365,13 +1358,6 @@
   
   <url>
     <loc>https://zhuxiongxian.cc/categories/vue/</loc>
-    <lastmod>2025-11-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://zhuxiongxian.cc/categories/%E5%89%8D%E7%AB%AF/vue/</loc>
     <lastmod>2025-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
