@@ -31,6 +31,9 @@ $(function () {
     $(".lazyload").lazyload();
     new LazyLoad($('img:not(".lazyload")'));
 
+    // 轮播图背景异步加载
+    xxcodingKit.initCarouselLazyLoad();
+
     $('main').css('min-height', window.innerHeight - $('#nav-header').height() - $('footer').innerHeight());
     $(window).resize(function () {
         $('.carousel.carousel-slider').height($(window).height());
@@ -70,7 +73,64 @@ xxcodingKit = {
             $('nav .brand-logo').addClass('nav-brand-logo-color');
             $backTop.slideDown(300);
         }
-    }, 17)
+    }, 17),
+    
+    // 轮播图背景异步加载
+    initCarouselLazyLoad: function() {
+        const $carouselItems = $('.carousel-bg-lazy');
+        if ($carouselItems.length === 0) return;
+        
+        let loadedCount = 0;
+        const totalImages = $carouselItems.length;
+        
+        // 加载图片的函数
+        const loadImage = function($item) {
+            const bgUrl = $item.attr('data-bg');
+            if (!bgUrl) return;
+            
+            // 创建新图片对象预加载
+            const img = new Image();
+            img.onload = function() {
+                // 图片加载成功后设置背景
+                $item.css({
+                    'background-image': 'url(' + bgUrl + ')',
+                    'background-color': 'transparent'
+                });
+                loadedCount++;
+                
+                // 添加淡入效果
+                $item.css('opacity', '0');
+                setTimeout(function() {
+                    $item.css({
+                        'transition': 'opacity 0.3s ease-in-out',
+                        'opacity': '1'
+                    });
+                }, 50);
+            };
+            img.onerror = function() {
+                console.warn('Failed to load carousel image:', bgUrl);
+                // 加载失败时保持占位颜色
+            };
+            img.src = bgUrl;
+        };
+        
+        // 优先加载第一张图片
+        const $firstItem = $carouselItems.first();
+        loadImage($firstItem);
+        
+        // 延迟加载其他图片，避免阻塞页面渲染
+        setTimeout(function() {
+            $carouselItems.each(function(index) {
+                if (index > 0) {
+                    const $item = $(this);
+                    // 分批加载，每张图片间隔200ms
+                    setTimeout(function() {
+                        loadImage($item);
+                    }, index * 200);
+                }
+            });
+        }, 800); // 800ms后开始加载其他图片
+    }
 };
 
 // Returns a function, that, as long as it continues to be invoked, will not
