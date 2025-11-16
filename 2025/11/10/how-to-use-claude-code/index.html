@@ -989,6 +989,74 @@ Node.js 18+">
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><strong>注意</strong>：配置文件可随时删除，不影响 Claude 正常使用。</p>
+<h4 id="1-4-3-配置代理（可选）"><a href="#1-4-3-配置代理（可选）" class="headerlink" title="1.4.3 配置代理（可选）"></a>1.4.3 配置代理（可选）</h4><p>如果你的网络环境需要通过代理访问 Claude API，可以通过设置环境变量来配置代理。</p>
+<p><strong>支持的代理环境变量</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>环境变量</th>
+<th>说明</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>HTTP_PROXY</code></td>
+<td>HTTP 请求代理</td>
+<td><code>http://127.0.0.1:7890</code></td>
+</tr>
+<tr>
+<td><code>HTTPS_PROXY</code></td>
+<td>HTTPS 请求代理</td>
+<td><code>http://127.0.0.1:7890</code></td>
+</tr>
+<tr>
+<td><code>ALL_PROXY</code></td>
+<td>所有请求代理（优先级低于上述两个）</td>
+<td><code>http://127.0.0.1:7890</code></td>
+</tr>
+<tr>
+<td><code>NO_PROXY</code></td>
+<td>不使用代理的地址列表</td>
+<td><code>localhost,127.0.0.1,.local</code></td>
+</tr>
+</tbody></table>
+<p><strong>Linux/macOS 临时设置</strong>：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">export</span> <span class="token assign-left variable">HTTP_PROXY</span><span class="token operator">=</span><span class="token string">"http://127.0.0.1:7890"</span>
+<span class="token builtin class-name">export</span> <span class="token assign-left variable">HTTPS_PROXY</span><span class="token operator">=</span><span class="token string">"http://127.0.0.1:7890"</span>
+<span class="token builtin class-name">export</span> <span class="token assign-left variable">NO_PROXY</span><span class="token operator">=</span><span class="token string">"localhost,127.0.0.1"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>Linux/macOS 永久设置</strong>：</p>
+<p>将以下内容添加到 <code>~/.bashrc</code>、<code>~/.zshrc</code> 或 <code>~/.profile</code>：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">export</span> <span class="token assign-left variable">HTTP_PROXY</span><span class="token operator">=</span><span class="token string">"http://127.0.0.1:7890"</span>
+<span class="token builtin class-name">export</span> <span class="token assign-left variable">HTTPS_PROXY</span><span class="token operator">=</span><span class="token string">"http://127.0.0.1:7890"</span>
+<span class="token builtin class-name">export</span> <span class="token assign-left variable">NO_PROXY</span><span class="token operator">=</span><span class="token string">"localhost,127.0.0.1"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>Windows PowerShell 临时设置</strong>：</p>
+<pre class="line-numbers language-powershell" data-language="powershell"><code class="language-powershell"><span class="token variable">$env</span>:HTTP_PROXY = <span class="token string">"http://127.0.0.1:7890"</span>
+<span class="token variable">$env</span>:HTTPS_PROXY = <span class="token string">"http://127.0.0.1:7890"</span>
+<span class="token variable">$env</span>:NO_PROXY = <span class="token string">"localhost,127.0.0.1"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>Windows PowerShell 永久设置</strong>：</p>
+<pre class="line-numbers language-powershell" data-language="powershell"><code class="language-powershell"><span class="token namespace">[System.Environment]</span>::SetEnvironmentVariable<span class="token punctuation">(</span><span class="token string">"HTTP_PROXY"</span><span class="token punctuation">,</span> <span class="token string">"http://127.0.0.1:7890"</span><span class="token punctuation">,</span> <span class="token namespace">[System.EnvironmentVariableTarget]</span>::User<span class="token punctuation">)</span>
+<span class="token namespace">[System.Environment]</span>::SetEnvironmentVariable<span class="token punctuation">(</span><span class="token string">"HTTPS_PROXY"</span><span class="token punctuation">,</span> <span class="token string">"http://127.0.0.1:7890"</span><span class="token punctuation">,</span> <span class="token namespace">[System.EnvironmentVariableTarget]</span>::User<span class="token punctuation">)</span>
+<span class="token namespace">[System.Environment]</span>::SetEnvironmentVariable<span class="token punctuation">(</span><span class="token string">"NO_PROXY"</span><span class="token punctuation">,</span> <span class="token string">"localhost,127.0.0.1"</span><span class="token punctuation">,</span> <span class="token namespace">[System.EnvironmentVariableTarget]</span>::User<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>通过配置文件设置（推荐）</strong>：</p>
+<p>在 <code>~/.claude/settings.json</code> 中添加：</p>
+<pre class="line-numbers language-json" data-language="json"><code class="language-json"><span class="token punctuation">{</span>
+    <span class="token property">"env"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">"HTTP_PROXY"</span><span class="token operator">:</span> <span class="token string">"http://127.0.0.1:7890"</span><span class="token punctuation">,</span>
+        <span class="token property">"HTTPS_PROXY"</span><span class="token operator">:</span> <span class="token string">"http://127.0.0.1:7890"</span><span class="token punctuation">,</span>
+        <span class="token property">"NO_PROXY"</span><span class="token operator">:</span> <span class="token string">"localhost,127.0.0.1"</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>注意事项</strong>：</p>
+<ul>
+<li>代理地址和端口需要根据你的实际代理软件配置进行修改</li>
+<li>设置后需要重启终端或重新运行 Claude Code</li>
+<li>验证代理是否生效：<code>echo $env:HTTP_PROXY</code>（Windows）或 <code>echo $HTTP_PROXY</code>（Linux/macOS）</li>
+</ul>
 <h2 id="2-基本用法"><a href="#2-基本用法" class="headerlink" title="2. 基本用法"></a>2. 基本用法</h2><h3 id="2-1-启动Claude-Code"><a href="#2-1-启动Claude-Code" class="headerlink" title="2.1 启动Claude Code"></a>2.1 启动Claude Code</h3><p>在您的项目目录中，运行以下命令启动Claude Code：</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">claude<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
