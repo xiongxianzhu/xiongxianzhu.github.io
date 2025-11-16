@@ -903,8 +903,18 @@ Node.js 18+">
 <li>git</li>
 </ul>
 <h3 id="1-2-安装方法"><a href="#1-2-安装方法" class="headerlink" title="1.2 安装方法"></a>1.2 安装方法</h3><p>Claude Code提供多种安装方式，您可以根据自己的系统选择最适合的方法：</p>
-<p>NPM安装(官方推荐)</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> <span class="token parameter variable">-g</span> @anthropic-ai/claude-code<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h4 id="方法一：NPM安装（官方推荐）"><a href="#方法一：NPM安装（官方推荐）" class="headerlink" title="方法一：NPM安装（官方推荐）"></a>方法一：NPM安装（官方推荐）</h4><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> <span class="token parameter variable">-g</span> @anthropic-ai/claude-code<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h4 id="方法二：使用国内镜像加速（Windows推荐）"><a href="#方法二：使用国内镜像加速（Windows推荐）" class="headerlink" title="方法二：使用国内镜像加速（Windows推荐）"></a>方法二：使用国内镜像加速（Windows推荐）</h4><p>如果在国内安装速度较慢，可以使用淘宝镜像：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> <span class="token parameter variable">-g</span> @anthropic-ai/claude-code <span class="token parameter variable">--registry</span><span class="token operator">=</span>https://registry.npmmirror.com<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><strong>Windows系统注意事项</strong>：</p>
+<ul>
+<li>建议使用 PowerShell 而不是 CMD</li>
+<li>如遇到权限问题，以管理员身份运行 PowerShell</li>
+<li>某些杀毒软件可能误报，需添加到白名单</li>
+</ul>
+<h4 id="更新-Claude-Code"><a href="#更新-Claude-Code" class="headerlink" title="更新 Claude Code"></a>更新 Claude Code</h4><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">claude update<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h3 id="1-3-验证安装"><a href="#1-3-验证安装" class="headerlink" title="1.3 验证安装"></a>1.3 验证安装</h3><p>安装完成后，您可以通过以下命令验证是否安装成功：</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">claude <span class="token parameter variable">--version</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
@@ -912,7 +922,7 @@ Node.js 18+">
 <p>如果成功安装，系统将显示Claude Code的版本信息。</p>
 <h3 id="1-4-配置认证"><a href="#1-4-配置认证" class="headerlink" title="1.4 配置认证"></a>1.4 配置认证</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">claude<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p>然后输入 /login 并用你的 Claude.ai 账号（或 Anthropic 控制台）授权</p>
+<p>如果用你的 Claude.ai 账号（或 Anthropic 控制台）授权，则输入 /login。</p>
 <h4 id="1-4-1-自定义API端点配置"><a href="#1-4-1-自定义API端点配置" class="headerlink" title="1.4.1 自定义API端点配置"></a>1.4.1 自定义API端点配置</h4><p>在某些情况下，您可能需要配置自定义API端点或使用特定的认证令牌。Claude Code支持通过以下环境变量进行自定义配置：</p>
 <p><strong>ANTHROPIC_BASE_URL</strong>：用于指定自定义的API基础URL</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 设置自定义API端点</span>
@@ -940,22 +950,45 @@ Node.js 18+">
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">export</span> <span class="token assign-left variable">ANTHROPIC_BASE_URL</span><span class="token operator">=</span><span class="token string">"https://your-custom-api-endpoint.com/v1"</span>
 <span class="token builtin class-name">export</span> <span class="token assign-left variable">ANTHROPIC_AUTH_TOKEN</span><span class="token operator">=</span><span class="token string">"your-custom-auth-token"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<p><strong>Windows</strong>：通过”系统属性” &gt; “高级” &gt; “环境变量”界面添加</p>
-<p>或者，您可以创建Claude Code的配置文件：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 创建配置目录</span>
-<span class="token function">mkdir</span> <span class="token parameter variable">-p</span> ~/.claude
+<p>验证环境变量：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">echo</span> <span class="token variable">$ANTHROPIC_BASE_URL</span>
+<span class="token builtin class-name">echo</span> <span class="token variable">$ANTHROPIC_AUTH_TOKEN</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<span class="token comment"># 创建配置文件</span>
-<span class="token function">cat</span> <span class="token operator">&gt;</span> ~/.claude/settings.json <span class="token operator">&lt;&lt;</span> <span class="token string">EOF
-{
-    "env": {
-        "ANTHROPIC_BASE_URL": "https://your-custom-api-endpoint.com/v1",
-        "ANTHROPIC_AUTH_TOKEN": "your-custom-auth-token",
-        "ANTHROPIC_MODEL": "claude-3-5-sonnet-20240620"
-    }
-}
-EOF</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>Windows PowerShell 永久设置（推荐）</strong></p>
+<p>在 PowerShell 中运行以下命令设置用户级环境变量（永久生效）：</p>
+<pre class="line-numbers language-powershell" data-language="powershell"><code class="language-powershell"><span class="token comment"># 设置用户级环境变量</span>
+<span class="token namespace">[System.Environment]</span>::SetEnvironmentVariable<span class="token punctuation">(</span><span class="token string">"ANTHROPIC_BASE_URL"</span><span class="token punctuation">,</span> <span class="token string">"https://your-custom-api-endpoint.com/v1"</span><span class="token punctuation">,</span> <span class="token namespace">[System.EnvironmentVariableTarget]</span>::User<span class="token punctuation">)</span>
+<span class="token namespace">[System.Environment]</span>::SetEnvironmentVariable<span class="token punctuation">(</span><span class="token string">"ANTHROPIC_AUTH_TOKEN"</span><span class="token punctuation">,</span> <span class="token string">"your-custom-auth-token"</span><span class="token punctuation">,</span> <span class="token namespace">[System.EnvironmentVariableTarget]</span>::User<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
+<p>查看已设置的环境变量：</p>
+<pre class="line-numbers language-powershell" data-language="powershell"><code class="language-powershell"><span class="token comment"># 查看用户级环境变量</span>
+<span class="token namespace">[System.Environment]</span>::GetEnvironmentVariable<span class="token punctuation">(</span><span class="token string">"ANTHROPIC_BASE_URL"</span><span class="token punctuation">,</span> <span class="token namespace">[System.EnvironmentVariableTarget]</span>::User<span class="token punctuation">)</span>
+<span class="token namespace">[System.Environment]</span>::GetEnvironmentVariable<span class="token punctuation">(</span><span class="token string">"ANTHROPIC_AUTH_TOKEN"</span><span class="token punctuation">,</span> <span class="token namespace">[System.EnvironmentVariableTarget]</span>::User<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>验证环境变量是否生效（需要重新打开 PowerShell）：</p>
+<pre class="line-numbers language-powershell" data-language="powershell"><code class="language-powershell"><span class="token function">echo</span> <span class="token variable">$env</span>:ANTHROPIC_BASE_URL
+<span class="token function">echo</span> <span class="token variable">$env</span>:ANTHROPIC_AUTH_TOKEN<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p><strong>通过配置文件设置（跨平台推荐）</strong></p>
+<p>创建或编辑 <code>~/.claude/settings.json</code> 文件：</p>
+<ul>
+<li>Windows 路径：<code>C:/Users/你的用户名/.claude/settings.json</code></li>
+<li>Linux/macOS 路径：<code>~/.claude/settings.json</code></li>
+</ul>
+<pre class="line-numbers language-json" data-language="json"><code class="language-json"><span class="token punctuation">{</span>
+    <span class="token property">"env"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">"ANTHROPIC_BASE_URL"</span><span class="token operator">:</span> <span class="token string">"https://your-custom-api-endpoint.com/v1"</span><span class="token punctuation">,</span>
+        <span class="token property">"ANTHROPIC_AUTH_TOKEN"</span><span class="token operator">:</span> <span class="token string">"your-custom-auth-token"</span><span class="token punctuation">,</span>
+        <span class="token property">"ANTHROPIC_MODEL"</span><span class="token operator">:</span> <span class="token string">"claude-3-5-sonnet-20240620"</span><span class="token punctuation">,</span>
+        <span class="token property">"CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC"</span><span class="token operator">:</span> <span class="token number">1</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">"permissions"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">"allow"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token property">"deny"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>注意</strong>：配置文件可随时删除，不影响 Claude 正常使用。</p>
 <h2 id="2-基本用法"><a href="#2-基本用法" class="headerlink" title="2. 基本用法"></a>2. 基本用法</h2><h3 id="2-1-启动Claude-Code"><a href="#2-1-启动Claude-Code" class="headerlink" title="2.1 启动Claude Code"></a>2.1 启动Claude Code</h3><p>在您的项目目录中，运行以下命令启动Claude Code：</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">claude<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
@@ -1047,7 +1080,21 @@ EOF</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span>
 <li><strong>保持CLAUDE.md简洁</strong>：专注于最重要的规则</li>
 <li><strong>配置适当超时</strong>：为您的工作流设置合理的超时时间</li>
 </ol>
-<h2 id="4-故障排除"><a href="#4-故障排除" class="headerlink" title="4. 故障排除"></a>4. 故障排除</h2><h3 id="4-1-常见问题"><a href="#4-1-常见问题" class="headerlink" title="4.1 常见问题"></a>4.1 常见问题</h3><h4 id="安装问题"><a href="#安装问题" class="headerlink" title="安装问题"></a>安装问题</h4><p>如果在Linux上遇到权限问题，请查阅<a href="https://code.claude.com/docs/zh-CN/troubleshooting#linux-permission-issues">故障排除指南</a>。</p>
+<h2 id="4-故障排除"><a href="#4-故障排除" class="headerlink" title="4. 故障排除"></a>4. 故障排除</h2><h3 id="4-1-常见问题"><a href="#4-1-常见问题" class="headerlink" title="4.1 常见问题"></a>4.1 常见问题</h3><h4 id="安装问题"><a href="#安装问题" class="headerlink" title="安装问题"></a>安装问题</h4><p><strong>Linux 权限问题</strong>：<br>如果在Linux上遇到权限问题，请查阅<a href="https://code.claude.com/docs/zh-CN/troubleshooting#linux-permission-issues">故障排除指南</a>。</p>
+<p><strong>Windows 权限问题</strong>：</p>
+<ul>
+<li>安装时提示 “permission denied” 错误：以管理员身份运行 PowerShell</li>
+<li>或配置 npm 使用用户目录：<code>npm config set prefix %APPDATA%\npm</code></li>
+</ul>
+<p><strong>PowerShell 执行策略错误</strong>：<br>如果遇到执行策略限制，运行：</p>
+<pre class="line-numbers language-powershell" data-language="powershell"><code class="language-powershell"><span class="token function">Set-ExecutionPolicy</span> <span class="token operator">-</span>ExecutionPolicy RemoteSigned <span class="token operator">-</span>Scope CurrentUser<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><strong>环境变量设置后不生效</strong>：</p>
+<ul>
+<li>重新启动 PowerShell 或 CMD</li>
+<li>或注销并重新登录 Windows</li>
+<li>验证设置：<code>echo $env:ANTHROPIC_BASE_URL</code></li>
+</ul>
 <h4 id="认证问题"><a href="#认证问题" class="headerlink" title="认证问题"></a>认证问题</h4><p>如果遇到认证问题，请确保：</p>
 <ul>
 <li>API密钥有效且未过期</li>
@@ -1098,7 +1145,12 @@ claude config show
 <li>提交问题：<a href="https://github.com/anthropics/claude-code/issues">GitHub Issues</a></li>
 <li>社区支持：<a href="https://community.anthropic.com/">Claude社区论坛</a></li>
 </ul>
-<h2 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h2><p><a href="https://developer.qiniu.com/aitokenapi/13085/claude-code-configuration-instructions">七牛云-Anthropic API 兼容和Claude Code 配置</a><br><a href="https://code.claude.com/docs/zh-CN/settings#%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F">官方Claude Code 环境变量配置</a><br><a href="https://docs.bigmodel.cn/cn/coding-plan/tool/claude">智谱AI-Claude Code配置</a><br><a href="https://docs.claude.com/zh-CN/home">Claude Docs</a></p>
+<h2 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h2><ul>
+<li><a href="https://developer.qiniu.com/aitokenapi/13085/claude-code-configuration-instructions">七牛云-Anthropic API 兼容和Claude Code 配置</a></li>
+<li><a href="https://code.claude.com/docs/zh-CN/settings#%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F">官方Claude Code 环境变量配置</a></li>
+<li><a href="https://docs.bigmodel.cn/cn/coding-plan/tool/claude">智谱AI-Claude Code配置</a></li>
+<li><a href="https://docs.claude.com/zh-CN/home">Claude Docs</a></li>
+</ul>
 
         </div>
         <div class="post-comment">
