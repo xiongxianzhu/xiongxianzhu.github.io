@@ -31,9 +31,6 @@ $(function () {
     $(".lazyload").lazyload();
     new LazyLoad($('img:not(".lazyload")'));
 
-    // 轮播图背景异步加载
-    xxcodingKit.initCarouselLazyLoad();
-
     $('main').css('min-height', window.innerHeight - $('#nav-header').height() - $('footer').innerHeight());
     $(window).resize(function () {
         $('.carousel.carousel-slider').height($(window).height());
@@ -56,6 +53,11 @@ $(function () {
     $('pre.line-numbers code').each(function(index, element) {
         $(element).parent().append($(element).children('span.line-numbers-rows'));
     });
+});
+
+// 页面完全加载后再加载转播图
+$(window).on('load', function() {
+    xxcodingKit.initCarouselLazyLoad();
 });
 
 let $backTop = $('.top-scroll');
@@ -114,22 +116,23 @@ xxcodingKit = {
             img.src = bgUrl;
         };
         
-        // 优先加载第一张图片
-        const $firstItem = $carouselItems.first();
-        loadImage($firstItem);
-        
-        // 延迟加载其他图片，避免阻塞页面渲染
+        // 页面加载完毕后，延迟一小段时间再开始加载轮播图
         setTimeout(function() {
+            // 优先加载第一张图片
+            const $firstItem = $carouselItems.first();
+            loadImage($firstItem);
+            
+            // 分批加载其他图片
             $carouselItems.each(function(index) {
                 if (index > 0) {
                     const $item = $(this);
-                    // 分批加载，每张图片间隔200ms
+                    // 每张图片间隔200ms
                     setTimeout(function() {
                         loadImage($item);
                     }, index * 200);
                 }
             });
-        }, 800); // 800ms后开始加载其他图片
+        }, 300); // 页面加载完成后延迟300ms开始加载
     }
 };
 
@@ -141,13 +144,13 @@ xxcodingKit = {
 function debounce(func, wait, immediate) {
     var timeout;
     return function() {
-      var context = this,
-        args = arguments;
-      clearTimeout(timeout);
-      timeout = setTimeout(function() {
-        timeout = null;
-        if (!immediate) func.apply(context, args);
-      }, wait);
-      if (immediate && !timeout) func.apply(context, args);
+        var context = this,
+            args = arguments;
+        clearTimeout(timeout);
+        timeout = setTimeout(function() {
+            timeout = null;
+            if (!immediate) func.apply(context, args);
+        }, wait);
+        if (immediate && !timeout) func.apply(context, args);
     };
-  };
+};
