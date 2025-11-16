@@ -1,3 +1,4 @@
+https://zhuxiongxian.cc/2025/11/16/markdown-rules/
 https://zhuxiongxian.cc/2025/11/16/vue-main-technological-stack-and-best-practices/
 https://zhuxiongxian.cc/2025/11/16/delete-all-github-fork-repos/
 https://zhuxiongxian.cc/2025/11/15/mcp-toolbox-essential-extensions/
@@ -155,6 +156,8 @@ https://zhuxiongxian.cc/tags/%E5%88%A0%E9%99%A4/
 https://zhuxiongxian.cc/tags/%E6%89%B9%E9%87%8F/
 https://zhuxiongxian.cc/tags/%E5%89%8D%E7%AB%AF/
 https://zhuxiongxian.cc/tags/%E6%8A%80%E6%9C%AF%E6%A0%88/
+https://zhuxiongxian.cc/tags/markdown/
+https://zhuxiongxian.cc/tags/%E8%A7%84%E8%8C%83/
 https://zhuxiongxian.cc/categories/mongodb/
 https://zhuxiongxian.cc/categories/ai/
 https://zhuxiongxian.cc/categories/docker/
@@ -174,3 +177,4 @@ https://zhuxiongxian.cc/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E
 https://zhuxiongxian.cc/categories/%E5%89%8D%E7%AB%AF/
 https://zhuxiongxian.cc/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/
 https://zhuxiongxian.cc/categories/vue/
+https://zhuxiongxian.cc/categories/%E8%A7%84%E8%8C%83/

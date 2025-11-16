@@ -1,0 +1,2683 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="keywords" content="markdown规范, markdown, 规范, xx, zhuxiongxian, blog, 博客, 官方, it">
+    <meta name="description" content="本文档基于 markdownlint 规则，定义项目中 Markdown 文件的编写规范。
+目录
+标题规范
+列表规范
+代码块规范
+链接和图片规范
+段落和换行
+强调和格式
+其他规范
+
+
+标题规范MD001 - 标题层级递增标题层级应该递增，不">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate.css/animate.min.css">
+    
+    <!-- 是否加载使用自带的 prismjs. -->
+    <link rel="stylesheet" href="/libs/prism/prism-tomorrow-night.css">
+    <link rel="stylesheet" type="text/css" href="/libs/prism/prism-line-numbers.css">
+    
+    
+    <!-- Material Icons -->
+    <link rel="stylesheet" type="text/css" href="/libs/materialicons/materialicons.css">
+    
+    <!-- Fontawesome Icons -->
+    <link rel="stylesheet" type="text/css" href="/libs/fontawesome/css/all.min.css">
+    <!-- aos -->
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <!-- The theme css -->
+    <link rel="stylesheet" type="text/css" href="/css/xxcoding.css">
+
+    
+    <!-- Your css -->
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    
+    <!-- 
+        
+            
+                <link rel="stylesheet" type="text/css" href="/libs/fontawesome/css/all.min.css">
+            
+        
+            
+                <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+            
+        
+            
+                <link rel="stylesheet" type="text/css" href="/libs/animate.css/animate.min.css">
+            
+        
+            
+        
+            
+                <link rel="stylesheet" type="text/css" href="/libs/prism/prism-tomorrow-night.css">
+            
+        
+            
+                <link rel="stylesheet" type="text/css" href="/libs/materialicons/materialicons.css">
+            
+        
+            
+                <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+            
+        
+            
+                <link rel="stylesheet" type="text/css" href="/libs/aplayer/APlayer.min.css">
+            
+        
+            
+                <link rel="stylesheet" type="text/css" href="/libs/tocbot/tocbot.css">
+            
+        
+            
+                <link rel="stylesheet" type="text/css" href="/libs/fancybox/fancybox.css">
+            
+        
+            
+                <link rel="stylesheet" type="text/css" href="/css/xxcoding.css">
+            
+        
+            
+                <link rel="stylesheet" type="text/css" href="/css/my.css">
+            
+        
+     -->
+    <!-- 
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500">
+    
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Marck+Script">
+     -->
+    
+
+    <!-- Custom Head -->
+    
+
+    <title>markdown规范 | xx&#39;s blog</title>
+    <link rel="icon" type="image/png" href="/img/favicon.png">
+    <script src="/libs/jquery/jquery.min.js"></script>
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="xx's blog" type="application/atom+xml">
+
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
+
+<body>
+    <header class="navbar-fixed">
+    <!-- <nav class="nav-extended pushpin"> -->
+    <nav class="nav-color nav-transparent" id="nav-header" color-on-scroll="100">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a class="brand-logo waves-effect waves-light" href="/">
+                    
+                    <img src="/img/logo.png" class="circle logo-img lazyload" data-src="/img/logo.png" alt="logo">
+                    
+                    <span class="logo-span">xx&#39;s blog</span>
+                </a>
+                <a href="#" data-target="nav-mobile" class="sidenav-trigger">
+    <i class="material-icons">menu</i>
+</a>
+<ul class="right hide-on-med-and-down">
+    
+        
+            <li>
+                
+                
+                <a class="nav-item waves-effect waves-light" href="/" style="display: flex;">
+                    <i class="material-icons">home</i>
+                
+                    <span class="nav-menu">首页</span>
+                </a>
+                
+            </li>
+        
+    
+        
+            <li>
+                
+                
+                <a class="nav-item waves-effect waves-light" href="/categories" style="display: flex;">
+                    <i class="material-icons">chrome_reader_mode</i>
+                
+                    <span class="nav-menu">分类</span>
+                </a>
+                
+            </li>
+        
+    
+        
+            <li>
+                
+                
+                <a class="nav-item waves-effect waves-light" href="/archives" style="display: flex;">
+                    <i class="material-icons">inbox</i>
+                
+                    <span class="nav-menu">归档</span>
+                </a>
+                
+            </li>
+        
+    
+        
+            <li>
+                
+                
+                <a class="nav-item waves-effect waves-light" href="/tags" style="display: flex;">
+                    <i class="material-icons">label</i>
+                
+                    <span class="nav-menu">标签</span>
+                </a>
+                
+            </li>
+        
+    
+        
+            <li>
+                
+                
+                <a class="nav-item waves-effect waves-light" href="/about" style="display: flex;">
+                    <i class="material-icons">account_circle</i>
+                
+                    <span class="nav-menu">关于</span>
+                </a>
+                
+            </li>
+        
+    
+        
+            <li>
+                
+                
+                <a class="nav-item dropdown-trigger waves-effect waves-light" href="#!" data-target="dropdown-lab" style="display: flex;">
+                    <i class="material-icons">apps</i>
+                
+                    <span class="nav-menu">实验室</span>
+                    <i class="material-icons right">arrow_drop_down</i>
+                </a>
+                <ul class="dropdown-content" id="dropdown-lab">
+                    
+                        
+                        <li>
+                            
+                            <a href="/comments" style="display: flex;">
+                                <i class="material-icons">comment</i>
+                            
+                                <span>留言板</span>
+                            </a>
+                        </li>
+                        
+                    
+                        
+                        <li>
+                            
+                            <a href="/friends" style="display: flex;">
+                                <i class="material-icons">link</i>
+                            
+                                <span>友情链接</span>
+                            </a>
+                        </li>
+                        
+                    
+                        
+                        <li>
+                            
+                            <a href="/resume" style="display: flex;">
+                                <i class="material-icons">work</i>
+                            
+                                <span>简历</span>
+                            </a>
+                        </li>
+                        
+                    
+                        
+                        <li>
+                            
+                            <a href="/timeline" style="display: flex;">
+                                <i class="material-icons">timeline</i>
+                            
+                                <span>时间线</span>
+                            </a>
+                        </li>
+                        
+                    
+                        
+                        <li>
+                            
+                            <a href="/vlog" style="display: flex;">
+                                <i class="material-icons">video_library</i>
+                            
+                                <span>Vlog</span>
+                            </a>
+                        </li>
+                        
+                    
+                        
+                        <li>
+                            
+                            <a href="/portfolio" style="display: flex;">
+                                <i class="material-icons">widgets</i>
+                            
+                                <span>作品集</span>
+                            </a>
+                        </li>
+                        
+                    
+                </ul>
+                
+            </li>
+        
+    
+        
+            <li>
+                
+                
+                <a class="nav-item dropdown-trigger waves-effect waves-light" href="#!" data-target="dropdown-medias" style="display: flex;">
+                    <i class="material-icons">perm_media</i>
+                
+                    <span class="nav-menu">多媒体</span>
+                    <i class="material-icons right">arrow_drop_down</i>
+                </a>
+                <ul class="dropdown-content" id="dropdown-medias">
+                    
+                        
+                        <li>
+                            
+                            <a href="/galleries" style="display: flex;">
+                                <i class="material-icons">photo_library</i>
+                            
+                                <span>图库</span>
+                            </a>
+                        </li>
+                        
+                    
+                        
+                        <li>
+                            
+                            <a href="/musics" style="display: flex;">
+                                <i class="material-icons">library_music</i>
+                            
+                                <span>音乐</span>
+                            </a>
+                        </li>
+                        
+                    
+                        
+                        <li>
+                            
+                            <a href="/videos" style="display: flex;">
+                                <i class="material-icons">video_library</i>
+                            
+                                <span>视频</span>
+                            </a>
+                        </li>
+                        
+                    
+                        
+                        <li>
+                            
+                            <a href="/books" style="display: flex;">
+                                <i class="material-icons">library_books</i>
+                            
+                                <span>书籍</span>
+                            </a>
+                        </li>
+                        
+                    
+                </ul>
+                
+            </li>
+        
+    
+    <li>
+        <a class="nav-item modal-trigger waves-effect waves-light" href="#search-modal">
+            <i class="material-icons">search</i>
+        </a>
+    </li>
+</ul>
+
+            </div>
+        </div>
+    </nav>
+</header>
+<!-- 滚动进度条容器 -->
+<div class="scroll-progress-bar"></div>
+<div class="sidenav" id="nav-mobile">
+    <div class="user-view">
+        <div class="background overlay">
+            <img class="lazyload" src="/img/icon-seamless.png" data-src="/img/icon-seamless.png">
+        </div>
+        <img class="circle responsive-img lazyload" src="/img/logo.png" data-src="/img/logo.png">
+        <div class="name white-text">xx's blog</div>
+        <div class="description white-text">欢迎来到zhuxiongxian's blog, 我是zhuxiongxian, 这是我的博客!</div>
+    </div>
+    <ul>
+        
+            
+                <li>
+                    
+                    
+                    <a class="waves-effect" href="/" style="display: flex;">
+                        <i class="material-icons">home</i>
+                    
+                        <span>首页</span>
+                    </a>
+                    
+                </li>
+            
+        
+            
+                <li>
+                    
+                    
+                    <a class="waves-effect" href="/categories" style="display: flex;">
+                        <i class="material-icons">chrome_reader_mode</i>
+                    
+                        <span>分类</span>
+                    </a>
+                    
+                </li>
+            
+        
+            
+                <li>
+                    
+                    
+                    <a class="waves-effect" href="/archives" style="display: flex;">
+                        <i class="material-icons">inbox</i>
+                    
+                        <span>归档</span>
+                    </a>
+                    
+                </li>
+            
+        
+            
+                <li>
+                    
+                    
+                    <a class="waves-effect" href="/tags" style="display: flex;">
+                        <i class="material-icons">label</i>
+                    
+                        <span>标签</span>
+                    </a>
+                    
+                </li>
+            
+        
+            
+                <li>
+                    
+                    
+                    <a class="waves-effect" href="/about" style="display: flex;">
+                        <i class="material-icons">account_circle</i>
+                    
+                        <span>关于</span>
+                    </a>
+                    
+                </li>
+            
+        
+            
+                <li>
+                    
+                    <ul class="collapsible">
+                        <li>
+                            
+                            <div class="collapsible-header waves-effect">
+                                <i class="material-icons">apps</i>
+                            
+                                <span>实验室</span>
+                                <i class="material-icons right">arrow_drop_down</i>
+                            </div>
+                            <ul class="collapsible-body">
+                                
+                                    
+                                    <li>
+                                        
+                                        <a class="waves-effect" href="/comments" style="display: flex;">
+                                            <i class="material-icons">comment</i>
+                                        
+                                            <span>留言板</span>
+                                        </a>
+                                    </li>
+                                    
+                                
+                                    
+                                    <li>
+                                        
+                                        <a class="waves-effect" href="/friends" style="display: flex;">
+                                            <i class="material-icons">link</i>
+                                        
+                                            <span>友情链接</span>
+                                        </a>
+                                    </li>
+                                    
+                                
+                                    
+                                    <li>
+                                        
+                                        <a class="waves-effect" href="/resume" style="display: flex;">
+                                            <i class="material-icons">work</i>
+                                        
+                                            <span>简历</span>
+                                        </a>
+                                    </li>
+                                    
+                                
+                                    
+                                    <li>
+                                        
+                                        <a class="waves-effect" href="/timeline" style="display: flex;">
+                                            <i class="material-icons">timeline</i>
+                                        
+                                            <span>时间线</span>
+                                        </a>
+                                    </li>
+                                    
+                                
+                                    
+                                    <li>
+                                        
+                                        <a class="waves-effect" href="/vlog" style="display: flex;">
+                                            <i class="material-icons">video_library</i>
+                                        
+                                            <span>Vlog</span>
+                                        </a>
+                                    </li>
+                                    
+                                
+                                    
+                                    <li>
+                                        
+                                        <a class="waves-effect" href="/portfolio" style="display: flex;">
+                                            <i class="material-icons">widgets</i>
+                                        
+                                            <span>作品集</span>
+                                        </a>
+                                    </li>
+                                    
+                                
+                            </ul>
+                        </li>
+                    </ul>
+                    
+                </li>
+            
+        
+            
+                <li>
+                    
+                    <ul class="collapsible">
+                        <li>
+                            
+                            <div class="collapsible-header waves-effect">
+                                <i class="material-icons">perm_media</i>
+                            
+                                <span>多媒体</span>
+                                <i class="material-icons right">arrow_drop_down</i>
+                            </div>
+                            <ul class="collapsible-body">
+                                
+                                    
+                                    <li>
+                                        
+                                        <a class="waves-effect" href="/galleries" style="display: flex;">
+                                            <i class="material-icons">photo_library</i>
+                                        
+                                            <span>图库</span>
+                                        </a>
+                                    </li>
+                                    
+                                
+                                    
+                                    <li>
+                                        
+                                        <a class="waves-effect" href="/musics" style="display: flex;">
+                                            <i class="material-icons">library_music</i>
+                                        
+                                            <span>音乐</span>
+                                        </a>
+                                    </li>
+                                    
+                                
+                                    
+                                    <li>
+                                        
+                                        <a class="waves-effect" href="/videos" style="display: flex;">
+                                            <i class="material-icons">video_library</i>
+                                        
+                                            <span>视频</span>
+                                        </a>
+                                    </li>
+                                    
+                                
+                                    
+                                    <li>
+                                        
+                                        <a class="waves-effect" href="/books" style="display: flex;">
+                                            <i class="material-icons">library_books</i>
+                                        
+                                            <span>书籍</span>
+                                        </a>
+                                    </li>
+                                    
+                                
+                            </ul>
+                        </li>
+                    </ul>
+                    
+                </li>
+            
+        
+        <li>
+            <a class="modal-trigger waves-effect waves-light" href="#search-modal">
+                <i class="material-icons">search</i>
+                <span>搜索</span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<div>
+    <!-- 模态框结构 -->
+    <div id="search-modal" class="modal">
+        <div class="modal-content">
+            <div id="search-title">
+                <i class="material-icons icon-search">search</i>
+                &nbsp;搜索
+            </div>
+            <input type="text" id="search-input" placeholder="输入关键字进行搜索...">
+            <ul id="search-results"></ul>
+        </div>
+    </div>
+
+    <script>
+        // $(document).ready(function() {
+        //     // 获取搜索输入框和结果列表元素
+        //     var searchInput = $('#search-input');
+        //     var searchResults = $('#search-results');
+
+        //     // 读取 search.json 文件
+        //     $.getJSON('/search.json', function(data) {
+        //         // 监听输入框的输入事件
+        //         searchInput.on('input', function() {
+        //             var query = $(this).val().toLowerCase();
+
+        //             if (query === '') {
+        //                 // 如果查询字符串为空，则清空结果列表
+        //                 searchResults.empty();
+        //                 return;
+        //             }
+
+        //             var results = data.filter(post => 
+        //                 post.title.toLowerCase().includes(query) || 
+        //                 post.content.toLowerCase().includes(query)
+        //             );
+
+        //             // 清空结果列表
+        //             searchResults.empty();
+
+        //             // 显示搜索结果
+        //             results.forEach(function(result) {
+        //                 var li = $('<li>');
+        //                 var a = $('<a>').attr('href', result.url).text(result.title).addClass('title');
+        //                 li.append(a);
+        //                 searchResults.append(li);
+
+        //                 // 高亮显示关键词
+        //                 var content = result.content.trim().replace(/<[^>]+>/g, "");
+        //                 var regex = new RegExp('(' + query.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&') + ')', 'gi');
+        //                 var highlightedContent = content.replace(regex, '<span class="highlight">$&</span>');
+        //                 li.append($('<div>').html(highlightedContent).addClass('content'));
+
+        //             });
+                    
+        //         });
+        //     }).fail(function(err) {
+        //         console.error(err);
+        //     });
+        // });
+
+        $(document).ready(function() {
+            // 获取搜索输入框和结果列表元素
+            var searchInput = $('#search-input');
+            var searchResults = $('#search-results');
+
+            // 读取 search.json 文件
+            $.getJSON('/search.json', function(data) {
+                // 监听输入框的输入事件
+                searchInput.on('input', function() {
+                    var query = $(this).val().toLowerCase().trim();
+
+                    if (query === '') {
+                        // 如果查询字符串为空，则清空结果列表
+                        searchResults.empty();
+                        return;
+                    }
+                    
+                    // 将查询字符串拆分成多个关键词，并过滤掉空字符串
+                    var keywords = query.split(/\s+/).filter(keyword => keyword.trim() !== '');
+
+                    var results = data.filter(post => 
+                        keywords.some(keyword => 
+                            post.title.toLowerCase().includes(keyword) || 
+                            post.content.toLowerCase().includes(keyword)
+                        )
+                    );
+
+                    // 清空结果列表
+                    searchResults.empty();
+
+                    // 显示搜索结果
+                    results.forEach(function(result) {
+                        var li = $('<li>');
+                        var title = highlightMatches(result.title, keywords, result.title.length, result.title);
+                        // var a = $('<a>').attr('href', result.url).text(title).addClass('title');
+                        var a = $('<a>').attr('href', result.url).html(title).addClass('title');
+                        li.append(a);
+                        searchResults.append(li);
+
+                        // 高亮显示关键词及其前后 20 个字符
+                        // var content = result.content.trim().replace(/<[^>]+>/g, "");
+                        var content = result.content.trim();
+                        content = stripMarkdownAndHtml(content);
+                        var highlightedContent = highlightMatches(content, keywords, 20);
+                        li.append($('<div>').html(highlightedContent).addClass('content'));
+
+                    });
+                    
+                });
+            }).fail(function(err) {
+                console.error(err);
+            });
+        });
+
+        /**
+         * 从给定字符串中移除Markdown和HTML语法的函数。
+         * @param {string} input - 包含Markdown和HTML语法的字符串。
+         * @return {string} - 去除Markdown和HTML语法的纯文本。
+         */
+        function stripMarkdownAndHtml(input) {
+            return input
+                .replace(/(\*\*|__)(.*?)\1/g, '$2')  // 加粗: **text** 或 __text__
+                .replace(/(\*|_)(.*?)\1/g, '$2')     // 斜体: *text* 或 _text_
+                .replace(/(~~)(.*?)\1/g, '$2')       // 删除线: ~~text~~
+                .replace(/`([^`]+)`/g, '$1')         // 行内代码: `text`
+                .replace(/```[\s\S]*?```/g, '')      // 代码块: ```text```
+                .replace(/<[^>]*>/g, '')             // HTML标签
+                .replace(/#+\s+(.*)/g, '$1')         // 标题: # text
+                .replace(/!\[.*?\]\(.*?\)/g, '')     // 图片: ![alt](url)
+                .replace(/\[(.*?)\]\(.*?\)/g, '$1')  // 链接: [text](url)
+                .replace(/^\s*\n/gm, '');            // 去除空行
+        }
+
+        /**
+         * 高亮显示关键词
+         * @param {string} text - 字符串。
+         * @param {string} keywords - 关键词数组。
+         * @param {int} offset - 偏移量。
+         * @param {string} notMatchValue - 不匹配时默认值。
+         * @return {string} 高亮后的文本 - 。
+         */
+        function highlightMatches(text, keywords, offset = 0, notMatchValue = '') {
+            // 创建正则表达式以匹配关键词，并确保关键词不会被部分匹配
+            const regex = new RegExp(keywords.map(keyword => `(${keyword.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&')})`).join('|'), 'gi');
+
+            // 通过正则表达式匹配所有关键词
+            const matches = [];
+            let match;
+            while ((match = regex.exec(text)) !== null) {
+                matches.push({
+                    index: match.index,
+                    length: match[0].length,
+                    keyword: match[0]
+                });
+            }
+
+            if (matches.length === 0) {
+                return notMatchValue;
+            }
+
+            // 按照匹配的 index 升序排序
+            matches.sort((a, b) => a.index - b.index);
+
+            // console.log(matches);
+
+            // 按照匹配顺序重建文本，并添加高亮标记
+            let highlightedText = '';
+            let lastIndex = 0;
+            
+            matches.forEach(({ index, length, keyword }) => {
+                // 获取关键词前后2个字符的位置
+                let start = Math.max(0, index - offset);
+                let end = index + length + offset;
+
+                if (index < lastIndex || lastIndex > start) {
+                    // 处理重复的部分
+                    start = lastIndex;
+                } else if (lastIndex !== start && lastIndex > 0) {
+                    // 处理非重复的部分 
+                    highlightedText += '...'
+                }
+
+                // console.log([lastIndex, start, end]);
+                // console.log(text.slice(start, end));
+
+                highlightedText += text.slice(start, end);  // 包含关键词前后的字符
+                highlightedText = highlightLastOccurrence(highlightedText, keyword);  // 高亮最后一个关键词
+                // console.log(highlightedText);
+
+                lastIndex = end;  // 更新最后处理的位置
+            });
+
+            return highlightedText;
+        }
+
+        function highlightLastOccurrence(text, keyword) {
+            // 高亮最后一个关键词
+            // 查找最后一个 keyword 的位置
+            const lastIndex = text.lastIndexOf(keyword);
+            if (lastIndex === -1) return text; // 如果找不到 keyword，则返回原始文本
+
+            // 构造高亮的 HTML 代码
+            const highlightedKeyword = `<span class="highlight">${keyword}</span>`;
+
+            // 通过模板字符串拼接高亮后的文本
+            return `${text.substring(0, lastIndex)}${highlightedKeyword}${text.substring(lastIndex + keyword.length)}`;
+        }
+
+        // // 示例
+        // const text = '显示可安装的python版本的``bash\npyenv install --listpython';
+        // const keywords = ['python', '安装'];
+        // const result = highlightMatches(text, keywords, 16);
+        // console.log(result); // 输出：显示可<span class="highlight">安装</span>的<span class="highlight">python</span>版本
+
+        // 处理按钮点击事件
+        $('.modal-trigger').on('click', function(e) {
+            e.preventDefault(); // 阻止默认行为
+            var modalId = $(this).attr('href');
+            var modal = $(modalId);
+            M.Modal.init(modal[0]);
+            var instance = M.Modal.getInstance(modal[0]);
+            instance.open();
+        });
+    </script>
+</div>
+
+
+    <main>
+    <!-- 文章封面 -->
+    <div class="post-cover">
+    <div class="cover-background">
+        
+        <div class="pattern repeat lazyload" data-src="/img/icon-seamless.png"
+            style="background-image: url('/img/icon-seamless.png');">
+            
+        </div>
+        
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="brand">
+                    <!-- <h4>markdown规范</h4> -->
+                    
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Marck+Script">
+
+<div class="description white-text">
+    
+    <span id="subtitle" style="font-family: 'Marck Script';"></span>
+    
+</div>
+<script src="/libs/typedjs/typed.js"></script>
+<script>
+
+    var typed = new Typed("#subtitle", {
+        strings: [ 
+            
+                "Hi, I&#39;m zhuxiongxian.",
+            
+                "Welcome to my blog!!!",
+            
+        ],
+        startDelay: 300,
+        typeSpeed: 100,
+        loop: true,
+        backSpeed: 50,
+        showCursor: true
+    });
+
+</script>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="container has-cover-container post-container">
+        <div class="row">
+            
+                <div class="col s12 m12 l9" id="post-body">
+                    <!-- 文章详情 -->
+                    <div id="post-detail">
+    <div class="card main main-raised">
+        <h1 class="post-title">markdown规范</h1>
+        
+        <div class="post-meta">
+            <div class="post-meta-top">
+                <span class="post-author">
+                    作者： xx
+                </span>
+                <span class="post-date">
+                    发布于： 2025-11-16 22:21:52
+                </span>
+                
+                
+                <span class="post-categories">
+                    <i class="fas fa-bookmark fa-fw icon-category"></i>
+                    
+                    <a href="/categories/%E8%A7%84%E8%8C%83/" class="post-category">规范</a>
+                    
+                </span>
+                
+            </div>
+            
+            
+            <div class="post-meta-bottom">
+                
+                <a href="/tags/markdown/" class="post-tag">markdown</a>
+                
+                <a href="/tags/%E8%A7%84%E8%8C%83/" class="post-tag">规范</a>
+                
+            </div>
+            
+        </div>
+        
+        <div class="post-content">
+            <p>本文档基于 <a href="https://github.com/DavidAnson/markdownlint">markdownlint</a> 规则，定义项目中 Markdown 文件的编写规范。</p>
+<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul>
+<li><a href="#%E6%A0%87%E9%A2%98%E8%A7%84%E8%8C%83">标题规范</a></li>
+<li><a href="#%E5%88%97%E8%A1%A8%E8%A7%84%E8%8C%83">列表规范</a></li>
+<li><a href="#%E4%BB%A3%E7%A0%81%E5%9D%97%E8%A7%84%E8%8C%83">代码块规范</a></li>
+<li><a href="#%E9%93%BE%E6%8E%A5%E5%92%8C%E5%9B%BE%E7%89%87%E8%A7%84%E8%8C%83">链接和图片规范</a></li>
+<li><a href="#%E6%AE%B5%E8%90%BD%E5%92%8C%E6%8D%A2%E8%A1%8C">段落和换行</a></li>
+<li><a href="#%E5%BC%BA%E8%B0%83%E5%92%8C%E6%A0%BC%E5%BC%8F">强调和格式</a></li>
+<li><a href="#%E5%85%B6%E4%BB%96%E8%A7%84%E8%8C%83">其他规范</a></li>
+</ul>
+<hr>
+<h2 id="标题规范"><a href="#标题规范" class="headerlink" title="标题规范"></a>标题规范</h2><h3 id="MD001-标题层级递增"><a href="#MD001-标题层级递增" class="headerlink" title="MD001 - 标题层级递增"></a>MD001 - 标题层级递增</h3><p>标题层级应该递增，不能跳级。</p>
+<p>❌ <strong>错误示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token title important"><span class="token punctuation">#</span> 一级标题</span>
+<span class="token title important"><span class="token punctuation">###</span> 三级标题（跳过了二级标题）</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>✅ <strong>正确示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token title important"><span class="token punctuation">#</span> 一级标题</span>
+<span class="token title important"><span class="token punctuation">##</span> 二级标题</span>
+<span class="token title important"><span class="token punctuation">###</span> 三级标题</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<hr>
+<h3 id="MD003-标题风格统一"><a href="#MD003-标题风格统一" class="headerlink" title="MD003 - 标题风格统一"></a>MD003 - 标题风格统一</h3><p>统一使用 ATX 风格标题（<code>#</code>），不使用 Setext 风格。</p>
+<p>❌ <strong>错误示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token title important">标题一
+<span class="token punctuation">======</span></span>
+
+<span class="token title important">标题二
+<span class="token punctuation">------</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>✅ <strong>正确示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token title important"><span class="token punctuation">#</span> 标题一</span>
+
+<span class="token title important"><span class="token punctuation">##</span> 标题二</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<hr>
+<h3 id="MD018-标题符号后需要空格"><a href="#MD018-标题符号后需要空格" class="headerlink" title="MD018 - 标题符号后需要空格"></a>MD018 - 标题符号后需要空格</h3><p><code>#</code> 后面必须有一个空格。</p>
+<p>❌ <strong>错误示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token title important"><span class="token punctuation">#</span>标题</span>
+<span class="token title important"><span class="token punctuation">##</span>标题</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>✅ <strong>正确示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token title important"><span class="token punctuation">#</span> 标题</span>
+<span class="token title important"><span class="token punctuation">##</span> 标题</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<hr>
+<h3 id="MD019-标题符号后只能有一个空格"><a href="#MD019-标题符号后只能有一个空格" class="headerlink" title="MD019 - 标题符号后只能有一个空格"></a>MD019 - 标题符号后只能有一个空格</h3><p><code>#</code> 后面只能有一个空格。</p>
+<p>❌ <strong>错误示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token title important"><span class="token punctuation">#</span>  标题（两个空格）</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>✅ <strong>正确示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token title important"><span class="token punctuation">#</span> 标题</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<hr>
+<h3 id="MD022-标题前后需要空行"><a href="#MD022-标题前后需要空行" class="headerlink" title="MD022 - 标题前后需要空行"></a>MD022 - 标题前后需要空行</h3><p>标题前后应该有空行（文件开头除外）。</p>
+<p>❌ <strong>错误示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">一些文本
+<span class="token title important"><span class="token punctuation">##</span> 标题</span>
+接下来的内容<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>✅ <strong>正确示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">一些文本
+
+<span class="token title important"><span class="token punctuation">##</span> 标题</span>
+
+接下来的内容<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<hr>
+<h3 id="MD023-标题不能缩进"><a href="#MD023-标题不能缩进" class="headerlink" title="MD023 - 标题不能缩进"></a>MD023 - 标题不能缩进</h3><p>标题不应该有缩进。</p>
+<p>❌ <strong>错误示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">Some text
+
+  <span class="token title important"><span class="token punctuation">#</span> 标题</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>✅ <strong>正确示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">Some text
+
+<span class="token title important"><span class="token punctuation">#</span> 标题</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<hr>
+<h3 id="MD024-避免重复标题"><a href="#MD024-避免重复标题" class="headerlink" title="MD024 - 避免重复标题"></a>MD024 - 避免重复标题</h3><p>同一文档中不应该有内容完全相同的标题（同级标题）。</p>
+<p>❌ <strong>错误示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token title important"><span class="token punctuation">##</span> 功能介绍</span>
+一些内容
+
+<span class="token title important"><span class="token punctuation">##</span> 功能介绍（重复）</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>✅ <strong>正确示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token title important"><span class="token punctuation">##</span> 功能介绍</span>
+一些内容
+
+<span class="token title important"><span class="token punctuation">##</span> 高级功能介绍</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<hr>
+<h3 id="MD025-只能有一个一级标题"><a href="#MD025-只能有一个一级标题" class="headerlink" title="MD025 - 只能有一个一级标题"></a>MD025 - 只能有一个一级标题</h3><p>文档中只能有一个一级标题（<code>#</code>）。</p>
+<p>❌ <strong>错误示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token title important"><span class="token punctuation">#</span> 标题一</span>
+<span class="token title important"><span class="token punctuation">#</span> 标题二</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>✅ <strong>正确示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token title important"><span class="token punctuation">#</span> 主标题</span>
+<span class="token title important"><span class="token punctuation">##</span> 章节一</span>
+<span class="token title important"><span class="token punctuation">##</span> 章节二</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<hr>
+<h3 id="MD041-文件应以一级标题开始"><a href="#MD041-文件应以一级标题开始" class="headerlink" title="MD041 - 文件应以一级标题开始"></a>MD041 - 文件应以一级标题开始</h3><p> Markdown 文件的第一行应该是一级标题。</p>
+<p>❌ <strong>错误示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">这是一段介绍文字
+
+<span class="token title important"><span class="token punctuation">#</span> 标题</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>✅ <strong>正确示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token title important"><span class="token punctuation">#</span> 标题</span>
+
+这是一段介绍文字<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<hr>
+<h2 id="列表规范"><a href="#列表规范" class="headerlink" title="列表规范"></a>列表规范</h2><h3 id="MD004-无序列表符号统一"><a href="#MD004-无序列表符号统一" class="headerlink" title="MD004 - 无序列表符号统一"></a>MD004 - 无序列表符号统一</h3><p>无序列表应使用统一的符号，推荐使用 <code>-</code>。</p>
+<p>❌ <strong>错误示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token list punctuation">-</span> 项目一
+<span class="token list punctuation">*</span> 项目二
+<span class="token list punctuation">+</span> 项目三<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>✅ <strong>正确示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token list punctuation">-</span> 项目一
+<span class="token list punctuation">-</span> 项目二
+<span class="token list punctuation">-</span> 项目三<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<hr>
+<h3 id="MD005-同级列表项缩进一致"><a href="#MD005-同级列表项缩进一致" class="headerlink" title="MD005 - 同级列表项缩进一致"></a>MD005 - 同级列表项缩进一致</h3><p>同级列表项的缩进应该保持一致。</p>
+<p>❌ <strong>错误示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token list punctuation">-</span> 项目一
+  <span class="token list punctuation">-</span> 子项目一
+   <span class="token list punctuation">-</span> 子项目二（缩进不一致）<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>✅ <strong>正确示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token list punctuation">-</span> 项目一
+  <span class="token list punctuation">-</span> 子项目一
+  <span class="token list punctuation">-</span> 子项目二<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<hr>
+<h3 id="MD006-列表项不要从行首开始缩进"><a href="#MD006-列表项不要从行首开始缩进" class="headerlink" title="MD006 - 列表项不要从行首开始缩进"></a>MD006 - 列表项不要从行首开始缩进</h3><p>顶级列表项不应该有缩进。</p>
+<p>❌ <strong>错误示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token list punctuation">-</span> 项目一
+<span class="token list punctuation">-</span> 项目二<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>✅ <strong>正确示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token list punctuation">-</span> 项目一
+<span class="token list punctuation">-</span> 项目二<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<hr>
+<h3 id="MD007-无序列表缩进使用2个空格"><a href="#MD007-无序列表缩进使用2个空格" class="headerlink" title="MD007 - 无序列表缩进使用2个空格"></a>MD007 - 无序列表缩进使用2个空格</h3><p>无序列表的子项目缩进应该使用 2 个空格。</p>
+<p>❌ <strong>错误示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token list punctuation">-</span> 项目一
+    <span class="token list punctuation">-</span> 子项目（4个空格）<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>✅ <strong>正确示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token list punctuation">-</span> 项目一
+  <span class="token list punctuation">-</span> 子项目（2个空格）<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<hr>
+<h3 id="MD029-有序列表序号"><a href="#MD029-有序列表序号" class="headerlink" title="MD029 - 有序列表序号"></a>MD029 - 有序列表序号</h3><p>有序列表建议使用递增序号，或全部使用 <code>1.</code></p>
+<p>✅ <strong>推荐示例</strong>（递增序号）：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token list punctuation">1.</span> 第一项
+<span class="token list punctuation">2.</span> 第二项
+<span class="token list punctuation">3.</span> 第三项<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>✅ <strong>可选示例</strong>（全部使用1）：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token list punctuation">1.</span> 第一项
+<span class="token list punctuation">1.</span> 第二项
+<span class="token list punctuation">1.</span> 第三项<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<hr>
+<h3 id="MD030-列表符号后需要空格"><a href="#MD030-列表符号后需要空格" class="headerlink" title="MD030 - 列表符号后需要空格"></a>MD030 - 列表符号后需要空格</h3><p>列表符号（<code>-</code>、<code>*</code>、<code>+</code>、数字<code>.</code>）后必须有空格。</p>
+<p>❌ <strong>错误示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">-项目一
+1.项目一<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>✅ <strong>正确示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token list punctuation">-</span> 项目一
+<span class="token list punctuation">1.</span> 项目一<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<hr>
+<h3 id="MD032-列表前后需要空行"><a href="#MD032-列表前后需要空行" class="headerlink" title="MD032 - 列表前后需要空行"></a>MD032 - 列表前后需要空行</h3><p>列表前后应该有空行（文件开头和列表嵌套除外）。</p>
+<p>❌ <strong>错误示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">一些文本
+<span class="token list punctuation">-</span> 项目一
+<span class="token list punctuation">-</span> 项目二
+接下来的文本<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>✅ <strong>正确示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">一些文本
+
+<span class="token list punctuation">-</span> 项目一
+<span class="token list punctuation">-</span> 项目二
+
+接下来的文本<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<hr>
+<h2 id="代码块规范"><a href="#代码块规范" class="headerlink" title="代码块规范"></a>代码块规范</h2><h3 id="MD031-代码块前后需要空行"><a href="#MD031-代码块前后需要空行" class="headerlink" title="MD031 - 代码块前后需要空行"></a>MD031 - 代码块前后需要空行</h3><p>围栏式代码块前后应该有空行。</p>
+<p>❌ <strong>错误示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">一些文本
+<span class="token code"><span class="token punctuation">```</span><span class="token code-language">code</span>
+<span class="token code-block language-code">code here</span>
+<span class="token punctuation">```</span></span>
+接下来的文本<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>✅ <strong>正确示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">一些文本
+
+<span class="token code"><span class="token punctuation">```</span><span class="token code-language">code</span>
+<span class="token code-block language-code">code here</span>
+<span class="token punctuation">```</span></span>
+
+接下来的文本<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<hr>
+<h3 id="MD040-代码块应指定语言"><a href="#MD040-代码块应指定语言" class="headerlink" title="MD040 - 代码块应指定语言"></a>MD040 - 代码块应指定语言</h3><p>围栏式代码块应该指定语言类型。</p>
+<p>❌ <strong>错误示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token code"><span class="token punctuation">```</span>
+<span class="token code-block">const a = 1;</span>
+<span class="token punctuation">```</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>✅ <strong>正确示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token code"><span class="token punctuation">```</span><span class="token code-language">javascript</span>
+<span class="token code-block language-javascript"><span class="token keyword">const</span> a <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span></span>
+<span class="token punctuation">```</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<hr>
+<h3 id="MD046-代码块风格统一"><a href="#MD046-代码块风格统一" class="headerlink" title="MD046 - 代码块风格统一"></a>MD046 - 代码块风格统一</h3><p>统一使用围栏式代码块（<code>```</code>），不使用缩进式代码块。</p>
+<p>❌ <strong>错误示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">Some text.
+
+<span class="token code keyword">    const a = 1;  // 缩进式代码块</span>
+
+More text.
+
+<span class="token code"><span class="token punctuation">```</span><span class="token code-language">javascript</span>
+<span class="token code-block language-javascript"><span class="token keyword">const</span> a <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span></span>
+<span class="token punctuation">```</span></span>
+
+More text.<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>✅ <strong>正确示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">Some text.
+
+<span class="token code"><span class="token punctuation">```</span><span class="token code-language">javascript</span>
+<span class="token code-block language-javascript"><span class="token keyword">const</span> a <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span></span>
+<span class="token punctuation">```</span></span>
+
+More text.
+
+<span class="token code"><span class="token punctuation">```</span><span class="token code-language">javascript</span>
+<span class="token code-block language-javascript"><span class="token keyword">const</span> b <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span></span>
+<span class="token punctuation">```</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<hr>
+<h3 id="MD049-行内代码使用反引号"><a href="#MD049-行内代码使用反引号" class="headerlink" title="MD049 - 行内代码使用反引号"></a>MD049 - 行内代码使用反引号</h3><p>行内代码应该使用反引号（<code>`</code>）包裹。</p>
+<p>✅ <strong>正确示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">使用 <span class="token code-snippet code keyword">`console.log()`</span> 输出信息。<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<hr>
+<h2 id="链接和图片规范"><a href="#链接和图片规范" class="headerlink" title="链接和图片规范"></a>链接和图片规范</h2><h3 id="MD034-URL应使用尖括号或链接格式"><a href="#MD034-URL应使用尖括号或链接格式" class="headerlink" title="MD034 - URL应使用尖括号或链接格式"></a>MD034 - URL应使用尖括号或链接格式</h3><p>裸露的 URL 应该使用尖括号包裹或使用链接格式。</p>
+<p>❌ <strong>错误示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">https://example.com<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>✅ <strong>正确示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">&lt;https://example.com&gt;
+<span class="token url">[<span class="token content">示例网站</span>](<span class="token url">https://example.com</span>)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<hr>
+<h3 id="MD039-链接文本两侧不应有空格"><a href="#MD039-链接文本两侧不应有空格" class="headerlink" title="MD039 - 链接文本两侧不应有空格"></a>MD039 - 链接文本两侧不应有空格</h3><p>链接文本的方括号内两侧不应该有空格。</p>
+<p>❌ <strong>错误示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token url">[<span class="token content"> 链接文本 </span>](<span class="token url">https://example.com</span>)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>✅ <strong>正确示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token url">[<span class="token content">链接文本</span>](<span class="token url">https://example.com</span>)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<hr>
+<h3 id="MD042-链接URL不能为空"><a href="#MD042-链接URL不能为空" class="headerlink" title="MD042 - 链接URL不能为空"></a>MD042 - 链接URL不能为空</h3><p>链接必须有有效的 URL。</p>
+<p>❌ <strong>错误示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">[链接]()<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>✅ <strong>正确示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token url">[<span class="token content">链接</span>](<span class="token url">https://example.com</span>)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<hr>
+<h3 id="MD045-图片应有alt文本"><a href="#MD045-图片应有alt文本" class="headerlink" title="MD045 - 图片应有alt文本"></a>MD045 - 图片应有alt文本</h3><p>图片应该有 alt 文本描述。</p>
+<p>❌ <strong>错误示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">![](image.png)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>✅ <strong>正确示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token url"><span class="token operator">!</span>[<span class="token content">图片描述</span>](<span class="token url">image.png</span>)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<hr>
+<h2 id="段落和换行"><a href="#段落和换行" class="headerlink" title="段落和换行"></a>段落和换行</h2><h3 id="MD009-行尾不应有多余空格"><a href="#MD009-行尾不应有多余空格" class="headerlink" title="MD009 - 行尾不应有多余空格"></a>MD009 - 行尾不应有多余空格</h3><p>行尾不应该有多余的空格（除非是用于换行的两个空格）。</p>
+<p>❌ <strong>错误示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">这是一行文本   <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>✅ <strong>正确示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">这是一行文本<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<hr>
+<h3 id="MD010-不使用硬制表符（Tab）"><a href="#MD010-不使用硬制表符（Tab）" class="headerlink" title="MD010 - 不使用硬制表符（Tab）"></a>MD010 - 不使用硬制表符（Tab）</h3><p>使用空格代替 Tab 缩进。</p>
+<p>❌ <strong>错误示例</strong>：使用 Tab 缩进</p>
+<p>✅ <strong>正确示例</strong>：使用空格缩进</p>
+<hr>
+<h3 id="MD012-不应有连续多个空行"><a href="#MD012-不应有连续多个空行" class="headerlink" title="MD012 - 不应有连续多个空行"></a>MD012 - 不应有连续多个空行</h3><p>不应该有连续的多个空行。</p>
+<p>❌ <strong>错误示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">段落一
+
+
+
+段落二（多个空行）<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>✅ <strong>正确示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">段落一
+
+段落二<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<hr>
+<h3 id="MD047-文件应以空行结尾"><a href="#MD047-文件应以空行结尾" class="headerlink" title="MD047 - 文件应以空行结尾"></a>MD047 - 文件应以空行结尾</h3><p>Markdown 文件应该以一个空行结束。</p>
+<p>✅ <strong>正确示例</strong>：文件最后有一个空行</p>
+<hr>
+<h2 id="强调和格式"><a href="#强调和格式" class="headerlink" title="强调和格式"></a>强调和格式</h2><h3 id="MD036-不要用强调代替标题"><a href="#MD036-不要用强调代替标题" class="headerlink" title="MD036 - 不要用强调代替标题"></a>MD036 - 不要用强调代替标题</h3><p>不应该用加粗或斜体来代替标题。</p>
+<p>❌ <strong>错误示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token bold"><span class="token punctuation">**</span><span class="token content">这是一个章节</span><span class="token punctuation">**</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>✅ <strong>正确示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token title important"><span class="token punctuation">##</span> 这是一个章节</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<hr>
+<h3 id="MD037-强调标记内侧不应有空格"><a href="#MD037-强调标记内侧不应有空格" class="headerlink" title="MD037 - 强调标记内侧不应有空格"></a>MD037 - 强调标记内侧不应有空格</h3><p>强调标记（<code>*</code> 或 <code>_</code>）内侧不应该有空格。</p>
+<p>❌ <strong>错误示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token bold"><span class="token punctuation">**</span><span class="token content"> 加粗文本 </span><span class="token punctuation">**</span></span>
+<span class="token list punctuation">*</span> 斜体文本 *<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>✅ <strong>正确示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token bold"><span class="token punctuation">**</span><span class="token content">加粗文本</span><span class="token punctuation">**</span></span>
+<span class="token italic"><span class="token punctuation">*</span><span class="token content">斜体文本</span><span class="token punctuation">*</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<hr>
+<h3 id="MD049-MD050-强调风格统一"><a href="#MD049-MD050-强调风格统一" class="headerlink" title="MD049/MD050 - 强调风格统一"></a>MD049/MD050 - 强调风格统一</h3><p>强调符号应该统一使用：</p>
+<ul>
+<li>斜体：使用 <code>*斜体*</code></li>
+<li>加粗：使用 <code>**加粗**</code></li>
+</ul>
+<p>✅ <strong>推荐示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token italic"><span class="token punctuation">*</span><span class="token content">斜体文本</span><span class="token punctuation">*</span></span>
+<span class="token bold"><span class="token punctuation">**</span><span class="token content">加粗文本</span><span class="token punctuation">**</span></span>
+<span class="token bold"><span class="token punctuation">**</span><span class="token content"><span class="token italic"><span class="token punctuation">*</span><span class="token content">加粗斜体</span><span class="token punctuation">*</span></span></span><span class="token punctuation">**</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<hr>
+<h2 id="其他规范"><a href="#其他规范" class="headerlink" title="其他规范"></a>其他规范</h2><h3 id="MD013-行长度限制（可选）"><a href="#MD013-行长度限制（可选）" class="headerlink" title="MD013 - 行长度限制（可选）"></a>MD013 - 行长度限制（可选）</h3><p>建议每行不超过 80-120 字符（中文可适当放宽）。</p>
+<p><strong>配置建议</strong>：根据项目需求调整或禁用此规则。</p>
+<hr>
+<h3 id="MD014-Shell命令前不要加美元符号"><a href="#MD014-Shell命令前不要加美元符号" class="headerlink" title="MD014 - Shell命令前不要加美元符号"></a>MD014 - Shell命令前不要加美元符号</h3><p>Shell 命令示例中不应该包含 <code>$</code> 提示符。</p>
+<p>❌ <strong>错误示例</strong>：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">npm</span> <span class="token function">install</span>
+$ <span class="token function">npm</span> start<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>✅ <strong>正确示例</strong>：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span>
+<span class="token function">npm</span> start<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<hr>
+<h3 id="MD026-标题末尾不要有标点符号"><a href="#MD026-标题末尾不要有标点符号" class="headerlink" title="MD026 - 标题末尾不要有标点符号"></a>MD026 - 标题末尾不要有标点符号</h3><p>标题末尾不应该有 <code>.</code>、<code>,</code>、<code>;</code>、<code>:</code> 等标点符号（<code>?</code> 和 <code>!</code> 允许）。</p>
+<p>❌ <strong>错误示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token title important"><span class="token punctuation">##</span> 项目介绍。</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>✅ <strong>正确示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token title important"><span class="token punctuation">##</span> 项目介绍</span>
+<span class="token title important"><span class="token punctuation">##</span> 这是什么？（允许问号）</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<hr>
+<h3 id="MD033-不使用HTML标签（可选）"><a href="#MD033-不使用HTML标签（可选）" class="headerlink" title="MD033 - 不使用HTML标签（可选）"></a>MD033 - 不使用HTML标签（可选）</h3><p>尽量避免在 Markdown 中使用 HTML 标签，除非必要。</p>
+<p>❌ <strong>不推荐</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">&gt;</span></span>标题<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>b</span><span class="token punctuation">&gt;</span></span>加粗<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>b</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>✅ <strong>推荐</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token title important"><span class="token punctuation">#</span> 标题</span>
+<span class="token bold"><span class="token punctuation">**</span><span class="token content">加粗</span><span class="token punctuation">**</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<hr>
+<h3 id="MD038-行内代码两侧不应有空格"><a href="#MD038-行内代码两侧不应有空格" class="headerlink" title="MD038 - 行内代码两侧不应有空格"></a>MD038 - 行内代码两侧不应有空格</h3><p>行内代码的反引号内侧不应该有空格。</p>
+<p>❌ <strong>错误示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token code-snippet code keyword">` code `</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>✅ <strong>正确示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token code-snippet code keyword">`code`</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<hr>
+<h3 id="MD002-第一个标题应该是一级标题（已弃用）"><a href="#MD002-第一个标题应该是一级标题（已弃用）" class="headerlink" title="MD002 - 第一个标题应该是一级标题（已弃用）"></a>MD002 - 第一个标题应该是一级标题（已弃用）</h3><p>此规则已被 MD041 替代。</p>
+<hr>
+<h3 id="MD011-链接语法错误"><a href="#MD011-链接语法错误" class="headerlink" title="MD011 - 链接语法错误"></a>MD011 - 链接语法错误</h3><p>链接语法应该正确，方括号和圆括号要匹配。</p>
+<p>❌ <strong>错误示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">[链接文本](https://example.com
+[链接文本https://example.com)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>✅ <strong>正确示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token url">[<span class="token content">链接文本</span>](<span class="token url">https://example.com</span>)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<hr>
+<h3 id="MD020-闭合的-ATX-标题内侧需要空格"><a href="#MD020-闭合的-ATX-标题内侧需要空格" class="headerlink" title="MD020 - 闭合的 ATX 标题内侧需要空格"></a>MD020 - 闭合的 ATX 标题内侧需要空格</h3><p>使用闭合的 ATX 标题时，<code>#</code> 内侧需要空格。</p>
+<p>❌ <strong>错误示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token title important"><span class="token punctuation">#</span>标题<span class="token punctuation">#</span></span>
+<span class="token title important"><span class="token punctuation">##</span>标题<span class="token punctuation">##</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>✅ <strong>正确示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token title important"><span class="token punctuation">#</span> 标题 <span class="token punctuation">#</span></span>
+<span class="token title important"><span class="token punctuation">##</span> 标题 <span class="token punctuation">##</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<hr>
+<h3 id="MD021-闭合的-ATX-标题外侧需要空格"><a href="#MD021-闭合的-ATX-标题外侧需要空格" class="headerlink" title="MD021 - 闭合的 ATX 标题外侧需要空格"></a>MD021 - 闭合的 ATX 标题外侧需要空格</h3><p>使用闭合的 ATX 标题时，外侧 <code>#</code> 也需要空格。</p>
+<p>❌ <strong>错误示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token title important"><span class="token punctuation">#</span> 标题<span class="token punctuation">#</span></span>
+<span class="token title important"><span class="token punctuation">##</span> 标题<span class="token punctuation">##</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>✅ <strong>正确示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token title important"><span class="token punctuation">#</span> 标题 <span class="token punctuation">#</span></span>
+<span class="token title important"><span class="token punctuation">##</span> 标题 <span class="token punctuation">##</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<hr>
+<h3 id="MD027-引用块后需要空格"><a href="#MD027-引用块后需要空格" class="headerlink" title="MD027 - 引用块后需要空格"></a>MD027 - 引用块后需要空格</h3><p>引用符号 <code>&gt;</code> 后面需要空格。</p>
+<p>❌ <strong>错误示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token blockquote punctuation">&gt;</span>引用内容
+<span class="token blockquote punctuation">&gt;&gt;</span>嵌套引用<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>✅ <strong>正确示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token blockquote punctuation">&gt;</span> 引用内容
+<span class="token blockquote punctuation">&gt; &gt;</span> 嵌套引用<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<hr>
+<h3 id="MD028-引用块内不应有空行"><a href="#MD028-引用块内不应有空行" class="headerlink" title="MD028 - 引用块内不应有空行"></a>MD028 - 引用块内不应有空行</h3><p>引用块内部不应该有连续的空引用行。</p>
+<p>❌ <strong>错误示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token blockquote punctuation">&gt;</span> 第一段引用
+<span class="token blockquote punctuation">&gt;</span>
+<span class="token blockquote punctuation">&gt;</span> 第二段引用<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>✅ <strong>正确示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token blockquote punctuation">&gt;</span> 第一段引用
+<span class="token blockquote punctuation">&gt;</span> 第二段引用<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>或者使用分隔的引用块：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token blockquote punctuation">&gt;</span> 第一段引用
+
+<span class="token blockquote punctuation">&gt;</span> 第二段引用<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<hr>
+<h3 id="MD035-分隔线风格统一"><a href="#MD035-分隔线风格统一" class="headerlink" title="MD035 - 分隔线风格统一"></a>MD035 - 分隔线风格统一</h3><p>分隔线应该使用统一的风格。</p>
+<p>❌ <strong>错误示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token hr punctuation">---</span>
+<span class="token hr punctuation">***</span>
+___<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>✅ <strong>正确示例</strong>（统一使用一种）：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token front-matter-block"><span class="token punctuation">---</span>
+<span class="token punctuation">---</span></span>
+<span class="token hr punctuation">---</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<hr>
+<h3 id="MD043-必需的标题结构（可选）"><a href="#MD043-必需的标题结构（可选）" class="headerlink" title="MD043 - 必需的标题结构（可选）"></a>MD043 - 必需的标题结构（可选）</h3><p>可以定义文档必须遵循的标题结构。</p>
+<p><strong>配置建议</strong>：根据项目需求自定义标题结构。</p>
+<hr>
+<h3 id="MD044-特定单词的大小写（可选）"><a href="#MD044-特定单词的大小写（可选）" class="headerlink" title="MD044 - 特定单词的大小写（可选）"></a>MD044 - 特定单词的大小写（可选）</h3><p>可以定义特定单词或短语的正确大小写。</p>
+<p><strong>示例</strong>：</p>
+<pre class="line-numbers language-json" data-language="json"><code class="language-json"><span class="token punctuation">{</span>
+  <span class="token property">"MD044"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">"names"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"JavaScript"</span><span class="token punctuation">,</span> <span class="token string">"TypeScript"</span><span class="token punctuation">,</span> <span class="token string">"GitHub"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">"code_blocks"</span><span class="token operator">:</span> <span class="token boolean">false</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<hr>
+<h3 id="MD048-代码围栏风格"><a href="#MD048-代码围栏风格" class="headerlink" title="MD048 - 代码围栏风格"></a>MD048 - 代码围栏风格</h3><p>代码块围栏应使用统一的风格。</p>
+<p>❌ <strong>混合使用</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token code"><span class="token punctuation">```</span><span class="token code-language">python</span>
+<span class="token code-block language-python">code</span>
+<span class="token punctuation">```</span></span>
+
+~<span class="token strike"><span class="token punctuation">~~</span><span class="token content">python
+code
+</span><span class="token punctuation">~~</span></span>~<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>✅ <strong>统一使用</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token code"><span class="token punctuation">```</span><span class="token code-language">python</span>
+<span class="token code-block language-python">code</span>
+<span class="token punctuation">```</span></span>
+
+<span class="token code"><span class="token punctuation">```</span><span class="token code-language">python</span>
+<span class="token code-block language-python">code</span>
+<span class="token punctuation">```</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<hr>
+<h3 id="MD051-链接片段应该有效（可选）"><a href="#MD051-链接片段应该有效（可选）" class="headerlink" title="MD051 - 链接片段应该有效（可选）"></a>MD051 - 链接片段应该有效（可选）</h3><p>文档内部链接的锚点应该是有效的。</p>
+<p>❌ <strong>错误示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token url">[<span class="token content">跳转到不存在的章节</span>](<span class="token url">#不存在的锚点</span>)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>✅ <strong>正确示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token title important"><span class="token punctuation">##</span> 章节标题</span>
+
+<span class="token url">[<span class="token content">跳转到章节</span>](<span class="token url">#章节标题</span>)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<hr>
+<h3 id="MD052-引用链接和图片应该有定义"><a href="#MD052-引用链接和图片应该有定义" class="headerlink" title="MD052 - 引用链接和图片应该有定义"></a>MD052 - 引用链接和图片应该有定义</h3><p>使用引用式链接时，必须有对应的定义。</p>
+<p>❌ <strong>错误示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token url">[<span class="token content">链接文本</span>][<span class="token variable">ref</span>]</span>
+<span class="token comment">&lt;!-- 缺少 [ref] 的定义 --&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>✅ <strong>正确示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token url">[<span class="token content">链接文本</span>][<span class="token variable">ref</span>]</span>
+
+<span class="token url-reference url"><span class="token punctuation">[</span><span class="token variable">ref</span><span class="token punctuation">]</span><span class="token punctuation">:</span> https://example.com</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<hr>
+<h3 id="MD053-链接和图片引用定义应该被使用"><a href="#MD053-链接和图片引用定义应该被使用" class="headerlink" title="MD053 - 链接和图片引用定义应该被使用"></a>MD053 - 链接和图片引用定义应该被使用</h3><p>定义的引用链接应该在文档中被使用。</p>
+<p>❌ <strong>错误示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token url-reference url"><span class="token punctuation">[</span><span class="token variable">ref</span><span class="token punctuation">]</span><span class="token punctuation">:</span> https://example.com</span>
+<span class="token comment">&lt;!-- 定义了但未使用 --&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>✅ <strong>正确示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token url">[<span class="token content">链接文本</span>][<span class="token variable">ref</span>]</span>
+
+<span class="token url-reference url"><span class="token punctuation">[</span><span class="token variable">ref</span><span class="token punctuation">]</span><span class="token punctuation">:</span> https://example.com</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<hr>
+<h3 id="MD054-链接和图片样式统一"><a href="#MD054-链接和图片样式统一" class="headerlink" title="MD054 - 链接和图片样式统一"></a>MD054 - 链接和图片样式统一</h3><p>链接和图片应使用统一的样式（内联或引用）。</p>
+<p>❌ <strong>混合使用</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token url">[<span class="token content">内联链接</span>](<span class="token url">https://example.com</span>)</span>
+<span class="token url">[<span class="token content">引用链接</span>][<span class="token variable">ref</span>]</span>
+
+<span class="token url-reference url"><span class="token punctuation">[</span><span class="token variable">ref</span><span class="token punctuation">]</span><span class="token punctuation">:</span> https://example.com</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>✅ <strong>统一使用</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token url">[<span class="token content">链接一</span>](<span class="token url">https://example.com</span>)</span>
+<span class="token url">[<span class="token content">链接二</span>](<span class="token url">https://example.com</span>)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<hr>
+<h3 id="MD055-表格管道符号风格统一"><a href="#MD055-表格管道符号风格统一" class="headerlink" title="MD055 - 表格管道符号风格统一"></a>MD055 - 表格管道符号风格统一</h3><p>表格应使用统一的管道符号风格。</p>
+<p>❌ <strong>不一致</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token table"><span class="token table-header-row"><span class="token punctuation">|</span><span class="token table-header important"> 列1 </span><span class="token punctuation">|</span><span class="token table-header important"> 列2</span>
+</span><span class="token table-line"><span class="token punctuation">|</span><span class="token punctuation">-----</span><span class="token punctuation">|</span><span class="token punctuation">-----</span>
+</span><span class="token table-data-rows"><span class="token punctuation">|</span><span class="token table-data"> 值1 </span><span class="token punctuation">|</span><span class="token table-data"> 值2 </span><span class="token punctuation">|</span></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>✅ <strong>一致</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token table"><span class="token table-header-row"><span class="token punctuation">|</span><span class="token table-header important"> 列1 </span><span class="token punctuation">|</span><span class="token table-header important"> 列2 </span><span class="token punctuation">|</span>
+</span><span class="token table-line"><span class="token punctuation">|</span><span class="token punctuation">-----</span><span class="token punctuation">|</span><span class="token punctuation">-----</span><span class="token punctuation">|</span>
+</span><span class="token table-data-rows"><span class="token punctuation">|</span><span class="token table-data"> 值1 </span><span class="token punctuation">|</span><span class="token table-data"> 值2 </span><span class="token punctuation">|</span></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<hr>
+<h3 id="MD056-表格列数应一致"><a href="#MD056-表格列数应一致" class="headerlink" title="MD056 - 表格列数应一致"></a>MD056 - 表格列数应一致</h3><p>表格每行的列数应该一致。</p>
+<p>❌ <strong>错误示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token table"><span class="token table-header-row"><span class="token punctuation">|</span><span class="token table-header important"> 列1 </span><span class="token punctuation">|</span><span class="token table-header important"> 列2 </span><span class="token punctuation">|</span><span class="token table-header important"> 列3 </span><span class="token punctuation">|</span>
+</span><span class="token table-line"><span class="token punctuation">|</span><span class="token punctuation">-----</span><span class="token punctuation">|</span><span class="token punctuation">-----</span><span class="token punctuation">|</span>
+</span><span class="token table-data-rows"><span class="token punctuation">|</span><span class="token table-data"> 值1 </span><span class="token punctuation">|</span><span class="token table-data"> 值2 </span><span class="token punctuation">|</span></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>✅ <strong>正确示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token table"><span class="token table-header-row"><span class="token punctuation">|</span><span class="token table-header important"> 列1 </span><span class="token punctuation">|</span><span class="token table-header important"> 列2 </span><span class="token punctuation">|</span><span class="token table-header important"> 列3 </span><span class="token punctuation">|</span>
+</span><span class="token table-line"><span class="token punctuation">|</span><span class="token punctuation">-----</span><span class="token punctuation">|</span><span class="token punctuation">-----</span><span class="token punctuation">|</span><span class="token punctuation">-----</span><span class="token punctuation">|</span>
+</span><span class="token table-data-rows"><span class="token punctuation">|</span><span class="token table-data"> 值1 </span><span class="token punctuation">|</span><span class="token table-data"> 值2 </span><span class="token punctuation">|</span><span class="token table-data"> 值3 </span><span class="token punctuation">|</span></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<hr>
+<h3 id="MD058-表格需要标题行"><a href="#MD058-表格需要标题行" class="headerlink" title="MD058 - 表格需要标题行"></a>MD058 - 表格需要标题行</h3><p>表格应该有标题行。</p>
+<p>❌ <strong>错误示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">|-----|-----|
+| 值1 | 值2 |<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>✅ <strong>正确示例</strong>：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token table"><span class="token table-header-row"><span class="token punctuation">|</span><span class="token table-header important"> 列1 </span><span class="token punctuation">|</span><span class="token table-header important"> 列2 </span><span class="token punctuation">|</span>
+</span><span class="token table-line"><span class="token punctuation">|</span><span class="token punctuation">-----</span><span class="token punctuation">|</span><span class="token punctuation">-----</span><span class="token punctuation">|</span>
+</span><span class="token table-data-rows"><span class="token punctuation">|</span><span class="token table-data"> 值1 </span><span class="token punctuation">|</span><span class="token table-data"> 值2 </span><span class="token punctuation">|</span></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<hr>
+<h2 id="完整规则列表"><a href="#完整规则列表" class="headerlink" title="完整规则列表"></a>完整规则列表</h2><h3 id="已实现规则"><a href="#已实现规则" class="headerlink" title="已实现规则"></a>已实现规则</h3><table>
+<thead>
+<tr>
+<th>规则编号</th>
+<th>说明</th>
+<th>严重程度</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>MD001</td>
+<td>标题层级递增</td>
+<td>error</td>
+</tr>
+<tr>
+<td>MD003</td>
+<td>标题风格统一（ATX）</td>
+<td>error</td>
+</tr>
+<tr>
+<td>MD004</td>
+<td>无序列表符号统一</td>
+<td>error</td>
+</tr>
+<tr>
+<td>MD005</td>
+<td>同级列表项缩进一致</td>
+<td>error</td>
+</tr>
+<tr>
+<td>MD006</td>
+<td>列表项不从行首缩进</td>
+<td>error</td>
+</tr>
+<tr>
+<td>MD007</td>
+<td>无序列表缩进2空格</td>
+<td>error</td>
+</tr>
+<tr>
+<td>MD009</td>
+<td>行尾无多余空格</td>
+<td>error</td>
+</tr>
+<tr>
+<td>MD010</td>
+<td>不使用Tab</td>
+<td>error</td>
+</tr>
+<tr>
+<td>MD011</td>
+<td>链接语法正确</td>
+<td>error</td>
+</tr>
+<tr>
+<td>MD012</td>
+<td>无连续多空行</td>
+<td>error</td>
+</tr>
+<tr>
+<td>MD013</td>
+<td>行长度限制</td>
+<td>warning</td>
+</tr>
+<tr>
+<td>MD014</td>
+<td>Shell命令无$符号</td>
+<td>error</td>
+</tr>
+<tr>
+<td>MD018</td>
+<td>标题#后需空格</td>
+<td>error</td>
+</tr>
+<tr>
+<td>MD019</td>
+<td>标题#后只一个空格</td>
+<td>error</td>
+</tr>
+<tr>
+<td>MD020</td>
+<td>闭合ATX标题内侧空格</td>
+<td>error</td>
+</tr>
+<tr>
+<td>MD021</td>
+<td>闭合ATX标题外侧空格</td>
+<td>error</td>
+</tr>
+<tr>
+<td>MD022</td>
+<td>标题前后空行</td>
+<td>error</td>
+</tr>
+<tr>
+<td>MD023</td>
+<td>标题不缩进</td>
+<td>error</td>
+</tr>
+<tr>
+<td>MD024</td>
+<td>避免重复标题</td>
+<td>error</td>
+</tr>
+<tr>
+<td>MD025</td>
+<td>只一个一级标题</td>
+<td>error</td>
+</tr>
+<tr>
+<td>MD026</td>
+<td>标题末尾无标点</td>
+<td>error</td>
+</tr>
+<tr>
+<td>MD027</td>
+<td>引用块后空格</td>
+<td>error</td>
+</tr>
+<tr>
+<td>MD028</td>
+<td>引用块内无空行</td>
+<td>error</td>
+</tr>
+<tr>
+<td>MD029</td>
+<td>有序列表序号</td>
+<td>error</td>
+</tr>
+<tr>
+<td>MD030</td>
+<td>列表符号后空格</td>
+<td>error</td>
+</tr>
+<tr>
+<td>MD031</td>
+<td>代码块前后空行</td>
+<td>error</td>
+</tr>
+<tr>
+<td>MD032</td>
+<td>列表前后空行</td>
+<td>error</td>
+</tr>
+<tr>
+<td>MD033</td>
+<td>不使用HTML标签</td>
+<td>warning</td>
+</tr>
+<tr>
+<td>MD034</td>
+<td>URL使用尖括号</td>
+<td>error</td>
+</tr>
+<tr>
+<td>MD035</td>
+<td>分隔线风格统一</td>
+<td>error</td>
+</tr>
+<tr>
+<td>MD036</td>
+<td>不用强调代替标题</td>
+<td>error</td>
+</tr>
+<tr>
+<td>MD037</td>
+<td>强调标记内侧无空格</td>
+<td>error</td>
+</tr>
+<tr>
+<td>MD038</td>
+<td>行内代码两侧无空格</td>
+<td>error</td>
+</tr>
+<tr>
+<td>MD039</td>
+<td>链接文本两侧无空格</td>
+<td>error</td>
+</tr>
+<tr>
+<td>MD040</td>
+<td>代码块指定语言</td>
+<td>error</td>
+</tr>
+<tr>
+<td>MD041</td>
+<td>文件以一级标题开始</td>
+<td>error</td>
+</tr>
+<tr>
+<td>MD042</td>
+<td>链接URL不为空</td>
+<td>error</td>
+</tr>
+<tr>
+<td>MD043</td>
+<td>必需的标题结构</td>
+<td>warning</td>
+</tr>
+<tr>
+<td>MD044</td>
+<td>特定单词大小写</td>
+<td>warning</td>
+</tr>
+<tr>
+<td>MD045</td>
+<td>图片有alt文本</td>
+<td>error</td>
+</tr>
+<tr>
+<td>MD046</td>
+<td>代码块风格统一</td>
+<td>error</td>
+</tr>
+<tr>
+<td>MD047</td>
+<td>文件以空行结尾</td>
+<td>error</td>
+</tr>
+<tr>
+<td>MD048</td>
+<td>代码围栏风格统一</td>
+<td>error</td>
+</tr>
+<tr>
+<td>MD049</td>
+<td>斜体风格统一</td>
+<td>error</td>
+</tr>
+<tr>
+<td>MD050</td>
+<td>加粗风格统一</td>
+<td>error</td>
+</tr>
+<tr>
+<td>MD051</td>
+<td>链接片段有效</td>
+<td>warning</td>
+</tr>
+<tr>
+<td>MD052</td>
+<td>引用有定义</td>
+<td>error</td>
+</tr>
+<tr>
+<td>MD053</td>
+<td>定义被使用</td>
+<td>error</td>
+</tr>
+<tr>
+<td>MD054</td>
+<td>链接样式统一</td>
+<td>warning</td>
+</tr>
+<tr>
+<td>MD055</td>
+<td>表格管道符统一</td>
+<td>error</td>
+</tr>
+<tr>
+<td>MD056</td>
+<td>表格列数一致</td>
+<td>error</td>
+</tr>
+<tr>
+<td>MD058</td>
+<td>表格有标题行</td>
+<td>error</td>
+</tr>
+</tbody></table>
+<h3 id="未包含规则"><a href="#未包含规则" class="headerlink" title="未包含规则"></a>未包含规则</h3><p>以下规则编号在 markdownlint 中未定义或已弃用：</p>
+<ul>
+<li>MD002（已被 MD041 替代）</li>
+<li>MD008（已合并到 MD009）</li>
+<li>MD015-MD017（未定义）</li>
+<li>MD057（未定义）</li>
+<li>MD059-MD060（未定义）</li>
+</ul>
+<hr>
+<h2 id="常用规则速查表"><a href="#常用规则速查表" class="headerlink" title="常用规则速查表"></a>常用规则速查表</h2><table>
+<thead>
+<tr>
+<th>规则编号</th>
+<th>说明</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>MD001</td>
+<td>标题层级递增</td>
+<td><code># h1</code> → <code>## h2</code></td>
+</tr>
+<tr>
+<td>MD003</td>
+<td>标题风格统一</td>
+<td>使用 <code>#</code> 而不是下划线</td>
+</tr>
+<tr>
+<td>MD004</td>
+<td>无序列表符号统一</td>
+<td>统一使用 <code>-</code></td>
+</tr>
+<tr>
+<td>MD007</td>
+<td>列表缩进2空格</td>
+<td><code>- item</code><br><code>  - subitem</code></td>
+</tr>
+<tr>
+<td>MD009</td>
+<td>行尾无多余空格</td>
+<td>删除行尾空格</td>
+</tr>
+<tr>
+<td>MD012</td>
+<td>无连续多空行</td>
+<td>最多一个空行</td>
+</tr>
+<tr>
+<td>MD022</td>
+<td>标题前后空行</td>
+<td>标题前后需要空行</td>
+</tr>
+<tr>
+<td>MD025</td>
+<td>只能有一个一级标题</td>
+<td>全文只有一个 <code># h1</code></td>
+</tr>
+<tr>
+<td>MD031</td>
+<td>代码块前后空行</td>
+<td>代码块前后需要空行</td>
+</tr>
+<tr>
+<td>MD032</td>
+<td>列表前后空行</td>
+<td>列表前后需要空行</td>
+</tr>
+<tr>
+<td>MD040</td>
+<td>代码块指定语言</td>
+<td><code>markdown ```python</code></td>
+</tr>
+<tr>
+<td>MD047</td>
+<td>文件结尾空行</td>
+<td>文件最后一行为空行</td>
+</tr>
+<tr>
+<td>MD055</td>
+<td>表格管道符统一</td>
+<td>每行开始和结束都有 `</td>
+</tr>
+<tr>
+<td>MD056</td>
+<td>表格列数一致</td>
+<td>所有行列数相同</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="规则优先级建议"><a href="#规则优先级建议" class="headerlink" title="规则优先级建议"></a>规则优先级建议</h2><h3 id="必须遵守（error）"><a href="#必须遵守（error）" class="headerlink" title="必须遵守（error）"></a>必须遵守（error）</h3><p>以下规则影响文档可读性和规范性，必须遵守：</p>
+<ul>
+<li><strong>标题类</strong>：MD001, MD003, MD018, MD019, MD022, MD023, MD025, MD041</li>
+<li><strong>列表类</strong>：MD004, MD005, MD006, MD007, MD030, MD032</li>
+<li><strong>代码类</strong>：MD031, MD040, MD046, MD047</li>
+<li><strong>链接类</strong>：MD011, MD034, MD039, MD042, MD045</li>
+<li><strong>格式类</strong>：MD009, MD010, MD012</li>
+</ul>
+<h3 id="建议遵守（warning）"><a href="#建议遵守（warning）" class="headerlink" title="建议遵守（warning）"></a>建议遵守（warning）</h3><p>以下规则可根据项目需求调整：</p>
+<ul>
+<li>MD013（行长度，中文文档可放宽）</li>
+<li>MD033（HTML标签，复杂格式时允许）</li>
+<li>MD043（标题结构，适用于固定模板）</li>
+<li>MD044（单词大小写，品牌词汇）</li>
+</ul>
+<h3 id="团队协商"><a href="#团队协商" class="headerlink" title="团队协商"></a>团队协商</h3><p>以下规则可由团队协商决定：</p>
+<ul>
+<li>MD029（有序列表序号风格）</li>
+<li>MD035（分隔线风格）</li>
+<li>MD048（代码围栏风格）</li>
+<li>MD054（链接样式）</li>
+</ul>
+<hr>
+<p><strong>最后更新时间</strong>：2025-11-16<br><strong>基于版本</strong>：markdownlint v0.39.0</p>
+
+        </div>
+        <div class="post-comment">
+            
+
+    <style>
+    .v[data-class=v] .vinput {
+        padding: unset;
+    }
+</style>
+<div id="vcomments"></div>
+
+<script src="/libs/valine/Valine.min.js"></script>
+
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'Mia2Oc0sFRP8CLKWIpkzlKH7-gzGzoHsz',
+        appKey: 'UzWr1AJYRlfkoKpaNY9l2dIW',
+        notify: 'false' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'monsterid',
+        avatar_cdn: 'https://cravatar.cn/avatar/',
+        pageSize: '10',
+        lang: '',
+        // lang: 'zh-cn',
+        placeholder: '发一条友善的评论',
+        emojiCDN: 'https://i0.hdslb.com/bfs/emote/',
+        emojiMaps: {
+            "doge": "3087d273a78ccaff4bb1e9972e2ba2a7583c9f11.png",
+            "微笑": "685612eadc33f6bc233776c6241813385844f182.png",
+            "OK": "4683fd9ffc925fa6423110979d7dcac5eda297f4.png",
+            "星星眼": "63c9d1a31c0da745b61cdb35e0ecb28635675db2.png",
+            "妙啊": "b4cb77159d58614a9b787b91b1cd22a81f383535.png",
+            "辣眼睛": "35d62c496d1e4ea9e091243fa812866f5fecc101.png",
+            "吃瓜": "4191ce3c44c2b3df8fd97c33f85d3ab15f4f3c84.png",
+            "滑稽": "d15121545a99ac46774f1f4465b895fe2d1411c3.png",
+            "呲牙": "b5a5898491944a4268360f2e7a84623149672eb6.png",
+            "打call": "431432c43da3ee5aab5b0e4f8931953e649e9975.png",
+            "歪嘴": "4384050fbab0586259acdd170b510fe262f08a17.png",
+            "调皮": "8290b7308325e3179d2154327c85640af1528617.png",
+            "嗑瓜子": "28a91da1685d90124cfeead74622e1ebb417c0eb.png",
+            "笑哭": "c3043ba94babf824dea03ce500d0e73763bf4f40.png",
+            "脱单doge": "bf7e00ecab02171f8461ee8cf439c73db9797748.png",
+            "给心心": "1597302b98827463f5b75c7cac1f29ea6ce572c4.png",
+            "嘟嘟": "abd7404537d8162720ccbba9e0a8cdf75547e07a.png",
+            "喜欢": "8a10a4d73a89f665feff3d46ca56e83dc68f9eb8.png",
+            "酸了": "92b1c8cbceea3ae0e8e32253ea414783e8ba7806.png",
+            "哦呼": "362bded07ea5434886271d23fa25f5d85d8af06c.png",
+            "嫌弃": "de4c0783aaa60ec03de0a2b90858927bfad7154b.png",
+            "大哭": "2caafee2e5db4db72104650d87810cc2c123fc86.png",
+            "害羞": "9d2ec4e1fbd6cb1b4d12d2bbbdd124ccb83ddfda.png",
+            "疑惑": "b7840db4b1f9f4726b7cb23c0972720c1698d661.png",
+            "喜极而泣": "485a7e0c01c2d70707daae53bee4a9e2e31ef1ed.png",
+            "奸笑": "bb84906573472f0a84cebad1e9000eb6164a6f5a.png",
+            "笑": "81edf17314cea3b48674312b4364df44d5c01f17.png",
+            "偷笑": "6c49d226e76c42cd8002abc47b3112bc5a92f66a.png",
+            "惊讶": "f8e9a59cad52ae1a19622805696a35f0a0d853f3.png",
+            "捂脸": "6921bb43f0c634870b92f4a8ad41dada94a5296d.png",
+            "阴险": "ba8d5f8e7d136d59aab52c40fd3b8a43419eb03c.png",
+            "囧": "12e41d357a9807cc80ef1e1ed258127fcc791424.png",
+            "呆": "33ad6000d9f9f168a0976bc60937786f239e5d8c.png",
+            "抠鼻": "cb89184c97e3f6d50acfd7961c313ce50360d70f.png",
+            "大笑": "ca94ad1c7e6dac895eb5b33b7836b634c614d1c0.png",
+            "惊喜": "0afecaf3a3499479af946f29749e1a6c285b6f65.png",
+            "无语": "44667b7d9349957e903b1b62cb91fb9b13720f04.png",
+            "点赞": "1a67265993913f4c35d15a6028a30724e83e7d35.png",
+            "鼓掌": "895d1fc616b4b6c830cf96012880818c0e1de00d.png",
+            "尴尬": "cb321684ed5ce6eacdc2699092ab8fe7679e4fda.png",
+            "灵魂出窍": "43d3db7d97343c01b47e22cfabeca84b4251f35a.png",
+            "委屈": "d2f26cbdd6c96960320af03f5514c5b524990840.png",
+            "傲娇": "010540d0f61220a0db4922e4a679a1d8eca94f4e.png",
+            "疼": "905fd9a99ec316e353b9bd4ecd49a5f0a301eabf.png",
+            "冷": "cb0ebbd0668640f07ebfc0e03f7a18a8cd00b4ed.png",
+            "生病": "0f25ce04ae1d7baf98650986454c634f6612cb76.png",
+            "吓": "9c10c5ebc7bef27ec641b8a1877674e0c65fea5d.png",
+            "吐": "06946bfe71ac48a6078a0b662181bb5cad09decc.png",
+            "捂眼": "c5c6d6982e1e53e478daae554b239f2b227b172b.png",
+            "嘘声": "e64af664d20716e090f10411496998095f62f844.png",
+            "思考": "cfa9b7e89e4bfe04bbcd34ccb1b0df37f4fa905c.png",
+            "再见": "fc510306bae26c9aec7e287cdf201ded27b065b9.png",
+            "翻白眼": "eba54707c7168925b18f6f8b1f48d532fe08c2b1.png",
+            "哈欠": "888d877729cbec444ddbd1cf4c9af155a7a06086.png",
+            "奋斗": "bb2060c15dba7d3fd731c35079d1617f1afe3376.png",
+            "墨镜": "3a03aebfc06339d86a68c2d893303b46f4b85771.png",
+            "难过": "a651db36701610aa70a781fa98c07c9789b11543.png",
+            "撇嘴": "531863568e5668c5ac181d395508a0eeb1f0cda4.png",
+            "抓狂": "4c87afff88c22439c45b79e9d2035d21d5622eba.png",
+            "生气": "3195714219c4b582a4fb02033dd1519913d0246d.png",
+            "口罩": "3ad2f66b151496d2a5fb0a8ea75f32265d778dd3.png",
+            "牛年": "9275275ff1f2659310648221107d20bc4970f106.png",
+            "福到了": "5de5373d354c373cf1617b6b836f3a8d53c5a655.png",
+            "鸡腿": "c7860392815d345fa69c4f00ef18d67dccfbd574.png",
+            "月饼": "89b19c5730e08d6f12fadf6996de5bc2e52f81fe.png",
+            "雪花": "a41813c4edf8782047e172c884ebd4507ce5e449.png",
+            "视频卫星": "dce6fc7d6dfeafff01241924db60f8251cca5307.png",
+            "干杯": "8da12d5f55a2c7e9778dcc05b40571979fe208e6.png",
+            "爱心": "ed04066ea7124106d17ffcaf75600700e5442f5c.png",
+            "锦鲤": "643d6c19c8164ffd89e3e9cdf093cf5d773d979c.png",
+            "胜利": "b49fa9f4b1e7c3477918153b82c60b114d87347c.png",
+            "加油": "c7aaeacb21e107292d3bb053e5abde4a4459ed30.png",
+            "抱拳": "89516218158dbea18ab78e8873060bf95d33bbbe.png",
+            "响指": "1b5c53cf14336903e1d2ae3527ca380a1256a077.png",
+            "保佑": "fafe8d3de0dc139ebe995491d2dac458a865fb30.png",
+            "支持": "3c210366a5585706c09d4c686a9d942b39feeb50.png",
+            "拥抱": "41780a4254750cdaaccb20735730a36044e98ef3.png",
+            "跪了": "f2b3aee7e521de7799d4e3aa379b01be032698ac.png",
+            "怪我咯": "07cc6077f7f7d75b8d2c722dd9d9828a9fb9e46d.png",
+            "黑洞": "e90ec4c799010f25391179118ccd9f66b3b279ba.png",
+            "老鼠": "8e6fb491eb1bb0d5862e7ec8ccf9a3da12b6c155.png",
+            "凛冬-生气": "d90bd2fbc13a3cb8d313f6d675f20caf109f60a7.png",
+            "W-哈哈": "83d527303c8f62f494e6971c48836487e7d87b1b.png",
+            "霜叶-疑问": "ada3aea8594e724511c1daad15fb3b23900d8e24.png",
+            "煌-震撼": "7bb39ac289bc97fe52af047020a9bf324ecdebe1.png",
+            "哭泣": "a61abafb8c39defc323b045f30072198007b1c89.png",
+            "狗子": "6a997106af5bf490f22c80a7acf3be813ee755fc.png",
+            "羞羞": "f4f9171e4d8c3f30827a8b96ea1ce1beb825ad50.png",
+            "亲亲": "2f72bae7b834d499f259c833f7011d5ed8748fd1.png",
+            "耍帅": "d7a38b08d1f1cc35b19c35041f29ffcc48808e87.png",
+            "气愤": "069b029d17a086ab475fd331697a649e234850bb.png",
+            "高兴": "416570a8aca7be12fb2c36e4b846906653f6d294.png",
+        }
+    })
+</script>
+
+
+
+        </div>
+
+    </div>
+</div>
+
+<style>
+    .post-title {
+        font-size: 22px;
+        font-weight: 700;
+        padding: 15px 0;
+        text-align: center;
+        line-height: 1.3;
+        color: #2c3e50;
+    }
+
+    .post-meta {
+        padding: 15px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        padding-bottom: 20px;
+        position: relative;
+    }
+
+    .post-meta::after {
+        content: '';
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        width: 60px;
+        height: 2px;
+        background: linear-gradient(90deg, #00f2fe, #e94560);
+    }
+
+    .post-meta-top {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        margin-bottom: 10px;
+    }
+
+    .post-author, .post-date {
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: rgba(0, 0, 0, 0.7);
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.025em;
+    }
+
+    .post-categories {
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: rgba(0, 0, 0, 0.7);
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.025em;
+        margin-left: auto;
+    }
+
+    .post-author i, .post-date i, .post-categories i {
+        font-size: 20px;
+        margin-right: 10px;
+        color: #000000;
+        opacity: 0.85;
+    }
+
+    .post-meta-bottom {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 0;
+    }
+
+    @media (max-width: 768px) {
+        .post-title {
+            font-size: 28px;
+            margin-bottom: 25px;
+            padding: 8px 0;
+        }
+        
+        .post-meta {
+            margin-bottom: 30px;
+            padding-bottom: 16px;
+        }
+        
+        .post-meta-top {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 16px;
+        }
+        
+        .post-author, .post-date, .post-categories {
+            padding: 4px 0;
+            font-size: 0.85rem;
+        }
+        
+        .post-meta-bottom {
+            gap: 8px;
+        }
+        
+        .post-category, .post-tag {
+            padding: 4px 12px;
+            font-size: 0.8rem;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+        
+        .post-tag:hover {
+            transform: translateY(-1px);
+        }
+    }
+
+    
+    .post-content pre.line-numbers {
+        padding: 2.2rem 1.5rem 0.5rem 3.8rem !important;
+        -webkit-box-shadow: 0 0 20px rgba(128, 128, 128, 0.8);
+        box-shadow: 0 0 20px rgba(128, 128, 128, 0.8);
+    }
+
+    /* 行号位置 */
+    .line-numbers .line-numbers-rows {
+        top: 2.5rem;        /* 2.2rem + 0.3rem */
+    }
+    
+    
+    /* mac主题效果 */
+    .post-content pre.line-numbers::after {
+        content: '';
+        position: absolute;
+        display: block;
+        border-radius: 50%;
+        background: #ff5f56!important;
+        width: 12px!important;
+        height: 12px!important;
+        top: 12px!important;
+        left: 12px!important;
+        -webkit-box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
+        box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
+    }
+    
+    
+    /* 代码块语言 */
+    .post-content pre.line-numbers::before {
+        color: #ccc;
+        font-size: 1rem;
+        font-weight: 600;
+        height: 25px;
+        line-height: 25px;
+        padding: 5px 10px 0;
+        position: absolute;
+        right: 0;
+        text-align: right;
+        top: 0;
+        /* content: attr(data-language); */
+        content: '';
+    }
+    
+
+    .post-meta-item:hover {
+        color: rgba(0, 0, 0, 0.9);
+    }
+    
+    .post-meta-item i {
+        margin-right: 10px;
+        font-size: 20px;
+        color: #00f2fe;
+        opacity: 0.85;
+        transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .post-meta-item:hover i {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    
+    .post-tags {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    
+    .post-tag {
+        display: inline-block;
+        margin-left: 10px;
+        margin-bottom: 6px;
+        padding: 6px 12px;
+        background-color: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(10px);
+        color: rgba(0, 0, 0, 0.87);
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 500;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        border: 1px solid rgba(229, 235, 242, 0.8);
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .post-tag::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(0, 242, 254, 0.1), transparent);
+        transition: left 0.5s;
+    }
+    
+    .post-tag:hover {
+        color: #424242;
+        background-color: rgba(255, 255, 255, 0.9);
+        border-color: rgba(0, 242, 254, 0.5);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    
+    .post-tag:hover::before {
+        left: 100%;
+    }
+    
+    /* 分类链接高端大气样式 */
+    .post-category {
+        display: inline-block;
+        padding: 4px 10px;
+        margin: 0 4px;
+        background: linear-gradient(135deg, rgba(239, 246, 255, 0.8), rgba(255, 255, 255, 0.9));
+        color: #2c3e50;
+        font-size: 0.85rem;
+        font-weight: 600;
+        text-decoration: none;
+        border-radius: 6px;
+        border: 1px solid rgba(229, 235, 242, 0.8);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .post-category::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+        transition: left 0.4s ease;
+    }
+    
+    .post-category:hover {
+        color: #1565c0;
+        background-color: rgba(255, 255, 255, 0.9);
+        border-color: rgba(0, 242, 254, 0.5);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    
+    .post-category:hover::before {
+        left: 100%;
+    }
+
+    .code-container {
+        position: relative;
+    }
+
+    .code-container .button-container {
+        position: absolute;
+        top: 8px;
+        right: 12px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        z-index: 999;
+    }
+
+    .copy-button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        color: #aaa;
+    }
+
+    .copy-button:hover {
+        color: #999;
+    }
+
+    .copy-button:active {
+        color: #999;
+    }
+
+    /* .code-container.copied .copy-button::before {
+        content: '\e86c  ';
+    } */
+
+    .language-label {
+        font-size: 1rem;
+        color: #aaa;
+        font-weight: 600;
+        background-color: transparent;
+        border-radius: 4px;
+        /* 不允许选择文本 */
+        user-select: none;
+    }
+</style>
+<script>
+    // Function to wrap <pre> tags with a .code-container and add a copy button
+    function wrapCodeBlocks() {
+        $('pre').each(function() {
+            // Create a container div
+            var $container = $('<div class="code-container"></div>');
+
+            // Create a div for the buttons
+            var $buttonContainer = $('<div class="button-container"></div>');
+
+            // Create a copy button
+            var $copyButton = $('<i class="material-icons copy-button">content_copy</i>');
+            $copyButton.on('click', function() {
+                copyCode($container);
+            });
+
+            // Create a language label
+            var language = $(this).data('language');
+            var $languageLabel = $('<span class="language-label"></span>').text(language);
+
+            // Insert the button and language label into the button container
+            $buttonContainer.append($copyButton).append($languageLabel);
+
+            // Insert the button and pre element into the container
+            $(this).before($container);
+            $container.append($buttonContainer).append($(this));
+        });
+    }
+
+    // Function to copy code content
+    function copyCode($container) {
+        var code = $container.find('pre').text();
+
+        navigator.clipboard.writeText(code).then(function() {
+            M.toast({
+                html: '已拷贝',
+                displayLength: 1200,
+                inDuration: 300,
+                outDuration: 300
+            });
+            $container.addClass('copied');
+            $container.find('i.copy-button').text('done_all');
+            setTimeout(function() {
+                $container.removeClass('copied');
+                $container.find('i.copy-button').text('content_copy');
+            }, 2000);
+        }).catch(function(err) {
+            console.error('无法复制文本: ', err);
+        });
+    }
+
+    // Execute the wrap function when the document is loaded
+    $(document).ready(function() {
+        wrapCodeBlocks();
+    });
+</script>
+                </div>
+                <div class="col l3" id="toc-body">
+                    <!-- 文章目录 -->
+                    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget #toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #toc-content .toc-list {
+        padding-left: 10px;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ul li, #toc-content ol li {
+        padding-left: 10px;
+        line-height: 1.8rem;
+        font-size: 1rem;
+        color: #444;
+    }
+
+    #toc-content .is-active-link {
+        color: #E91E63;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: transparent;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+    }
+
+    .toc-widget {
+        box-shadow: 0 16px 24px 2px rgb(0 0 0 / 14%), 0 6px 30px 5px rgb(0 0 0 / 12%), 0 8px 10px -5px rgb(0 0 0 / 20%);
+    }
+
+</style>
+<div id="post-toc">
+    <div class="toc-widget card">
+        <div id="toc-title">
+            <i class="far fa-list-alt"></i>&nbsp;&nbsp;目录
+        </div>
+        <div id="toc-content"></div>
+    </div>
+</div>
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function() {
+        tocbot.init({
+            // Where to render the table of contents.
+            tocSelector: '#toc-content',
+            // Where to grab the headings to build the table of contents.
+            contentSelector: '.post-content',
+            // Which headings to grab inside of the contentSelector element.
+            headingSelector: 'h1, h2, h3, h4',
+            // For headings inside relative or absolute positioned containers within content.
+            hasInnerContainers: false,
+            // Smooth scrolling enabled.
+            scrollSmooth: true,
+            // Smooth scroll duration.
+            scrollSmoothDuration: 420,
+            headingsOffset: $('#nav-header').height() + 10,
+            scrollSmoothOffset: -($('#nav-header').height() + 10),
+            collapseDepth: 4,
+            // orderedList can be set to false to generate unordered lists (ul)
+            // instead of ordered lists (ol)
+            orderedList: false,
+        });
+
+        // 动态设置文章目录的宽度， 防止滚动和窗口变动时变形
+        // width()不包含padding, innerWidth()包含padding
+        $('.toc-widget').width($('#toc-body').width());
+
+        let tocHeight = parseInt($(window).height() * 0.5 - 64);
+        let $tocWidget = $('.toc-widget');
+        let $tocTitle = $('#toc-title');
+        let $tocContent = $('#toc-content');
+        if ($(window).scrollTop() > tocHeight) {
+            $tocWidget.addClass('toc-fixed');
+        } else {
+            $tocWidget.removeClass('toc-fixed');
+        }
+        $tocWidget.css('max-height', $(window).height() * 0.6);
+        if ($tocContent.height() > ($tocWidget.height() - $tocTitle.height())) {
+            $tocWidget.css('overflow-y', 'auto');
+        }
+        // if ($tocWidget.height() > $(window).height() * 0.6) {
+        //     $tocWidget.css('max-height', $(window).height() * 0.6);
+        // }
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+            if ($tocContent.height() > ($tocWidget.height() - $tocTitle.height())) {
+                $tocWidget.css('overflow-y', 'auto');
+            } else {
+                $tocWidget.css('overflow-y', 'unset');
+            }
+            $('.toc-widget').width($('#toc-body').width());
+        });
+        $(window).on('resize', function(){
+            $tocWidget.css('max-height', $(window).height() * 0.6);
+            if ($tocContent.height() > ($tocWidget.height() - $tocTitle.height())) {
+                $tocWidget.css('overflow-y', 'auto');
+            } else {
+                $tocWidget.css('overflow-y', 'unset');
+            }
+            $('.toc-widget').width($('#toc-body').width());
+        });
+    });
+</script>
+
+                </div>
+            
+        </div>
+    </div>
+</main>
+
+    <footer class="page-footer footer-color">
+    
+        
+
+<link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+
+
+    
+<style type="text/css">
+    .aplayer.aplayer-fixed {
+        z-index: 999;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+
+    .aplayer .aplayer-lrc {
+        height: 66px;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        font-size: 24px;
+        color: #BCDDEC;
+        line-height: 24px !important;
+        font-weight: bold;
+    }
+
+    .aplayer.aplayer-fixed .aplayer-lrc {
+        text-shadow: none;
+    }
+</style>
+
+<div class="">
+    <div class="row">
+        <meting-js
+            class="col l8 offset-l2 m10 offset-m1 s12"
+            server="netease"
+            type="playlist"
+            id="743950282"
+            fixed='true'
+            autoplay='false'
+            theme='#BCDDEC'
+            loop='all'
+            order='random'
+            preload='auto'
+            volume='0.7'
+            list-folded='true'>
+        </meting-js>
+    </div>
+</div>
+
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+
+
+<script src="/libs/meting/Meting.min.js"></script>
+
+<script>
+    
+        $(document).ready(function() {
+            $('.aplayer .aplayer-lrc').addClass('aplayer-lrc-hide');
+        });
+    
+</script>
+    
+    <div class="container">
+        <div class="row center">
+            <div class="col l12 m12 s12">
+                <div id="framework-info">
+                    Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+                    &nbsp;|&nbsp;&nbsp;Theme&nbsp;
+                    <a href="https://github.com/xiongxianzhu/hexo-theme-xxcoding" target="_blank">
+                        xxcoding
+                    </a>
+                </div>
+                <div id="siteinfo">
+                    <!-- <span>站点总字数：</span> -->
+                    
+                    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+                    <span id="busuanzi_container_page_pv">站点总阅读量：<span class="white-text" id="busuanzi_value_page_pv"></span>次</span>
+                    &nbsp;|&nbsp;&nbsp;<span id="busuanzi_container_site_uv">站点总访客数：<span class="white-text" id="busuanzi_value_site_uv"></span>人</span>
+                    &nbsp;|&nbsp;&nbsp;<span id="busuanzi_container_site_pv">站点总访问量：<span class="white-text" id="busuanzi_value_site_pv"></span>次</span>
+                    
+                </div>
+                
+                <div id="sitetime">载入运行时间...</div>
+                <script>
+                    function siteTime() {
+                        var seconds = 1000;
+                        var minutes = seconds * 60;
+                        var hours = minutes * 60;
+                        var days = hours * 24;
+                        var years = days * 365;
+                        var today = new Date();
+                        var startYear = "2017";
+                        var startMonth = "6";
+                        var startDate = "5";
+                        var startHour = "0";
+                        var startMinute = "0";
+                        var startSecond = "0";
+                        var todayYear = today.getFullYear();
+                        var todayMonth = today.getMonth() + 1;
+                        var todayDate = today.getDate();
+                        var todayHour = today.getHours();
+                        var todayMinute = today.getMinutes();
+                        var todaySecond = today.getSeconds();
+                        var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                        var diff = t2 - t1;
+                        var diffYears = Math.floor(diff / years);
+                        var diffDays = Math.floor((diff / days) - diffYears * 365);
+                        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                            minutes);
+                        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                            diffMinutes * minutes) / seconds);
+                        if (startYear == todayYear) {
+                            document.getElementById("year").innerHTML = todayYear;
+                            document.getElementById("sitetime").innerHTML = "本站已持续运行 " + "<span class='white-text'>" + diffDays + "</span>" + " 天 "
+                            + "<span class='white-text'>" + diffHours + "</span>" + " 小时 "
+                            + "<span class='white-text'>" + diffMinutes + "</span>" + " 分钟 "
+                            + "<span class='white-text'>" + diffSeconds + "</span>" + " 秒";
+                        } else {
+                            document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                            document.getElementById("sitetime").innerHTML = "本站已持续运行 " + "<span class='white-text'>" + diffYears + "</span>" + " 年 "
+                            + "<span class='white-text'>" + diffDays + "</span>" + " 天 "
+                            + "<span class='white-text'>" + diffHours + "</span>" + " 小时 "
+                            + "<span class='white-text'>" + diffMinutes + "</span>" + " 分钟 "
+                            + "<span class='white-text'>" + diffSeconds + "</span>" + " 秒";
+                        }
+                    }
+                    setInterval(siteTime, 1000);
+                </script>
+                
+                
+                <div id="icp">
+                    <img class="lazyload" src="/img/icp.png" data-src="/img/icp.png" style="vertical-align: text-bottom;" />
+                    <a href="https://beian.miit.gov.cn/" target="_blank">粤ICP备17065679号-1</a>
+                </div>
+                
+                
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container center">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2017 - 2025</span>
+            
+            ,&nbsp;
+            made with <span style="color: red;">❤️</span>&nbsp;&nbsp;by
+            <a href="/about" target="_blank">xx</a>
+            for a better web.
+        </div>
+    </div>
+</footer>
+
+
+    
+    <!-- 回到顶部按钮 -->
+<div id="back-top" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+    
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+<script src="/libs/lazyload/lazyload.min.js"></script>
+<script src="/libs/aos/aos.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/scrollprogress/3.0.2/scrollProgress.min.js"></script>
+<script src="/js/xxcoding.js"></script>
+
+
+<script src="https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
+
+
+</body>
+</html>

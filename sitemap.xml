@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://zhuxiongxian.cc/2025/11/16/markdown-rules/</loc>
+    
+    <lastmod>2025-11-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://zhuxiongxian.cc/2025/11/16/vue-main-technological-stack-and-best-practices/</loc>
     
     <lastmod>2025-11-16</lastmod>
@@ -1228,6 +1237,20 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>https://zhuxiongxian.cc/tags/markdown/</loc>
+    <lastmod>2025-11-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhuxiongxian.cc/tags/%E8%A7%84%E8%8C%83/</loc>
+    <lastmod>2025-11-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
   
   <url>
@@ -1358,6 +1381,13 @@
   
   <url>
     <loc>https://zhuxiongxian.cc/categories/vue/</loc>
+    <lastmod>2025-11-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhuxiongxian.cc/categories/%E8%A7%84%E8%8C%83/</loc>
     <lastmod>2025-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
