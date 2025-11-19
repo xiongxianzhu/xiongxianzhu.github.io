@@ -1131,7 +1131,7 @@ Node.js 18+">
 <span class="token list punctuation">-</span> 消息体：包含必要的信息，如错误消息、数据等，响应结构示例：
 
 <span class="token code"><span class="token punctuation">```</span><span class="token code-language">json</span>
-<span class="token code-block language-json language-json"><span class="token punctuation">{</span>
+<span class="token code-block language-json"><span class="token punctuation">{</span>
     <span class="token property">"code"</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
     <span class="token property">"msg"</span><span class="token operator">:</span> <span class="token string">"SUCCESS"</span><span class="token punctuation">,</span>
     <span class="token property">"data"</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
@@ -1149,6 +1149,13 @@ Node.js 18+">
 <li><strong>保持CLAUDE.md简洁</strong>：专注于最重要的规则</li>
 <li><strong>配置适当超时</strong>：为您的工作流设置合理的超时时间</li>
 </ol>
+<h2 id="4-安装mcp"><a href="#4-安装mcp" class="headerlink" title="4. 安装mcp"></a>4. 安装mcp</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 安装context7</span>
+claude mcp <span class="token function">add</span> context7 <span class="token parameter variable">--scope</span> user  -- npx <span class="token parameter variable">-y</span> @upstash/context7-mcp
+<span class="token comment"># 安装playwright</span>
+claude mcp <span class="token function">add</span> playwright <span class="token parameter variable">--scope</span> user -- npx <span class="token parameter variable">-y</span> @playwright/mcp@latest
+<span class="token comment"># 安装chrome devtools</span>
+claude mcp <span class="token function">add</span> chrome-devtools <span class="token parameter variable">--scope</span> user -- npx <span class="token parameter variable">-y</span> chrome-devtools-mcp@latest<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <h2 id="4-故障排除"><a href="#4-故障排除" class="headerlink" title="4. 故障排除"></a>4. 故障排除</h2><h3 id="4-1-常见问题"><a href="#4-1-常见问题" class="headerlink" title="4.1 常见问题"></a>4.1 常见问题</h3><h4 id="安装问题"><a href="#安装问题" class="headerlink" title="安装问题"></a>安装问题</h4><p><strong>Linux 权限问题</strong>：<br>如果在Linux上遇到权限问题，请查阅<a href="https://code.claude.com/docs/zh-CN/troubleshooting#linux-permission-issues">故障排除指南</a>。</p>
 <p><strong>Windows 权限问题</strong>：</p>
 <ul>
