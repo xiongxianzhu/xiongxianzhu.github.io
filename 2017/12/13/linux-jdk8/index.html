@@ -98,9 +98,9 @@ http://www.oracle.com/technetwork/java/javase/downloads/jd">
     <title>linux安装jdk8 | xx&#39;s blog</title>
     <link rel="icon" type="image/png" href="/img/favicon.png">
     <script src="/libs/jquery/jquery.min.js"></script>
-<meta name="generator" content="Hexo 7.3.0">
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="xx's blog" type="application/atom+xml">
+
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="xx's blog" type="application/atom+xml">
 </head>
 
 <body>
@@ -1196,14 +1196,15 @@ $ echo source ~/.bash_profile &gt;&gt; ~/.zshrc<span aria-hidden="true" class="l
 
     
     .post-content pre.line-numbers {
-        padding: 2.2rem 1.5rem 0.5rem 3.8rem !important;
+        padding: 2.40625rem 1.5rem 0.5rem 3.8rem !important;
         -webkit-box-shadow: 0 0 20px rgba(128, 128, 128, 0.8);
         box-shadow: 0 0 20px rgba(128, 128, 128, 0.8);
     }
 
     /* 行号位置 */
     .line-numbers .line-numbers-rows {
-        top: 2.5rem;        /* 2.2rem + 0.3rem */
+        top: 2.80625rem;        /* 2.40625rem + 0.4rem */
+        border-right: none;
     }
     
     
@@ -1409,8 +1410,13 @@ $ echo source ~/.bash_profile &gt;&gt; ~/.zshrc<span aria-hidden="true" class="l
             var language = $(this).data('language');
             var $languageLabel = $('<span class="language-label"></span>').text(language);
 
-            // Insert the button and language label into the button container
-            $buttonContainer.append($copyButton).append($languageLabel);
+            // Insert the button and language label into the button container based on theme config
+            
+                $buttonContainer.append($copyButton);
+            
+            
+                $buttonContainer.append($languageLabel);
+            
 
             // Insert the button and pre element into the container
             $(this).before($container);

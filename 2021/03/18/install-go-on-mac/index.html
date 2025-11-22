@@ -98,9 +98,9 @@
     <title>mac下安装go开发环境 | xx&#39;s blog</title>
     <link rel="icon" type="image/png" href="/img/favicon.png">
     <script src="/libs/jquery/jquery.min.js"></script>
-<meta name="generator" content="Hexo 7.3.0">
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="xx's blog" type="application/atom+xml">
+
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="xx's blog" type="application/atom+xml">
 </head>
 
 <body>
@@ -897,7 +897,7 @@
         </div>
         
         <div class="post-content">
-            <h4 id="1-下载go安装包"><a href="#1-下载go安装包" class="headerlink" title="1. 下载go安装包"></a>1. 下载go安装包</h4><p>官网下载go安装包： <a href="https://golang.google.cn/dl/">https://golang.google.cn/dl/</a></p>
+            <h4 id="1-下载go安装包"><a href="#1-下载go安装包" class="headerlink" title="1. 下载go安装包"></a>1. 下载go安装包</h4><p>官网下载go安装包： <a target="_blank" rel="noopener" href="https://golang.google.cn/dl/">https://golang.google.cn/dl/</a></p>
 <p>下载go二进制包<code>go1.20.3.darwin-amd64.tar.gz</code>或<code>go1.20.3.darwin-arm64.tar.gz</code></p>
 <p>注意：选择amd64还是arm64取决于你电脑CPU的架构是x86_64还是arm架构，x86用amd64的包，arm则用arm64的包。mac的CPU目前主要有2种，分别Intel和M系列如m1, m2。CPU为Intel的则为x86_64架构，CPU为m1,m2,…则为arm架构。</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">wget</span> <span class="token parameter variable">-c</span> https://golang.google.cn/dl/go1.20.3.darwin-amd64.tar.gz
@@ -971,7 +971,7 @@ go version go1.20.3 darwin/arm64<span aria-hidden="true" class="line-numbers-row
 <span class="token function">mkdir</span> <span class="token parameter variable">-p</span> <span class="token variable">$GOPATH</span>/bin<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p>在<code>$GOPATH/src</code>目录下， 创建新项目进行开发</p>
-<h4 id="5-设置go国内模块代理"><a href="#5-设置go国内模块代理" class="headerlink" title="5. 设置go国内模块代理"></a>5. 设置go国内模块代理</h4><p>参考： <a href="https://goproxy.cn/">https://goproxy.cn/</a></p>
+<h4 id="5-设置go国内模块代理"><a href="#5-设置go国内模块代理" class="headerlink" title="5. 设置go国内模块代理"></a>5. 设置go国内模块代理</h4><p>参考： <a target="_blank" rel="noopener" href="https://goproxy.cn/">https://goproxy.cn/</a></p>
 <p>编辑<code>~/.bash_profile</code>:</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">vim</span> ~/.bash_profile<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
@@ -1048,7 +1048,7 @@ go run example.go
 或
 go run <span class="token builtin class-name">.</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>访问： <a href="http://0.0.0.0:10240/ping">http://0.0.0.0:10240/ping</a></p>
+<p>访问： <a target="_blank" rel="noopener" href="http://0.0.0.0:10240/ping">http://0.0.0.0:10240/ping</a></p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">{</span>
     <span class="token string">"message"</span><span class="token builtin class-name">:</span> <span class="token string">"pong"</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
@@ -1308,14 +1308,15 @@ go mod tidy<span aria-hidden="true" class="line-numbers-rows"><span></span><span
 
     
     .post-content pre.line-numbers {
-        padding: 2.2rem 1.5rem 0.5rem 3.8rem !important;
+        padding: 2.40625rem 1.5rem 0.5rem 3.8rem !important;
         -webkit-box-shadow: 0 0 20px rgba(128, 128, 128, 0.8);
         box-shadow: 0 0 20px rgba(128, 128, 128, 0.8);
     }
 
     /* 行号位置 */
     .line-numbers .line-numbers-rows {
-        top: 2.5rem;        /* 2.2rem + 0.3rem */
+        top: 2.80625rem;        /* 2.40625rem + 0.4rem */
+        border-right: none;
     }
     
     
@@ -1521,8 +1522,13 @@ go mod tidy<span aria-hidden="true" class="line-numbers-rows"><span></span><span
             var language = $(this).data('language');
             var $languageLabel = $('<span class="language-label"></span>').text(language);
 
-            // Insert the button and language label into the button container
-            $buttonContainer.append($copyButton).append($languageLabel);
+            // Insert the button and language label into the button container based on theme config
+            
+                $buttonContainer.append($copyButton);
+            
+            
+                $buttonContainer.append($languageLabel);
+            
 
             // Insert the button and pre element into the container
             $(this).before($container);

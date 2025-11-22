@@ -97,9 +97,9 @@
     <title>mac os x从源码编译安装python3.8 | xx&#39;s blog</title>
     <link rel="icon" type="image/png" href="/img/favicon.png">
     <script src="/libs/jquery/jquery.min.js"></script>
-<meta name="generator" content="Hexo 7.3.0">
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="xx's blog" type="application/atom+xml">
+
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="xx's blog" type="application/atom+xml">
 </head>
 
 <body>
@@ -896,13 +896,13 @@
         </div>
         
         <div class="post-content">
-            <h4 id="1-下载并解压python3-8源码包"><a href="#1-下载并解压python3-8源码包" class="headerlink" title="1. 下载并解压python3.8源码包"></a>1. 下载并解压python3.8源码包</h4><p><a href="https://www.python.org/">https://www.python.org/</a><br><a href="https://www.python.org/downloads/">https://www.python.org/downloads/</a></p>
+            <h4 id="1-下载并解压python3-8源码包"><a href="#1-下载并解压python3-8源码包" class="headerlink" title="1. 下载并解压python3.8源码包"></a>1. 下载并解压python3.8源码包</h4><p><a target="_blank" rel="noopener" href="https://www.python.org/">https://www.python.org/</a><br><a target="_blank" rel="noopener" href="https://www.python.org/downloads/">https://www.python.org/downloads/</a></p>
 <p>选择<code>XZ compressed source tarball</code>， 拷贝文件绝对路径链接， 用wget命令下载</p>
 <pre class="line-numbers language-none"><code class="language-none">wget -c https://www.python.org/ftp/python/3.8.0/Python-3.8.0.tar.xz
 xz -d Python-3.8.0.tar.xz
 tar -xvf Python-3.8.0.tar<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
-<h4 id="2-安装依赖"><a href="#2-安装依赖" class="headerlink" title="2. 安装依赖"></a>2. 安装依赖</h4><h5 id="2-1-安装sqlite3"><a href="#2-1-安装sqlite3" class="headerlink" title="2.1. 安装sqlite3"></a>2.1. 安装sqlite3</h5><p><a href="http://www.sqlite.org/">http://www.sqlite.org/</a></p>
+<h4 id="2-安装依赖"><a href="#2-安装依赖" class="headerlink" title="2. 安装依赖"></a>2. 安装依赖</h4><h5 id="2-1-安装sqlite3"><a href="#2-1-安装sqlite3" class="headerlink" title="2.1. 安装sqlite3"></a>2.1. 安装sqlite3</h5><p><a target="_blank" rel="noopener" href="http://www.sqlite.org/">http://www.sqlite.org/</a></p>
 <pre class="line-numbers language-none"><code class="language-none">wget -c https://www.sqlite.org/2019/sqlite-autoconf-3280000.tar.gz
 ./configure --prefix=/usr/local/
 make
@@ -1205,14 +1205,15 @@ Type "help", "copyright", "credits" or "license" for more information.
 
     
     .post-content pre.line-numbers {
-        padding: 2.2rem 1.5rem 0.5rem 3.8rem !important;
+        padding: 2.40625rem 1.5rem 0.5rem 3.8rem !important;
         -webkit-box-shadow: 0 0 20px rgba(128, 128, 128, 0.8);
         box-shadow: 0 0 20px rgba(128, 128, 128, 0.8);
     }
 
     /* 行号位置 */
     .line-numbers .line-numbers-rows {
-        top: 2.5rem;        /* 2.2rem + 0.3rem */
+        top: 2.80625rem;        /* 2.40625rem + 0.4rem */
+        border-right: none;
     }
     
     
@@ -1418,8 +1419,13 @@ Type "help", "copyright", "credits" or "license" for more information.
             var language = $(this).data('language');
             var $languageLabel = $('<span class="language-label"></span>').text(language);
 
-            // Insert the button and language label into the button container
-            $buttonContainer.append($copyButton).append($languageLabel);
+            // Insert the button and language label into the button container based on theme config
+            
+                $buttonContainer.append($copyButton);
+            
+            
+                $buttonContainer.append($languageLabel);
+            
 
             // Insert the button and pre element into the container
             $(this).before($container);

@@ -97,9 +97,9 @@
     <title>linux下pip的安装及常用命令 | xx&#39;s blog</title>
     <link rel="icon" type="image/png" href="/img/favicon.png">
     <script src="/libs/jquery/jquery.min.js"></script>
-<meta name="generator" content="Hexo 7.3.0">
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="xx's blog" type="application/atom+xml">
+
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="xx's blog" type="application/atom+xml">
 </head>
 
 <body>
@@ -899,9 +899,9 @@
         
         <div class="post-content">
             <p>pip是一个用来安装和管理Python包的工具， 它是<code>easy_install</code>的替代品， 也是目前社区的主流工具。</p>
-<p>第三方包主要分布在The Python Package Index (<a href="https://pypi.org/">https://pypi.org</a>) 官方的仓库(简称 PYPI), Github, Bitbucker等代码托管服务上。</p>
+<p>第三方包主要分布在The Python Package Index (<a target="_blank" rel="noopener" href="https://pypi.org/">https://pypi.org</a>) 官方的仓库(简称 PYPI), Github, Bitbucker等代码托管服务上。</p>
 <ul>
-<li>pip官方文档： <a href="https://pip.readthedocs.io/en/stable/">https://pip.readthedocs.io/en/stable/</a></li>
+<li>pip官方文档： <a target="_blank" rel="noopener" href="https://pip.readthedocs.io/en/stable/">https://pip.readthedocs.io/en/stable/</a></li>
 </ul>
 <h4 id="1-pip安装"><a href="#1-pip安装" class="headerlink" title="1. pip安装"></a>1. pip安装</h4><p>ubuntu下pip安装：</p>
 <pre class="line-numbers language-none"><code class="language-none">$ sudo apt-get install python-pip -y<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
@@ -1263,14 +1263,15 @@ $ source ~/.zprofile<span aria-hidden="true" class="line-numbers-rows"><span></s
 
     
     .post-content pre.line-numbers {
-        padding: 2.2rem 1.5rem 0.5rem 3.8rem !important;
+        padding: 2.40625rem 1.5rem 0.5rem 3.8rem !important;
         -webkit-box-shadow: 0 0 20px rgba(128, 128, 128, 0.8);
         box-shadow: 0 0 20px rgba(128, 128, 128, 0.8);
     }
 
     /* 行号位置 */
     .line-numbers .line-numbers-rows {
-        top: 2.5rem;        /* 2.2rem + 0.3rem */
+        top: 2.80625rem;        /* 2.40625rem + 0.4rem */
+        border-right: none;
     }
     
     
@@ -1476,8 +1477,13 @@ $ source ~/.zprofile<span aria-hidden="true" class="line-numbers-rows"><span></s
             var language = $(this).data('language');
             var $languageLabel = $('<span class="language-label"></span>').text(language);
 
-            // Insert the button and language label into the button container
-            $buttonContainer.append($copyButton).append($languageLabel);
+            // Insert the button and language label into the button container based on theme config
+            
+                $buttonContainer.append($copyButton);
+            
+            
+                $buttonContainer.append($languageLabel);
+            
 
             // Insert the button and pre element into the container
             $(this).before($container);

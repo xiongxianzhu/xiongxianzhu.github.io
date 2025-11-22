@@ -97,9 +97,9 @@
     <title>如何在github提交PR(Pull Request) | xx&#39;s blog</title>
     <link rel="icon" type="image/png" href="/img/favicon.png">
     <script src="/libs/jquery/jquery.min.js"></script>
-<meta name="generator" content="Hexo 7.3.0">
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="xx's blog" type="application/atom+xml">
+
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="xx's blog" type="application/atom+xml">
 </head>
 
 <body>
@@ -898,8 +898,8 @@
         </div>
         
         <div class="post-content">
-            <p>拿本人在github上开源的<a href="https://github.com/xiongxianzhu/cookiecutter-django">cookiecutter-django</a>为例。</p>
-<h4 id="1-fork-repository"><a href="#1-fork-repository" class="headerlink" title="1. fork repository"></a>1. fork repository</h4><p>Fork 开源项目, 单击<a href="https://github.com/xiongxianzhu/cookiecutter-django">cookiecutter-django</a>页面顶部附近的<code>Fork</code>按钮, 这将在GitHub服务器上创建您帐户下的代码副本。</p>
+            <p>拿本人在github上开源的<a target="_blank" rel="noopener" href="https://github.com/xiongxianzhu/cookiecutter-django">cookiecutter-django</a>为例。</p>
+<h4 id="1-fork-repository"><a href="#1-fork-repository" class="headerlink" title="1. fork repository"></a>1. fork repository</h4><p>Fork 开源项目, 单击<a target="_blank" rel="noopener" href="https://github.com/xiongxianzhu/cookiecutter-django">cookiecutter-django</a>页面顶部附近的<code>Fork</code>按钮, 这将在GitHub服务器上创建您帐户下的代码副本。</p>
 <h4 id="2-克隆代码副本到本地磁盘"><a href="#2-克隆代码副本到本地磁盘" class="headerlink" title="2. 克隆代码副本到本地磁盘"></a>2. 克隆代码副本到本地磁盘</h4><pre class="line-numbers language-none"><code class="language-none">$ git clone git@github.com:xiongxianzhu/cookiecutter-django.git
 $ cd cookiecutter-django<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
@@ -917,8 +917,8 @@ $ git commit -m 'changelog'<span aria-hidden="true" class="line-numbers-rows"><s
 <h4 id="5-push推送您的更改到github上"><a href="#5-push推送您的更改到github上" class="headerlink" title="5. push推送您的更改到github上"></a>5. push推送您的更改到github上</h4><p>通过<code>git push</code>命令推送到源码库repository所在的git托管网站， 本处的git托管网站为<code>github</code>, 若第一次推送， 则需要添加<code>-u</code>参数。</p>
 <pre class="line-numbers language-none"><code class="language-none">$ git push -u origin my-feature<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<h4 id="6-新建PR发送您的更改以供审核"><a href="#6-新建PR发送您的更改以供审核" class="headerlink" title="6. 新建PR发送您的更改以供审核"></a>6. 新建PR发送您的更改以供审核</h4><p>最后，转到<code>cookiecutter-django</code> repo的<a href="https://github.com/xiongxianzhu/cookiecutter-django/pulls">Pull requests</a>页面，然后单击<code>New Pull Request</code>发送您的更改以供审核</p>
-<h4 id="7-GitHub-Pull-Request文档"><a href="#7-GitHub-Pull-Request文档" class="headerlink" title="7. GitHub Pull Request文档"></a>7. GitHub Pull Request文档</h4><p>如果您不熟悉<code>Pull Request</code>，请查看<a href="https://help.github.com/articles/about-pull-requests/">pull request docs</a></p>
+<h4 id="6-新建PR发送您的更改以供审核"><a href="#6-新建PR发送您的更改以供审核" class="headerlink" title="6. 新建PR发送您的更改以供审核"></a>6. 新建PR发送您的更改以供审核</h4><p>最后，转到<code>cookiecutter-django</code> repo的<a target="_blank" rel="noopener" href="https://github.com/xiongxianzhu/cookiecutter-django/pulls">Pull requests</a>页面，然后单击<code>New Pull Request</code>发送您的更改以供审核</p>
+<h4 id="7-GitHub-Pull-Request文档"><a href="#7-GitHub-Pull-Request文档" class="headerlink" title="7. GitHub Pull Request文档"></a>7. GitHub Pull Request文档</h4><p>如果您不熟悉<code>Pull Request</code>，请查看<a target="_blank" rel="noopener" href="https://help.github.com/articles/about-pull-requests/">pull request docs</a></p>
 
         </div>
         <div class="post-comment">
@@ -1162,14 +1162,15 @@ $ git commit -m 'changelog'<span aria-hidden="true" class="line-numbers-rows"><s
 
     
     .post-content pre.line-numbers {
-        padding: 2.2rem 1.5rem 0.5rem 3.8rem !important;
+        padding: 2.40625rem 1.5rem 0.5rem 3.8rem !important;
         -webkit-box-shadow: 0 0 20px rgba(128, 128, 128, 0.8);
         box-shadow: 0 0 20px rgba(128, 128, 128, 0.8);
     }
 
     /* 行号位置 */
     .line-numbers .line-numbers-rows {
-        top: 2.5rem;        /* 2.2rem + 0.3rem */
+        top: 2.80625rem;        /* 2.40625rem + 0.4rem */
+        border-right: none;
     }
     
     
@@ -1375,8 +1376,13 @@ $ git commit -m 'changelog'<span aria-hidden="true" class="line-numbers-rows"><s
             var language = $(this).data('language');
             var $languageLabel = $('<span class="language-label"></span>').text(language);
 
-            // Insert the button and language label into the button container
-            $buttonContainer.append($copyButton).append($languageLabel);
+            // Insert the button and language label into the button container based on theme config
+            
+                $buttonContainer.append($copyButton);
+            
+            
+                $buttonContainer.append($languageLabel);
+            
 
             // Insert the button and pre element into the container
             $(this).before($container);

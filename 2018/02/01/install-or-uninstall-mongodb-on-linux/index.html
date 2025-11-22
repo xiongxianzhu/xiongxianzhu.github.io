@@ -98,9 +98,9 @@ p.s. 本文针对64位的linux发行版本。
     <title>Linux安装与卸载MongoDB | xx&#39;s blog</title>
     <link rel="icon" type="image/png" href="/img/favicon.png">
     <script src="/libs/jquery/jquery.min.js"></script>
-<meta name="generator" content="Hexo 7.3.0">
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="xx's blog" type="application/atom+xml">
+
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="xx's blog" type="application/atom+xml">
 </head>
 
 <body>
@@ -903,12 +903,12 @@ p.s. 本文针对64位的linux发行版本。
         </div>
         
         <div class="post-content">
-            <p>官方安装MongoDB英文教程： <a href="https://docs.mongodb.com/getting-started/shell/installation/">https://docs.mongodb.com/getting-started/shell/installation/</a></p>
+            <p>官方安装MongoDB英文教程： <a target="_blank" rel="noopener" href="https://docs.mongodb.com/getting-started/shell/installation/">https://docs.mongodb.com/getting-started/shell/installation/</a></p>
 <p>p.s. 本文针对64位的linux发行版本。</p>
 <h4 id="1-Ubuntu下安装或卸载MongoDB"><a href="#1-Ubuntu下安装或卸载MongoDB" class="headerlink" title="1. Ubuntu下安装或卸载MongoDB"></a>1. Ubuntu下安装或卸载MongoDB</h4><h5 id="1-1-包管理系统APT添加MongoDB公钥key"><a href="#1-1-包管理系统APT添加MongoDB公钥key" class="headerlink" title="1.1. 包管理系统APT添加MongoDB公钥key"></a>1.1. 包管理系统APT添加MongoDB公钥key</h5><p>使用ubuntu的包管理系统(即dpkg和APT)导入公钥：</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">sudo</span> apt-key adv <span class="token parameter variable">--keyserver</span> hkp://keyserver.ubuntu.com:80 <span class="token parameter variable">--recv</span> 2930ADAE8CAF5059EE73BB4B58712A2291FA4AD5<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p>MongoDB的公钥Key会更新， 最新的公钥只能在官网Ubuntu系统下安装MongoDB的页面中查找：<br><a href="https://docs.mongodb.com/master/tutorial/install-mongodb-on-ubuntu/">https://docs.mongodb.com/master/tutorial/install-mongodb-on-ubuntu/</a></p>
+<p>MongoDB的公钥Key会更新， 最新的公钥只能在官网Ubuntu系统下安装MongoDB的页面中查找：<br><a target="_blank" rel="noopener" href="https://docs.mongodb.com/master/tutorial/install-mongodb-on-ubuntu/">https://docs.mongodb.com/master/tutorial/install-mongodb-on-ubuntu/</a></p>
 <p>任选以上其中一个公钥， 执行命令回车添加即可。</p>
 <h5 id="1-2-创建MongoDB软件源文件"><a href="#1-2-创建MongoDB软件源文件" class="headerlink" title="1.2. 创建MongoDB软件源文件"></a>1.2. 创建MongoDB软件源文件</h5><p>添加MongoDB软件源：</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">vim</span> /etc/apt/sources.list.d/mongodb.list<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
@@ -1041,7 +1041,7 @@ build environment:
 <pre class="line-numbers language-none"><code class="language-none">$ sudo update-rc.d -f mongod remove<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 
-<h4 id="2-Centos下安装或卸载MongoDB"><a href="#2-Centos下安装或卸载MongoDB" class="headerlink" title="2. Centos下安装或卸载MongoDB"></a>2. Centos下安装或卸载MongoDB</h4><p><a href="https://docs.mongodb.com/manual/tutorial/install-mongodb-on-red-hat/">install-mongodb-on-red-hat</a></p>
+<h4 id="2-Centos下安装或卸载MongoDB"><a href="#2-Centos下安装或卸载MongoDB" class="headerlink" title="2. Centos下安装或卸载MongoDB"></a>2. Centos下安装或卸载MongoDB</h4><p><a target="_blank" rel="noopener" href="https://docs.mongodb.com/manual/tutorial/install-mongodb-on-red-hat/">install-mongodb-on-red-hat</a></p>
 <h5 id="2-1-安装MongoDB"><a href="#2-1-安装MongoDB" class="headerlink" title="2.1. 安装MongoDB"></a>2.1. 安装MongoDB</h5><p>当前最新稳定版本为<code>3.6.5</code>， 则选择安装最新稳定版的mongodb</p>
 <p>安装mongodb, 会安装软件包<code>mongodb-org</code>及其依赖包<code>mongodb-org-server</code>、<code>mongodb-org-mongos</code>、<code>mongodb-org-shell</code>、<code>mongodb-org-tools</code>。</p>
 <p>创建MongoDB软件源文件 <code>/etc/yum.repos.d/mongodb-org-3.6.repo</code>， 其内容为：</p>
@@ -1323,14 +1323,15 @@ $ sudo systemctl stop mongod    // 停止mongod服务<span aria-hidden="true" cl
 
     
     .post-content pre.line-numbers {
-        padding: 2.2rem 1.5rem 0.5rem 3.8rem !important;
+        padding: 2.40625rem 1.5rem 0.5rem 3.8rem !important;
         -webkit-box-shadow: 0 0 20px rgba(128, 128, 128, 0.8);
         box-shadow: 0 0 20px rgba(128, 128, 128, 0.8);
     }
 
     /* 行号位置 */
     .line-numbers .line-numbers-rows {
-        top: 2.5rem;        /* 2.2rem + 0.3rem */
+        top: 2.80625rem;        /* 2.40625rem + 0.4rem */
+        border-right: none;
     }
     
     
@@ -1536,8 +1537,13 @@ $ sudo systemctl stop mongod    // 停止mongod服务<span aria-hidden="true" cl
             var language = $(this).data('language');
             var $languageLabel = $('<span class="language-label"></span>').text(language);
 
-            // Insert the button and language label into the button container
-            $buttonContainer.append($copyButton).append($languageLabel);
+            // Insert the button and language label into the button container based on theme config
+            
+                $buttonContainer.append($copyButton);
+            
+            
+                $buttonContainer.append($languageLabel);
+            
 
             // Insert the button and pre element into the container
             $(this).before($container);
