@@ -962,11 +962,17 @@ MCP官网文档：https://modelcontextprotocol.io">
       <span class="token property">"command"</span><span class="token operator">:</span> <span class="token string">"npx"</span><span class="token punctuation">,</span>
       <span class="token property">"args"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"-y"</span><span class="token punctuation">,</span> <span class="token string">"firecrawl-mcp"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
       <span class="token property">"env"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-        <span class="token property">"FIRECRAWL_API_KEY"</span><span class="token operator">:</span> <span class="token string">"YOUR-API-KEY"</span>
+        <span class="token property">"FIRECRAWL_API_KEY"</span><span class="token operator">:</span> <span class="token string">"YOUR-API-KEY"</span><span class="token punctuation">,</span>
+        <span class="token property">"FIRECRAWL_RETRY_MAX_ATTEMPTS"</span><span class="token operator">:</span> <span class="token string">"3"</span><span class="token punctuation">,</span>
+        <span class="token property">"FIRECRAWL_RETRY_INITIAL_DELAY"</span><span class="token operator">:</span> <span class="token string">"1000"</span><span class="token punctuation">,</span>
+        <span class="token property">"FIRECRAWL_RETRY_MAX_DELAY"</span><span class="token operator">:</span> <span class="token string">"10000"</span><span class="token punctuation">,</span>
+        <span class="token property">"FIRECRAWL_RETRY_BACKOFF_FACTOR"</span><span class="token operator">:</span> <span class="token string">"2"</span><span class="token punctuation">,</span>
+        <span class="token property">"FIRECRAWL_CREDIT_WARNING_THRESHOLD"</span><span class="token operator">:</span> <span class="token string">"1000"</span><span class="token punctuation">,</span>
+        <span class="token property">"FIRECRAWL_CREDIT_CRITICAL_THRESHOLD"</span><span class="token operator">:</span> <span class="token string">"100"</span>
       <span class="token punctuation">}</span>
     <span class="token punctuation">}</span>
   <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>得到firecrawl api key：<a target="_blank" rel="noopener" href="https://www.firecrawl.dev/app/api-keys">https://www.firecrawl.dev/app/api-keys</a></p>
 <h3 id="5-Memory"><a href="#5-Memory" class="headerlink" title="5. Memory"></a>5. Memory</h3><p><strong>用途</strong>: 提供持久化记忆功能，帮助AI智能体记住对话历史和重要信息</p>

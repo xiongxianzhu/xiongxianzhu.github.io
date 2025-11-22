@@ -1131,7 +1131,7 @@ Node.js 18+">
 <span class="token list punctuation">-</span> 消息体：包含必要的信息，如错误消息、数据等，响应结构示例：
 
 <span class="token code"><span class="token punctuation">```</span><span class="token code-language">json</span>
-<span class="token code-block language-json language-json"><span class="token punctuation">{</span>
+<span class="token code-block language-json"><span class="token punctuation">{</span>
     <span class="token property">"code"</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
     <span class="token property">"msg"</span><span class="token operator">:</span> <span class="token string">"SUCCESS"</span><span class="token punctuation">,</span>
     <span class="token property">"data"</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
@@ -1154,7 +1154,9 @@ claude mcp <span class="token function">add</span> context7 <span class="token p
 <span class="token comment"># 安装playwright</span>
 claude mcp <span class="token function">add</span> playwright <span class="token parameter variable">--scope</span> user -- npx <span class="token parameter variable">-y</span> @playwright/mcp@latest
 <span class="token comment"># 安装chrome devtools</span>
-claude mcp <span class="token function">add</span> chrome-devtools <span class="token parameter variable">--scope</span> user -- npx <span class="token parameter variable">-y</span> chrome-devtools-mcp@latest<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+claude mcp <span class="token function">add</span> chrome-devtools <span class="token parameter variable">--scope</span> user -- npx <span class="token parameter variable">-y</span> chrome-devtools-mcp@latest
+<span class="token comment"># 安装firecrawl</span>
+claude mcp <span class="token function">add</span> firecrawl <span class="token parameter variable">--scope</span> user <span class="token parameter variable">--env</span> <span class="token assign-left variable">FIRECRAWL_API_KEY</span><span class="token operator">=</span>YOUR-API-KEY -- npx <span class="token parameter variable">-y</span> firecrawl-mcp<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="5-故障排除"><a href="#5-故障排除" class="headerlink" title="5. 故障排除"></a>5. 故障排除</h2><h3 id="5-1-常见问题"><a href="#5-1-常见问题" class="headerlink" title="5.1 常见问题"></a>5.1 常见问题</h3><h4 id="安装问题"><a href="#安装问题" class="headerlink" title="安装问题"></a>安装问题</h4><p><strong>Linux 权限问题</strong>：<br>如果在Linux上遇到权限问题，请查阅<a target="_blank" rel="noopener" href="https://code.claude.com/docs/zh-CN/troubleshooting#linux-permission-issues">故障排除指南</a>。</p>
 <p><strong>Windows 权限问题</strong>：</p>
@@ -1224,6 +1226,7 @@ claude config show
 <h2 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h2><ul>
 <li><a target="_blank" rel="noopener" href="https://developer.qiniu.com/aitokenapi/13085/claude-code-configuration-instructions">七牛云-Anthropic API 兼容和Claude Code 配置</a></li>
 <li><a target="_blank" rel="noopener" href="https://code.claude.com/docs/zh-CN/settings#%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F">官方Claude Code 环境变量配置</a></li>
+<li><a target="_blank" rel="noopener" href="https://code.claude.com/docs/zh-CN/mcp#%E9%80%89%E9%A1%B9-3%EF%BC%9A%E6%B7%BB%E5%8A%A0%E6%9C%AC%E5%9C%B0-stdio-%E6%9C%8D%E5%8A%A1%E5%99%A8">Claude Code添加MCP</a></li>
 <li><a target="_blank" rel="noopener" href="https://docs.bigmodel.cn/cn/coding-plan/tool/claude">智谱AI-Claude Code配置</a></li>
 <li><a target="_blank" rel="noopener" href="https://docs.claude.com/zh-CN/home">Claude Docs</a></li>
 </ul>
