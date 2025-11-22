@@ -915,6 +915,18 @@ MCP官网文档：https://modelcontextprotocol.io">
 <p><strong>GitHub</strong>: <a href="https://github.com/upstash/context7">https://github.com/upstash/context7</a></p>
 <h3 id="4-Playwright"><a href="#4-Playwright" class="headerlink" title="4. Playwright"></a>4. Playwright</h3><p><strong>用途</strong>: 提供浏览器自动化和网页交互能力，允许AI智能体执行网页操作、截图和测试</p>
 <p><strong>GitHub</strong>: <a href="https://github.com/microsoft/playwright-mcp">https://github.com/microsoft/playwright-mcp</a></p>
+<p>mcp配置示例：</p>
+<pre class="line-numbers language-json" data-language="json"><code class="language-json"><span class="token punctuation">{</span>
+  <span class="token property">"mcpServers"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">"playwright"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">"command"</span><span class="token operator">:</span> <span class="token string">"npx"</span><span class="token punctuation">,</span>
+      <span class="token property">"args"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token string">"@playwright/mcp@latest"</span>
+      <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <h3 id="5-Chrome-DevTools"><a href="#5-Chrome-DevTools" class="headerlink" title="5. Chrome DevTools"></a>5. Chrome DevTools</h3><p><strong>用途</strong>: 提供浏览器开发者工具集成能力，允许AI智能体进行页面调试、性能分析和元素检查</p>
 <p><strong>GitHub</strong>: <a href="https://github.com/ChromeDevTools/chrome-devtools-mcp">https://github.com/ChromeDevTools/chrome-devtools-mcp</a></p>
 <h3 id="6-Obsidian"><a href="#6-Obsidian" class="headerlink" title="6. Obsidian"></a>6. Obsidian</h3><p><strong>用途</strong>: 提供Obsidian笔记管理能力，允许AI智能体读取、写入和管理Obsidian笔记库</p>
@@ -936,6 +948,7 @@ MCP官网文档：https://modelcontextprotocol.io">
 <li><a href="https://github.com/modelcontextprotocol/servers">MCP服务器实现</a></li>
 </ul>
 <h2 id="MCP广场"><a href="#MCP广场" class="headerlink" title="MCP广场"></a>MCP广场</h2><ul>
+<li><a href="https://github.com/mcp">github MCP广场</a></li>
 <li><a href="https://mcp.so/">mcp.so</a></li>
 <li><a href="https://www.volcengine.com/mcp-marketplace">火山引擎MCP Servers</a></li>
 <li><a href="https://www.mcpworld.com/">MCP World</a></li>
