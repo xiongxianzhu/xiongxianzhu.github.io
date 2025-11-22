@@ -97,9 +97,9 @@ MCP官网文档：https://modelcontextprotocol.io">
     <title>MCP工具箱：必备扩展提升AI智能体能力 | xx&#39;s blog</title>
     <link rel="icon" type="image/png" href="/img/favicon.png">
     <script src="/libs/jquery/jquery.min.js"></script>
-<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="xx's blog" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 7.3.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="xx's blog" type="application/atom+xml">
 </head>
 
 <body>
@@ -906,14 +906,24 @@ MCP官网文档：https://modelcontextprotocol.io">
 <li><strong>npm</strong>: 通常随Node.js一起安装</li>
 <li><strong>npx</strong>: 通常随Node.js一起安装</li>
 </ul>
-<p>安装Node.js可访问官网：<a target="_blank" rel="noopener" href="https://nodejs.org/">https://nodejs.org/</a></p>
-<h2 id="常用MCP列表"><a href="#常用MCP列表" class="headerlink" title="常用MCP列表"></a>常用MCP列表</h2><h3 id="1-Filesystem"><a href="#1-Filesystem" class="headerlink" title="1. Filesystem"></a>1. Filesystem</h3><p><strong>用途</strong>: 提供文件系统访问能力，允许AI智能体读取、写入和管理本地文件</p>
-<p><strong>GitHub</strong>: <a target="_blank" rel="noopener" href="https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem">https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem</a></p>
-<h3 id="2-Memory"><a href="#2-Memory" class="headerlink" title="2. Memory"></a>2. Memory</h3><p><strong>用途</strong>: 提供持久化记忆功能，帮助AI智能体记住对话历史和重要信息</p>
-<p><strong>GitHub</strong>: <a target="_blank" rel="noopener" href="https://github.com/modelcontextprotocol/servers/tree/main/src/memory">https://github.com/modelcontextprotocol/servers/tree/main/src/memory</a></p>
-<h3 id="3-Content7"><a href="#3-Content7" class="headerlink" title="3. Content7"></a>3. Content7</h3><p><strong>用途</strong>: 提供文档检索和知识库查询能力，允许AI智能体访问各类技术文档和参考资料</p>
+<p>安装Node.js可访问官网：<a target="_blank" rel="noopener" href="https://nodejs.org/">https://nodejs.org</a></p>
+<h2 id="常用MCP列表"><a href="#常用MCP列表" class="headerlink" title="常用MCP列表"></a>常用MCP列表</h2><h3 id="1-Content7"><a href="#1-Content7" class="headerlink" title="1. Content7"></a>1. Content7</h3><p><strong>用途</strong>: 提供文档检索和知识库查询能力，允许AI智能体访问各类技术文档和参考资料</p>
 <p><strong>GitHub</strong>: <a target="_blank" rel="noopener" href="https://github.com/upstash/context7">https://github.com/upstash/context7</a></p>
-<h3 id="4-Playwright"><a href="#4-Playwright" class="headerlink" title="4. Playwright"></a>4. Playwright</h3><p><strong>用途</strong>: 提供浏览器自动化和网页交互能力，允许AI智能体执行网页操作、截图和测试</p>
+<p>mcp配置示例：</p>
+<pre class="line-numbers language-json" data-language="json"><code class="language-json"><span class="token punctuation">{</span>
+  <span class="token property">"mcpServers"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">"context7"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">"command"</span><span class="token operator">:</span> <span class="token string">"npx"</span><span class="token punctuation">,</span>
+      <span class="token property">"args"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token string">"-y"</span><span class="token punctuation">,</span>
+        <span class="token string">"@upstash/context7-mcp@latest"</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token property">"env"</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="2-Playwright"><a href="#2-Playwright" class="headerlink" title="2. Playwright"></a>2. Playwright</h3><p><strong>用途</strong>: 提供浏览器自动化和网页交互能力，允许AI智能体执行网页操作、截图和测试</p>
 <p><strong>GitHub</strong>: <a target="_blank" rel="noopener" href="https://github.com/microsoft/playwright-mcp">https://github.com/microsoft/playwright-mcp</a></p>
 <p>mcp配置示例：</p>
 <pre class="line-numbers language-json" data-language="json"><code class="language-json"><span class="token punctuation">{</span>
@@ -921,15 +931,49 @@ MCP官网文档：https://modelcontextprotocol.io">
     <span class="token property">"playwright"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
       <span class="token property">"command"</span><span class="token operator">:</span> <span class="token string">"npx"</span><span class="token punctuation">,</span>
       <span class="token property">"args"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token string">"-y"</span><span class="token punctuation">,</span>
         <span class="token string">"@playwright/mcp@latest"</span>
       <span class="token punctuation">]</span>
     <span class="token punctuation">}</span>
   <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="5-Chrome-DevTools"><a href="#5-Chrome-DevTools" class="headerlink" title="5. Chrome DevTools"></a>5. Chrome DevTools</h3><p><strong>用途</strong>: 提供浏览器开发者工具集成能力，允许AI智能体进行页面调试、性能分析和元素检查</p>
+<h3 id="3-Chrome-DevTools"><a href="#3-Chrome-DevTools" class="headerlink" title="3. Chrome DevTools"></a>3. Chrome DevTools</h3><p><strong>用途</strong>: 提供浏览器开发者工具集成能力，允许AI智能体进行页面调试、性能分析和元素检查</p>
 <p><strong>GitHub</strong>: <a target="_blank" rel="noopener" href="https://github.com/ChromeDevTools/chrome-devtools-mcp">https://github.com/ChromeDevTools/chrome-devtools-mcp</a></p>
-<h3 id="6-Obsidian"><a href="#6-Obsidian" class="headerlink" title="6. Obsidian"></a>6. Obsidian</h3><p><strong>用途</strong>: 提供Obsidian笔记管理能力，允许AI智能体读取、写入和管理Obsidian笔记库</p>
+<p>mcp配置示例：</p>
+<pre class="line-numbers language-json" data-language="json"><code class="language-json"><span class="token punctuation">{</span>
+  <span class="token property">"mcpServers"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">"chrome-devtools"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">"command"</span><span class="token operator">:</span> <span class="token string">"npx"</span><span class="token punctuation">,</span>
+      <span class="token property">"args"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token string">"-y"</span><span class="token punctuation">,</span>
+        <span class="token string">"chrome-devtools-mcp@latest"</span>
+      <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="4-Firecrawl"><a href="#4-Firecrawl" class="headerlink" title="4. Firecrawl"></a>4. Firecrawl</h4><p><strong>用途</strong>: 提供网页内容抓取和索引能力，允许AI智能体从互联网上提取有价值的信息</p>
+<p><strong>GitHub</strong>: <a target="_blank" rel="noopener" href="https://github.com/mcp/firecrawl/firecrawl-mcp-server">https://github.com/mcp/firecrawl/firecrawl-mcp-server</a></p>
+<p>mcp配置示例：</p>
+<pre class="line-numbers language-json" data-language="json"><code class="language-json"><span class="token punctuation">{</span>
+  <span class="token property">"mcpServers"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">"firecrawl-mcp"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">"command"</span><span class="token operator">:</span> <span class="token string">"npx"</span><span class="token punctuation">,</span>
+      <span class="token property">"args"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"-y"</span><span class="token punctuation">,</span> <span class="token string">"firecrawl-mcp"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token property">"env"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">"FIRECRAWL_API_KEY"</span><span class="token operator">:</span> <span class="token string">"YOUR-API-KEY"</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>得到firecrawl api key：<a target="_blank" rel="noopener" href="https://www.firecrawl.dev/app/api-keys">https://www.firecrawl.dev/app/api-keys</a></p>
+<h3 id="5-Memory"><a href="#5-Memory" class="headerlink" title="5. Memory"></a>5. Memory</h3><p><strong>用途</strong>: 提供持久化记忆功能，帮助AI智能体记住对话历史和重要信息</p>
+<p><strong>GitHub</strong>: <a target="_blank" rel="noopener" href="https://github.com/modelcontextprotocol/servers/tree/main/src/memory">https://github.com/modelcontextprotocol/servers/tree/main/src/memory</a></p>
+<h3 id="6-Filesystem"><a href="#6-Filesystem" class="headerlink" title="6. Filesystem"></a>6. Filesystem</h3><p><strong>用途</strong>: 提供文件系统访问能力，允许AI智能体读取、写入和管理本地文件</p>
+<p><strong>GitHub</strong>: <a target="_blank" rel="noopener" href="https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem">https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem</a></p>
+<h3 id="7-Obsidian"><a href="#7-Obsidian" class="headerlink" title="7. Obsidian"></a>7. Obsidian</h3><p><strong>用途</strong>: 提供Obsidian笔记管理能力，允许AI智能体读取、写入和管理Obsidian笔记库</p>
 <p><strong>GitHub</strong>: <a target="_blank" rel="noopener" href="https://github.com/StevenStavrakis/obsidian-mcp">https://github.com/StevenStavrakis/obsidian-mcp</a></p>
 <p>持续更新中…</p>
 <h2 id="使用MCP的优势"><a href="#使用MCP的优势" class="headerlink" title="使用MCP的优势"></a>使用MCP的优势</h2><ol>
