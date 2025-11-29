@@ -6,7 +6,7 @@
   <link href="https://zhuxiongxian.cc/atom.xml" rel="self"/>
   
   <link href="https://zhuxiongxian.cc/"/>
-  <updated>2025-11-19T13:38:17.000Z</updated>
+  <updated>2025-11-27T13:58:44.000Z</updated>
   <id>https://zhuxiongxian.cc/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>React主流技术栈与最佳实践 (2025版)</title>
+    <link href="https://zhuxiongxian.cc/2025/11/27/react-main-technological-stack-and-best-practices-2025/"/>
+    <id>https://zhuxiongxian.cc/2025/11/27/react-main-technological-stack-and-best-practices-2025/</id>
+    <published>2025-11-27T13:58:44.000Z</published>
+    <updated>2025-11-27T13:58:44.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;React作为当今最流行的前端框架之一，在2025年已经发展到了React 19版本，带来了Server</summary>
+        
+      
+    
+    
+    
+    <category term="React" scheme="https://zhuxiongxian.cc/categories/React/"/>
+    
+    
+    <category term="React" scheme="https://zhuxiongxian.cc/tags/React/"/>
+    
+    <category term="前端" scheme="https://zhuxiongxian.cc/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+    <category term="技术栈" scheme="https://zhuxiongxian.cc/tags/%E6%8A%80%E6%9C%AF%E6%A0%88/"/>
+    
+    <category term="TypeScript" scheme="https://zhuxiongxian.cc/tags/TypeScript/"/>
+    
+    <category term="最佳实践" scheme="https://zhuxiongxian.cc/tags/%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/"/>
+    
+  </entry>
   
   <entry>
     <title>下载 VMware Workstation Pro</title>
@@ -97,11 +130,11 @@
     <category term="vue" scheme="https://zhuxiongxian.cc/categories/vue/"/>
     
     
-    <category term="vue" scheme="https://zhuxiongxian.cc/tags/vue/"/>
-    
     <category term="前端" scheme="https://zhuxiongxian.cc/tags/%E5%89%8D%E7%AB%AF/"/>
     
     <category term="技术栈" scheme="https://zhuxiongxian.cc/tags/%E6%8A%80%E6%9C%AF%E6%A0%88/"/>
+    
+    <category term="Vue" scheme="https://zhuxiongxian.cc/tags/Vue/"/>
     
   </entry>
   
@@ -303,14 +336,14 @@
     
     
     
-    <category term="vue" scheme="https://zhuxiongxian.cc/categories/vue/"/>
+    <category term="Vue" scheme="https://zhuxiongxian.cc/categories/Vue/"/>
     
     
     <category term="nodejs" scheme="https://zhuxiongxian.cc/tags/nodejs/"/>
     
     <category term="npm" scheme="https://zhuxiongxian.cc/tags/npm/"/>
     
-    <category term="vue" scheme="https://zhuxiongxian.cc/tags/vue/"/>
+    <category term="Vue" scheme="https://zhuxiongxian.cc/tags/Vue/"/>
     
     <category term="yarn" scheme="https://zhuxiongxian.cc/tags/yarn/"/>
     
@@ -371,9 +404,9 @@
     <category term="go" scheme="https://zhuxiongxian.cc/categories/go/"/>
     
     
-    <category term="mac" scheme="https://zhuxiongxian.cc/tags/mac/"/>
-    
     <category term="go" scheme="https://zhuxiongxian.cc/tags/go/"/>
+    
+    <category term="mac" scheme="https://zhuxiongxian.cc/tags/mac/"/>
     
   </entry>
   
@@ -573,37 +606,6 @@
     <category term="docker" scheme="https://zhuxiongxian.cc/tags/docker/"/>
     
     <category term="安装" scheme="https://zhuxiongxian.cc/tags/%E5%AE%89%E8%A3%85/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>解决macos下安装m2crypto报SWIG的错</title>
-    <link href="https://zhuxiongxian.cc/2020/03/06/install-m2crypto-on-macosx/"/>
-    <id>https://zhuxiongxian.cc/2020/03/06/install-m2crypto-on-macosx/</id>
-    <published>2020-03-06T06:25:39.000Z</published>
-    <updated>2020-03-06T06:25:39.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h4 id=&quot;1-使用pipenv或pip在虚拟环境安装m2crypto报错&quot;&gt;&lt;a href=&quot;#1-使用pipenv或pip在虚拟环境安装m2crypto报错&quot; class=&quot;headerlink&quot; title=&quot;1.</summary>
-        
-      
-    
-    
-    
-    <category term="python" scheme="https://zhuxiongxian.cc/categories/python/"/>
-    
-    
-    <category term="python" scheme="https://zhuxiongxian.cc/tags/python/"/>
-    
-    <category term="mac" scheme="https://zhuxiongxian.cc/tags/mac/"/>
-    
-    <category term="m2crypto" scheme="https://zhuxiongxian.cc/tags/m2crypto/"/>
-    
-    <category term="swig" scheme="https://zhuxiongxian.cc/tags/swig/"/>
     
   </entry>
   

@@ -1,3 +1,4 @@
+https://zhuxiongxian.cc/2025/11/27/react-main-technological-stack-and-best-practices-2025/
 https://zhuxiongxian.cc/2025/11/19/download-vmware-workstation-pro/
 https://zhuxiongxian.cc/2025/11/16/markdown-rules/
 https://zhuxiongxian.cc/2025/11/16/vue-main-technological-stack-and-best-practices/
@@ -7,4 +8,3 @@ https://zhuxiongxian.cc/2025/11/15/win11-install-chocolatey/
 https://zhuxiongxian.cc/2025/11/10/how-to-use-claude-code/
 https://zhuxiongxian.cc/2024/07/21/win11-install-nodejs/
 https://zhuxiongxian.cc/2024/03/22/pyenv-usage/
-https://zhuxiongxian.cc/2023/05/09/how-to-learn-vue/
